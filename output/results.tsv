@@ -1,1 +1,6 @@
 commit	avg_score	cluster_coverage	best_strategy	status	description
+b08d85e	96.8	100.0	strategy-EMPATHY_LOSS_AVERSION	keep	baseline
+57391c6	96.2	100.0	strategy-SIMPLIFICATION_LOSS_AVERSION	discard	experiment 1: data-driven + logical contrast
+3ab963c	94.93	100.0	strategy-strategy_1_empathy_simplicity	discard	experiment 2: customer-type differentiation
+7207698	94.2	100.0	strategy-Expert_Authority_Trust	discard	experiment 3: turn-by-turn flow guide
+1253d38	95.1	100.0	strategy-strategy_3_authority_loss_aversion	discard	experiment 4: Cialdini 6 principles

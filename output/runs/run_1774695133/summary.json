@@ -1,0 +1,29 @@
+{
+  "avg_score": 94.93,
+  "cluster_coverage": 100.0,
+  "best_strategy": "strategy-strategy_1_empathy_simplicity",
+  "cluster_scores": {
+    "budget_sensitive": 94.93,
+    "roi_driven": 94.93,
+    "practical": 94.93,
+    "young_starter": 98.0,
+    "early_career_worker": 98.33,
+    "busy_parent": 96.33,
+    "freelancer_solopreneur": 94.0,
+    "office_professional": 97.0,
+    "manager_influencer": 89.67,
+    "high_urgency": 92.0,
+    "low_urgency": 95.33,
+    "existing_alternative_user": 95.0,
+    "mature_later_life_buyer": 93.67
+  },
+  "strategy_scores": {
+    "strategy-strategy_1_empathy_simplicity": 96.3,
+    "strategy-strategy_2_roi_risk_reversal": 92.3,
+    "strategy-strategy_3_authority_differentiation": 96.2
+  },
+  "outcome_distribution": {
+    "converted": 14,
+    "interested": 16
+  }
+}
