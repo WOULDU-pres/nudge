@@ -1,0 +1,102 @@
+{
+  "persona_id": "P162",
+  "archetype_id": "identity_expressive_buyer",
+  "archetype_name": "Identity Expressive Buyer",
+  "variation_slot": "early_career_worker",
+  "summary": "직장 초반의 이미지와 실용을 함께 챙기려는 정체성 표현형 구매자. 회사에서 봐도 과하지 않으면서 자기 감각은 남는 선택을 찾는 early_career_worker variation.",
+  "cluster_tags": [
+    "identity_driven",
+    "taste_sensitive",
+    "self_expression",
+    "early_career_worker"
+  ],
+  "profile": {
+    "age_band": "20s-30s early",
+    "occupation": "early_career_worker",
+    "life_context": "업무 적응과 자기 취향 관리가 동시에 중요한 시기라 실용과 분위기 둘 다 놓치지 않으려 함",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "조금 밋밋해도 무난한 기본 제품을 먹지만 오래 손이 가지는 않는 편",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "taste_fit",
+      "identity_alignment",
+      "distinctiveness"
+    ],
+    "preferred_message_style": [
+      "expressive",
+      "tasteful",
+      "identity_aligned"
+    ],
+    "disliked_message_style": [
+      "generic",
+      "mass_market",
+      "cookie_cutter"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "stylish",
+      "distinct",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "bland",
+      "generic",
+      "overly_corporate"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "identity_fit",
+    "taste_signal",
+    "polished_practicality"
+  ],
+  "objection_profile": {
+    "primary_type": "identity_mismatch",
+    "secondary_type": "premium_mismatch",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_generic",
+      "style_feels_off",
+      "brand_vibe_does_not_match_self_image"
+    ],
+    "resolution_requirements": [
+      "taste_aligned_language",
+      "distinct_positioning",
+      "identity_relevant_examples"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "회사 책상 위에 둬도 어색하지 않은지와 자기 취향이 남는지를 함께 본다",
+    "if_unconvinced": "무난하긴 하지만 자기 느낌은 아니라고 정리한다",
+    "if_annoyed": "획일적인 회사식 표현에 빠르게 식는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "distinct_style",
+      "taste_signal",
+      "identity_language"
+    ],
+    "engagement_penalties": [
+      "generic_vibe",
+      "mass_market_copy",
+      "style_mismatch"
+    ],
+    "purchase_intent_boosts": [
+      "self_expression_fit",
+      "taste_alignment"
+    ],
+    "purchase_intent_penalties": [
+      "identity_mismatch",
+      "boring_presentation"
+    ]
+  }
+}

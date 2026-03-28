@@ -1,0 +1,102 @@
+{
+  "persona_id": "P174",
+  "archetype_id": "deal_hunter",
+  "archetype_name": "Deal Hunter",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "수입이 들쑥날쑥한 1인 운영 생활에서 보충제도 철저히 거래 조건으로 보는 딜 민감형 구매자. 총액보다 1일 섭취량 기준 실제 며칠분인지, 할인 적용 후 하루 비용이 얼마인지, 가성비 대안 대비 성분과 복용 편의 차이가 선명할 때 움직이는 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "deal_sensitive",
+    "price_per_day_focus",
+    "value_hunter",
+    "freelancer_solopreneur"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "수입 변동이 있어 고정지출을 날카롭게 관리하며 보충제도 작업 효율보다 먼저 조건표와 체감 대비 비용을 따지는 1인 운영 환경",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "very_high",
+    "current_alternative": "할인 폭 큰 기본 제품이나 대용량 제품을 돌려 먹지만 복용 편의와 성분 만족도는 늘 절충 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "concrete_offer",
+      "transparent_price_math",
+      "value_density"
+    ],
+    "preferred_message_style": [
+      "clear_offer",
+      "specific",
+      "benefit_explicit"
+    ],
+    "disliked_message_style": [
+      "vague_urgency",
+      "hidden_terms",
+      "premium_without_math"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "sharp",
+      "clear",
+      "fast"
+    ],
+    "disliked_voice_style": [
+      "mushy",
+      "unclear",
+      "dragging"
+    ],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": [
+    "explicit_price_per_day",
+    "count_and_dosage_transparency",
+    "real_savings_vs_basic_option"
+  ],
+  "objection_profile": {
+    "primary_type": "offer_unclear",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "deal_is_vague",
+      "discount_hides_real_daily_cost",
+      "terms_are_unclear"
+    ],
+    "resolution_requirements": [
+      "transparent_price_breakdown",
+      "exact_bottle_duration",
+      "credible_reason_for_premium_gap"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "할인 전후 가격, 하루 비용, 현재 먹는 제품과의 성분 차이를 바로 계산해본다",
+    "if_unconvinced": "혜택은 커 보여도 실제로는 비슷한 가격이라고 느끼면 바로 식는다",
+    "if_annoyed": "한정 혜택만 강조하고 병 수, 섭취량, 조건을 숨기면 낚시라고 판단한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "price_math_up_front",
+      "visible_discount",
+      "clear_dosage_duration"
+    ],
+    "engagement_penalties": [
+      "hidden_costs",
+      "percentage_without_base_price",
+      "vague_value_claim"
+    ],
+    "purchase_intent_boosts": [
+      "immediate_savings",
+      "better_formula_for_nearby_cost"
+    ],
+    "purchase_intent_penalties": [
+      "weak_offer",
+      "bait_like_message"
+    ]
+  }
+}

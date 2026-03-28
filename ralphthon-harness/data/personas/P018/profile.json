@@ -1,0 +1,102 @@
+{
+  "persona_id": "P018",
+  "archetype_id": "busy_convenience_seeker",
+  "archetype_name": "Busy Convenience Seeker",
+  "variation_slot": "low_urgency",
+  "summary": "지금 루틴을 크게 깨지 않으려는 안정 추구형. 새 제품도 기존 식사와 기본 영양제 흐름에 조용히 얹힐 때만 검토하는 low_urgency variation.",
+  "cluster_tags": [
+    "time_sensitive",
+    "convenience_first",
+    "fast_filtering",
+    "low_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "현재 루틴이 크게 불편하지 않아 변화 자체에 신중한 안정 구간",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "아침 식사와 기본 비타민 정도로 큰 불만 없이 계속 가는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "clarity",
+      "speed",
+      "friction_reduction"
+    ],
+    "preferred_message_style": [
+      "benefit_first",
+      "short",
+      "direct"
+    ],
+    "disliked_message_style": [
+      "long_intro",
+      "rambling",
+      "slow_build_up"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "energetic",
+      "clear",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "slow",
+      "overly_soft",
+      "dragging"
+    ],
+    "length_tolerance": "very_short"
+  },
+  "persuasion_triggers": [
+    "easy_intake",
+    "routine_fit",
+    "simple_next_step"
+  ],
+  "objection_profile": {
+    "primary_type": "timing",
+    "secondary_type": "complexity",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_not_stated_immediately",
+      "forces_unnecessary_routine_change",
+      "explanation_takes_too_long_to_get_to_how_it_layers_on_current_habits"
+    ],
+    "resolution_requirements": [
+      "benefit_in_first_few_seconds",
+      "one_clear_intake_path",
+      "gentle_add_on_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "지금 먹는 기본 루틴에 덧붙여도 부담 없는지부터 확인한다",
+    "if_unconvinced": "굳이 바꿀 이유가 약하다며 현재 방식 유지 쪽으로 돌아선다",
+    "if_annoyed": "변화를 강하게 밀어붙이면 바로 거리감을 둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "fast_hook",
+      "short_sentences",
+      "clear_cta"
+    ],
+    "engagement_penalties": [
+      "delayed_value",
+      "too_much_context",
+      "complex_setup"
+    ],
+    "purchase_intent_boosts": [
+      "quick_win",
+      "easy_daily_fit"
+    ],
+    "purchase_intent_penalties": [
+      "high_friction",
+      "unclear_intake_start"
+    ]
+  }
+}

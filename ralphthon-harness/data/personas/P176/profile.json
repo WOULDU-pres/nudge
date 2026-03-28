@@ -1,0 +1,102 @@
+{
+  "persona_id": "P176",
+  "archetype_id": "deal_hunter",
+  "archetype_name": "Deal Hunter",
+  "variation_slot": "manager_influencer",
+  "summary": "혜택만 보는 사람이 아니라, 가격과 구성의 실속을 주변에도 설명할 수 있어야 만족하는 딜 민감형 관리자. 하루 비용과 추가 구성까지 투명하게 따지는 manager_influencer variation.",
+  "cluster_tags": [
+    "deal_sensitive",
+    "offer_driven",
+    "value_hunter",
+    "manager_influencer"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "본인 루틴뿐 아니라 가족이나 동료에게도 납득 가능한 가성비를 설명해야 하는 관리자",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "high",
+    "current_alternative": "기존 영양제를 유지하면서도 하루 비용과 구성 대비 더 실속 있는 선택지를 비교 검토 중",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "concrete_offer",
+      "clear_savings",
+      "deal_clarity"
+    ],
+    "preferred_message_style": [
+      "clear_offer",
+      "specific",
+      "benefit_explicit"
+    ],
+    "disliked_message_style": [
+      "vague_urgency",
+      "hidden_terms",
+      "fuzzy_benefits"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "energetic",
+      "clear",
+      "sharp"
+    ],
+    "disliked_voice_style": [
+      "mushy",
+      "unclear",
+      "dragging"
+    ],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": [
+    "discount",
+    "limited_bonus",
+    "clear_savings"
+  ],
+  "objection_profile": {
+    "primary_type": "offer_unclear",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "deal_is_vague",
+      "urgency_without_benefit",
+      "terms_are_unclear"
+    ],
+    "resolution_requirements": [
+      "specific_offer",
+      "transparent_terms",
+      "visible_savings"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "몇 일분인지와 하루 비용이 얼마나 내려가는지부터 계산한다",
+    "if_unconvinced": "겉으로만 혜택이 커 보이고 실제 실속은 약하다고 느낀다",
+    "if_annoyed": "조건이 흐리거나 낚시처럼 보이면 바로 신뢰를 접는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_offer",
+      "visible_discount",
+      "specific_bonus"
+    ],
+    "engagement_penalties": [
+      "vague_urgency",
+      "unclear_terms",
+      "hidden_costs"
+    ],
+    "purchase_intent_boosts": [
+      "immediate_savings",
+      "transparent_value"
+    ],
+    "purchase_intent_penalties": [
+      "weak_offer",
+      "bait_like_message"
+    ]
+  }
+}

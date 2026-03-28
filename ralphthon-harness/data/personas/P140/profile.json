@@ -1,0 +1,102 @@
+{
+  "persona_id": "P140",
+  "archetype_id": "data_rational_analyst",
+  "archetype_name": "Data Rational Analyst",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "중장년 시기의 일상 속에서 이해하기 쉬운 근거와 무리 없는 복용을 함께 보는 분석형 구매자. 낯선 설명보다 읽기 쉬운 기준과 유지 안정성을 찾는 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "data_driven",
+    "rational",
+    "logic_first",
+    "mature_later_life_buyer"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "나이가 들수록 선택 근거는 분명해야 하지만 설명은 어렵지 않아야 한다고 느끼는 단계",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium",
+    "current_alternative": "식사 후 기본 영양제를 꾸준히 챙기며 낯선 제형이나 복잡한 복용법은 피하는 편",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "numbers",
+      "logic",
+      "ease_of_understanding"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "plain",
+      "evidence_backed"
+    ],
+    "disliked_message_style": [
+      "handwavy",
+      "too_emotional",
+      "ambiguous"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "steady",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "too_fast",
+      "chaotic",
+      "vague"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "measurable_gain",
+    "plain_structure",
+    "easy_keep_routine"
+  ],
+  "objection_profile": {
+    "primary_type": "logic_gap",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_are_unstructured",
+      "numbers_are_missing",
+      "explanation_feels_difficult"
+    ],
+    "resolution_requirements": [
+      "structured_reasoning",
+      "plain_language",
+      "simple_routine_example"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "집에서 현재 제품과 차분히 비교해보며 계속 챙길 수 있을지 본다",
+    "if_unconvinced": "복잡한 설명보다 익숙한 현재 루틴이 낫다고 판단한다",
+    "if_annoyed": "어려운 용어를 밀어붙이면 더 볼 이유가 없다고 느낀다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_logic",
+      "plain_words",
+      "easy_keep_picture"
+    ],
+    "engagement_penalties": [
+      "ambiguity",
+      "overly_technical_tone",
+      "logic_jump"
+    ],
+    "purchase_intent_boosts": [
+      "measurable_outcome",
+      "easy_to_keep"
+    ],
+    "purchase_intent_penalties": [
+      "unproven_claims",
+      "too_complex"
+    ]
+  }
+}

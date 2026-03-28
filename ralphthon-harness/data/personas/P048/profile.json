@@ -1,0 +1,102 @@
+{
+  "persona_id": "P048",
+  "archetype_id": "premium_status_buyer",
+  "archetype_name": "Premium Status Buyer",
+  "variation_slot": "low_urgency",
+  "summary": "품질 기준과 생활의 결을 함께 보는 프리미엄 지향형. 당장 바꿔야 할 절박함은 없지만, 원료 신뢰도와 복용 경험이 현재 루틴보다 더 정제됐다고 느껴질 때만 움직이는 low_urgency variation.",
+  "cluster_tags": [
+    "premium",
+    "status_sensitive",
+    "quality_signal",
+    "low_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "현재 루틴은 안정적이지만 더 정제된 품질과 경험에는 관심이 있는 상황",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "지금도 무난히 챙겨 먹는 제품은 있지만, 더 깔끔한 원료와 복용 경험이 보이면 조용히 교체를 검토",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "brand_quality",
+      "authority",
+      "refined_delivery"
+    ],
+    "preferred_message_style": [
+      "composed",
+      "elegant",
+      "high_signal"
+    ],
+    "disliked_message_style": [
+      "cheap_sounding",
+      "desperate",
+      "overly_casual"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "premium",
+      "calm",
+      "assured"
+    ],
+    "disliked_voice_style": [
+      "overexcited",
+      "chatty",
+      "loud"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "premium_quality_signal",
+    "credibility",
+    "effortless_wellness"
+  ],
+  "objection_profile": {
+    "primary_type": "premium_mismatch",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "tone_feels_too_salesy",
+      "messaging_sounds_mass_market",
+      "benefit_framing_lacks_refinement"
+    ],
+    "resolution_requirements": [
+      "more_composed_voice",
+      "confidence_without_pressure",
+      "premium_positioning_language"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "말수는 많지 않지만 원료 출처, 제조 기준, 복용감 같은 디테일을 차분히 더 확인한다",
+    "if_unconvinced": "나쁘진 않지만 지금 쓰는 제품보다 한 단계 위라는 느낌은 없다고 판단한다",
+    "if_annoyed": "프리미엄을 말하면서 표현이 조급하거나 싸 보이면 바로 신뢰를 거둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "refined_tone",
+      "premium_language",
+      "confidence"
+    ],
+    "engagement_penalties": [
+      "cheap_framing",
+      "pushiness",
+      "mass_market_vibe"
+    ],
+    "purchase_intent_boosts": [
+      "status_fit",
+      "quality_assurance"
+    ],
+    "purchase_intent_penalties": [
+      "premium_mismatch",
+      "brand_weakness"
+    ]
+  }
+}

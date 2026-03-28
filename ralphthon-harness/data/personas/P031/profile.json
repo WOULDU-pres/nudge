@@ -1,0 +1,102 @@
+{
+  "persona_id": "P031",
+  "archetype_id": "emotionally_open_caregiver",
+  "archetype_name": "Emotionally Open Caregiver",
+  "variation_slot": "young_starter",
+  "summary": "가방 속 한두 알로 시작할 수 있고 설명이 다정해야 움직이는 사회초년생 돌봄 민감형 구매자. 수업·알바·취업 준비 사이에서 실패 비용이 적고 마음 부담이 낮은 선택을 찾는 young_starter variation.",
+  "cluster_tags": [
+    "empathy_seeking",
+    "warmth_sensitive",
+    "care_context",
+    "young_starter"
+  ],
+  "profile": {
+    "age_band": "20s",
+    "occupation": "student_or_first_jobber",
+    "life_context": "강의, 아르바이트, 취업 준비를 오가며 식사 시간도 들쭉날쭉한 사회 진입 초반",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "편의점 비타민 젤리나 저가 멀티비타민을 생각날 때만 챙기는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "empathy",
+      "clarity",
+      "gentle_guidance"
+    ],
+    "preferred_message_style": [
+      "warm",
+      "understanding",
+      "easy_to_follow"
+    ],
+    "disliked_message_style": [
+      "cold",
+      "technical",
+      "aggressive"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "gentle",
+      "reassuring"
+    ],
+    "disliked_voice_style": [
+      "sharp",
+      "fast",
+      "hard_sell"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "emotional_understanding",
+    "easy_intake",
+    "reduced_worry"
+  ],
+  "objection_profile": {
+    "primary_type": "complexity",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "too_many_ingredients_explained",
+      "technical_terms_without_help",
+      "tone_feels_pushy"
+    ],
+    "resolution_requirements": [
+      "simple_step_by_step_explanation",
+      "gentle_reassurance",
+      "one_clear_benefit_at_a_time"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "가방에 넣고 다니며 언제 챙기면 편한지부터 물어본다",
+    "if_unconvinced": "좋아 보여도 내가 끝까지 챙길 자신은 없다고 말한다",
+    "if_annoyed": "혼나는 느낌이 들면 예의 있게 끊고 거리를 둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "warm_opening",
+      "gentle_pacing",
+      "simple_language"
+    ],
+    "engagement_penalties": [
+      "cold_tone",
+      "jargon",
+      "pressure_cta"
+    ],
+    "purchase_intent_boosts": [
+      "worry_reduction",
+      "easy_routine_adoption"
+    ],
+    "purchase_intent_penalties": [
+      "feels_hard_to_keep_up",
+      "emotional_disconnect"
+    ]
+  }
+}

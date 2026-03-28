@@ -1,0 +1,102 @@
+{
+  "persona_id": "P206",
+  "archetype_id": "low_attention_skimmer",
+  "archetype_name": "Low Attention Skimmer",
+  "variation_slot": "manager_influencer",
+  "summary": "회의 많은 팀장이 한 줄 만에 누가 왜 챙기면 되는지 파악할 수 있어야 멈추는 저주의력형 구매자. 짧은 틈에 훑고도 나중에 주변에 설명할 수 있는 명료함을 찾는 manager_influencer variation.",
+  "cluster_tags": [
+    "low_attention",
+    "manager_scan",
+    "headline_clarity",
+    "explainable_brief"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "짧은 틈에 정보를 훑고도 나중에 팀원이나 가족에게 설명할 수 있어야 해서, 첫 문장의 명확함을 특히 따지는 중간관리자",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "아침 식후 챙기는 기본 제품은 유지하고, 새 제품은 회의 사이에 짧게 훑어보며 검토 중",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "first_pass_clarity",
+      "explainability",
+      "authority_without_pressure"
+    ],
+    "preferred_message_style": [
+      "crisp",
+      "credible",
+      "role_specific"
+    ],
+    "disliked_message_style": [
+      "vague_story",
+      "hedging",
+      "filler"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "firm_calm",
+      "articulate",
+      "efficient"
+    ],
+    "disliked_voice_style": [
+      "sloppy",
+      "overly_casual",
+      "overhyped"
+    ],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": [
+    "headline_clarity",
+    "explainable_difference",
+    "quick_scan_value"
+  ],
+  "objection_profile": {
+    "primary_type": "attention",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "unclear_target_user",
+      "buried_key_point",
+      "hard_close"
+    ],
+    "resolution_requirements": [
+      "one_line_summary",
+      "structured_followup",
+      "calm_confidence"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "첫 문장만 보고도 왜 이 제품인지 설명할 틀이 잡히면 다음 문단까지 본다",
+    "if_unconvinced": "핵심이 흐리면 믿을 만한 내용이어도 우선순위에서 뺀다",
+    "if_annoyed": "요점 없이 끌면 회의 일정처럼 바로 잘라낸다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "headline_clarity",
+      "crisp",
+      "first_pass_clarity"
+    ],
+    "engagement_penalties": [
+      "vague_story",
+      "unclear_target_user",
+      "sloppy"
+    ],
+    "purchase_intent_boosts": [
+      "one_line_summary",
+      "structured_followup"
+    ],
+    "purchase_intent_penalties": [
+      "buried_key_point",
+      "hard_close"
+    ]
+  }
+}

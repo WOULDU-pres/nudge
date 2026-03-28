@@ -1,0 +1,102 @@
+{
+  "persona_id": "P035",
+  "archetype_id": "emotionally_open_caregiver",
+  "archetype_name": "Emotionally Open Caregiver",
+  "variation_slot": "office_professional",
+  "summary": "책상 서랍에 두고 점심 뒤 자연스럽게 챙길 수 있어야 움직이는 사무직 돌봄 민감형 구매자. 큰 변화보다 업무 중 덜 지치게 이어지는 무리 없는 루틴을 찾는 office_professional variation.",
+  "cluster_tags": [
+    "empathy_seeking",
+    "warmth_sensitive",
+    "care_context",
+    "office_professional"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "office_professional",
+    "life_context": "회의, 메신저, 긴 좌식 업무 속에서 오후 집중이 무너지지 않길 바라는 일반 사무직 일상",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "집에 둔 기본 영양제 한두 개를 생각날 때 먹거나 회사 서랍에 따로 두고 챙기는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "empathy",
+      "clarity",
+      "gentle_guidance"
+    ],
+    "preferred_message_style": [
+      "warm",
+      "understanding",
+      "easy_to_follow"
+    ],
+    "disliked_message_style": [
+      "cold",
+      "technical",
+      "aggressive"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "gentle",
+      "reassuring"
+    ],
+    "disliked_voice_style": [
+      "sharp",
+      "fast",
+      "hard_sell"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "emotional_understanding",
+    "easy_intake",
+    "reduced_worry"
+  ],
+  "objection_profile": {
+    "primary_type": "complexity",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "too_many_ingredients_explained",
+      "technical_terms_without_help",
+      "tone_feels_pushy"
+    ],
+    "resolution_requirements": [
+      "simple_step_by_step_explanation",
+      "gentle_reassurance",
+      "one_clear_benefit_at_a_time"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오후 회의 많은 날에도 부담 없는 복용 타이밍을 구체적으로 묻는다",
+    "if_unconvinced": "지금 제품이랑 크게 다르지 않으면 굳이 바꿀 필요 없다고 본다",
+    "if_annoyed": "회사에서 바로 사라고 몰아붙이는 분위기면 경계한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "warm_opening",
+      "gentle_pacing",
+      "simple_language"
+    ],
+    "engagement_penalties": [
+      "cold_tone",
+      "jargon",
+      "pressure_cta"
+    ],
+    "purchase_intent_boosts": [
+      "worry_reduction",
+      "easy_routine_adoption"
+    ],
+    "purchase_intent_penalties": [
+      "feels_hard_to_keep_up",
+      "emotional_disconnect"
+    ]
+  }
+}

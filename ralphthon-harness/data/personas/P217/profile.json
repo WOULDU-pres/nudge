@@ -1,0 +1,102 @@
+{
+  "persona_id": "P217",
+  "archetype_id": "voice_sensitive_listener",
+  "archetype_name": "Voice Sensitive Listener",
+  "variation_slot": "high_urgency",
+  "summary": "긴장한 상황일수록 설명의 톤과 속도에 더 민감해지며, 차분한 전달에서만 신뢰를 얻는 청각 중심형 실무자. 급한 컨디션 관리일수록 목소리의 평정심을 중요하게 보는 high_urgency variation.",
+  "cluster_tags": [
+    "voice_sensitive",
+    "tone_matching",
+    "delivery_critical",
+    "high_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "이미 피로와 긴장이 높은 상태라 설명의 목소리 톤에 더 쉽게 영향을 받는 실무자",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "커피로 버티면서도 더 차분한 컨디션 관리 루틴을 찾는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "tone_match",
+      "natural_delivery",
+      "rhythm"
+    ],
+    "preferred_message_style": [
+      "well_delivered",
+      "clear",
+      "emotionally_tuned"
+    ],
+    "disliked_message_style": [
+      "tone_mismatch",
+      "awkward_delivery",
+      "unnatural"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "natural",
+      "emotionally_matched",
+      "steady"
+    ],
+    "disliked_voice_style": [
+      "robotic",
+      "overacted",
+      "off_tone"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "voice_style_match",
+    "natural_rhythm",
+    "credible_emotion"
+  ],
+  "objection_profile": {
+    "primary_type": "voice_mismatch",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "tts_feels_unnatural",
+      "tone_does_not_match_message",
+      "delivery_breaks_immersion"
+    ],
+    "resolution_requirements": [
+      "better_tone_alignment",
+      "natural_pacing",
+      "credible_voice_direction"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "차분한 목소리에서 안심을 얻고 바로 복용 그림까지 받아들인다",
+    "if_unconvinced": "내용보다 전달의 긴장감이 먼저 거슬려서 집중이 흐려진다",
+    "if_annoyed": "높고 급한 톤이면 첫 문장부터 거부감이 생긴다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "tone_alignment",
+      "natural_pacing",
+      "credible_delivery"
+    ],
+    "engagement_penalties": [
+      "robotic_voice",
+      "overacting",
+      "tone_mismatch"
+    ],
+    "purchase_intent_boosts": [
+      "voice_comfort",
+      "delivery_trust"
+    ],
+    "purchase_intent_penalties": [
+      "delivery_discomfort",
+      "unnatural_tts"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "persona_id": "P155",
+  "archetype_id": "career_efficiency_optimizer",
+  "archetype_name": "Career Efficiency Optimizer",
+  "variation_slot": "office_professional",
+  "summary": "문서 정리, 보고, 회의 후속 작업처럼 잔업성 인지 부하가 큰 사무 루틴에서 머리의 흐릿함을 특히 싫어하는 효율형 구매자. 보충제를 고를 때도 복용 난이도, 속 편안함, 오후 정리 업무 안정감, 기존 커피·종합비타민 대비 차이를 짧게 설명할 수 있을 때 반응하는 office_professional variation.",
+  "cluster_tags": [
+    "focus_support",
+    "cognitive_clarity",
+    "efficiency_seeking",
+    "office_professional"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "office_professional",
+    "life_context": "문서 작업과 회의 후속 정리가 많은 책상 중심 업무에서 오후 인지 피로와 누락 방지를 중요하게 보는 일반 직장 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "출근 전 종합비타민이나 커피를 챙기지만 3~5시 집중 흐림과 정리 업무 피로는 여전히 남는다고 느낌",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "workflow_fit",
+      "performance_gain",
+      "clean_explanation"
+    ],
+    "preferred_message_style": [
+      "efficient",
+      "structured",
+      "work_relevant"
+    ],
+    "disliked_message_style": [
+      "vague_inspiration",
+      "off_topic_emotion",
+      "messy_explanation"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "professional",
+      "neat"
+    ],
+    "disliked_voice_style": [
+      "rambling",
+      "too_soft",
+      "overfriendly"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "afternoon_admin_focus",
+    "stomach_friendly_dosage",
+    "low_cognitive_overhead_routine"
+  ],
+  "objection_profile": {
+    "primary_type": "relevance",
+    "secondary_type": "inertia",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_does_not_map_to_admin_work",
+      "routine_feels_easy_to_forget",
+      "difference_from_basics_is_unclear"
+    ],
+    "resolution_requirements": [
+      "specific_office_use_case",
+      "brief_ingredient_purpose_explanation",
+      "simple_repeatable_intake_logic"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "출근 후 첫 업무 블록과 오후 정리 시간에 실제로 얼마나 덜 흐릿할지 생각해본다",
+    "if_unconvinced": "좋아 보여도 결국 회사용 체감 차이가 크지 않다고 느낀다",
+    "if_annoyed": "장황하고 구조 없는 설명이 이어지면 바로 집중을 끊는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "structured_explanation",
+      "office_admin_relevance",
+      "simple_dosage"
+    ],
+    "engagement_penalties": [
+      "messy_talking_points",
+      "non_work_examples",
+      "unclear_difference_from_coffee"
+    ],
+    "purchase_intent_boosts": [
+      "afternoon_clarity_support",
+      "easy_breakfast_or_lunch_routine"
+    ],
+    "purchase_intent_penalties": [
+      "extra_step_feel",
+      "stomach_discomfort_concern"
+    ]
+  }
+}

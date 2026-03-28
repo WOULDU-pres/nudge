@@ -1,0 +1,102 @@
+{
+  "persona_id": "P169",
+  "archetype_id": "identity_expressive_buyer",
+  "archetype_name": "Identity Expressive Buyer",
+  "variation_slot": "existing_alternative_user",
+  "summary": "이미 따로 챙겨 먹는 루틴이 있어도, 더 정돈되고 자기 취향에 맞는 방식이라면 갈아탈 여지를 계산하는 정체성 표현형 구매자. 전환 비용과 분위기 만족을 동시에 보는 existing_alternative_user variation.",
+  "cluster_tags": [
+    "identity_driven",
+    "taste_sensitive",
+    "self_expression",
+    "existing_alternative_user"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "comparison_ready_user",
+    "life_context": "이미 다른 솔루션이나 대체 방식을 사용 중이며 전환비용을 계산함",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "지금도 여러 영양제를 나눠 챙기는 수동 루틴을 유지하고 있어 바꿀 이유가 분명해야 움직임",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "taste_fit",
+      "identity_alignment",
+      "distinctiveness"
+    ],
+    "preferred_message_style": [
+      "expressive",
+      "tasteful",
+      "identity_aligned"
+    ],
+    "disliked_message_style": [
+      "generic",
+      "mass_market",
+      "cookie_cutter"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "stylish",
+      "distinct",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "bland",
+      "generic",
+      "overly_corporate"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "identity_fit",
+    "taste_signal",
+    "self_expression"
+  ],
+  "objection_profile": {
+    "primary_type": "identity_mismatch",
+    "secondary_type": "premium_mismatch",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_generic",
+      "style_feels_off",
+      "brand_vibe_does_not_match_self_image"
+    ],
+    "resolution_requirements": [
+      "taste_aligned_language",
+      "distinct_positioning",
+      "identity_relevant_examples"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 루틴보다 덜 번거롭고 더 자기답다면 갈아탈 가치가 있는지 꼼꼼히 계산한다",
+    "if_unconvinced": "차이는 보여도 전환할 만큼 매력적이거나 자기 취향에 맞는 선택은 아니라고 느낀다",
+    "if_annoyed": "지금 루틴을 대충 무시하거나 비교를 흐리면 바로 마음을 닫는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "distinct_style",
+      "taste_signal",
+      "identity_language"
+    ],
+    "engagement_penalties": [
+      "generic_vibe",
+      "mass_market_copy",
+      "style_mismatch"
+    ],
+    "purchase_intent_boosts": [
+      "self_expression_fit",
+      "taste_alignment"
+    ],
+    "purchase_intent_penalties": [
+      "identity_mismatch",
+      "boring_presentation"
+    ]
+  }
+}

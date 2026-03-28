@@ -1,0 +1,102 @@
+{
+  "persona_id": "P034",
+  "archetype_id": "emotionally_open_caregiver",
+  "archetype_name": "Emotionally Open Caregiver",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "늦게 시작하는 날에도 첫 식사 전에 간단히 챙길 수 있어야 움직이는 프리랜서 돌봄 민감형 구매자. 불규칙한 일정 속에서도 몸을 몰아붙이지 않는 선택을 찾는 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "empathy_seeking",
+    "warmth_sensitive",
+    "care_context",
+    "freelancer_solopreneur"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "작업 시간과 식사 시간이 프로젝트마다 달라지고 컨디션이 곧 수입으로 이어지는 1인 운영 생활",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "커피와 물로 버티다가 생각날 때 저렴한 기본 영양제를 챙기는 식으로 이어가는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "empathy",
+      "clarity",
+      "gentle_guidance"
+    ],
+    "preferred_message_style": [
+      "warm",
+      "understanding",
+      "easy_to_follow"
+    ],
+    "disliked_message_style": [
+      "cold",
+      "technical",
+      "aggressive"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "gentle",
+      "reassuring"
+    ],
+    "disliked_voice_style": [
+      "sharp",
+      "fast",
+      "hard_sell"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "emotional_understanding",
+    "easy_intake",
+    "reduced_worry"
+  ],
+  "objection_profile": {
+    "primary_type": "complexity",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "too_many_ingredients_explained",
+      "technical_terms_without_help",
+      "tone_feels_pushy"
+    ],
+    "resolution_requirements": [
+      "simple_step_by_step_explanation",
+      "gentle_reassurance",
+      "one_clear_benefit_at_a_time"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "언제 붙이면 좋은지와 한 번 빼먹어도 다시 이어가기 쉬운지 묻는다",
+    "if_unconvinced": "좋은 얘기지만 내 불규칙한 생활엔 안 맞을 것 같다고 선을 긋는다",
+    "if_annoyed": "완벽한 루틴을 전제한 설명이 나오면 현실감 없다고 느낀다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "warm_opening",
+      "gentle_pacing",
+      "simple_language"
+    ],
+    "engagement_penalties": [
+      "cold_tone",
+      "jargon",
+      "pressure_cta"
+    ],
+    "purchase_intent_boosts": [
+      "worry_reduction",
+      "easy_routine_adoption"
+    ],
+    "purchase_intent_penalties": [
+      "feels_hard_to_keep_up",
+      "emotional_disconnect"
+    ]
+  }
+}

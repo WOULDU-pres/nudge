@@ -1,0 +1,102 @@
+{
+  "persona_id": "P083",
+  "archetype_id": "trend_sensitive_early_adopter",
+  "archetype_name": "Trend Sensitive Early Adopter",
+  "variation_slot": "busy_parent",
+  "summary": "늦은 밤 성분 기사와 후기까지 훑어보며 새로운 원료와 배합의 차이를 먼저 찾는 선도형 구매자. 다만 등원과 출근 사이 한 번에 끝나는 루틴으로 연결돼야 움직이는 busy_parent variation.",
+  "cluster_tags": [
+    "trend_sensitive",
+    "novelty_seeking",
+    "early_adopter",
+    "busy_parent"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "working_parent",
+    "life_context": "가정과 일을 병행하며 여유 시간이 부족함",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium",
+    "current_alternative": "기본 영양제 조합을 유지하면서도 새 원료가 보이면 밤마다 따로 비교해보는 중",
+    "buyer_role": "shared_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "novelty",
+      "differentiation",
+      "future_signal"
+    ],
+    "preferred_message_style": [
+      "fresh",
+      "distinctive",
+      "forward_looking"
+    ],
+    "disliked_message_style": [
+      "boring",
+      "generic",
+      "old_fashioned"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "energetic",
+      "fresh",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "flat",
+      "dated",
+      "too_stiff"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "new_formula",
+    "trend_signal",
+    "first_mover_advantage"
+  ],
+  "objection_profile": {
+    "primary_type": "novelty_mismatch",
+    "secondary_type": "relevance",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_generic",
+      "no_distinctive_angle",
+      "change_is_not_visible_in_daily_routine"
+    ],
+    "resolution_requirements": [
+      "fresh_positioning",
+      "clear_whats_new",
+      "future_facing_benefit"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "새 원료가 기존 루틴보다 어떤 체감 차이를 만들지 먼저 캐묻는다",
+    "if_unconvinced": "결국 이름만 새롭고 생활 속 차이는 없다고 느낀다",
+    "if_annoyed": "구식 표현이나 뻔한 인기 문구가 나오면 바로 흥미를 접는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "novel_angle",
+      "distinctiveness",
+      "energetic_freshness"
+    ],
+    "engagement_penalties": [
+      "generic_copy",
+      "dated_language",
+      "me_too_message"
+    ],
+    "purchase_intent_boosts": [
+      "first_mover_value",
+      "uniqueness"
+    ],
+    "purchase_intent_penalties": [
+      "boring_positioning",
+      "no_clear_delta"
+    ]
+  }
+}

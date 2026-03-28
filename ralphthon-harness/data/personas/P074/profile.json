@@ -1,0 +1,102 @@
+{
+  "persona_id": "P074",
+  "archetype_id": "risk_averse_safety_first",
+  "archetype_name": "Risk Averse Safety First",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "작업일에 몸이 어긋나는 리스크를 피하는 것이 가장 중요한 프리랜서 안전 우선형 구매자. 불규칙한 일정 속에서도 보수적으로 고르는 성향이 강한 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "risk_averse",
+    "safety_first",
+    "stability_sensitive",
+    "freelancer_solopreneur"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "회의, 촬영, 작업 시간이 들쭉날쭉해도 컨디션 변수가 생기면 곧바로 일정 차질로 이어지는 1인 운영 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "커피와 기본 비타민 한 병 정도만 두고, 새 제품은 후기를 오래 읽은 뒤에야 건드리는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "stability",
+      "risk_reduction",
+      "predictability"
+    ],
+    "preferred_message_style": [
+      "reassuring",
+      "clear",
+      "non_risky"
+    ],
+    "disliked_message_style": [
+      "reckless",
+      "uncertain",
+      "overpromising"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "steady",
+      "reassuring"
+    ],
+    "disliked_voice_style": [
+      "too_fast",
+      "reckless",
+      "overexcited"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "risk_reduction",
+    "safety_signal",
+    "reliability"
+  ],
+  "objection_profile": {
+    "primary_type": "risk",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "unclear_body_outcome",
+      "too_much_novelty",
+      "missing_safety_explanation"
+    ],
+    "resolution_requirements": [
+      "reassuring_explanation",
+      "reliability_signal",
+      "clear_downside_control"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "원료가 과하게 화려하지 않은지, 기본적인 검증 정보가 있는지부터 확인한다",
+    "if_unconvinced": "내 일정이 너무 불규칙해서 검증 안 된 새 시도는 어렵다고 말한다",
+    "if_annoyed": "빠른 체감만 강조하면 오히려 위험하게 느낀다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "risk_control",
+      "stable_tone",
+      "reliability"
+    ],
+    "engagement_penalties": [
+      "uncertainty",
+      "aggressive_innovation",
+      "overpromise"
+    ],
+    "purchase_intent_boosts": [
+      "safe_choice_framing",
+      "predictability"
+    ],
+    "purchase_intent_penalties": [
+      "unknowns",
+      "perceived_side_effect_risk"
+    ]
+  }
+}

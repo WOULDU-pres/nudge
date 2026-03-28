@@ -1,0 +1,102 @@
+{
+  "persona_id": "P071",
+  "archetype_id": "risk_averse_safety_first",
+  "archetype_name": "Risk Averse Safety First",
+  "variation_slot": "young_starter",
+  "summary": "처음 먹는 제품에서 몸이 놀라지 않을지를 가장 먼저 보는 사회초년생 안전 우선형 구매자. 시험, 면접, 출근 일정 앞에서 무난하고 예측 가능한 선택을 찾는 young_starter variation.",
+  "cluster_tags": [
+    "risk_averse",
+    "safety_first",
+    "stability_sensitive",
+    "young_starter"
+  ],
+  "profile": {
+    "age_band": "20s",
+    "occupation": "student_or_first_jobber",
+    "life_context": "수업, 면접 준비, 아르바이트를 병행하며 작은 컨디션 변화에도 일정이 쉽게 흔들리는 시기",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "편의점 비타민이나 무난한 기본 제품만 가끔 챙기고 새로운 건 쉽게 손대지 않는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "stability",
+      "risk_reduction",
+      "predictability"
+    ],
+    "preferred_message_style": [
+      "reassuring",
+      "clear",
+      "non_risky"
+    ],
+    "disliked_message_style": [
+      "reckless",
+      "uncertain",
+      "overpromising"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "steady",
+      "reassuring"
+    ],
+    "disliked_voice_style": [
+      "too_fast",
+      "reckless",
+      "overexcited"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "risk_reduction",
+    "safety_signal",
+    "reliability"
+  ],
+  "objection_profile": {
+    "primary_type": "risk",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "unclear_body_outcome",
+      "too_much_novelty",
+      "missing_safety_explanation"
+    ],
+    "resolution_requirements": [
+      "reassuring_explanation",
+      "reliability_signal",
+      "clear_downside_control"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "처음 시작해도 부담이 큰지, 언제 먹는 게 가장 무난한지부터 확인한다",
+    "if_unconvinced": "좋아 보여도 혹시 안 맞을까 봐 일단 미루겠다고 한다",
+    "if_annoyed": "안전 질문을 가볍게 넘기면 바로 신뢰를 잃는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "risk_control",
+      "stable_tone",
+      "reliability"
+    ],
+    "engagement_penalties": [
+      "uncertainty",
+      "aggressive_innovation",
+      "overpromise"
+    ],
+    "purchase_intent_boosts": [
+      "safe_choice_framing",
+      "predictability"
+    ],
+    "purchase_intent_penalties": [
+      "unknowns",
+      "perceived_side_effect_risk"
+    ]
+  }
+}

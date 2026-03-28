@@ -1,0 +1,102 @@
+{
+  "persona_id": "P209",
+  "archetype_id": "low_attention_skimmer",
+  "archetype_name": "Low Attention Skimmer",
+  "variation_slot": "existing_alternative_user",
+  "summary": "현재 먹는 제품과 뭐가 다른지 첫 문장에서 안 보이면 바로 넘기는 저주의력형 구매자. 재구매 시점마다 차이와 갈아탈 이유만 짧게 확인하려는 existing_alternative_user variation.",
+  "cluster_tags": [
+    "low_attention",
+    "comparison_ready",
+    "difference_first",
+    "reorder_moment"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "comparison_ready_user",
+    "life_context": "이미 복용 중인 브랜드가 있어 새 제품을 볼 때도 차이점과 갈아탈 이유를 아주 짧게 확인하려는 비교 단계",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "아침 종합비타민과 운동 후 마그네슘을 유지하며 재구매 시점에 다른 브랜드를 훑어보는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "immediate_difference",
+      "compareability",
+      "time_respect"
+    ],
+    "preferred_message_style": [
+      "compare_first",
+      "crisp",
+      "concrete"
+    ],
+    "disliked_message_style": [
+      "generic_benefits",
+      "evasive",
+      "copy_paste"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "brisk",
+      "measured",
+      "factual"
+    ],
+    "disliked_voice_style": [
+      "smug",
+      "longwinded",
+      "vague"
+    ],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": [
+    "first_line_difference",
+    "easy_switch_map",
+    "overlap_check"
+  ],
+  "objection_profile": {
+    "primary_type": "switching_cost",
+    "secondary_type": "attention",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "no_comparison",
+      "redundant_benefits",
+      "unnecessary_complexity"
+    ],
+    "resolution_requirements": [
+      "direct_difference",
+      "keep_or_swap_guidance",
+      "concise_reason"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 먹는 제품과 어디가 달라서 갈아탈 만한지 한눈에 잡히면 본다",
+    "if_unconvinced": "차이가 뭉뚱그려지면 그냥 기존 제품을 재주문한다",
+    "if_annoyed": "비교 없이 좋다는 말만 반복하면 바로 관심을 끊는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "first_line_difference",
+      "compare_first",
+      "immediate_difference"
+    ],
+    "engagement_penalties": [
+      "generic_benefits",
+      "no_comparison",
+      "smug"
+    ],
+    "purchase_intent_boosts": [
+      "direct_difference",
+      "keep_or_swap_guidance"
+    ],
+    "purchase_intent_penalties": [
+      "redundant_benefits",
+      "unnecessary_complexity"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "persona_id": "P132",
+  "archetype_id": "data_rational_analyst",
+  "archetype_name": "Data Rational Analyst",
+  "variation_slot": "early_career_worker",
+  "summary": "커리어 초반의 업무 적응 속에서 집중 흐름을 해치지 않는 구성을 따지는 분석형 구매자. 업무 시간대별 루틴 적합성과 설명 가능성을 확인하려는 early_career_worker variation.",
+  "cluster_tags": [
+    "data_driven",
+    "rational",
+    "logic_first",
+    "early_career_worker"
+  ],
+  "profile": {
+    "age_band": "20s-30s early",
+    "occupation": "early_career_worker",
+    "life_context": "출근 리듬과 업무 집중을 지키고 싶어 복용 단순성, 점심 이후 컨디션 관리, 1일 비용을 함께 계산함",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "출근 전 커피와 기본 비타민 정도로 버티며 오후 처짐은 그냥 넘기는 편",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "numbers",
+      "logic",
+      "workflow_fit"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "precise",
+      "evidence_backed"
+    ],
+    "disliked_message_style": [
+      "handwavy",
+      "emotional_only",
+      "ambiguous"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "measured",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "too_emotional",
+      "chaotic",
+      "vague"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "measurable_gain",
+    "logical_structure",
+    "workday_fit"
+  ],
+  "objection_profile": {
+    "primary_type": "logic_gap",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_are_unstructured",
+      "numbers_are_missing",
+      "workflow_fit_is_unclear"
+    ],
+    "resolution_requirements": [
+      "structured_reasoning",
+      "evidence",
+      "workday_specific_example"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "출근 전과 점심 이후 루틴에 어떻게 넣을지 바로 계산한다",
+    "if_unconvinced": "설명은 들었지만 업무 흐름을 바꿀 이유는 약하다고 판단한다",
+    "if_annoyed": "기준표 없이 감성만 밀면 검토할 가치가 없다고 본다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_logic",
+      "quantification",
+      "workflow_fit"
+    ],
+    "engagement_penalties": [
+      "ambiguity",
+      "emotion_only_pitch",
+      "logic_jump"
+    ],
+    "purchase_intent_boosts": [
+      "measurable_outcome",
+      "easy_workday_fit"
+    ],
+    "purchase_intent_penalties": [
+      "unproven_claims",
+      "lack_of_structure"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "persona_id": "P214",
+  "archetype_id": "voice_sensitive_listener",
+  "archetype_name": "Voice Sensitive Listener",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "혼자 일하는 시간이 길어 보충제 설명을 귀로 오래 듣는 만큼 전달 톤과 호흡에 민감한 청각 중심형 구매자. 성분이나 효능 뉘앙스보다도 차분한 목소리로 섭취 타이밍, 하루 비용, 피로·집중 관련 기대 포인트를 자연스럽게 풀어줄 때 신뢰가 생기는 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "voice_sensitive",
+    "tone_matching",
+    "delivery_critical",
+    "freelancer_solopreneur"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "혼자 작업하며 오디오 설명을 자주 접하는 1인 운영 환경에서 전달 톤이 보충제 신뢰도와 직결되는 생활",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "가격이 무난한 제품을 먹고 있지만 성분 설명이나 복용 맥락을 들을 때 전달 방식이 어색하면 쉽게 의심하는 편",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "tone_match",
+      "natural_delivery",
+      "calm_credibility"
+    ],
+    "preferred_message_style": [
+      "well_delivered",
+      "clear",
+      "emotionally_tuned"
+    ],
+    "disliked_message_style": [
+      "tone_mismatch",
+      "awkward_delivery",
+      "unnatural"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "natural",
+      "steady",
+      "low_pressure"
+    ],
+    "disliked_voice_style": [
+      "robotic",
+      "overacted",
+      "off_tone"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "voice_style_match",
+    "natural_rhythm",
+    "credible_emotion"
+  ],
+  "objection_profile": {
+    "primary_type": "voice_mismatch",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "delivery_feels_unnatural",
+      "tone_does_not_match_message",
+      "pacing_breaks_attention"
+    ],
+    "resolution_requirements": [
+      "better_tone_alignment",
+      "natural_pacing",
+      "credible_voice_direction"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "목소리 자체가 편안하고 성분·복용 설명이 과장 없이 들릴 때 더 오래 듣고 자기 루틴에 대입한다",
+    "if_unconvinced": "내용보다 전달 방식이 어색해 믿음이 덜 간다고 느낀다",
+    "if_annoyed": "힘이 과하거나 인위적인 톤이면 시작부터 방어적으로 듣는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "tone_alignment",
+      "natural_pacing",
+      "credible_delivery"
+    ],
+    "engagement_penalties": [
+      "robotic_voice",
+      "overacting",
+      "tone_mismatch"
+    ],
+    "purchase_intent_boosts": [
+      "voice_comfort",
+      "delivery_trust"
+    ],
+    "purchase_intent_penalties": [
+      "delivery_discomfort",
+      "unnatural_pacing"
+    ]
+  }
+}

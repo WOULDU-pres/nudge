@@ -1,0 +1,525 @@
+19:39:13 [run_simulation] Ralphthon Simulation — mode=DEV, provider=gemini, cheap=gemini-3.1-flash-lite-preview, expensive=gemini-3.1-pro-preview
+19:39:13 [run_simulation] Run ID: run_1774694353
+19:39:13 [run_simulation] Run dir: /home/hwjoo/01-projects/2026/hwjoo-idea/ralphton/output/runs/run_1774694353
+19:39:13 [ralphthon.ralph] ============================================================
+19:39:13 [ralphthon.ralph] H (Hypothesize) — 전략 가설 생성
+19:39:14 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:39:55 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:39:55 [ralphthon.ralph]   Generated 3 strategies: ['strategy-ROI_SIMPLIFICATION', 'strategy-EMPATHY_LOSS_AVERSION', 'strategy-EXPERT_AUTHORITY']
+19:39:55 [ralphthon.ralph] P (Plan) — 페르소나 선택
+19:39:55 [ralphthon.ralph]   Selected 10 personas (DEV mode)
+19:39:55 [ralphthon.ralph] A (Act) — 대화 시뮬레이션
+19:39:55 [ralphthon.ralph.act] Act: running 30 conversations (3 strategies × 10 personas)
+19:39:55 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:39:55 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:39:55 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:39:56 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:39:56 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:39:57 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:39:57 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:39:57 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:39:57 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:39:57 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:39:57 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:39:58 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:39:58 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:39:58 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:39:58 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:39:59 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:39:59 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:39:59 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:39:59 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:00 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:00 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:00 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:00 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:01 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:01 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:01 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:01 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:02 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:02 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:02 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:02 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:03 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:03 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:04 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:04 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:04 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:04 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:04 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:04 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:04 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:04 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:05 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:05 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:06 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:06 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:06 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:07 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:07 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:07 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:08 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:08 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:08 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:08 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:09 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:09 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:09 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:09 [ralphthon.ralph.act]   strategy-ROI_SIMPLIFICATION × P002 → 6 turns, ended_by=turn_limit
+19:40:09 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:10 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:10 [ralphthon.ralph.act]   strategy-ROI_SIMPLIFICATION × P005 → 6 turns, ended_by=turn_limit
+19:40:10 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:10 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:10 [ralphthon.ralph.act]   strategy-ROI_SIMPLIFICATION × P001 → 6 turns, ended_by=turn_limit
+19:40:10 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:11 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:11 [ralphthon.ralph.act]   strategy-ROI_SIMPLIFICATION × P004 → 6 turns, ended_by=turn_limit
+19:40:11 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:11 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:11 [ralphthon.ralph.act]   strategy-ROI_SIMPLIFICATION × P003 → 6 turns, ended_by=turn_limit
+19:40:11 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:11 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:12 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:12 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:12 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:12 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:12 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:13 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:13 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:13 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:13 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:14 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:14 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:14 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:14 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:15 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:15 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:15 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:16 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:16 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:16 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:17 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:17 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:17 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:17 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:18 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:18 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:19 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:19 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:20 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:20 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:20 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:20 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:20 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:20 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:21 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:21 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:21 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:21 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:23 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:23 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:23 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:23 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:23 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:23 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:24 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:24 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:24 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:24 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:25 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:25 [ralphthon.ralph.act]   strategy-ROI_SIMPLIFICATION × P007 → 6 turns, ended_by=turn_limit
+19:40:25 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:25 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:25 [ralphthon.ralph.act]   strategy-ROI_SIMPLIFICATION × P010 → 6 turns, ended_by=turn_limit
+19:40:25 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:26 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:26 [ralphthon.ralph.act]   strategy-ROI_SIMPLIFICATION × P008 → 6 turns, ended_by=turn_limit
+19:40:26 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:27 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:27 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:27 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:27 [ralphthon.ralph.act]   strategy-ROI_SIMPLIFICATION × P006 → 6 turns, ended_by=turn_limit
+19:40:27 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:27 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:27 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:27 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:27 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:28 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:28 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:29 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:29 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:29 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:29 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:29 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:29 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:30 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:30 [ralphthon.ralph.act]   strategy-ROI_SIMPLIFICATION × P009 → 6 turns, ended_by=turn_limit
+19:40:30 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:31 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:31 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:31 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:31 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:31 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:31 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:32 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:32 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:32 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:32 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:33 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:33 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:33 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:33 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:34 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:34 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:34 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:34 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:35 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:35 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:35 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:35 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:36 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:36 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:37 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:37 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:37 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:37 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:38 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:38 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:39 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:39 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:39 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:39 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:39 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:39 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:40 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:40 [ralphthon.ralph.act]   strategy-EMPATHY_LOSS_AVERSION × P001 → 6 turns, ended_by=turn_limit
+19:40:40 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:40 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:40 [ralphthon.ralph.act]   strategy-EMPATHY_LOSS_AVERSION × P004 → 6 turns, ended_by=turn_limit
+19:40:40 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:41 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:41 [ralphthon.ralph.act]   strategy-EMPATHY_LOSS_AVERSION × P002 → 6 turns, ended_by=turn_limit
+19:40:41 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:42 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:42 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:42 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:42 [ralphthon.ralph.act]   strategy-EMPATHY_LOSS_AVERSION × P003 → 6 turns, ended_by=turn_limit
+19:40:42 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:42 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:42 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:42 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:43 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:43 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:43 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:44 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:44 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:44 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:44 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:44 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:44 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:45 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:45 [ralphthon.ralph.act]   strategy-EMPATHY_LOSS_AVERSION × P005 → 6 turns, ended_by=turn_limit
+19:40:45 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:45 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:45 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:46 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:46 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:46 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:47 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:47 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:47 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:47 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:47 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:48 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:48 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:48 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:48 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:49 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:49 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:49 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:49 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:49 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:50 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:50 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:50 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:51 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:51 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:51 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:51 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:52 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:52 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:53 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:53 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:53 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:53 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:54 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:54 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:54 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:54 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:54 [ralphthon.ralph.act]   strategy-EMPATHY_LOSS_AVERSION × P006 → 6 turns, ended_by=turn_limit
+19:40:54 [ralphthon.ralph.act]   strategy-EMPATHY_LOSS_AVERSION × P007 → 6 turns, ended_by=turn_limit
+19:40:54 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:54 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:56 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:56 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:56 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:56 [ralphthon.ralph.act]   strategy-EMPATHY_LOSS_AVERSION × P008 → 6 turns, ended_by=turn_limit
+19:40:56 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:56 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:56 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:56 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:57 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:57 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:57 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:58 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:58 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:58 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:58 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:59 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:59 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:59 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:59 [ralphthon.ralph.act]   strategy-EMPATHY_LOSS_AVERSION × P010 → 6 turns, ended_by=turn_limit
+19:40:59 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:40:59 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:40:59 [ralphthon.ralph.act]   strategy-EMPATHY_LOSS_AVERSION × P009 → 6 turns, ended_by=turn_limit
+19:40:59 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:00 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:00 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:01 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:01 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:01 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:01 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:02 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:02 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:02 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:02 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:02 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:02 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:04 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:04 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:04 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:04 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:04 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:04 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:04 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:04 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:05 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:05 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:06 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:06 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:06 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:07 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:07 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:07 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:07 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:07 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:07 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:07 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:09 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:09 [ralphthon.ralph.act]   strategy-EXPERT_AUTHORITY × P001 → 6 turns, ended_by=turn_limit
+19:41:09 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:09 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:09 [ralphthon.ralph.act]   strategy-EXPERT_AUTHORITY × P003 → 6 turns, ended_by=turn_limit
+19:41:09 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:09 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:09 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:09 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:09 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:10 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:10 [ralphthon.ralph.act]   strategy-EXPERT_AUTHORITY × P002 → 6 turns, ended_by=turn_limit
+19:41:10 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:11 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:11 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:11 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:11 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:12 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:12 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:12 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:12 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:12 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:12 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:13 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:13 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:13 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:13 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:14 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:14 [ralphthon.ralph.act]   strategy-EXPERT_AUTHORITY × P005 → 6 turns, ended_by=turn_limit
+19:41:14 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:14 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:14 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:15 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:15 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:15 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:15 [ralphthon.ralph.act]   strategy-EXPERT_AUTHORITY × P004 → 6 turns, ended_by=turn_limit
+19:41:15 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:15 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:15 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:16 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:16 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:16 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:16 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:17 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:17 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:17 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:17 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:17 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:17 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:18 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:18 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:19 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:19 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:19 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:19 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:19 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:19 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:20 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:20 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:21 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:21 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:22 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:22 [ralphthon.ralph.act]   strategy-EXPERT_AUTHORITY × P006 → 6 turns, ended_by=turn_limit
+19:41:22 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:22 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:22 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:22 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:22 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:22 [ralphthon.ralph.act]   strategy-EXPERT_AUTHORITY × P007 → 6 turns, ended_by=turn_limit
+19:41:24 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:24 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:24 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:24 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:25 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:25 [ralphthon.ralph.act]   strategy-EXPERT_AUTHORITY × P008 → 6 turns, ended_by=turn_limit
+19:41:26 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:26 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:28 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:28 [ralphthon.ralph.act]   strategy-EXPERT_AUTHORITY × P010 → 6 turns, ended_by=turn_limit
+19:41:28 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:28 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:32 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent "HTTP/1.1 200 OK"
+19:41:32 [ralphthon.ralph.act]   strategy-EXPERT_AUTHORITY × P009 → 6 turns, ended_by=turn_limit
+19:41:32 [ralphthon.ralph.act] Act: completed 30/30 conversations
+19:41:32 [ralphthon.ralph]   Completed 30 conversations
+19:41:32 [ralphthon.ralph] E (Evaluate) — Judge 채점
+19:41:32 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:32 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:32 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:32 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:33 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:41 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:41:41 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:41:41 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:41 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:41 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:41:41 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:42 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:41:42 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:44 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:41:44 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:51 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:41:51 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:53 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:41:53 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:53 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:41:53 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:56 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:41:56 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:41:57 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:41:57 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:02 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:02 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:03 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:03 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:03 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:03 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:05 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:05 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:07 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:07 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:11 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:11 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:13 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:13 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:14 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:14 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:15 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:15 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:15 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:15 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:22 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:22 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:22 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 429 Too Many Requests"
+19:42:22 [ralphthon.llm] Rate limited (attempt 1), waiting 39s
+19:42:23 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:23 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:23 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:23 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:23 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 429 Too Many Requests"
+19:42:23 [ralphthon.llm] Rate limited (attempt 1), waiting 38s
+19:42:25 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:25 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:34 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:34 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:42:35 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:38 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:42:44 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:43:02 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:43:02 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:43:10 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:43:12 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:43:12 [ralphthon.ralph]   Evaluated 30 conversations
+19:43:12 [ralphthon.ralph]     strategy-ROI_SIMPLIFICATION × P001: total=99, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-ROI_SIMPLIFICATION × P002: total=98, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-ROI_SIMPLIFICATION × P003: total=96, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-ROI_SIMPLIFICATION × P004: total=100, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-ROI_SIMPLIFICATION × P005: total=96, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-ROI_SIMPLIFICATION × P006: total=98, outcome=interested
+19:43:12 [ralphthon.ralph]     strategy-ROI_SIMPLIFICATION × P007: total=96, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-ROI_SIMPLIFICATION × P008: total=91, outcome=interested
+19:43:12 [ralphthon.ralph]     strategy-ROI_SIMPLIFICATION × P009: total=98, outcome=interested
+19:43:12 [ralphthon.ralph]     strategy-ROI_SIMPLIFICATION × P010: total=96, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-EMPATHY_LOSS_AVERSION × P001: total=96, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-EMPATHY_LOSS_AVERSION × P002: total=100, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-EMPATHY_LOSS_AVERSION × P003: total=100, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-EMPATHY_LOSS_AVERSION × P004: total=99, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-EMPATHY_LOSS_AVERSION × P005: total=98, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-EMPATHY_LOSS_AVERSION × P006: total=98, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-EMPATHY_LOSS_AVERSION × P007: total=95, outcome=interested
+19:43:12 [ralphthon.ralph]     strategy-EMPATHY_LOSS_AVERSION × P008: total=93, outcome=interested
+19:43:12 [ralphthon.ralph]     strategy-EMPATHY_LOSS_AVERSION × P009: total=94, outcome=interested
+19:43:12 [ralphthon.ralph]     strategy-EMPATHY_LOSS_AVERSION × P010: total=96, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-EXPERT_AUTHORITY × P001: total=96, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-EXPERT_AUTHORITY × P002: total=100, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-EXPERT_AUTHORITY × P003: total=100, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-EXPERT_AUTHORITY × P004: total=100, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-EXPERT_AUTHORITY × P005: total=98, outcome=interested
+19:43:12 [ralphthon.ralph]     strategy-EXPERT_AUTHORITY × P006: total=97, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-EXPERT_AUTHORITY × P007: total=94, outcome=converted
+19:43:12 [ralphthon.ralph]     strategy-EXPERT_AUTHORITY × P008: total=95, outcome=interested
+19:43:12 [ralphthon.ralph]     strategy-EXPERT_AUTHORITY × P009: total=92, outcome=interested
+19:43:12 [ralphthon.ralph]     strategy-EXPERT_AUTHORITY × P010: total=95, outcome=interested
+19:43:12 [ralphthon.ralph]   avg_score=96.8, cluster_coverage=100.0
+19:43:12 [ralphthon.ralph]   best_strategy=strategy-EMPATHY_LOSS_AVERSION
+19:43:12 [ralphthon.ralph] R (Reason) — 패턴 분석
+19:43:12 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:43:46 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:43:47 [ralphthon.ralph]   winning_patterns: 4
+19:43:47 [ralphthon.ralph]   losing_patterns: 3
+19:43:47 [ralphthon.ralph] L (Learn) — 학습 추출
+19:43:47 [google_genai.models] AFC is enabled with max remote calls: 10.
+19:44:07 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 200 OK"
+19:44:07 [ralphthon.ralph]   learnings: 6
+19:44:07 [ralphthon.ralph]   recommended_changes: 5
+19:44:07 [ralphthon.ralph] RALPH Loop completed in 294.0s
+19:44:07 [ralphthon.ralph] ============================================================
+19:44:07 [ralphthon.ralph]   Saved run artifacts to /home/hwjoo/01-projects/2026/hwjoo-idea/ralphton/output/runs/run_1774694353
+avg_score: 96.8
+cluster_coverage: 100.0
+best_strategy: strategy-EMPATHY_LOSS_AVERSION
+elapsed_seconds: 294.0
+run_id: run_1774694353
+cluster_scores: {"budget_sensitive": 96.8, "roi_driven": 96.8, "practical": 96.8, "young_starter": 97.0, "early_career_worker": 99.33, "busy_parent": 98.67, "freelancer_solopreneur": 99.67, "office_professional": 97.33, "manager_influencer": 97.67, "high_urgency": 95.0, "low_urgency": 93.0, "existing_alternative_user": 94.67, "mature_later_life_buyer": 95.67}
+outcome_distribution: {"converted": 20, "interested": 10}
+strategy_scores: {"strategy-ROI_SIMPLIFICATION": 96.8, "strategy-EMPATHY_LOSS_AVERSION": 96.9, "strategy-EXPERT_AUTHORITY": 96.7}

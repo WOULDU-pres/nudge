@@ -1,0 +1,102 @@
+{
+  "persona_id": "P203",
+  "archetype_id": "low_attention_skimmer",
+  "archetype_name": "Low Attention Skimmer",
+  "variation_slot": "busy_parent",
+  "summary": "등원 준비 중에도 첫 문장에서 바쁜 부모에게 왜 간단한지 보여야 멈추는 저주의력형 구매자. 긴 설명보다 아침 동선에 바로 붙는 핵심을 찾는 busy_parent variation.",
+  "cluster_tags": [
+    "low_attention",
+    "busy_parent",
+    "one_hand_routine",
+    "kitchen_counter_fit"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "working_parent",
+    "life_context": "아이 준비물과 출근을 동시에 챙겨 긴 설명을 읽을 틈이 없고, 자기 루틴은 늘 뒤로 밀리는 생활",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium",
+    "current_alternative": "주방에 둔 유산균과 회사 서랍 비타민을 상황 될 때만 나눠 챙기는 중",
+    "buyer_role": "shared_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "instant_family_fit",
+      "simplicity",
+      "no_guilt"
+    ],
+    "preferred_message_style": [
+      "direct",
+      "empathetic_brief",
+      "practical"
+    ],
+    "disliked_message_style": [
+      "long_story",
+      "guilt_driven",
+      "scattered"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "quick_clear",
+      "low_pressure"
+    ],
+    "disliked_voice_style": [
+      "nagging",
+      "overly_cute",
+      "rambling"
+    ],
+    "length_tolerance": "very_short"
+  },
+  "persuasion_triggers": [
+    "parent_fit_in_opening",
+    "one_hand_routine",
+    "guilt_free_care"
+  ],
+  "objection_profile": {
+    "primary_type": "attention",
+    "secondary_type": "overwhelm",
+    "intensity": "high",
+    "trigger_conditions": [
+      "buried_relevance",
+      "parent_shaming",
+      "multi_step_instructions"
+    ],
+    "resolution_requirements": [
+      "one_sentence_fit",
+      "easy_location_cue",
+      "respectful_brevity"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "아침 식탁이나 가방 옆에서 바로 챙기는 그림이 첫 문장에 보이면 멈춘다",
+    "if_unconvinced": "내 동선 얘기가 없으면 좋든 말든 그냥 넘긴다",
+    "if_annoyed": "육아 죄책감 건드리는 표현이 보이면 끝까지 안 읽는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "parent_fit_in_opening",
+      "direct",
+      "instant_family_fit"
+    ],
+    "engagement_penalties": [
+      "long_story",
+      "buried_relevance",
+      "nagging"
+    ],
+    "purchase_intent_boosts": [
+      "one_sentence_fit",
+      "easy_location_cue"
+    ],
+    "purchase_intent_penalties": [
+      "parent_shaming",
+      "multi_step_instructions"
+    ]
+  }
+}

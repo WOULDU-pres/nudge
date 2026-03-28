@@ -1,0 +1,102 @@
+{
+  "persona_id": "P183",
+  "archetype_id": "relationship_trust_buyer",
+  "archetype_name": "Relationship Trust Buyer",
+  "variation_slot": "busy_parent",
+  "summary": "복잡한 집안 일정 속에서 성분보다 먼저 말의 온도와 성실함을 확인하는 관계형 구매자. 가족 루틴을 함부로 단순화하지 않고 차분히 답해주는 사람에게 신뢰를 두는 busy_parent variation.",
+  "cluster_tags": [
+    "relationship_driven",
+    "trust_building",
+    "human_connection",
+    "busy_parent"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "working_parent",
+    "life_context": "가정과 일을 병행하며 여유 시간이 부족함",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium",
+    "current_alternative": "가족 일정에 맞춰 기본 영양제를 따로 챙기고 있지만 설명이 더 편한 선택이 있으면 바꿀 의향이 있음",
+    "buyer_role": "shared_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "sincerity",
+      "consistency",
+      "human_tone"
+    ],
+    "preferred_message_style": [
+      "genuine",
+      "warm",
+      "steady"
+    ],
+    "disliked_message_style": [
+      "robotic",
+      "scripted",
+      "detached"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "sincere",
+      "gentle"
+    ],
+    "disliked_voice_style": [
+      "synthetic_feeling",
+      "too_salesy",
+      "harsh"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "sincerity",
+    "gentle_guidance",
+    "human_connection"
+  ],
+  "objection_profile": {
+    "primary_type": "trust",
+    "secondary_type": "pressure_aversion",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_scripted",
+      "tone_feels_fake_friendly",
+      "relationship_is_forced"
+    ],
+    "resolution_requirements": [
+      "natural_warmth",
+      "consistent_tone",
+      "non_forced_humanity"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "가족 일정과 자기 걱정을 더 자세히 풀어놓으며 이 사람이 끝까지 차분히 답하는지 본다",
+    "if_unconvinced": "친절하긴 하지만 집안 현실을 모르는 말 같아 거리를 둔다",
+    "if_annoyed": "대본 같은 공감이나 결정 재촉이 나오면 바로 피곤해한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "natural_warmth",
+      "human_pacing",
+      "sincere_language"
+    ],
+    "engagement_penalties": [
+      "scripted_feel",
+      "fake_friendliness",
+      "coldness"
+    ],
+    "purchase_intent_boosts": [
+      "trust_buildup",
+      "consistent_human_tone"
+    ],
+    "purchase_intent_penalties": [
+      "synthetic_feel",
+      "performative_empathy"
+    ]
+  }
+}

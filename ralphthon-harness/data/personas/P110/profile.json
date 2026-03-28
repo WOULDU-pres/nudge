@@ -1,0 +1,102 @@
+{
+  "persona_id": "P110",
+  "archetype_id": "overwhelmed_complexity_avoider",
+  "archetype_name": "Overwhelmed Complexity Avoider",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "복용 이유와 방법이 한두 문장 안에 정리되지 않으면 금세 피로해지는 중장년 단순성 선호형 구매자. 익숙한 식사 뒤 루틴을 기준으로, 새 영양제도 쉽게 이해되고 오래 기억하기 쉬울 때만 받아들이는 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "complexity_averse",
+    "overwhelm_sensitive",
+    "simplicity_seeking",
+    "mature_later_life_buyer"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "익숙한 식사 뒤 루틴은 유지하고 싶지만 복잡한 성분표와 세세한 복용 지침은 부담스러워 이해 쉬운 선택을 선호함",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium",
+    "current_alternative": "가족이나 지인이 알려준 기본 영양제를 단순한 순서로만 챙기는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "simplicity",
+      "guided_explanation",
+      "clarity"
+    ],
+    "preferred_message_style": [
+      "simple",
+      "one_thing_at_a_time",
+      "stepwise"
+    ],
+    "disliked_message_style": [
+      "feature_dump",
+      "jargon_heavy",
+      "dense"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "gentle",
+      "clear",
+      "steady"
+    ],
+    "disliked_voice_style": [
+      "fast",
+      "information_heavy",
+      "chaotic"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "easy_start",
+    "simplicity",
+    "one_clear_benefit"
+  ],
+  "objection_profile": {
+    "primary_type": "complexity",
+    "secondary_type": "confidence",
+    "intensity": "high",
+    "trigger_conditions": [
+      "too_many_ingredients",
+      "technical_terms_without_context",
+      "unclear_starting_point"
+    ],
+    "resolution_requirements": [
+      "step_by_step_guidance",
+      "one_core_benefit",
+      "simple_entry_path"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "하루 언제 어떻게 먹는지만 먼저 확인하고, 설명이 짧고 분명하면 안심한다",
+    "if_unconvinced": "좋아 보여도 외울 것이 많아 보이면 내가 계속 챙기기 어렵겠다고 느낀다",
+    "if_annoyed": "전문용어와 긴 성분 설명이 이어지면 대화 자체를 피곤한 숙제로 받아들인다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "simple_flow",
+      "guided_explanation",
+      "gentle_pacing"
+    ],
+    "engagement_penalties": [
+      "feature_overload",
+      "jargon",
+      "unclear_entry"
+    ],
+    "purchase_intent_boosts": [
+      "easy_intake_start",
+      "confidence_building"
+    ],
+    "purchase_intent_penalties": [
+      "looks_complicated",
+      "feels_hard_to_keep_up"
+    ]
+  }
+}

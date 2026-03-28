@@ -1,0 +1,8 @@
+commit	avg_score	cluster_coverage	best_strategy	status	description
+a1b2c3d	45.30	50.0	strategy-roi	keep	baseline prompt
+b2c3d4e	52.10	62.5	strategy-roi	keep	added empathy-first approach to guide
+c3d4e5f	48.70	50.0	strategy-pressure	discard	loss aversion framing - too aggressive
+d4e5f6g	0.00	0.0	none	crash	JSON parse error - removed closing instruction
+e5f6g7h	55.40	75.0	strategy-empathy	keep	restored JSON rules + added cultural context
+f6g7h8i	54.90	75.0	strategy-empathy	discard	minor tone tweak - no improvement
+g7h8i9j	58.20	87.5	strategy-roi	keep	added cluster-specific hints + premium framing

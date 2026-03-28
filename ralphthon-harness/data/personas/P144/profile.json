@@ -1,0 +1,102 @@
+{
+  "persona_id": "P144",
+  "archetype_id": "family_benefit_prioritizer",
+  "archetype_name": "Family Benefit Prioritizer",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "집에서 일과 돌봄이 맞물리는 1인 운영 생활 속에서 자신의 컨디션이 곧 가족 분위기와 수입 안정성에 번진다고 느끼는 가족 중심형 구매자. 보충제를 고를 때도 내 활력보다 저녁까지 덜 예민하고 꾸준히 챙기기 쉬운지, 하루 비용이 집안 기준으로 납득되는지를 먼저 보는 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "family_first",
+    "home_office_balance",
+    "care_driven",
+    "freelancer_solopreneur"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "집안 일정과 클라이언트 일을 동시에 굴리며 내 컨디션 저하가 작업 속도뿐 아니라 저녁 가족 분위기까지 흔들 수 있는 1인 운영 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "가성비 위주 제품이나 종합비타민을 띄엄띄엄 챙기지만 꾸준함과 체감, 가족 기준 설명 가능성은 부족하다고 느낌",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "family_relevance",
+      "safe_sounding_ingredients",
+      "practical_care"
+    ],
+    "preferred_message_style": [
+      "caring",
+      "household_context",
+      "down_to_earth"
+    ],
+    "disliked_message_style": [
+      "self_indulgent_framing",
+      "flashy_energy_talk",
+      "detached_claims"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "steady",
+      "reassuring"
+    ],
+    "disliked_voice_style": [
+      "cold",
+      "aggressive",
+      "overexcited"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "family_evening_stability",
+    "easy_shared_routine_fit",
+    "price_per_day_household_logic"
+  ],
+  "objection_profile": {
+    "primary_type": "family_relevance",
+    "secondary_type": "budget",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_feels_too_personal_only",
+      "safety_story_is_thin",
+      "cost_feels_hard_to_explain_at_home"
+    ],
+    "resolution_requirements": [
+      "household_benefit_example",
+      "simple_ingredient_and_dosage_explanation",
+      "practical_cost_justification"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "내가 덜 지치면 저녁 준비와 가족 대화 분위기가 어떻게 달라질지 먼저 떠올린다",
+    "if_unconvinced": "좋아 보여도 결국 집안 입장에서 꼭 필요한 선택인지는 모르겠다고 느낀다",
+    "if_annoyed": "나만 위한 사치처럼 들리거나 과장된 활력 표현이 나오면 금방 멀어진다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "family_evening_scene",
+      "sensible_safety_explanation",
+      "care_oriented_voice"
+    ],
+    "engagement_penalties": [
+      "selfish_positioning",
+      "stimulant_like_framing",
+      "unclear_daily_cost"
+    ],
+    "purchase_intent_boosts": [
+      "household_routine_fit",
+      "steady_mood_and_energy_support"
+    ],
+    "purchase_intent_penalties": [
+      "family_disconnect",
+      "hard_to_maintain_dosage"
+    ]
+  }
+}

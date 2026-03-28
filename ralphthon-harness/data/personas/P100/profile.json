@@ -1,0 +1,102 @@
+{
+  "persona_id": "P100",
+  "archetype_id": "inertia_bound_traditionalist",
+  "archetype_name": "Inertia Bound Traditionalist",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "식사 뒤에 챙기는 익숙한 영양제 순서가 몸에 밴 중장년 관성 구매자. 새 제품도 설명이 어렵지 않고 기존 복용 흐름을 거의 건드리지 않을 때만 검토하는 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "inertia",
+    "status_quo_bias",
+    "change_resistant",
+    "mature_later_life_buyer"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "아침 식사 뒤에 익숙한 영양제를 챙기는 순서가 굳어 있어 새로운 제품도 이해하기 쉽고 복용법이 단순해야 받아들이기 편함",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium",
+    "current_alternative": "지인이나 가족 추천으로 시작한 기본 영양제를 정해진 순서대로 계속 먹는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "familiarity",
+      "continuity",
+      "low_disruption"
+    ],
+    "preferred_message_style": [
+      "steady",
+      "non_disruptive",
+      "practical"
+    ],
+    "disliked_message_style": [
+      "dramatic_change",
+      "radical_shift",
+      "too_new"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "familiar",
+      "measured"
+    ],
+    "disliked_voice_style": [
+      "pushy",
+      "hyper",
+      "urgent"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "easy_transition",
+    "minimal_change",
+    "familiar_routine"
+  ],
+  "objection_profile": {
+    "primary_type": "inertia",
+    "secondary_type": "complexity",
+    "intensity": "high",
+    "trigger_conditions": [
+      "change_cost_seems_high",
+      "switching_routine_is_unclear",
+      "new_routine_feels_disruptive"
+    ],
+    "resolution_requirements": [
+      "low_transition_cost",
+      "familiarity_bridge",
+      "simple_switching_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "지금 식사 뒤 순서에 그대로 넣을 수 있는지, 기존 제품을 다 먹고 바꾸면 되는지부터 확인한다",
+    "if_unconvinced": "설명이 복잡하거나 익숙한 제품보다 낫다는 확신이 없으면 지금 방식이 편하다고 느낀다",
+    "if_annoyed": "변화를 재촉하거나 어려운 표현만 늘어놓으면 곧바로 마음을 닫는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "continuity_framing",
+      "simple_transition",
+      "low_disruption"
+    ],
+    "engagement_penalties": [
+      "radical_change",
+      "many_new_steps",
+      "forced_switching"
+    ],
+    "purchase_intent_boosts": [
+      "easy_migration",
+      "familiarity"
+    ],
+    "purchase_intent_penalties": [
+      "switching_cost",
+      "routine_disruption"
+    ]
+  }
+}

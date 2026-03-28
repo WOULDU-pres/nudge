@@ -1,0 +1,102 @@
+{
+  "persona_id": "P116",
+  "archetype_id": "hard_sell_resistant",
+  "archetype_name": "Hard Sell Resistant",
+  "variation_slot": "manager_influencer",
+  "summary": "본인 건강관리도 중요하지만, 한 번 고른 영양제는 가족이나 주변에게도 설명할 수 있어야 하는 관리자형 압박 저항 구매자. 누가 강하게 밀어붙일수록 책임지기 어려운 선택처럼 느끼며, 차분한 비교와 자율 판단을 중시하는 manager_influencer variation.",
+  "cluster_tags": [
+    "pressure_averse",
+    "autonomy_sensitive",
+    "hard_sell_resistant",
+    "manager_influencer"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "회의와 외근이 많은 생활 속에서 본인 루틴도 중요하지만, 선택한 영양제에 대해 가족이나 주변에 설명할 책임감도 크게 느낌",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "기존 복용 루틴과 익숙한 영양제 브랜드를 유지하며 천천히 비교 검토 중",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "respectful_distance",
+      "non_pressure",
+      "choice"
+    ],
+    "preferred_message_style": [
+      "calm",
+      "respectful",
+      "option_oriented"
+    ],
+    "disliked_message_style": [
+      "pushy",
+      "urgent",
+      "manipulative"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "warm",
+      "non_invasive"
+    ],
+    "disliked_voice_style": [
+      "aggressive",
+      "overeager",
+      "closing_heavy"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "choice_respect",
+    "low_pressure_guidance",
+    "informational_tone"
+  ],
+  "objection_profile": {
+    "primary_type": "pressure_aversion",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "forced_urgency",
+      "manipulative_cta",
+      "overly_salesy_tone"
+    ],
+    "resolution_requirements": [
+      "choice_preservation",
+      "soft_cta",
+      "calm_respectful_delivery"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "차이를 정리해 달라고 한 뒤, 출장 루틴과 주변 설명 가능성까지 스스로 검토해보려 한다",
+    "if_unconvinced": "당장 결정하지 않고 기존 브랜드와 더 비교해본다고 한다",
+    "if_annoyed": "강한 마감 화법이나 불안 자극이 들어오면 책임질 수 없는 선택처럼 느껴 바로 닫는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "respectful_tone",
+      "soft_cta",
+      "choice_language"
+    ],
+    "engagement_penalties": [
+      "deadline_pressure",
+      "pushy_close",
+      "scarcity_abuse"
+    ],
+    "purchase_intent_boosts": [
+      "autonomy_respected",
+      "low_pressure_clarity"
+    ],
+    "purchase_intent_penalties": [
+      "feels_manipulative",
+      "forced_action"
+    ]
+  }
+}

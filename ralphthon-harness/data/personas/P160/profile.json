@@ -1,0 +1,101 @@
+{
+  "persona_id": "P160",
+  "archetype_id": "career_efficiency_optimizer",
+  "archetype_name": "Career Efficiency Optimizer",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "오래 일해온 사람답게 자극보다 안정적인 업무 유지력을 중시하는 효율형 구매자. 중장년의 일 리듬 안에서 무리 없는 복용과 명확한 실무 연관성을 보는 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "focus_support",
+    "career_focused",
+    "efficiency_seeking"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "빠른 체감 약속보다 꾸준히 챙겨 업무 흐름을 덜 끊는 현실적인 루틴을 더 신뢰하는 단계",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium",
+    "current_alternative": "아침 커피와 익숙한 기본 영양제, 가벼운 휴식으로 근무 리듬을 유지하려 함",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "performance_gain",
+      "workflow_fit",
+      "professional_value"
+    ],
+    "preferred_message_style": [
+      "efficient",
+      "outcome_driven",
+      "work_relevant"
+    ],
+    "disliked_message_style": [
+      "vague_inspiration",
+      "off_topic_emotion",
+      "fluff"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "confident",
+      "clear",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "rambling",
+      "too_soft",
+      "casual"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "steady_workday_support",
+    "focus_support",
+    "fatigue_routine_fit"
+  ],
+  "objection_profile": {
+    "primary_type": "relevance",
+    "secondary_type": "inertia",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "workfit_is_unclear",
+      "benefit_does_not_map_to_workday",
+      "switch_cost_feels_unjustified"
+    ],
+    "resolution_requirements": [
+      "workday_specific_example",
+      "performance_gain",
+      "clear_use_case"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "하루 업무 흐름 어디에서 도움이 될지 차분히 대입해본다",
+    "if_unconvinced": "좋아 보여도 익숙한 방식보다 낫다는 확신은 없다고 판단한다",
+    "if_annoyed": "일과 무관한 화려한 말이 길어지면 흥미를 잃는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "workflow_fit",
+      "time_saved",
+      "professional_relevance"
+    ],
+    "engagement_penalties": [
+      "abstract_emotion",
+      "non_work_examples",
+      "unclear_gain"
+    ],
+    "purchase_intent_boosts": [
+      "workday_energy_gain",
+      "clear_focus_gain"
+    ],
+    "purchase_intent_penalties": [
+      "work_irrelevance",
+      "effort_gt_reward"
+    ]
+  }
+}

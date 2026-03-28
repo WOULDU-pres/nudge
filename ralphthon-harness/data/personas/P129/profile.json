@@ -1,0 +1,102 @@
+{
+  "persona_id": "P129",
+  "archetype_id": "story_driven_dreamer",
+  "archetype_name": "Story Driven Dreamer",
+  "variation_slot": "existing_alternative_user",
+  "summary": "이미 챙겨 먹는 제품이 있지만 더 잘 맞는 생활의 흐름을 찾고 싶은 서사형 구매자. 현재 루틴보다 자신의 하루를 더 부드럽고 납득 가능하게 바꿔줄 장면이 보일 때 전환을 검토하는 existing_alternative_user variation.",
+  "cluster_tags": [
+    "story_driven",
+    "aspirational",
+    "emotionally_imaginative",
+    "existing_alternative_user"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "comparison_ready_user",
+    "life_context": "이미 챙기는 영양 루틴이 있어 새 선택지도 결국 내 하루의 느낌이 더 좋아지는지 비교하는 상황",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "현재 먹는 브랜드와 익숙한 복용 흐름이 있지만, 더 자연스럽고 오래 이어질 루틴이 보이면 갈아탈 의향이 있음",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "narrative",
+      "vision",
+      "emotional_coherence"
+    ],
+    "preferred_message_style": [
+      "storytelling",
+      "evocative",
+      "future_picture"
+    ],
+    "disliked_message_style": [
+      "dry",
+      "soulless",
+      "only_numbers"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "expressive",
+      "warm",
+      "engaging"
+    ],
+    "disliked_voice_style": [
+      "flat",
+      "clinical",
+      "monotone"
+    ],
+    "length_tolerance": "medium_to_long"
+  },
+  "persuasion_triggers": [
+    "transformation_story",
+    "aspirational_future",
+    "emotional_arc"
+  ],
+  "objection_profile": {
+    "primary_type": "emotional_disconnect",
+    "secondary_type": "relevance",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_flat",
+      "no_future_picture",
+      "only_factual_listing"
+    ],
+    "resolution_requirements": [
+      "story_arc",
+      "imaginable_outcome",
+      "emotionally_alive_delivery"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 루틴과 새 선택지를 번갈아 떠올리며, 어느 쪽이 자신의 하루를 더 편안하게 만들지 상상한다",
+    "if_unconvinced": "정보는 충분해도 기존 루틴보다 더 잘 맞는 그림이 안 보여 그대로 유지한다",
+    "if_annoyed": "사람 없는 설명이나 건조한 비교만 이어지면 감정적으로 멀어진다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "narrative_opening",
+      "emotional_arc",
+      "expressive_voice"
+    ],
+    "engagement_penalties": [
+      "flat_listing",
+      "clinical_tone",
+      "no_story"
+    ],
+    "purchase_intent_boosts": [
+      "future_identity_fit",
+      "transformation_picture"
+    ],
+    "purchase_intent_penalties": [
+      "emotionless_delivery",
+      "dry_facts_only"
+    ]
+  }
+}

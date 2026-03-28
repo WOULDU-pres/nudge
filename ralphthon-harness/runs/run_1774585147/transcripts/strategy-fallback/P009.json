@@ -1,0 +1,45 @@
+{
+  "persona_id": "P009",
+  "strategy_id": "strategy-fallback",
+  "cluster_tags": [
+    "budget_sensitive",
+    "roi_driven",
+    "practical",
+    "existing_alternative_user"
+  ],
+  "transcript": [
+    {
+      "role": "agent",
+      "content": "[LLM ERROR] {\"error\": {\"code\": 400, \"message\": \"API key expired. Please renew the API key.\", \"status\": \"INVALID_ARGUMENT\", \"details\": [{\"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\", \"reason\": \"API_KEY_INVA"
+    },
+    {
+      "role": "persona",
+      "content": "[LLM ERROR] {\"error\": {\"code\": 400, \"message\": \"API key expired. Please renew the API key.\", \"status\": \"INVALID_ARGUMENT\", \"details\": [{\"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\", \"reason\": \"API_KEY_INVA"
+    },
+    {
+      "role": "agent",
+      "content": "[LLM ERROR] {\"error\": {\"code\": 400, \"message\": \"API key expired. Please renew the API key.\", \"status\": \"INVALID_ARGUMENT\", \"details\": [{\"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\", \"reason\": \"API_KEY_INVA"
+    },
+    {
+      "role": "persona",
+      "content": "[LLM ERROR] {\"error\": {\"code\": 400, \"message\": \"API key expired. Please renew the API key.\", \"status\": \"INVALID_ARGUMENT\", \"details\": [{\"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\", \"reason\": \"API_KEY_INVA"
+    },
+    {
+      "role": "agent",
+      "content": "[LLM ERROR] {\"error\": {\"code\": 400, \"message\": \"API key expired. Please renew the API key.\", \"status\": \"INVALID_ARGUMENT\", \"details\": [{\"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\", \"reason\": \"API_KEY_INVA"
+    },
+    {
+      "role": "persona",
+      "content": "[LLM ERROR] {\"error\": {\"code\": 400, \"message\": \"API key expired. Please renew the API key.\", \"status\": \"INVALID_ARGUMENT\", \"details\": [{\"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\", \"reason\": \"API_KEY_INVA"
+    }
+  ],
+  "judgment": {
+    "engagement": 0,
+    "relevance": 0,
+    "persuasion": 0,
+    "purchase_intent": 0,
+    "total": 0,
+    "outcome": "error",
+    "reason": "JSON parse failed: [LLM ERROR] {\"error\": {\"code\": 400, \"message\": \"API key expired. Please renew the API key.\", \"status"
+  }
+}

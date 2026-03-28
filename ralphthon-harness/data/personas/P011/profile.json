@@ -1,0 +1,102 @@
+{
+  "persona_id": "P011",
+  "archetype_id": "busy_convenience_seeker",
+  "archetype_name": "Busy Convenience Seeker",
+  "variation_slot": "young_starter",
+  "summary": "강의, 알바, 취업 준비 사이에서 챙김 마찰을 가장 싫어하는 초간편 루틴형. 가방에 넣어도 부담 없고 오늘부터 바로 먹을 그림이 떠올라야 반응하는 young_starter variation.",
+  "cluster_tags": [
+    "time_sensitive",
+    "convenience_first",
+    "fast_filtering",
+    "young_starter"
+  ],
+  "profile": {
+    "age_band": "20s",
+    "occupation": "student_or_first_jobber",
+    "life_context": "강의, 알바, 취업 준비가 겹쳐 식사와 수면이 자주 밀리는 초반 생활",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "가방 속 저가 멀티비타민이나 편의점 음료로 그때그때 버티는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "clarity",
+      "speed",
+      "friction_reduction"
+    ],
+    "preferred_message_style": [
+      "benefit_first",
+      "short",
+      "direct"
+    ],
+    "disliked_message_style": [
+      "long_intro",
+      "rambling",
+      "slow_build_up"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "energetic",
+      "clear",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "slow",
+      "overly_soft",
+      "dragging"
+    ],
+    "length_tolerance": "very_short"
+  },
+  "persuasion_triggers": [
+    "easy_intake",
+    "routine_fit",
+    "simple_next_step"
+  ],
+  "objection_profile": {
+    "primary_type": "timing",
+    "secondary_type": "complexity",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_not_stated_immediately",
+      "requires_multiple_daily_checks",
+      "explanation_takes_too_long_to_get_to_how_to_take_it"
+    ],
+    "resolution_requirements": [
+      "benefit_in_first_few_seconds",
+      "one_clear_intake_path",
+      "backpack_or_desk_fit_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "하루 몇 번인지와 가방에 넣고 다니기 편한지부터 바로 확인한다",
+    "if_unconvinced": "좋아 보여도 못 챙길 것 같다며 나중에 보겠다고 넘긴다",
+    "if_annoyed": "설명이 길거나 빈속·식후 조건이 많아 보이면 초반에 관심을 끊는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "fast_hook",
+      "short_sentences",
+      "clear_cta"
+    ],
+    "engagement_penalties": [
+      "delayed_value",
+      "too_much_context",
+      "complex_setup"
+    ],
+    "purchase_intent_boosts": [
+      "quick_win",
+      "easy_daily_fit"
+    ],
+    "purchase_intent_penalties": [
+      "high_friction",
+      "unclear_intake_start"
+    ]
+  }
+}

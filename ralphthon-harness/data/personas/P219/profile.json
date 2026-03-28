@@ -1,0 +1,102 @@
+{
+  "persona_id": "P219",
+  "archetype_id": "voice_sensitive_listener",
+  "archetype_name": "Voice Sensitive Listener",
+  "variation_slot": "existing_alternative_user",
+  "summary": "비교할 때 내용만큼 전달의 톤과 리듬도 함께 평가하는 청각 중심형 구매자. 이미 챙겨 먹는 기준이 있어도, 새 영양제의 설명이 자연스럽고 믿을 만하게 들릴 때만 전환을 검토하는 existing_alternative_user variation.",
+  "cluster_tags": [
+    "voice_sensitive",
+    "tone_matching",
+    "delivery_critical",
+    "existing_alternative_user"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "comparison_ready_user",
+    "life_context": "이미 챙기는 영양 루틴이 있어 새 선택지도 내용과 말투의 신뢰감을 함께 비교하는 상황",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "기존 브랜드와 복용 루틴을 유지 중이며, 새 제품은 내용과 전달감 모두 자연스러울 때만 검토",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "tone_match",
+      "natural_delivery",
+      "rhythm"
+    ],
+    "preferred_message_style": [
+      "well_delivered",
+      "clear",
+      "emotionally_tuned"
+    ],
+    "disliked_message_style": [
+      "tone_mismatch",
+      "awkward_delivery",
+      "unnatural"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "natural",
+      "emotionally_matched",
+      "steady"
+    ],
+    "disliked_voice_style": [
+      "robotic",
+      "overacted",
+      "off_tone"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "voice_style_match",
+    "natural_rhythm",
+    "credible_emotion"
+  ],
+  "objection_profile": {
+    "primary_type": "voice_mismatch",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "tts_feels_unnatural",
+      "tone_does_not_match_message",
+      "delivery_breaks_immersion"
+    ],
+    "resolution_requirements": [
+      "better_tone_alignment",
+      "natural_pacing",
+      "credible_voice_direction"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 먹는 제품과 비교하면서도 설명하는 말투가 자연스럽고 믿을 만한지 끝까지 확인한다",
+    "if_unconvinced": "내용이 괜찮아도 전달이 부자연스러우면 기존 루틴이 더 안정적으로 느껴진다",
+    "if_annoyed": "말투가 과장되거나 인위적이면 처음부터 방어적으로 변한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "tone_alignment",
+      "natural_pacing",
+      "credible_delivery"
+    ],
+    "engagement_penalties": [
+      "robotic_voice",
+      "overacting",
+      "tone_mismatch"
+    ],
+    "purchase_intent_boosts": [
+      "voice_comfort",
+      "delivery_trust"
+    ],
+    "purchase_intent_penalties": [
+      "delivery_discomfort",
+      "unnatural_tts"
+    ]
+  }
+}

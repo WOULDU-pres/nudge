@@ -1,0 +1,51 @@
+{
+  "persona_id": "P006",
+  "archetype_id": "budget_practical_buyer",
+  "archetype_name": "Budget Practical Buyer",
+  "variation_slot": "manager_influencer",
+  "summary": "본인 몸 관리를 하더라도 비용 대비 이유를 남에게 설명할 수 있어야 움직이는 실용형 구매자. 팀을 이끌고 있어 영양제 선택도 숫자와 납득 가능한 근거를 먼저 보는 manager_influencer variation.",
+  "cluster_tags": ["budget_sensitive", "roi_driven", "practical", "manager_influencer"],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "개인 판단뿐 아니라 팀이나 조직 내 설명 책임이 있음",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "high",
+    "current_alternative": "기존 복용 루틴과 다른 브랜드를 비교만 하며 쉽게 못 바꾸는 중",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": ["numbers", "roi", "concrete_comparison"],
+    "preferred_message_style": ["direct", "efficient", "specific"],
+    "disliked_message_style": ["fluffy", "dramatic", "vague"]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": ["clear", "steady", "direct"],
+    "disliked_voice_style": ["too_playful", "too_hyped", "too_soft"],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": ["price_per_day_value", "ingredient_value", "explainable_value"],
+  "objection_profile": {
+    "primary_type": "price",
+    "secondary_type": "relevance",
+    "intensity": "high",
+    "trigger_conditions": ["price_presented_without_daily_value", "benefits_not_tied_to_daily_workload", "formula_feels_irrelevant"],
+    "resolution_requirements": ["simple_cost_per_day_explanation", "specific_manager_context", "clear_difference_from_current_routine"]
+  },
+  "likely_reaction_style": {
+    "if_interested": "하루 비용과 체감 포인트를 다시 계산하며 남에게도 설명 가능한지 확인한다",
+    "if_unconvinced": "좋아 보여도 왜 이걸 먹는지 한 문장으로 설명이 안 된다고 느낀다",
+    "if_annoyed": "말만 길고 근거가 흐리면 빠르게 대화를 끝내려 한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": ["numbers_early", "clear_roi", "brief_structure"],
+    "engagement_penalties": ["hype_language", "long_intro", "abstract_claims"],
+    "purchase_intent_boosts": ["cost_per_day_proof", "routine_before_after_comparison"],
+    "purchase_intent_penalties": ["unclear_value", "high_price_without_ingredient_context"]
+  }
+}

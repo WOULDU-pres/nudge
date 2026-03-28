@@ -1,0 +1,422 @@
+[
+  {
+    "session_id": "conv-strategy-ROI_SIMPLIFICATION-P001",
+    "strategy_id": "strategy-ROI_SIMPLIFICATION",
+    "persona_id": "P001",
+    "scores": {
+      "engagement": 25,
+      "relevance": 25,
+      "persuasion": 25,
+      "purchase_intent": 24,
+      "total": 99
+    },
+    "outcome": "converted",
+    "reason": "고객이 비용 대비 효과를 납득하고 30일 환불 보장 제안에 동의하며, 구체적인 복용법과 주의사항을 묻는 등 명확한 구매 의사를 보임."
+  },
+  {
+    "session_id": "conv-strategy-ROI_SIMPLIFICATION-P002",
+    "strategy_id": "strategy-ROI_SIMPLIFICATION",
+    "persona_id": "P002",
+    "scores": {
+      "engagement": 25,
+      "relevance": 24,
+      "persuasion": 24,
+      "purchase_intent": 25,
+      "total": 98
+    },
+    "outcome": "converted",
+    "reason": "고객이 '일단 한 번 써보겠습니다'라며 명시적인 구매 의사를 밝히고 최종 결정을 위한 구체적인 수치를 요구함."
+  },
+  {
+    "session_id": "conv-strategy-ROI_SIMPLIFICATION-P003",
+    "strategy_id": "strategy-ROI_SIMPLIFICATION",
+    "persona_id": "P003",
+    "scores": {
+      "engagement": 24,
+      "relevance": 24,
+      "persuasion": 24,
+      "purchase_intent": 24,
+      "total": 96
+    },
+    "outcome": "converted",
+    "reason": "고객이 제품의 가성비와 편의성에 만족하며, 정기 배송 관리 조건만 확인되면 바로 구매하겠다는 명확한 의사를 표현함."
+  },
+  {
+    "session_id": "conv-strategy-ROI_SIMPLIFICATION-P004",
+    "strategy_id": "strategy-ROI_SIMPLIFICATION",
+    "persona_id": "P004",
+    "scores": {
+      "engagement": 25,
+      "relevance": 25,
+      "persuasion": 25,
+      "purchase_intent": 25,
+      "total": 100
+    },
+    "outcome": "converted",
+    "reason": "고객이 제품의 성분과 환불 보장 정책에 만족하여 명시적으로 주문 방법을 문의함"
+  },
+  {
+    "session_id": "conv-strategy-ROI_SIMPLIFICATION-P005",
+    "strategy_id": "strategy-ROI_SIMPLIFICATION",
+    "persona_id": "P005",
+    "scores": {
+      "engagement": 24,
+      "relevance": 24,
+      "persuasion": 24,
+      "purchase_intent": 24,
+      "total": 96
+    },
+    "outcome": "converted",
+    "reason": "고객이 제품의 성분과 환불 보장 조건에 만족하여 4개월분 묶음 구매 혜택을 문의하며 명확한 구매 의사를 밝힘."
+  },
+  {
+    "session_id": "conv-strategy-ROI_SIMPLIFICATION-P006",
+    "strategy_id": "strategy-ROI_SIMPLIFICATION",
+    "persona_id": "P006",
+    "scores": {
+      "engagement": 25,
+      "relevance": 25,
+      "persuasion": 24,
+      "purchase_intent": 24,
+      "total": 98
+    },
+    "outcome": "interested",
+    "reason": "고객의 분석적 성향에 맞춰 수치와 논리적 근거를 제공하고 무리한 대체 대신 합리적 보완을 제안하여 강한 긍정과 구체적인 구매 조건(추가 질문)을 이끌어냄."
+  },
+  {
+    "session_id": "conv-strategy-ROI_SIMPLIFICATION-P007",
+    "strategy_id": "strategy-ROI_SIMPLIFICATION",
+    "persona_id": "P007",
+    "scores": {
+      "engagement": 24,
+      "relevance": 23,
+      "persuasion": 24,
+      "purchase_intent": 25,
+      "total": 96
+    },
+    "outcome": "converted",
+    "reason": "고객이 제품의 함량과 환불 보장 조건에 만족하며 배송 일정을 묻는 등 명확한 구매 의사를 표현함."
+  },
+  {
+    "session_id": "conv-strategy-ROI_SIMPLIFICATION-P008",
+    "strategy_id": "strategy-ROI_SIMPLIFICATION",
+    "persona_id": "P008",
+    "scores": {
+      "engagement": 24,
+      "relevance": 23,
+      "persuasion": 23,
+      "purchase_intent": 21,
+      "total": 91
+    },
+    "outcome": "interested",
+    "reason": "에이전트의 구체적인 수치 제시와 논리적 대응에 설득되어, 최종 비용 및 성분 중복 여부만 확인되면 구매하겠다는 강한 관심을 보임."
+  },
+  {
+    "session_id": "conv-strategy-ROI_SIMPLIFICATION-P009",
+    "strategy_id": "strategy-ROI_SIMPLIFICATION",
+    "persona_id": "P009",
+    "scores": {
+      "engagement": 25,
+      "relevance": 25,
+      "persuasion": 25,
+      "purchase_intent": 23,
+      "total": 98
+    },
+    "outcome": "interested",
+    "reason": "에이전트의 투명하고 논리적인 설명에 고객이 깊이 납득하며, 최종 결정을 위한 구체적인 비용과 성분 수치를 요청함."
+  },
+  {
+    "session_id": "conv-strategy-ROI_SIMPLIFICATION-P010",
+    "strategy_id": "strategy-ROI_SIMPLIFICATION",
+    "persona_id": "P010",
+    "scores": {
+      "engagement": 24,
+      "relevance": 24,
+      "persuasion": 24,
+      "purchase_intent": 24,
+      "total": 96
+    },
+    "outcome": "converted",
+    "reason": "고객이 제품의 가성비와 올인원 편의성에 납득하고, 구매를 전제로 정기 배송 혜택과 알약 크기를 마지막으로 확인하고 있음."
+  },
+  {
+    "session_id": "conv-strategy-EMPATHY_LOSS_AVERSION-P001",
+    "strategy_id": "strategy-EMPATHY_LOSS_AVERSION",
+    "persona_id": "P001",
+    "scores": {
+      "engagement": 24,
+      "relevance": 24,
+      "persuasion": 24,
+      "purchase_intent": 24,
+      "total": 96
+    },
+    "outcome": "converted",
+    "reason": "고객이 비용 대비 효과에 완전히 납득하였으며, 배송 일정과 알약 크기 등 실질적인 구매 조건을 확인하며 강한 구매 의사를 보임."
+  },
+  {
+    "session_id": "conv-strategy-EMPATHY_LOSS_AVERSION-P002",
+    "strategy_id": "strategy-EMPATHY_LOSS_AVERSION",
+    "persona_id": "P002",
+    "scores": {
+      "engagement": 25,
+      "relevance": 25,
+      "persuasion": 25,
+      "purchase_intent": 25,
+      "total": 100
+    },
+    "outcome": "converted",
+    "reason": "고객이 제품의 가치와 환불 보장 조건에 완벽히 설득되어 결제 방법과 배송 일정을 묻고 명확한 구매 의사를 밝힘."
+  },
+  {
+    "session_id": "conv-strategy-EMPATHY_LOSS_AVERSION-P003",
+    "strategy_id": "strategy-EMPATHY_LOSS_AVERSION",
+    "persona_id": "P003",
+    "scores": {
+      "engagement": 25,
+      "relevance": 25,
+      "persuasion": 25,
+      "purchase_intent": 25,
+      "total": 100
+    },
+    "outcome": "converted",
+    "reason": "고객이 제품의 가성비와 간편함에 만족하며 배송 기간을 묻고 즉각적인 구매 의사를 명확히 밝힘."
+  },
+  {
+    "session_id": "conv-strategy-EMPATHY_LOSS_AVERSION-P004",
+    "strategy_id": "strategy-EMPATHY_LOSS_AVERSION",
+    "persona_id": "P004",
+    "scores": {
+      "engagement": 25,
+      "relevance": 25,
+      "persuasion": 24,
+      "purchase_intent": 25,
+      "total": 99
+    },
+    "outcome": "converted",
+    "reason": "고객이 제품의 가성비와 효과에 완벽히 설득되어, 속쓰림 여부만 확인 후 즉시 주문하겠다는 명확한 구매 의사를 밝힘."
+  },
+  {
+    "session_id": "conv-strategy-EMPATHY_LOSS_AVERSION-P005",
+    "strategy_id": "strategy-EMPATHY_LOSS_AVERSION",
+    "persona_id": "P005",
+    "scores": {
+      "engagement": 25,
+      "relevance": 25,
+      "persuasion": 24,
+      "purchase_intent": 24,
+      "total": 98
+    },
+    "outcome": "converted",
+    "reason": "고객이 에이전트의 구체적인 수치와 논리적 설명에 납득하여 명시적으로 구매(테스트) 의향을 밝힘."
+  },
+  {
+    "session_id": "conv-strategy-EMPATHY_LOSS_AVERSION-P006",
+    "strategy_id": "strategy-EMPATHY_LOSS_AVERSION",
+    "persona_id": "P006",
+    "scores": {
+      "engagement": 25,
+      "relevance": 25,
+      "persuasion": 24,
+      "purchase_intent": 24,
+      "total": 98
+    },
+    "outcome": "converted",
+    "reason": "고객이 에이전트의 구체적인 수치와 논리적 설명에 납득하여, 마지막 질문(위장 장애 여부)만 해결되면 바로 주문하겠다는 명확한 구매 의사를 밝힘."
+  },
+  {
+    "session_id": "conv-strategy-EMPATHY_LOSS_AVERSION-P007",
+    "strategy_id": "strategy-EMPATHY_LOSS_AVERSION",
+    "persona_id": "P007",
+    "scores": {
+      "engagement": 24,
+      "relevance": 24,
+      "persuasion": 24,
+      "purchase_intent": 23,
+      "total": 95
+    },
+    "outcome": "interested",
+    "reason": "고객이 비용과 효과에 납득하여 긍정적인 반응을 보이며, 구매를 전제로 구체적인 성분과 복용법을 최종 확인하고 있음."
+  },
+  {
+    "session_id": "conv-strategy-EMPATHY_LOSS_AVERSION-P008",
+    "strategy_id": "strategy-EMPATHY_LOSS_AVERSION",
+    "persona_id": "P008",
+    "scores": {
+      "engagement": 24,
+      "relevance": 22,
+      "persuasion": 23,
+      "purchase_intent": 24,
+      "total": 93
+    },
+    "outcome": "interested",
+    "reason": "고객이 에이전트의 섭취 루틴 제안을 납득했으며, 정확한 성분 함량 수치만 확인되면 구매하겠다는 명확한 조건부 구매 의사를 보임."
+  },
+  {
+    "session_id": "conv-strategy-EMPATHY_LOSS_AVERSION-P009",
+    "strategy_id": "strategy-EMPATHY_LOSS_AVERSION",
+    "persona_id": "P009",
+    "scores": {
+      "engagement": 25,
+      "relevance": 24,
+      "persuasion": 22,
+      "purchase_intent": 23,
+      "total": 94
+    },
+    "outcome": "interested",
+    "reason": "고객이 에이전트의 비교표에 긍정적으로 반응하며, 최종 판단을 위해 구체적인 성분 수치와 상세 링크를 적극적으로 요청하고 있음."
+  },
+  {
+    "session_id": "conv-strategy-EMPATHY_LOSS_AVERSION-P010",
+    "strategy_id": "strategy-EMPATHY_LOSS_AVERSION",
+    "persona_id": "P010",
+    "scores": {
+      "engagement": 24,
+      "relevance": 24,
+      "persuasion": 24,
+      "purchase_intent": 24,
+      "total": 96
+    },
+    "outcome": "converted",
+    "reason": "고객이 제품의 가성비와 간편함에 납득하여 명시적으로 구매 의사를 밝히고 배송 및 환불 절차를 문의함."
+  },
+  {
+    "session_id": "conv-strategy-EXPERT_AUTHORITY-P001",
+    "strategy_id": "strategy-EXPERT_AUTHORITY",
+    "persona_id": "P001",
+    "scores": {
+      "engagement": 24,
+      "relevance": 24,
+      "persuasion": 24,
+      "purchase_intent": 24,
+      "total": 96
+    },
+    "outcome": "converted",
+    "reason": "고객이 제품의 가성비와 효과에 납득하여 할인 혜택과 정기 배송 등 구체적인 구매 조건을 문의하며 명확한 구매 의사를 보임."
+  },
+  {
+    "session_id": "conv-strategy-EXPERT_AUTHORITY-P002",
+    "strategy_id": "strategy-EXPERT_AUTHORITY",
+    "persona_id": "P002",
+    "scores": {
+      "engagement": 25,
+      "relevance": 25,
+      "persuasion": 25,
+      "purchase_intent": 25,
+      "total": 100
+    },
+    "outcome": "converted",
+    "reason": "고객이 제품의 경제성과 환불 보장 제도에 완벽히 설득되어 명시적으로 구매 링크를 요청함."
+  },
+  {
+    "session_id": "conv-strategy-EXPERT_AUTHORITY-P003",
+    "strategy_id": "strategy-EXPERT_AUTHORITY",
+    "persona_id": "P003",
+    "scores": {
+      "engagement": 25,
+      "relevance": 25,
+      "persuasion": 25,
+      "purchase_intent": 25,
+      "total": 100
+    },
+    "outcome": "converted",
+    "reason": "고객이 제품의 가성비와 간편함에 만족하여 명시적으로 구매 의사를 밝히고 결제 링크를 요청함."
+  },
+  {
+    "session_id": "conv-strategy-EXPERT_AUTHORITY-P004",
+    "strategy_id": "strategy-EXPERT_AUTHORITY",
+    "persona_id": "P004",
+    "scores": {
+      "engagement": 25,
+      "relevance": 25,
+      "persuasion": 25,
+      "purchase_intent": 25,
+      "total": 100
+    },
+    "outcome": "converted",
+    "reason": "고객이 제품의 가성비와 고함량 성분에 만족하여 명시적으로 결제 방법을 문의하며 구매를 확정함."
+  },
+  {
+    "session_id": "conv-strategy-EXPERT_AUTHORITY-P005",
+    "strategy_id": "strategy-EXPERT_AUTHORITY",
+    "persona_id": "P005",
+    "scores": {
+      "engagement": 25,
+      "relevance": 25,
+      "persuasion": 24,
+      "purchase_intent": 24,
+      "total": 98
+    },
+    "outcome": "interested",
+    "reason": "고객이 요구한 구체적인 수치와 가성비 기준을 에이전트가 정확히 충족시켜, 고객이 스펙에 만족하고 추가 할인 옵션을 문의하며 강한 구매 의향을 보임."
+  },
+  {
+    "session_id": "conv-strategy-EXPERT_AUTHORITY-P006",
+    "strategy_id": "strategy-EXPERT_AUTHORITY",
+    "persona_id": "P006",
+    "scores": {
+      "engagement": 25,
+      "relevance": 23,
+      "persuasion": 24,
+      "purchase_intent": 25,
+      "total": 97
+    },
+    "outcome": "converted",
+    "reason": "고객이 에이전트가 제시한 구체적인 수치와 근거에 만족하며 명시적으로 구매 링크를 요청함."
+  },
+  {
+    "session_id": "conv-strategy-EXPERT_AUTHORITY-P007",
+    "strategy_id": "strategy-EXPERT_AUTHORITY",
+    "persona_id": "P007",
+    "scores": {
+      "engagement": 24,
+      "relevance": 24,
+      "persuasion": 22,
+      "purchase_intent": 24,
+      "total": 94
+    },
+    "outcome": "converted",
+    "reason": "고객이 가격과 섭취 편의성에 납득했으며, 함량 조건만 충족되면 즉시 구매(갈아탈 의향)하겠다는 명확한 의사를 표현함."
+  },
+  {
+    "session_id": "conv-strategy-EXPERT_AUTHORITY-P008",
+    "strategy_id": "strategy-EXPERT_AUTHORITY",
+    "persona_id": "P008",
+    "scores": {
+      "engagement": 25,
+      "relevance": 24,
+      "persuasion": 24,
+      "purchase_intent": 22,
+      "total": 95
+    },
+    "outcome": "interested",
+    "reason": "고객이 가격과 성분 함량에 긍정적인 반응을 보이며, 최종 구매 결정을 위해 현재 복용 중인 제품의 성분을 공유하고 구체적인 비교 분석을 요청함."
+  },
+  {
+    "session_id": "conv-strategy-EXPERT_AUTHORITY-P009",
+    "strategy_id": "strategy-EXPERT_AUTHORITY",
+    "persona_id": "P009",
+    "scores": {
+      "engagement": 24,
+      "relevance": 24,
+      "persuasion": 24,
+      "purchase_intent": 20,
+      "total": 92
+    },
+    "outcome": "interested",
+    "reason": "고객이 세일즈의 맞춤형 비교 분석에 수긍하며, 추가 성분(지아잔틴 등) 확인 후 기존 루틴을 대체할 의향을 긍정적으로 내비침."
+  },
+  {
+    "session_id": "conv-strategy-EXPERT_AUTHORITY-P010",
+    "strategy_id": "strategy-EXPERT_AUTHORITY",
+    "persona_id": "P010",
+    "scores": {
+      "engagement": 24,
+      "relevance": 24,
+      "persuasion": 24,
+      "purchase_intent": 23,
+      "total": 95
+    },
+    "outcome": "interested",
+    "reason": "고객이 제품의 가성비와 편의성에 만족하며, 유통기한 등 구매를 전제로 한 구체적인 질문을 통해 높은 구매 의향을 보임."
+  }
+]

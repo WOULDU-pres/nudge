@@ -1,0 +1,102 @@
+{
+  "persona_id": "P179",
+  "archetype_id": "deal_hunter",
+  "archetype_name": "Deal Hunter",
+  "variation_slot": "existing_alternative_user",
+  "summary": "이미 챙겨 먹는 제품이 있어도 조건이 더 좋으면 갈아탈 준비가 되어 있는 딜 민감형 구매자. 현재 루틴 대비 실제 절약 폭과 전환 부담을 계산해 움직이는 existing_alternative_user variation.",
+  "cluster_tags": [
+    "deal_sensitive",
+    "offer_driven",
+    "value_hunter",
+    "existing_alternative_user"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "comparison_ready_user",
+    "life_context": "이미 챙겨 먹는 영양 루틴이 있어 새 조건을 현재 제품과 직접 비교하는 상황",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "high",
+    "current_alternative": "기존 브랜드와 수동 복용 루틴을 유지 중이며, 새 제품은 비용 절감과 복용 편의가 동시에 나아질 때만 검토",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "concrete_offer",
+      "clear_savings",
+      "deal_clarity"
+    ],
+    "preferred_message_style": [
+      "clear_offer",
+      "specific",
+      "benefit_explicit"
+    ],
+    "disliked_message_style": [
+      "vague_urgency",
+      "hidden_terms",
+      "fuzzy_benefits"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "energetic",
+      "clear",
+      "sharp"
+    ],
+    "disliked_voice_style": [
+      "mushy",
+      "unclear",
+      "dragging"
+    ],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": [
+    "discount",
+    "limited_bonus",
+    "clear_savings"
+  ],
+  "objection_profile": {
+    "primary_type": "offer_unclear",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "deal_is_vague",
+      "urgency_without_benefit",
+      "terms_are_unclear"
+    ],
+    "resolution_requirements": [
+      "specific_offer",
+      "transparent_terms",
+      "visible_savings"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 먹는 제품과 가격, 분량, 복용 편의까지 놓고 실제 절약 폭을 계산한다",
+    "if_unconvinced": "혜택이 있어도 전환 메리트가 약하면 익숙한 제품이 낫다고 판단한다",
+    "if_annoyed": "조건을 숨기거나 급하게 재촉하면 낚시성 제안으로 보고 바로 신뢰를 거둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_offer",
+      "visible_discount",
+      "specific_bonus"
+    ],
+    "engagement_penalties": [
+      "vague_urgency",
+      "unclear_terms",
+      "hidden_costs"
+    ],
+    "purchase_intent_boosts": [
+      "immediate_savings",
+      "transparent_value"
+    ],
+    "purchase_intent_penalties": [
+      "weak_offer",
+      "bait_like_message"
+    ]
+  }
+}

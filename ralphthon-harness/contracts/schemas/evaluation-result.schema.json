@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evaluation-result.schema.json",
+  "title": "EvaluationResult",
+  "description": "E(Evaluate) 단계에서 Judge가 산출하는 평가 결과",
+  "type": "object",
+  "required": [
+    "session_id",
+    "strategy_id",
+    "persona_id",
+    "scores",
+    "outcome",
+    "reason"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "session_id": {
+      "type": "string"
+    },
+    "strategy_id": {
+      "type": "string"
+    },
+    "persona_id": {
+      "type": "string"
+    },
+    "scores": {
+      "type": "object",
+      "required": [
+        "engagement",
+        "relevance",
+        "persuasion",
+        "purchase_intent",
+        "total"
+      ],
+      "properties": {
+        "engagement": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 25,
+          "description": "참여도"
+        },
+        "relevance": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 25,
+          "description": "적합성"
+        },
+        "persuasion": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 25,
+          "description": "설득력"
+        },
+        "purchase_intent": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 25,
+          "description": "구매의향"
+        },
+        "total": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "합계"
+        }
+      }
+    },
+    "outcome": {
+      "type": "string",
+      "enum": [
+        "converted",
+        "interested",
+        "neutral",
+        "resistant",
+        "lost",
+        "error"
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "description": "판정 근거 (한 줄)"
+    }
+  }
+}

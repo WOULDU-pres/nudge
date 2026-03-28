@@ -1,0 +1,102 @@
+{
+  "persona_id": "P146",
+  "archetype_id": "family_benefit_prioritizer",
+  "archetype_name": "Family Benefit Prioritizer",
+  "variation_slot": "manager_influencer",
+  "summary": "나 혼자보다 집안 전체의 리듬이 덜 흔들리는지를 먼저 보는 가족 중심형 관리자. 내 컨디션 관리가 결국 저녁 식탁 분위기와 아침 준비의 여유로 이어지는지 따지는 manager_influencer variation.",
+  "cluster_tags": [
+    "family_first",
+    "shared_benefit",
+    "care_driven",
+    "manager_influencer"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "직장 책임과 집안 돌봄을 함께 안고 있어 내 컨디션이 가족 리듬에도 영향을 주는 관리자",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "기본 영양제를 챙기며 가족에게도 설명하기 쉬운 더 안정적인 선택지를 찾는 중",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "family_relevance",
+      "safety",
+      "practical_care"
+    ],
+    "preferred_message_style": [
+      "caring",
+      "relevant",
+      "down_to_earth"
+    ],
+    "disliked_message_style": [
+      "selfish_framing",
+      "flashy",
+      "detached"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "steady",
+      "caring"
+    ],
+    "disliked_voice_style": [
+      "cold",
+      "self_centered",
+      "abrasive"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "family_benefit",
+    "daily_life_improvement",
+    "safety_support"
+  ],
+  "objection_profile": {
+    "primary_type": "relevance",
+    "secondary_type": "budget",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_is_too_self_focused",
+      "family_value_is_unclear",
+      "cost_feels_hard_to_justify"
+    ],
+    "resolution_requirements": [
+      "shared_benefit_example",
+      "family_context_framing",
+      "practical_justification"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "내가 덜 무너지면 집안이 어떻게 편해질지까지 함께 따져본다",
+    "if_unconvinced": "개인 만족은 보여도 우리 집 기준의 의미가 약하다고 느낀다",
+    "if_annoyed": "현실감 없는 자기만족형 메시지면 바로 멀어진다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "family_context",
+      "care_benefit",
+      "real_life_use"
+    ],
+    "engagement_penalties": [
+      "self_indulgent_framing",
+      "detached_pitch",
+      "unjustified_cost"
+    ],
+    "purchase_intent_boosts": [
+      "shared_value",
+      "practical_daily_gain"
+    ],
+    "purchase_intent_penalties": [
+      "irrelevant_benefit",
+      "family_disconnect"
+    ]
+  }
+}

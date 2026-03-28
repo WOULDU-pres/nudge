@@ -1,0 +1,102 @@
+{
+  "persona_id": "P130",
+  "archetype_id": "story_driven_dreamer",
+  "archetype_name": "Story Driven Dreamer",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "숫자보다 하루의 표정이 어떻게 달라질지 상상될 때 마음이 움직이는 서사형 구매자. 중장년 시기의 익숙한 리듬 속에서 무리 없는 변화 장면을 그리고 싶은 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "story_driven",
+    "aspirational",
+    "emotionally_imaginative",
+    "mature_later_life_buyer"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "속도를 내기보다 몸과 생활이 덜 거칠어지는 장면이 자연스럽게 그려질 때 새 선택을 받아들임",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium",
+    "current_alternative": "식사 후 챙기는 기본 영양제와 지인 추천 제품을 번갈아 먹으며 익숙한 방식을 유지 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "narrative",
+      "lived_imagery",
+      "emotional_coherence"
+    ],
+    "preferred_message_style": [
+      "storytelling",
+      "warm",
+      "future_picture"
+    ],
+    "disliked_message_style": [
+      "dry",
+      "soulless",
+      "only_numbers"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "expressive",
+      "warm",
+      "engaging"
+    ],
+    "disliked_voice_style": [
+      "flat",
+      "clinical",
+      "monotone"
+    ],
+    "length_tolerance": "medium_to_long"
+  },
+  "persuasion_triggers": [
+    "gentle_day_scene",
+    "aspirational_future",
+    "emotional_arc"
+  ],
+  "objection_profile": {
+    "primary_type": "emotional_disconnect",
+    "secondary_type": "relevance",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_flat",
+      "no_life_scene",
+      "only_factual_listing"
+    ],
+    "resolution_requirements": [
+      "story_arc",
+      "imaginable_day_change",
+      "warm_delivery"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "복용 뒤 하루가 조금 덜 지치게 흘러가는 장면을 스스로 그려본다",
+    "if_unconvinced": "정보는 알겠지만 자기 생활에 들어오는 그림이 없다고 느낀다",
+    "if_annoyed": "사람 없이 성분표만 남는 설명에 금세 마음을 뗀다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "narrative_opening",
+      "day_scene",
+      "expressive_voice"
+    ],
+    "engagement_penalties": [
+      "flat_listing",
+      "clinical_tone",
+      "no_story"
+    ],
+    "purchase_intent_boosts": [
+      "future_identity_fit",
+      "gentle_transformation_picture"
+    ],
+    "purchase_intent_penalties": [
+      "emotionless_delivery",
+      "dry_facts_only"
+    ]
+  }
+}

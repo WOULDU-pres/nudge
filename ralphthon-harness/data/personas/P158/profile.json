@@ -1,0 +1,101 @@
+{
+  "persona_id": "P158",
+  "archetype_id": "career_efficiency_optimizer",
+  "archetype_name": "Career Efficiency Optimizer",
+  "variation_slot": "low_urgency",
+  "summary": "업무 흐름을 깨지 않으면서 집중력과 피로 관리에 보탬이 되는지를 따지는 효율형 구매자. 당장 절박하진 않지만, 새 영양 루틴이 실제 근무 시간대와 맞물려 효율을 높여준다고 느낄 때 반응하는 low_urgency variation.",
+  "cluster_tags": [
+    "focus_support",
+    "career_focused",
+    "efficiency_seeking"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "현재 루틴은 유지하지만 업무 집중 흐름을 더 깔끔하게 만들 선택지에는 관심이 있는 상황",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "기존 영양 루틴과 생활 패턴에 큰 불만은 없지만, 업무 피로 관리에 더 맞는 선택이 있으면 조용히 검토",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "performance_gain",
+      "workflow_fit",
+      "professional_value"
+    ],
+    "preferred_message_style": [
+      "efficient",
+      "outcome_driven",
+      "work_relevant"
+    ],
+    "disliked_message_style": [
+      "vague_inspiration",
+      "off_topic_emotion",
+      "fluff"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "confident",
+      "clear",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "rambling",
+      "too_soft",
+      "casual"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "energy_support",
+    "focus_support",
+    "fatigue_recovery"
+  ],
+  "objection_profile": {
+    "primary_type": "relevance",
+    "secondary_type": "inertia",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "workfit_is_unclear",
+      "benefit_does_not_map_to_workday",
+      "switch_cost_feels_unjustified"
+    ],
+    "resolution_requirements": [
+      "workday_specific_example",
+      "performance_gain",
+      "clear_use_case"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오전 집중이나 오후 피로 같은 실제 업무 시간대에 어떻게 연결되는지 확인한다",
+    "if_unconvinced": "좋아 보여도 일하는 하루에 체감될 포인트가 약하다며 미룬다",
+    "if_annoyed": "일과 무관한 감성 설명이 길어지면 바로 흥미를 잃는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "workflow_fit",
+      "time_saved",
+      "professional_relevance"
+    ],
+    "engagement_penalties": [
+      "abstract_emotion",
+      "non_work_examples",
+      "unclear_gain"
+    ],
+    "purchase_intent_boosts": [
+      "workday_energy_gain",
+      "clear_focus_gain"
+    ],
+    "purchase_intent_penalties": [
+      "work_irrelevance",
+      "effort_gt_reward"
+    ]
+  }
+}

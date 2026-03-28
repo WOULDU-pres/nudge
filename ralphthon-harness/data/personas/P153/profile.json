@@ -1,0 +1,102 @@
+{
+  "persona_id": "P153",
+  "archetype_id": "career_efficiency_optimizer",
+  "archetype_name": "Career Efficiency Optimizer",
+  "variation_slot": "busy_parent",
+  "summary": "회의 집중력과 퇴근 전 체력 저하를 동시에 관리하고 싶어 하는 효율형 구매자. 아이 등원, 업무 몰입, 하원 시간까지 이어지는 빽빽한 일정 속에서 한 번에 붙는 보충 루틴을 찾는 busy_parent variation.",
+  "cluster_tags": [
+    "focus_support",
+    "career_focused",
+    "efficiency_seeking",
+    "busy_parent"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "working_parent",
+    "life_context": "가정과 일을 병행하며 여유 시간이 부족함",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium",
+    "current_alternative": "커피와 기본 영양제로 버티지만 퇴근 전 집중력 저하가 남아 있어 더 단순한 루틴을 찾는 중",
+    "buyer_role": "shared_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "performance_gain",
+      "workflow_fit",
+      "professional_value"
+    ],
+    "preferred_message_style": [
+      "efficient",
+      "outcome_driven",
+      "work_relevant"
+    ],
+    "disliked_message_style": [
+      "vague_inspiration",
+      "off_topic_emotion",
+      "fluff"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "confident",
+      "clear",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "rambling",
+      "too_soft",
+      "casual"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "energy_support",
+    "focus_support",
+    "fatigue_recovery"
+  ],
+  "objection_profile": {
+    "primary_type": "relevance",
+    "secondary_type": "inertia",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "workfit_is_unclear",
+      "benefit_does_not_map_to_workday",
+      "switch_cost_feels_unjustified"
+    ],
+    "resolution_requirements": [
+      "workday_specific_example",
+      "performance_gain",
+      "clear_use_case"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "아침 회의와 퇴근 전 시간대에 어떻게 도움이 되는지 바로 대입해본다",
+    "if_unconvinced": "몸에는 좋아 보여도 실무 집중에는 직접 연결되지 않는다고 느낀다",
+    "if_annoyed": "일과 무관한 감성 설명만 길어지면 빠르게 흥미를 잃는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "workflow_fit",
+      "time_saved",
+      "professional_relevance"
+    ],
+    "engagement_penalties": [
+      "abstract_emotion",
+      "non_work_examples",
+      "unclear_gain"
+    ],
+    "purchase_intent_boosts": [
+      "workday_energy_gain",
+      "clear_focus_gain"
+    ],
+    "purchase_intent_penalties": [
+      "work_irrelevance",
+      "effort_gt_reward"
+    ]
+  }
+}

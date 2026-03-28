@@ -1,0 +1,102 @@
+{
+  "persona_id": "P125",
+  "archetype_id": "story_driven_dreamer",
+  "archetype_name": "Story Driven Dreamer",
+  "variation_slot": "office_professional",
+  "summary": "회의와 보고가 이어지는 사무직 루틴에서 오후 처짐과 퇴근 후 방전감을 특히 싫어하는 서사형 구매자. 보충제가 업무 시간 집중 유지, 점심 이후 컨디션, 저녁까지 남는 여유에 어떤 차이를 만드는지 일상 장면으로 상상될 때 반응하는 office_professional variation.",
+  "cluster_tags": [
+    "story_driven",
+    "deskbound_fatigue",
+    "afternoon_slump",
+    "office_professional"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "office_professional",
+    "life_context": "메신저, 회의, 문서 작업이 반복되는 책상 중심 업무 속에서 점심 이후 집중 저하와 퇴근 후 방전감을 관리하고 싶은 일반 직장 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium_to_high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "회사 서랍에 둔 종합비타민이나 커피로 버티지만 오후 회의 집중력과 퇴근 후 여유는 여전히 아쉽다고 느낌",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "narrative",
+      "routine_fit",
+      "reasonably_explained_ingredients"
+    ],
+    "preferred_message_style": [
+      "storytelling",
+      "workday_scene",
+      "calm_specificity"
+    ],
+    "disliked_message_style": [
+      "dry_spec_sheet",
+      "hypey_energy_claims",
+      "empty_selfcare_copy"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "clear",
+      "composed"
+    ],
+    "disliked_voice_style": [
+      "flat",
+      "clinical",
+      "pushy"
+    ],
+    "length_tolerance": "medium_to_long"
+  },
+  "persuasion_triggers": [
+    "afternoon_meeting_scene",
+    "simple_desk_drawer_routine",
+    "not_overstimulating_positioning"
+  ],
+  "objection_profile": {
+    "primary_type": "relevance",
+    "secondary_type": "credibility",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "no_clear_workday_use_case",
+      "feels_like_generic_energy_pitch",
+      "ingredient_story_not_grounded"
+    ],
+    "resolution_requirements": [
+      "specific_office_day_examples",
+      "credible_non_extreme_claims",
+      "easy_daily_use_explanation"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "점심 이후 회의가 많은 날이나 보고 마감 있는 날에 어떻게 챙기면 좋을지 자기 일정에 맞춰 상상해본다",
+    "if_unconvinced": "좋은 말 같지만 결국 커피와 무슨 차이가 있는지 선명하지 않다고 느낀다",
+    "if_annoyed": "직장인의 현실 피로를 모른 채 과장된 에너지 서사만 나오면 집중을 끊는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "office_day_scene",
+      "gentle_but_specific_tone",
+      "ingredient_purpose_explained"
+    ],
+    "engagement_penalties": [
+      "generic_motivation_copy",
+      "jittery_energy_framing",
+      "no_dosage_context"
+    ],
+    "purchase_intent_boosts": [
+      "afternoon_focus_support",
+      "after_work_energy_preservation"
+    ],
+    "purchase_intent_penalties": [
+      "big_promises_without_routine_fit",
+      "unclear_value_vs_coffee"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "persona_id": "P089",
+  "archetype_id": "trend_sensitive_early_adopter",
+  "archetype_name": "Trend Sensitive Early Adopter",
+  "variation_slot": "existing_alternative_user",
+  "summary": "이미 여러 제품을 챙겨 먹으며 새 조합을 비교하는 선도형 구매자. 유행어보다 현재 루틴 대비 확실한 차별점과 시도해볼 만한 전환 가치가 보여야 움직이는 existing_alternative_user variation.",
+  "cluster_tags": [
+    "trend_sensitive",
+    "novelty_seeking",
+    "early_adopter",
+    "existing_alternative_user"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "comparison_ready_user",
+    "life_context": "이미 챙기는 영양 루틴이 있어 새 포뮬러를 볼 때도 전환 가치와 차별점을 꼼꼼히 따지는 상황",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "기존에 챙기는 제품 조합이 있어 새 제품은 성분 차이, 제형 편의, 루틴 단순화 가능성까지 함께 비교함",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "novelty",
+      "differentiation",
+      "future_signal"
+    ],
+    "preferred_message_style": [
+      "fresh",
+      "distinctive",
+      "forward_looking"
+    ],
+    "disliked_message_style": [
+      "boring",
+      "generic",
+      "old_fashioned"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "energetic",
+      "fresh",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "flat",
+      "dated",
+      "too_stiff"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "new_formula",
+    "trend_signal",
+    "first_mover_advantage"
+  ],
+  "objection_profile": {
+    "primary_type": "novelty_mismatch",
+    "secondary_type": "relevance",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_generic",
+      "no_distinctive_angle",
+      "sounds_outdated"
+    ],
+    "resolution_requirements": [
+      "fresh_positioning",
+      "clear_whats_new",
+      "future_facing_benefit"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 먹는 조합과 비교해 무엇을 빼고 넣을지 바로 시뮬레이션하며 차별점을 더 캐묻는다",
+    "if_unconvinced": "이름만 새롭고 실제 루틴 변화는 크지 않다며 기존 제품을 유지한다",
+    "if_annoyed": "유행만 앞세우고 설명이 낡아 보이면 바로 시선을 거둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "novel_angle",
+      "distinctiveness",
+      "energetic_freshness"
+    ],
+    "engagement_penalties": [
+      "generic_copy",
+      "dated_language",
+      "me_too_message"
+    ],
+    "purchase_intent_boosts": [
+      "first_mover_value",
+      "uniqueness"
+    ],
+    "purchase_intent_penalties": [
+      "boring_positioning",
+      "no_clear_delta"
+    ]
+  }
+}

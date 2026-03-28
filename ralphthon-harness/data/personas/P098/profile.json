@@ -1,0 +1,102 @@
+{
+  "persona_id": "P098",
+  "archetype_id": "inertia_bound_traditionalist",
+  "archetype_name": "Inertia Bound Traditionalist",
+  "variation_slot": "low_urgency",
+  "summary": "지금 먹는 기본 영양제에 큰 불만이 없어 새 제안을 보더라도 '나중에 생각해볼게요'로 미루기 쉬운 안정 루틴형 구매자. 관심은 있지만 문제 의식이 약해, 새 제품도 부담 없이 바꿀 이유가 아주 선명할 때만 움직이는 low_urgency variation.",
+  "cluster_tags": [
+    "inertia",
+    "status_quo_bias",
+    "change_resistant",
+    "low_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "현재 멀티비타민이나 기본 루틴이 큰 문제 없이 굴러가고 있다고 느껴서 영양제 변경을 늘 우선순위 뒤로 미루는 편",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "현재 먹는 기본 영양제와 식사·수면 중심의 생활 루틴에 큰 불만 없이 유지 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "familiarity",
+      "continuity",
+      "low_disruption"
+    ],
+    "preferred_message_style": [
+      "steady",
+      "non_disruptive",
+      "practical"
+    ],
+    "disliked_message_style": [
+      "dramatic_change",
+      "radical_shift",
+      "too_new"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "familiar",
+      "measured"
+    ],
+    "disliked_voice_style": [
+      "pushy",
+      "hyper",
+      "urgent"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "easy_transition",
+    "minimal_change",
+    "familiar_routine"
+  ],
+  "objection_profile": {
+    "primary_type": "inertia",
+    "secondary_type": "complexity",
+    "intensity": "high",
+    "trigger_conditions": [
+      "change_cost_seems_high",
+      "switching_routine_is_unclear",
+      "new_routine_feels_disruptive"
+    ],
+    "resolution_requirements": [
+      "low_transition_cost",
+      "familiarity_bridge",
+      "simple_switching_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "지금 먹는 시간대와 거의 같게 유지되는지, 바꿨을 때 실제로 무엇이 더 편해지는지부터 확인한다",
+    "if_unconvinced": "현재도 큰 문제 없으니 굳이 지금 당장 바꿀 필요는 없다고 여긴다",
+    "if_annoyed": "급하게 결정하라고 하거나 필요성을 과장하면 바로 뒷전으로 미뤄버린다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "continuity_framing",
+      "simple_transition",
+      "low_disruption"
+    ],
+    "engagement_penalties": [
+      "radical_change",
+      "many_new_steps",
+      "forced_switching"
+    ],
+    "purchase_intent_boosts": [
+      "easy_migration",
+      "familiarity"
+    ],
+    "purchase_intent_penalties": [
+      "switching_cost",
+      "routine_disruption"
+    ]
+  }
+}

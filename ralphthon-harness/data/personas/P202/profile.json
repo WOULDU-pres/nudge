@@ -1,0 +1,102 @@
+{
+  "persona_id": "P202",
+  "archetype_id": "low_attention_skimmer",
+  "archetype_name": "Low Attention Skimmer",
+  "variation_slot": "early_career_worker",
+  "summary": "첫 줄에서 오후 집중이 흐려지는 초반 직장인에게 왜 맞는지 바로 보여야 읽는 저주의력형 구매자. 회의와 보고 사이에 긴 설명보다 지금 생활에 붙는 핵심만 빠르게 고르는 early_career_worker variation.",
+  "cluster_tags": [
+    "low_attention",
+    "early_career",
+    "office_slump",
+    "tight_summary"
+  ],
+  "profile": {
+    "age_band": "20s-30s early",
+    "occupation": "early_career_worker",
+    "life_context": "회의와 보고가 이어져 긴 설명보다 지금 생활에 붙는 핵심만 빠르게 확인하려는 커리어 초반",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "물 많이 마시기와 커피 줄이기로 버티며, 집에 있는 기본 영양제만 가끔 챙기는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "immediate_usefulness",
+      "clarity",
+      "efficiency"
+    ],
+    "preferred_message_style": [
+      "concise",
+      "outcome_first",
+      "structured"
+    ],
+    "disliked_message_style": [
+      "scene_setting",
+      "fluffy",
+      "slow_warmup"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clean",
+      "crisp",
+      "steady"
+    ],
+    "disliked_voice_style": [
+      "wandering",
+      "sing_songy",
+      "overbright"
+    ],
+    "length_tolerance": "very_short"
+  },
+  "persuasion_triggers": [
+    "first_line_relevance",
+    "office_timing",
+    "simple_benefit"
+  ],
+  "objection_profile": {
+    "primary_type": "attention",
+    "secondary_type": "time_pressure",
+    "intensity": "high",
+    "trigger_conditions": [
+      "buried_key_point",
+      "jargon",
+      "unclear_timing"
+    ],
+    "resolution_requirements": [
+      "role_specific_opening",
+      "one_benefit_one_timing",
+      "tight_summary"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "점심 뒤인지 퇴근 전인지 한 타이밍이 바로 보이면 더 읽는다",
+    "if_unconvinced": "업무 많은 날에 왜 필요한지가 안 잡히면 스킵한다",
+    "if_annoyed": "핵심 없이 서론만 길면 바로 다른 정보로 넘어간다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "first_line_relevance",
+      "concise",
+      "immediate_usefulness"
+    ],
+    "engagement_penalties": [
+      "scene_setting",
+      "buried_key_point",
+      "wandering"
+    ],
+    "purchase_intent_boosts": [
+      "role_specific_opening",
+      "one_benefit_one_timing"
+    ],
+    "purchase_intent_penalties": [
+      "jargon",
+      "unclear_timing"
+    ]
+  }
+}

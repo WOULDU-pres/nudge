@@ -1,0 +1,102 @@
+{
+  "persona_id": "P028",
+  "archetype_id": "skeptical_comparison_buyer",
+  "archetype_name": "Skeptical Comparison Buyer",
+  "variation_slot": "low_urgency",
+  "summary": "굳이 바꾸지 않아도 되는 안정 루틴 위에서 차이를 신중히 보는 보수적 비교형. 중복 없이 더해지는 가치가 선명할 때만 검토하는 low_urgency variation.",
+  "cluster_tags": [
+    "skeptical",
+    "comparison_driven",
+    "evidence_seeking",
+    "low_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "지금 방식에 큰 불만이 없어 바꿀 이유를 꼼꼼히 따지는 안정 단계",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "현재 먹는 제품과 식사 루틴에 큰 불만 없이 그대로 유지 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "evidence",
+      "benchmark",
+      "specificity"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "clear",
+      "non_exaggerated"
+    ],
+    "disliked_message_style": [
+      "marketing_speak",
+      "empty_confidence",
+      "fake_urgency"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "professional",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "too_excited",
+      "too_casual",
+      "performative"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "ingredient_comparison",
+    "clear_differentiation",
+    "specific_body_example"
+  ],
+  "objection_profile": {
+    "primary_type": "trust",
+    "secondary_type": "inertia",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_lack_evidence",
+      "incremental_value_over_current_routine_is_unclear",
+      "voice_sounds_overly_sales_driven"
+    ],
+    "resolution_requirements": [
+      "comparison_table",
+      "realistic_claims",
+      "clear_overlap_and_add_on_explanation"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 제품과 겹치지 않으면서 무엇이 더해지는지 천천히 따져본다",
+    "if_unconvinced": "굳이 바꿀 이유가 약하다며 기존 루틴을 그대로 유지한다",
+    "if_annoyed": "불안을 자극하거나 변화를 강하게 압박하면 바로 닫힌다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "comparison_framing",
+      "evidence",
+      "precise_language"
+    ],
+    "engagement_penalties": [
+      "hype_language",
+      "vague_superiority",
+      "aggressive_urgency"
+    ],
+    "purchase_intent_boosts": [
+      "clear_differentiation",
+      "credible_evidence"
+    ],
+    "purchase_intent_penalties": [
+      "lack_of_evidence",
+      "me_too_positioning"
+    ]
+  }
+}

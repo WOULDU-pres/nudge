@@ -1,0 +1,102 @@
+{
+  "persona_id": "P133",
+  "archetype_id": "data_rational_analyst",
+  "archetype_name": "Data Rational Analyst",
+  "variation_slot": "busy_parent",
+  "summary": "등원과 출근 사이의 빈틈 없는 일정 속에서 복용 효율을 냉정하게 따지는 분석형 구매자. 부모 역할과 업무를 동시에 굴리는 현실성으로 판단하는 busy_parent variation.",
+  "cluster_tags": [
+    "data_driven",
+    "rational",
+    "logic_first",
+    "busy_parent"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "working_parent",
+    "life_context": "아침 등원과 업무를 동시에 챙겨야 해서 복용이 한 번만 꼬여도 바로 탈락시키는 생활 단계",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium",
+    "current_alternative": "식사 후 기본 영양제 한두 개만 챙기거나 커피로 버티며 복잡한 루틴은 피함",
+    "buyer_role": "shared_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "numbers",
+      "logic",
+      "family_schedule_fit"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "precise",
+      "evidence_backed"
+    ],
+    "disliked_message_style": [
+      "handwavy",
+      "emotional_only",
+      "ambiguous"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "measured",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "too_emotional",
+      "chaotic",
+      "vague"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "measurable_gain",
+    "logical_structure",
+    "single_routine_fit"
+  ],
+  "objection_profile": {
+    "primary_type": "logic_gap",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_are_unstructured",
+      "numbers_are_missing",
+      "family_schedule_fit_is_unclear"
+    ],
+    "resolution_requirements": [
+      "structured_reasoning",
+      "evidence",
+      "busy_morning_example"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "등원 준비와 출근 사이 어느 순간에 넣을지 바로 계산한다",
+    "if_unconvinced": "좋아 보여도 집안 일정 안에서는 실익이 약하다고 본다",
+    "if_annoyed": "감성만 강한 설명을 현실 감각 없는 말로 받아들인다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_logic",
+      "quantification",
+      "busy_parent_fit"
+    ],
+    "engagement_penalties": [
+      "ambiguity",
+      "emotion_only_pitch",
+      "logic_jump"
+    ],
+    "purchase_intent_boosts": [
+      "measurable_outcome",
+      "single_step_routine"
+    ],
+    "purchase_intent_penalties": [
+      "unproven_claims",
+      "too_many_steps"
+    ]
+  }
+}

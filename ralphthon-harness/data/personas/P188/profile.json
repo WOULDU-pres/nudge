@@ -1,0 +1,102 @@
+{
+  "persona_id": "P188",
+  "archetype_id": "relationship_trust_buyer",
+  "archetype_name": "Relationship Trust Buyer",
+  "variation_slot": "low_urgency",
+  "summary": "산책과 식사 리듬을 해치지 않는 선에서 천천히 납득되는 설명이 있을 때만 움직이는 관계 신뢰형 구매자. 크게 불편한 건 없지만 편안하게 더할 수 있는 선택에는 열려 있는 low_urgency variation.",
+  "cluster_tags": [
+    "relationship_driven",
+    "calm_routine",
+    "gentle_consideration",
+    "no_rush_decision"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "아침 산책과 식후 루틴이 이미 안정적이라, 굳이 바꾸기보다 편안하게 더할 수 있을 때만 새 영양제를 보는 상태",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "아침 유산균과 저녁 오메가3처럼 익숙한 조합을 무리 없이 유지 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "calm_consistency",
+      "naturalness",
+      "moderation"
+    ],
+    "preferred_message_style": [
+      "unhurried",
+      "sincere",
+      "balanced"
+    ],
+    "disliked_message_style": [
+      "fear_based",
+      "too_eager",
+      "glossy"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "soft",
+      "settled"
+    ],
+    "disliked_voice_style": [
+      "sharp",
+      "breathless",
+      "overly_excited"
+    ],
+    "length_tolerance": "medium_to_long"
+  },
+  "persuasion_triggers": [
+    "respectful_pacing",
+    "no_overclaim",
+    "routine_compatibility"
+  ],
+  "objection_profile": {
+    "primary_type": "trust",
+    "secondary_type": "change_resistance",
+    "intensity": "low",
+    "trigger_conditions": [
+      "scare_tactics",
+      "forced_familiarity",
+      "hard_close"
+    ],
+    "resolution_requirements": [
+      "gentle_context",
+      "incremental_fit",
+      "steady_tone"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "지금 먹는 것과 시간을 어떻게 맞추면 편한지 차분히 묻는다",
+    "if_unconvinced": "사람은 괜찮아도 굳이 바꿀 이유까지는 아니라고 정리한다",
+    "if_annoyed": "불안감을 건드리는 순간 바로 거리 두고 기존 루틴으로 돌아간다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "respectful_pacing",
+      "unhurried",
+      "calm_consistency"
+    ],
+    "engagement_penalties": [
+      "fear_based",
+      "scare_tactics",
+      "sharp"
+    ],
+    "purchase_intent_boosts": [
+      "gentle_context",
+      "incremental_fit"
+    ],
+    "purchase_intent_penalties": [
+      "forced_familiarity",
+      "hard_close"
+    ]
+  }
+}

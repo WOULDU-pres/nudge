@@ -1,0 +1,102 @@
+{
+  "persona_id": "P191",
+  "archetype_id": "autonomy_protective_buyer",
+  "archetype_name": "Autonomy Protective Buyer",
+  "variation_slot": "young_starter",
+  "summary": "추천을 듣더라도 최종 선택은 스스로 비교해 결정해야 안심하는 자율성 보호형 구매자. 막 사회 진입 중이라 예산 제약이 크고, 영양제도 누가 밀어붙이기보다 직접 따져 고르고 싶은 young_starter variation.",
+  "cluster_tags": [
+    "autonomy",
+    "control_sensitive",
+    "self_directed",
+    "young_starter"
+  ],
+  "profile": {
+    "age_band": "20s",
+    "occupation": "student_or_first_jobber",
+    "life_context": "막 사회 진입 중이라 경험은 적고 예산 제약은 큰 편",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "집에 있는 기본 제품을 필요할 때만 느슨하게 챙겨 먹는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "choice",
+      "agency",
+      "information_before_commitment"
+    ],
+    "preferred_message_style": [
+      "informative",
+      "option_based",
+      "non_directive"
+    ],
+    "disliked_message_style": [
+      "controlling",
+      "pushy",
+      "leading"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "respectful",
+      "clear"
+    ],
+    "disliked_voice_style": [
+      "commanding",
+      "overbearing",
+      "high_pressure"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "option_visibility",
+    "self_paced_choice",
+    "low_commitment_start"
+  ],
+  "objection_profile": {
+    "primary_type": "autonomy_threat",
+    "secondary_type": "pressure_aversion",
+    "intensity": "high",
+    "trigger_conditions": [
+      "message_feels_controlling",
+      "single_product_is_forced",
+      "comparison_time_is_denied"
+    ],
+    "resolution_requirements": [
+      "multiple_options",
+      "decision_space",
+      "information_first_approach"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "직접 비교할 수 있는 기준표가 있으면 차분하게 검토를 이어간다",
+    "if_unconvinced": "정답을 강요받는 느낌이 들면 한 발 물러선다",
+    "if_annoyed": "지금 바로 사라고 몰아붙이면 즉시 반감을 가진다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "choice_language",
+      "options",
+      "respectful_information"
+    ],
+    "engagement_penalties": [
+      "forced_decision",
+      "directive_cta",
+      "closed_options"
+    ],
+    "purchase_intent_boosts": [
+      "agency_preserved",
+      "self_paced_evaluation"
+    ],
+    "purchase_intent_penalties": [
+      "autonomy_threat",
+      "control_loss"
+    ]
+  }
+}

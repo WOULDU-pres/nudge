@@ -1,0 +1,102 @@
+{
+  "persona_id": "P012",
+  "archetype_id": "busy_convenience_seeker",
+  "archetype_name": "Busy Convenience Seeker",
+  "variation_slot": "early_career_worker",
+  "summary": "점심 이후 퍼짐을 줄일 현실적인 루틴을 찾는 커리어 초반 직장인. 복용 타이밍이 단순하고 업무 흐름을 끊지 않아야 선택하는 early_career_worker variation.",
+  "cluster_tags": [
+    "time_sensitive",
+    "convenience_first",
+    "fast_filtering",
+    "early_career_worker"
+  ],
+  "profile": {
+    "age_band": "20s-30s early",
+    "occupation": "early_career_worker",
+    "life_context": "출근 적응과 성과 부담이 함께 와 점심 이후 집중 관리가 중요한 커리어 초반",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "물 많이 마시기, 커피, 늦은 수면 보충으로 넘기며 기본 루틴만 유지 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "clarity",
+      "speed",
+      "friction_reduction"
+    ],
+    "preferred_message_style": [
+      "benefit_first",
+      "short",
+      "direct"
+    ],
+    "disliked_message_style": [
+      "long_intro",
+      "rambling",
+      "slow_build_up"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "energetic",
+      "clear",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "slow",
+      "overly_soft",
+      "dragging"
+    ],
+    "length_tolerance": "very_short"
+  },
+  "persuasion_triggers": [
+    "easy_intake",
+    "routine_fit",
+    "simple_next_step"
+  ],
+  "objection_profile": {
+    "primary_type": "timing",
+    "secondary_type": "complexity",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_not_stated_immediately",
+      "requires_interrupting_workflow",
+      "explanation_takes_too_long_to_get_to_when_to_take_it"
+    ],
+    "resolution_requirements": [
+      "benefit_in_first_few_seconds",
+      "one_clear_intake_path",
+      "desk_or_lunch_break_fit_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "점심 뒤나 퇴근 전 어떤 타이밍이 가장 편한지부터 확인한다",
+    "if_unconvinced": "좋아 보여도 업무 중 챙길 자신이 없다며 미룬다",
+    "if_annoyed": "복용 조건이 많거나 메시지가 길면 바로 보류로 돌린다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "fast_hook",
+      "short_sentences",
+      "clear_cta"
+    ],
+    "engagement_penalties": [
+      "delayed_value",
+      "too_much_context",
+      "complex_setup"
+    ],
+    "purchase_intent_boosts": [
+      "quick_win",
+      "easy_daily_fit"
+    ],
+    "purchase_intent_penalties": [
+      "high_friction",
+      "unclear_intake_start"
+    ]
+  }
+}

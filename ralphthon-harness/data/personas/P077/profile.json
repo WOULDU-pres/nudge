@@ -1,0 +1,102 @@
+{
+  "persona_id": "P077",
+  "archetype_id": "risk_averse_safety_first",
+  "archetype_name": "Risk Averse Safety First",
+  "variation_slot": "high_urgency",
+  "summary": "지금 당장 버티고 싶어도 몸을 더 흔드는 선택은 피하려는 고압박 안전 우선형 구매자. 빠른 해결보다 무난하게 시작할 수 있는 현실적 선택에 반응하는 high_urgency variation.",
+  "cluster_tags": [
+    "risk_averse",
+    "safety_first",
+    "stability_sensitive",
+    "high_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "마감과 야근으로 지쳤지만 과한 제품을 잘못 고르면 다음 일정이 더 꼬일 수 있는 압박 상황",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "커피, 에너지 음료, 당 충전으로 버티다가도 과한 느낌이 싫어 금세 줄이는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "stability",
+      "risk_reduction",
+      "predictability"
+    ],
+    "preferred_message_style": [
+      "reassuring",
+      "clear",
+      "non_risky"
+    ],
+    "disliked_message_style": [
+      "reckless",
+      "uncertain",
+      "overpromising"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "steady",
+      "reassuring"
+    ],
+    "disliked_voice_style": [
+      "too_fast",
+      "reckless",
+      "overexcited"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "risk_reduction",
+    "safety_signal",
+    "reliability"
+  ],
+  "objection_profile": {
+    "primary_type": "risk",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "unclear_body_outcome",
+      "too_much_novelty",
+      "missing_safety_explanation"
+    ],
+    "resolution_requirements": [
+      "reassuring_explanation",
+      "reliability_signal",
+      "clear_downside_control"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "급한 와중에도 복용법이 단순한지, 과하게 자극적인 느낌은 없는지부터 확인한다",
+    "if_unconvinced": "지금은 위험 없는 익숙한 방법으로 버티겠다고 한다",
+    "if_annoyed": "극적인 변화를 약속하면 오히려 불안해서 물러난다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "risk_control",
+      "stable_tone",
+      "reliability"
+    ],
+    "engagement_penalties": [
+      "uncertainty",
+      "aggressive_innovation",
+      "overpromise"
+    ],
+    "purchase_intent_boosts": [
+      "safe_choice_framing",
+      "predictability"
+    ],
+    "purchase_intent_penalties": [
+      "unknowns",
+      "perceived_side_effect_risk"
+    ]
+  }
+}

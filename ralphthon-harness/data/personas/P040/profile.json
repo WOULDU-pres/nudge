@@ -1,0 +1,102 @@
+{
+  "persona_id": "P040",
+  "archetype_id": "emotionally_open_caregiver",
+  "archetype_name": "Emotionally Open Caregiver",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "복잡한 설명보다 식탁 위에서 자연스럽게 이어질 안심이 있어야 움직이는 중장년 돌봄 민감 구매자. 배우자와 함께 무리 없이 챙길 수 있는 부드러운 루틴을 선호하는 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "empathy_seeking",
+    "warmth_sensitive",
+    "care_context",
+    "mature_later_life_buyer"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "정해진 식사 시간과 생활 리듬은 지키되, 새로운 건 부담 없이 이해하고 싶어 하는 시기",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium",
+    "current_alternative": "배우자나 지인이 권한 기본 영양제를 식사 뒤에만 챙기는 단순한 루틴을 유지 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "empathy",
+      "clarity",
+      "gentle_guidance"
+    ],
+    "preferred_message_style": [
+      "warm",
+      "understanding",
+      "easy_to_follow"
+    ],
+    "disliked_message_style": [
+      "cold",
+      "technical",
+      "aggressive"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "gentle",
+      "reassuring"
+    ],
+    "disliked_voice_style": [
+      "sharp",
+      "fast",
+      "hard_sell"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "emotional_understanding",
+    "easy_intake",
+    "reduced_worry"
+  ],
+  "objection_profile": {
+    "primary_type": "complexity",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "too_many_ingredients_explained",
+      "technical_terms_without_help",
+      "tone_feels_pushy"
+    ],
+    "resolution_requirements": [
+      "simple_step_by_step_explanation",
+      "gentle_reassurance",
+      "one_clear_benefit_at_a_time"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "알약 크기, 하루 횟수, 식사와의 궁합처럼 실제 복용 장면을 자세히 묻는다",
+    "if_unconvinced": "좋은 말은 알겠지만 지금 먹는 것만으로도 충분하다고 본다",
+    "if_annoyed": "젊은 사람 기준으로 재촉하는 말투엔 마음이 닫힌다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "warm_opening",
+      "gentle_pacing",
+      "simple_language"
+    ],
+    "engagement_penalties": [
+      "cold_tone",
+      "jargon",
+      "pressure_cta"
+    ],
+    "purchase_intent_boosts": [
+      "worry_reduction",
+      "easy_routine_adoption"
+    ],
+    "purchase_intent_penalties": [
+      "feels_hard_to_keep_up",
+      "emotional_disconnect"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "persona_id": "P212",
+  "archetype_id": "voice_sensitive_listener",
+  "archetype_name": "Voice Sensitive Listener",
+  "variation_slot": "early_career_worker",
+  "summary": "출근길에 들어도 귀에 거슬리지 않는 또렷한 톤이어야 내용까지 믿는 청각 민감형 구매자. 목소리의 정돈감과 호흡이 설명의 신뢰를 좌우하는 early_career_worker variation.",
+  "cluster_tags": [
+    "voice_sensitive",
+    "early_career",
+    "commute_listener",
+    "clean_delivery"
+  ],
+  "profile": {
+    "age_band": "20s-30s early",
+    "occupation": "early_career_worker",
+    "life_context": "출근 준비와 업무 적응으로 머리가 분산돼 있어, 영양제 설명도 목소리의 정돈감과 호흡이 중요하게 들리는 커리어 초반",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "수면과 물 챙기기로 버티면서 기본 비타민만 가끔 챙기는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "vocal_credibility",
+      "clean_pacing",
+      "clarity"
+    ],
+    "preferred_message_style": [
+      "clearly_spoken",
+      "lightly_warm",
+      "structured"
+    ],
+    "disliked_message_style": [
+      "syrupy",
+      "breathless",
+      "monotone"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clean",
+      "calm",
+      "articulate"
+    ],
+    "disliked_voice_style": [
+      "nasal",
+      "too_cute",
+      "rushed"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "stable_pacing",
+    "crisp_words",
+    "commute_friendly_explanation"
+  ],
+  "objection_profile": {
+    "primary_type": "delivery",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "awkward_emphasis",
+      "messy_breath",
+      "vague_pronunciation"
+    ],
+    "resolution_requirements": [
+      "even_tempo",
+      "clean_sentence_endings",
+      "simple_structure"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "목소리가 또렷하고 편안하면 내용을 메모해 두고 출근길에 다시 떠올린다",
+    "if_unconvinced": "내용보다 전달감이 어수선하면 집중이 먼저 끊긴다",
+    "if_annoyed": "가볍게 꾸민 톤이 들리면 첫 문장부터 거리를 둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "stable_pacing",
+      "clearly_spoken",
+      "vocal_credibility"
+    ],
+    "engagement_penalties": [
+      "syrupy",
+      "awkward_emphasis",
+      "nasal"
+    ],
+    "purchase_intent_boosts": [
+      "even_tempo",
+      "clean_sentence_endings"
+    ],
+    "purchase_intent_penalties": [
+      "messy_breath",
+      "vague_pronunciation"
+    ]
+  }
+}

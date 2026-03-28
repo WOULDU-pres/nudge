@@ -1,0 +1,102 @@
+{
+  "persona_id": "P196",
+  "archetype_id": "autonomy_protective_buyer",
+  "archetype_name": "Autonomy Protective Buyer",
+  "variation_slot": "manager_influencer",
+  "summary": "스스로 비교하고 판단할 권리를 특히 중요하게 여기며, 그 판단 근거를 주변에도 설명할 수 있어야 만족하는 자율성 보호형 관리자. 한 가지 답보다 선택 기준을 중시하는 manager_influencer variation.",
+  "cluster_tags": [
+    "autonomy",
+    "control_sensitive",
+    "self_directed",
+    "manager_influencer"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "새 루틴을 들일 때도 스스로 비교 기준을 세우고 팀 안팎에 설명할 수 있어야 하는 관리자",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "기존 영양제를 유지하며 성분과 복용 편의 기준으로 천천히 비교 검토 중",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "choice",
+      "agency",
+      "information_before_commitment"
+    ],
+    "preferred_message_style": [
+      "informative",
+      "option_based",
+      "non_directive"
+    ],
+    "disliked_message_style": [
+      "controlling",
+      "pushy",
+      "leading"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "respectful",
+      "clear"
+    ],
+    "disliked_voice_style": [
+      "commanding",
+      "overbearing",
+      "high_pressure"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "option_visibility",
+    "self_paced_choice",
+    "non_forced_guidance"
+  ],
+  "objection_profile": {
+    "primary_type": "autonomy_threat",
+    "secondary_type": "pressure_aversion",
+    "intensity": "high",
+    "trigger_conditions": [
+      "message_feels_controlling",
+      "single_path_is_forced",
+      "cta_limits_choice"
+    ],
+    "resolution_requirements": [
+      "multiple_options",
+      "decision_space",
+      "information_first_approach"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "비교 기준과 적용 범위를 스스로 정리할 수 있을 때 호감을 느낀다",
+    "if_unconvinced": "좋아 보여도 결론을 대신 내려주는 순간 거리를 둔다",
+    "if_annoyed": "선택권이 줄어드는 느낌이면 바로 방어적으로 반응한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "choice_language",
+      "options",
+      "respectful_information"
+    ],
+    "engagement_penalties": [
+      "forced_decision",
+      "directive_cta",
+      "closed_options"
+    ],
+    "purchase_intent_boosts": [
+      "agency_preserved",
+      "self_paced_evaluation"
+    ],
+    "purchase_intent_penalties": [
+      "autonomy_threat",
+      "control_loss"
+    ]
+  }
+}

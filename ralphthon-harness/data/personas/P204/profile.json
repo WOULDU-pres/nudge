@@ -1,0 +1,102 @@
+{
+  "persona_id": "P204",
+  "archetype_id": "low_attention_skimmer",
+  "archetype_name": "Low Attention Skimmer",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "늦은 첫 끼와 불규칙한 작업 리듬에 맞는지 첫 문장에서 바로 보여야 보는 저주의력형 구매자. 촬영, 편집, 미팅 사이에 비용 감각까지 함께 따지는 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "low_attention",
+    "freelancer_rhythm",
+    "late_first_meal",
+    "quick_value_signal"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "촬영, 편집, 미팅 사이에 설명을 길게 읽기보다 지금 내 작업 패턴과 비용 감각에 맞는지 즉시 확인하려는 1인 운영 생활",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "가격 낮은 기본 제품을 프로젝트 있는 날만 띄엄띄엄 챙기며 계속 재구매 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "instant_fit",
+      "cost_logic",
+      "no_fluff"
+    ],
+    "preferred_message_style": [
+      "blunt_clear",
+      "contrastive",
+      "useful"
+    ],
+    "disliked_message_style": [
+      "branding_heavy",
+      "dreamy",
+      "repetitive"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "concise",
+      "grounded",
+      "dry"
+    ],
+    "disliked_voice_style": [
+      "theatrical",
+      "hypey",
+      "draggy"
+    ],
+    "length_tolerance": "very_short"
+  },
+  "persuasion_triggers": [
+    "irregular_schedule_fit",
+    "quick_value_signal",
+    "low_friction_routine"
+  ],
+  "objection_profile": {
+    "primary_type": "attention",
+    "secondary_type": "switching_cost",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "no_timing_hint",
+      "vague_value",
+      "long_intro"
+    ],
+    "resolution_requirements": [
+      "first_line_context",
+      "simple_cost_frame",
+      "immediate_use_case"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "지금 내 작업 패턴에 언제 붙일지만 바로 보이면 저장해 둔다",
+    "if_unconvinced": "불규칙한 생활 기준이 없으면 그냥 저가 제품을 계속 고른다",
+    "if_annoyed": "멋진 말만 길면 바로 넘겨버린다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "irregular_schedule_fit",
+      "blunt_clear",
+      "instant_fit"
+    ],
+    "engagement_penalties": [
+      "branding_heavy",
+      "no_timing_hint",
+      "theatrical"
+    ],
+    "purchase_intent_boosts": [
+      "first_line_context",
+      "simple_cost_frame"
+    ],
+    "purchase_intent_penalties": [
+      "vague_value",
+      "long_intro"
+    ]
+  }
+}

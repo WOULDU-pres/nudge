@@ -1,0 +1,102 @@
+{
+  "persona_id": "P134",
+  "archetype_id": "data_rational_analyst",
+  "archetype_name": "Data Rational Analyst",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "본인 컨디션이 곧 작업 속도와 수입으로 연결된다고 느끼는 분석형 구매자. 불규칙한 일정 안에서도 복용 손실과 비용 손실을 계산하는 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "data_driven",
+    "rational",
+    "logic_first",
+    "freelancer_solopreneur"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "혼자 일해 컨디션 관리가 바로 수익성과 연결되므로 복용 편의와 유지 비용을 특히 냉정하게 따짐",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "커피와 기본 영양제, 가끔 마시는 에너지 음료로 불규칙한 마감 주간을 버팀",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "numbers",
+      "logic",
+      "roi_thinking"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "precise",
+      "evidence_backed"
+    ],
+    "disliked_message_style": [
+      "handwavy",
+      "emotional_only",
+      "ambiguous"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "measured",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "too_emotional",
+      "chaotic",
+      "vague"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "measurable_gain",
+    "logical_structure",
+    "irregular_schedule_fit"
+  ],
+  "objection_profile": {
+    "primary_type": "logic_gap",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_are_unstructured",
+      "numbers_are_missing",
+      "switch_cost_is_unclear"
+    ],
+    "resolution_requirements": [
+      "structured_reasoning",
+      "evidence",
+      "simple_routine_example"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "마감 주간과 평소 일정 둘 다에 넣을 수 있는지 바로 따져본다",
+    "if_unconvinced": "좋아 보여도 자기 스케줄에서는 유지 효율이 낮다고 판단한다",
+    "if_annoyed": "감성 위주 설명을 시간 낭비로 받아들인다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_logic",
+      "quantification",
+      "simple_routine"
+    ],
+    "engagement_penalties": [
+      "ambiguity",
+      "emotion_only_pitch",
+      "logic_jump"
+    ],
+    "purchase_intent_boosts": [
+      "measurable_outcome",
+      "roi_fit"
+    ],
+    "purchase_intent_penalties": [
+      "unproven_claims",
+      "high_switch_cost"
+    ]
+  }
+}

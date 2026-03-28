@@ -1,0 +1,102 @@
+{
+  "persona_id": "P097",
+  "archetype_id": "inertia_bound_traditionalist",
+  "archetype_name": "Inertia Bound Traditionalist",
+  "variation_slot": "high_urgency",
+  "summary": "지금 당장 버텨야 하는 일정이 많아 커피와 에너지드링크에 의존하지만, 새 영양제도 오늘부터 바로 넣기 쉬운 방식이 아니면 손이 안 가는 관성형 구매자. 급함은 크지만 적응 비용에는 여전히 민감한 high_urgency variation.",
+  "cluster_tags": [
+    "inertia",
+    "status_quo_bias",
+    "change_resistant",
+    "high_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "마감과 일정 압박이 큰 상태라 컨디션 관리는 시급하지만 복용 루틴을 새로 배우거나 복잡하게 구성할 여유는 거의 없음",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "커피, 에너지드링크, 가끔 챙기는 기본 비타민과 짧은 휴식으로 임시로 버티는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "familiarity",
+      "continuity",
+      "low_disruption"
+    ],
+    "preferred_message_style": [
+      "steady",
+      "non_disruptive",
+      "practical"
+    ],
+    "disliked_message_style": [
+      "dramatic_change",
+      "radical_shift",
+      "too_new"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "familiar",
+      "measured"
+    ],
+    "disliked_voice_style": [
+      "pushy",
+      "hyper",
+      "urgent"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "easy_transition",
+    "minimal_change",
+    "familiar_routine"
+  ],
+  "objection_profile": {
+    "primary_type": "inertia",
+    "secondary_type": "complexity",
+    "intensity": "high",
+    "trigger_conditions": [
+      "change_cost_seems_high",
+      "switching_routine_is_unclear",
+      "new_routine_feels_disruptive"
+    ],
+    "resolution_requirements": [
+      "low_transition_cost",
+      "familiarity_bridge",
+      "simple_switching_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오늘부터 바로 시작해도 복용이 안 꼬이는지, 커피나 기존 비타민 대신 어떻게 두면 되는지부터 묻는다",
+    "if_unconvinced": "급하긴 하지만 복잡하면 결국 못 챙길 것 같아 현재 임시방편을 계속 유지한다",
+    "if_annoyed": "급한 상황을 이용해 과장하거나 여러 단계를 제시하면 바로 반감을 가진다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "continuity_framing",
+      "simple_transition",
+      "low_disruption"
+    ],
+    "engagement_penalties": [
+      "radical_change",
+      "many_new_steps",
+      "forced_switching"
+    ],
+    "purchase_intent_boosts": [
+      "easy_migration",
+      "familiarity"
+    ],
+    "purchase_intent_penalties": [
+      "switching_cost",
+      "routine_disruption"
+    ]
+  }
+}

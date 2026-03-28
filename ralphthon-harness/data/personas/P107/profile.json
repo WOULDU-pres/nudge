@@ -1,0 +1,102 @@
+{
+  "persona_id": "P107",
+  "archetype_id": "overwhelmed_complexity_avoider",
+  "archetype_name": "Overwhelmed Complexity Avoider",
+  "variation_slot": "high_urgency",
+  "summary": "지금 당장 루틴을 정리해야 할수록 복잡한 설명에 더 빨리 지치는 단순성 선호형 실무자. 바쁜 일정 속에서도 한 번에 이해되고 바로 시작할 수 있는 영양제만 받아들이는 high_urgency variation.",
+  "cluster_tags": [
+    "complexity_averse",
+    "overwhelm_sensitive",
+    "simplicity_seeking",
+    "high_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "일정이 급하게 돌아가 또 하나의 복잡한 루틴을 들일 여유가 없는 실무자",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "커피와 짧은 휴식, 손에 익은 기본 영양제로 급한 날을 버티는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "simplicity",
+      "guided_explanation",
+      "clarity"
+    ],
+    "preferred_message_style": [
+      "simple",
+      "one_thing_at_a_time",
+      "stepwise"
+    ],
+    "disliked_message_style": [
+      "feature_dump",
+      "jargon_heavy",
+      "dense"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "gentle",
+      "clear",
+      "steady"
+    ],
+    "disliked_voice_style": [
+      "fast",
+      "information_heavy",
+      "chaotic"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "easy_start",
+    "simplicity",
+    "one_clear_benefit"
+  ],
+  "objection_profile": {
+    "primary_type": "complexity",
+    "secondary_type": "confidence",
+    "intensity": "high",
+    "trigger_conditions": [
+      "too_many_ingredients",
+      "technical_terms_without_context",
+      "unclear_starting_point"
+    ],
+    "resolution_requirements": [
+      "step_by_step_guidance",
+      "one_core_benefit",
+      "simple_entry_path"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오늘부터 어떻게 넣는지만 확인하고 빠르게 시작 여부를 판단한다",
+    "if_unconvinced": "도움보다 관리 피로가 더 클 것 같아 뒤로 미룬다",
+    "if_annoyed": "핵심 전에 정보가 쌓이면 대화 자체를 짧게 끊는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "simple_flow",
+      "guided_explanation",
+      "gentle_pacing"
+    ],
+    "engagement_penalties": [
+      "feature_overload",
+      "jargon",
+      "unclear_entry"
+    ],
+    "purchase_intent_boosts": [
+      "easy_intake_start",
+      "confidence_building"
+    ],
+    "purchase_intent_penalties": [
+      "looks_complicated",
+      "feels_hard_to_keep_up"
+    ]
+  }
+}

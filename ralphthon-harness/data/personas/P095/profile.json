@@ -1,0 +1,102 @@
+{
+  "persona_id": "P095",
+  "archetype_id": "inertia_bound_traditionalist",
+  "archetype_name": "Inertia Bound Traditionalist",
+  "variation_slot": "office_professional",
+  "summary": "책상 서랍에 둔 익숙한 비타민을 회의 사이에 챙기는 정도로 관리해 온 사무직 관성 구매자. 새 영양제도 업무 흐름을 방해하지 않고 복용 이유를 스스로 깔끔하게 설명할 수 있을 때만 바꾸는 office_professional variation.",
+  "cluster_tags": [
+    "inertia",
+    "status_quo_bias",
+    "change_resistant",
+    "office_professional"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "office_professional",
+    "life_context": "회의와 보고 일정이 촘촘해 영양제도 회사 책상이나 집 현관 앞에서 습관처럼 챙기는 익숙한 흐름을 선호함",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "출근 전이나 오후에 익숙한 비타민 한두 개를 챙기는 개인 루틴을 유지 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "familiarity",
+      "continuity",
+      "low_disruption"
+    ],
+    "preferred_message_style": [
+      "steady",
+      "non_disruptive",
+      "practical"
+    ],
+    "disliked_message_style": [
+      "dramatic_change",
+      "radical_shift",
+      "too_new"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "familiar",
+      "measured"
+    ],
+    "disliked_voice_style": [
+      "pushy",
+      "hyper",
+      "urgent"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "easy_transition",
+    "minimal_change",
+    "familiar_routine"
+  ],
+  "objection_profile": {
+    "primary_type": "inertia",
+    "secondary_type": "complexity",
+    "intensity": "high",
+    "trigger_conditions": [
+      "change_cost_seems_high",
+      "switching_routine_is_unclear",
+      "new_routine_feels_disruptive"
+    ],
+    "resolution_requirements": [
+      "low_transition_cost",
+      "familiarity_bridge",
+      "simple_switching_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "출근 전이나 회사 서랍에서 하던 습관에 그대로 붙일 수 있는지, 지금 제품과 비교했을 때 설명 가능한 차이가 있는지 확인한다",
+    "if_unconvinced": "현재 루틴도 큰 문제 없이 돌아가니 굳이 새로 적응할 필요는 없다고 생각한다",
+    "if_annoyed": "복용이 복잡하거나 업무 현실을 무시한 설명이면 바로 거리를 둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "continuity_framing",
+      "simple_transition",
+      "low_disruption"
+    ],
+    "engagement_penalties": [
+      "radical_change",
+      "many_new_steps",
+      "forced_switching"
+    ],
+    "purchase_intent_boosts": [
+      "easy_migration",
+      "familiarity"
+    ],
+    "purchase_intent_penalties": [
+      "switching_cost",
+      "routine_disruption"
+    ]
+  }
+}

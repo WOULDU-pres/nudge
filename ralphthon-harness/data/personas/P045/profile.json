@@ -1,0 +1,51 @@
+{
+  "persona_id": "P045",
+  "archetype_id": "premium_status_buyer",
+  "archetype_name": "Premium Status Buyer",
+  "variation_slot": "office_professional",
+  "summary": "회사에서도 티 나지 않게 정돈된 자기관리 루틴을 원하며, 영양제도 원료와 브랜드의 격을 보는 프리미엄 지향형 구매자. 실무 적합성과 설명 가능성을 함께 중시하는 office_professional variation.",
+  "cluster_tags": ["premium", "status_sensitive", "quality_signal", "office_professional"],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "office_professional",
+    "life_context": "실무 적합성과 설명 가능성을 중시하는 일반 직장 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "low",
+    "current_alternative": "회사와 집에서 익숙한 기본 제품만 조용히 유지 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": ["brand_quality", "authority", "refined_delivery"],
+    "preferred_message_style": ["composed", "elegant", "high_signal"],
+    "disliked_message_style": ["cheap_sounding", "desperate", "overly_casual"]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": ["premium", "calm", "assured"],
+    "disliked_voice_style": ["overexcited", "chatty", "loud"],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": ["premium_quality_signal", "credibility", "effortless_wellness"],
+  "objection_profile": {
+    "primary_type": "premium_mismatch",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": ["tone_feels_too_salesy", "messaging_sounds_mass_market", "benefit_framing_lacks_refinement"],
+    "resolution_requirements": ["more_composed_voice", "confidence_without_pressure", "premium_positioning_language"]
+  },
+  "likely_reaction_style": {
+    "if_interested": "원료와 브랜드 기준을 조용히 확인하며 회사 루틴에 둘 만한지 본다",
+    "if_unconvinced": "브랜드나 제안의 격이 자기 기준과 안 맞는다고 느낀다",
+    "if_annoyed": "싸구려 세일즈처럼 느끼면 빠르게 신뢰를 잃는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": ["refined_tone", "premium_language", "confidence"],
+    "engagement_penalties": ["cheap_framing", "pushiness", "mass_market_vibe"],
+    "purchase_intent_boosts": ["status_fit", "quality_assurance"],
+    "purchase_intent_penalties": ["premium_mismatch", "brand_weakness"]
+  }
+}

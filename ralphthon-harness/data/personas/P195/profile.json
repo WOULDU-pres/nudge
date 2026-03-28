@@ -1,0 +1,102 @@
+{
+  "persona_id": "P195",
+  "archetype_id": "autonomy_protective_buyer",
+  "archetype_name": "Autonomy Protective Buyer",
+  "variation_slot": "office_professional",
+  "summary": "회사에서 이미 지시와 승인에 지친 만큼 개인 보충제 선택만큼은 스스로 비교하고 결정하려는 자율성 보호형 구매자. 기존 종합비타민이나 카페인 루틴과의 차이, 장단점, 섭취 타이밍, 한 통만 먼저 볼 수 있는 부담 수준이 차분히 제시될 때 반응하는 office_professional variation.",
+  "cluster_tags": [
+    "autonomy",
+    "control_sensitive",
+    "self_directed",
+    "office_professional"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "office_professional",
+    "life_context": "업무 시간 내내 지시와 승인 체계에 묶여 있어 개인 건강 루틴만큼은 스스로 판단 기준을 세우고 싶은 일반 직장 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "익숙한 종합비타민이나 커피 루틴을 유지하며 더 맞는 대안을 차분히 찾는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "choice",
+      "agency",
+      "balanced_information"
+    ],
+    "preferred_message_style": [
+      "informative",
+      "option_based",
+      "non_directive"
+    ],
+    "disliked_message_style": [
+      "controlling",
+      "pushy",
+      "leading"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "respectful",
+      "clear"
+    ],
+    "disliked_voice_style": [
+      "commanding",
+      "overbearing",
+      "high_pressure"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "side_by_side_comparison",
+    "small_commitment_trialability",
+    "non_forced_guidance"
+  ],
+  "objection_profile": {
+    "primary_type": "autonomy_threat",
+    "secondary_type": "pressure_aversion",
+    "intensity": "high",
+    "trigger_conditions": [
+      "message_feels_controlling",
+      "single_path_is_forced",
+      "tradeoffs_are_hidden"
+    ],
+    "resolution_requirements": [
+      "multiple_options",
+      "decision_space",
+      "information_first_approach"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "기존 루틴과 새 보충제를 표처럼 비교하며 아침 출근 루틴에 붙일 수 있을지 스스로 검토한다",
+    "if_unconvinced": "압박 없이도 차이가 선명하지 않으면 현재 루틴을 유지하는 쪽으로 기운다",
+    "if_annoyed": "결론을 강요하거나 질문을 무시하면 개인 선택권을 침해받는다고 느낀다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "choice_language",
+      "balanced_comparison",
+      "respectful_information"
+    ],
+    "engagement_penalties": [
+      "forced_decision",
+      "directive_cta",
+      "one_sided_pitch"
+    ],
+    "purchase_intent_boosts": [
+      "agency_preserved",
+      "low_risk_first_bottle_try"
+    ],
+    "purchase_intent_penalties": [
+      "autonomy_threat",
+      "control_loss"
+    ]
+  }
+}

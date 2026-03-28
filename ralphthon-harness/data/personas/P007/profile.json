@@ -1,0 +1,51 @@
+{
+  "persona_id": "P007",
+  "archetype_id": "budget_practical_buyer",
+  "archetype_name": "Budget Practical Buyer",
+  "variation_slot": "high_urgency",
+  "summary": "당장 덜 무너지는 데 도움이 되는지, 그리고 그 비용이 납득되는지를 가장 먼저 보는 실용형 구매자. 커피와 휴식으로 버티는 급한 시기라 영양제도 즉시성 중심으로 따지는 high_urgency variation.",
+  "cluster_tags": ["budget_sensitive", "roi_driven", "practical", "high_urgency"],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "당장 문제를 해결해야 해서 속도와 실행 가능성을 크게 봄",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "커피, 에너지드링크, 짧은 휴식으로 급한 피로를 메우는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": ["numbers", "roi", "concrete_comparison"],
+    "preferred_message_style": ["direct", "efficient", "specific"],
+    "disliked_message_style": ["fluffy", "dramatic", "vague"]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": ["clear", "steady", "direct"],
+    "disliked_voice_style": ["too_playful", "too_hyped", "too_soft"],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": ["price_per_day_value", "ingredient_value", "fast_routine_fit"],
+  "objection_profile": {
+    "primary_type": "price",
+    "secondary_type": "relevance",
+    "intensity": "high",
+    "trigger_conditions": ["price_presented_without_daily_value", "benefits_not_tied_to_immediate_fatigue", "formula_feels_irrelevant"],
+    "resolution_requirements": ["simple_cost_per_day_explanation", "specific_urgent_context", "clear_difference_from_current_routine"]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오늘부터 바로 먹을 수 있는지와 하루 비용을 다시 확인한다",
+    "if_unconvinced": "급한 상태인데도 차이가 작다고 느끼면 보류한다",
+    "if_annoyed": "말만 길고 오늘 도움 되는 그림이 안 보이면 빠르게 대화를 끝내려 한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": ["numbers_early", "clear_roi", "brief_structure"],
+    "engagement_penalties": ["hype_language", "long_intro", "abstract_claims"],
+    "purchase_intent_boosts": ["cost_per_day_proof", "routine_before_after_comparison"],
+    "purchase_intent_penalties": ["unclear_value", "high_price_without_ingredient_context"]
+  }
+}

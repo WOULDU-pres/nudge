@@ -1,0 +1,102 @@
+{
+  "persona_id": "P170",
+  "archetype_id": "identity_expressive_buyer",
+  "archetype_name": "Identity Expressive Buyer",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "오래 이어갈 루틴일수록 믿을 만한 설명과 어른스러운 취향이 함께 있어야 한다고 보는 정체성 표현형 구매자. 유행보다 안정감 있는 품위를 선호하는 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "identity_driven",
+    "taste_sensitive",
+    "self_expression",
+    "mature_later_life_buyer"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "속도보다 신뢰와 안정성, 무리 없는 이해를 중시하는 단계",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium",
+    "current_alternative": "지인 추천이나 익숙한 기본 영양제를 이어 먹고 있지만, 조금 더 품위 있고 안정적인 선택이 있는지 천천히 살피는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "taste_fit",
+      "identity_alignment",
+      "distinctiveness"
+    ],
+    "preferred_message_style": [
+      "expressive",
+      "tasteful",
+      "identity_aligned"
+    ],
+    "disliked_message_style": [
+      "generic",
+      "mass_market",
+      "cookie_cutter"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "stylish",
+      "distinct",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "bland",
+      "generic",
+      "overly_corporate"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "identity_fit",
+    "taste_signal",
+    "self_expression"
+  ],
+  "objection_profile": {
+    "primary_type": "identity_mismatch",
+    "secondary_type": "premium_mismatch",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_generic",
+      "style_feels_off",
+      "brand_vibe_does_not_match_self_image"
+    ],
+    "resolution_requirements": [
+      "taste_aligned_language",
+      "distinct_positioning",
+      "identity_relevant_examples"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오래 두고 먹어도 질리지 않을 안정감과 자기 취향의 품위가 함께 있는지 천천히 살핀다",
+    "if_unconvinced": "몸에는 무난해 보여도 어른스럽고 믿음 가는 선택이라는 느낌이 약하다고 본다",
+    "if_annoyed": "과한 유행 감성이나 어려운 설명이 섞이면 바로 피로해한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "distinct_style",
+      "taste_signal",
+      "identity_language"
+    ],
+    "engagement_penalties": [
+      "generic_vibe",
+      "mass_market_copy",
+      "style_mismatch"
+    ],
+    "purchase_intent_boosts": [
+      "self_expression_fit",
+      "taste_alignment"
+    ],
+    "purchase_intent_penalties": [
+      "identity_mismatch",
+      "boring_presentation"
+    ]
+  }
+}

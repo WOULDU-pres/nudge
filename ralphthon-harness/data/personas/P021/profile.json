@@ -1,0 +1,102 @@
+{
+  "persona_id": "P021",
+  "archetype_id": "skeptical_comparison_buyer",
+  "archetype_name": "Skeptical Comparison Buyer",
+  "variation_slot": "young_starter",
+  "summary": "라벨과 함량표를 직접 비교해야 안심하는 초년 검증형. 예산은 한정돼 있지만 근거 없는 카피에는 더 엄격한 young_starter variation.",
+  "cluster_tags": [
+    "skeptical",
+    "comparison_driven",
+    "evidence_seeking",
+    "young_starter"
+  ],
+  "profile": {
+    "age_band": "20s",
+    "occupation": "student_or_first_jobber",
+    "life_context": "정보는 넘치지만 예산은 좁아 성분 근거를 직접 걸러야 하는 초년 소비 단계",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "저가 멀티비타민이나 온라인 인기 기본 제품을 성분만 대충 보고 고르는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "evidence",
+      "benchmark",
+      "specificity"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "clear",
+      "non_exaggerated"
+    ],
+    "disliked_message_style": [
+      "marketing_speak",
+      "empty_confidence",
+      "fake_urgency"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "professional",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "too_excited",
+      "too_casual",
+      "performative"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "ingredient_comparison",
+    "clear_differentiation",
+    "specific_body_example"
+  ],
+  "objection_profile": {
+    "primary_type": "trust",
+    "secondary_type": "inertia",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_lack_evidence",
+      "advantage_over_current_basic_is_unclear",
+      "voice_sounds_like_hype_before_label_explanation"
+    ],
+    "resolution_requirements": [
+      "comparison_table",
+      "realistic_claims",
+      "plain_language_label_reasoning"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "함량표와 현재 제품 대비 차이를 더 자세히 묻고 스스로 비교해본다",
+    "if_unconvinced": "결정적 차이가 없다고 보고 더 싼 기본 제품으로 돌아간다",
+    "if_annoyed": "근거 없이 몰아붙이는 톤이면 바로 신뢰를 철회한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "comparison_framing",
+      "evidence",
+      "precise_language"
+    ],
+    "engagement_penalties": [
+      "hype_language",
+      "vague_superiority",
+      "aggressive_urgency"
+    ],
+    "purchase_intent_boosts": [
+      "clear_differentiation",
+      "credible_evidence"
+    ],
+    "purchase_intent_penalties": [
+      "lack_of_evidence",
+      "me_too_positioning"
+    ]
+  }
+}

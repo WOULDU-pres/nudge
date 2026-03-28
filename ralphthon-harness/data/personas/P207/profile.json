@@ -1,0 +1,102 @@
+{
+  "persona_id": "P207",
+  "archetype_id": "low_attention_skimmer",
+  "archetype_name": "Low Attention Skimmer",
+  "variation_slot": "high_urgency",
+  "summary": "지금 지친 날 바로 적용할 한 줄이 없으면 넘겨버리는 저주의력형 구매자. 마감과 대응이 겹친 상태에서 오늘 식사 어디에 붙일지만 빠르게 찾는 high_urgency variation.",
+  "cluster_tags": [
+    "low_attention",
+    "urgent_fatigue",
+    "today_fit",
+    "single_step_needed"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "마감과 대응이 몰려 긴 설명을 읽을 체력도 부족해서, 즉시 적용 가능한 핵심만 찾는 압박 국면",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "커피, 에너지드링크, 당분 높은 간식으로 급한 불만 끄는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "immediacy",
+      "clarity",
+      "realism"
+    ],
+    "preferred_message_style": [
+      "one_shot_clear",
+      "urgent_but_calm",
+      "plain"
+    ],
+    "disliked_message_style": [
+      "preamble",
+      "repetition",
+      "hype"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "direct",
+      "steady",
+      "clipped"
+    ],
+    "disliked_voice_style": [
+      "frantic",
+      "chatty",
+      "chirpy"
+    ],
+    "length_tolerance": "very_short"
+  },
+  "persuasion_triggers": [
+    "instant_actionability",
+    "today_fit",
+    "no_hype"
+  ],
+  "objection_profile": {
+    "primary_type": "attention",
+    "secondary_type": "fatigue",
+    "intensity": "high",
+    "trigger_conditions": [
+      "delayed_payoff_intro",
+      "long_explanation",
+      "vague_use_case"
+    ],
+    "resolution_requirements": [
+      "today_use_case",
+      "single_step_instruction",
+      "realistic_tone"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오늘 당장 어느 식사에 붙이면 되는지 보이면 멈춘다",
+    "if_unconvinced": "지금 내 피로와 연결 안 되면 바로 스킵한다",
+    "if_annoyed": "지친 상태에서 광고 문장 같으면 반사적으로 닫아버린다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "instant_actionability",
+      "one_shot_clear",
+      "immediacy"
+    ],
+    "engagement_penalties": [
+      "preamble",
+      "delayed_payoff_intro",
+      "frantic"
+    ],
+    "purchase_intent_boosts": [
+      "today_use_case",
+      "single_step_instruction"
+    ],
+    "purchase_intent_penalties": [
+      "long_explanation",
+      "vague_use_case"
+    ]
+  }
+}

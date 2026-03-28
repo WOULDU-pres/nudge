@@ -1,0 +1,102 @@
+{
+  "persona_id": "P166",
+  "archetype_id": "identity_expressive_buyer",
+  "archetype_name": "Identity Expressive Buyer",
+  "variation_slot": "manager_influencer",
+  "summary": "개인 취향은 분명하지만 팀 안에서 설명 가능한 품위를 더 중시하는 정체성 표현형 구매자. 혼자 좋다고 끝나는 선택보다, 팀장으로서 권해도 민망하지 않은 결을 찾는 manager_influencer variation.",
+  "cluster_tags": [
+    "identity_driven",
+    "taste_sensitive",
+    "self_expression",
+    "manager_influencer"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "개인 판단뿐 아니라 팀이나 조직 내 설명 책임이 있음",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "개인적으로 챙기는 영양제는 있지만 팀장답게 설명할 수 있는 선택인지 늘 한 번 더 따져보는 중",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "taste_fit",
+      "identity_alignment",
+      "distinctiveness"
+    ],
+    "preferred_message_style": [
+      "expressive",
+      "tasteful",
+      "identity_aligned"
+    ],
+    "disliked_message_style": [
+      "generic",
+      "mass_market",
+      "cookie_cutter"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "stylish",
+      "distinct",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "bland",
+      "generic",
+      "overly_corporate"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "identity_fit",
+    "taste_signal",
+    "self_expression"
+  ],
+  "objection_profile": {
+    "primary_type": "identity_mismatch",
+    "secondary_type": "premium_mismatch",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_generic",
+      "style_feels_off",
+      "brand_vibe_does_not_match_self_image"
+    ],
+    "resolution_requirements": [
+      "taste_aligned_language",
+      "distinct_positioning",
+      "identity_relevant_examples"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "팀 분위기와 자신의 안목 둘 다 해치지 않는 선택인지 설명 가능성을 따져본다",
+    "if_unconvinced": "나쁘진 않아도 팀장으로서 굳이 이걸 고를 이유가 약하다고 느낀다",
+    "if_annoyed": "과하게 유행을 타거나 촌스러운 인상에는 바로 선을 긋는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "distinct_style",
+      "taste_signal",
+      "identity_language"
+    ],
+    "engagement_penalties": [
+      "generic_vibe",
+      "mass_market_copy",
+      "style_mismatch"
+    ],
+    "purchase_intent_boosts": [
+      "self_expression_fit",
+      "taste_alignment"
+    ],
+    "purchase_intent_penalties": [
+      "identity_mismatch",
+      "boring_presentation"
+    ]
+  }
+}

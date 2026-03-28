@@ -1,0 +1,102 @@
+{
+  "persona_id": "P092",
+  "archetype_id": "inertia_bound_traditionalist",
+  "archetype_name": "Inertia Bound Traditionalist",
+  "variation_slot": "early_career_worker",
+  "summary": "출근 시간에 쫓겨 물 한 잔과 커피로 버티는 날이 많아, 영양제도 지금보다 더 번거로워지면 바로 포기하는 관성형 구매자. 업무 적응기라 컨디션 관리는 필요하지만 새 제품도 현재 루틴에 얌전히 붙을 때만 움직이는 early_career_worker variation.",
+  "cluster_tags": [
+    "inertia",
+    "status_quo_bias",
+    "change_resistant",
+    "early_career_worker"
+  ],
+  "profile": {
+    "age_band": "20s-30s early",
+    "occupation": "early_career_worker",
+    "life_context": "출근 준비와 업무 적응으로 아침이 늘 급하고 점심 이후 집중 저하를 느끼지만 새로운 복용 습관을 추가할 여유는 많지 않음",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "물 많이 마시기, 커피, 가끔 먹는 기본 비타민 정도의 익숙한 루틴으로 버티는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "familiarity",
+      "continuity",
+      "low_disruption"
+    ],
+    "preferred_message_style": [
+      "steady",
+      "non_disruptive",
+      "practical"
+    ],
+    "disliked_message_style": [
+      "dramatic_change",
+      "radical_shift",
+      "too_new"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "familiar",
+      "measured"
+    ],
+    "disliked_voice_style": [
+      "pushy",
+      "hyper",
+      "urgent"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "easy_transition",
+    "minimal_change",
+    "familiar_routine"
+  ],
+  "objection_profile": {
+    "primary_type": "inertia",
+    "secondary_type": "complexity",
+    "intensity": "high",
+    "trigger_conditions": [
+      "change_cost_seems_high",
+      "switching_routine_is_unclear",
+      "new_routine_feels_disruptive"
+    ],
+    "resolution_requirements": [
+      "low_transition_cost",
+      "familiarity_bridge",
+      "simple_switching_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "출근 전에 한 번으로 끝나는지, 지금 가끔 먹는 비타민과 어떻게 바꿔야 하는지부터 확인한다",
+    "if_unconvinced": "지금도 커피와 수면 조절로 버티는데 굳이 루틴을 늘릴 필요 없다고 느낀다",
+    "if_annoyed": "바쁜 직장인의 현실을 무시하고 여러 단계를 요구하면 바로 거리를 둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "continuity_framing",
+      "simple_transition",
+      "low_disruption"
+    ],
+    "engagement_penalties": [
+      "radical_change",
+      "many_new_steps",
+      "forced_switching"
+    ],
+    "purchase_intent_boosts": [
+      "easy_migration",
+      "familiarity"
+    ],
+    "purchase_intent_penalties": [
+      "switching_cost",
+      "routine_disruption"
+    ]
+  }
+}

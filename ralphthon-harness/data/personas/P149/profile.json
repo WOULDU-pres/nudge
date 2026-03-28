@@ -1,0 +1,102 @@
+{
+  "persona_id": "P149",
+  "archetype_id": "family_benefit_prioritizer",
+  "archetype_name": "Family Benefit Prioritizer",
+  "variation_slot": "existing_alternative_user",
+  "summary": "이미 집 안에서 챙기는 루틴이 있어도 더 설명하기 쉽고 가족 생활에 무리 없는 선택지를 찾는 가족 중심형 구매자. 나 혼자보다 우리 집 전체의 납득과 실용을 기준으로 전환을 따지는 existing_alternative_user variation.",
+  "cluster_tags": [
+    "family_first",
+    "shared_benefit",
+    "care_driven",
+    "existing_alternative_user"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "comparison_ready_user",
+    "life_context": "이미 집 안에서 챙기는 영양 루틴이 있어 새 제품도 가족 기준으로 비교하는 상황",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "현재도 익숙한 브랜드와 복용 루틴이 있지만, 가족에게 설명하기 쉽고 유지가 편한 쪽이면 갈아탈 수 있음",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "family_relevance",
+      "safety",
+      "practical_care"
+    ],
+    "preferred_message_style": [
+      "caring",
+      "relevant",
+      "down_to_earth"
+    ],
+    "disliked_message_style": [
+      "selfish_framing",
+      "flashy",
+      "detached"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "steady",
+      "caring"
+    ],
+    "disliked_voice_style": [
+      "cold",
+      "self_centered",
+      "abrasive"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "family_benefit",
+    "daily_life_improvement",
+    "safety_support"
+  ],
+  "objection_profile": {
+    "primary_type": "relevance",
+    "secondary_type": "budget",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_is_too_self_focused",
+      "family_value_is_unclear",
+      "cost_feels_hard_to_justify"
+    ],
+    "resolution_requirements": [
+      "shared_benefit_example",
+      "family_context_framing",
+      "practical_justification"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 집안 루틴과 비교해 무엇이 더 편하고 설명하기 쉬운지 가족 기준으로 다시 따져본다",
+    "if_unconvinced": "나한테는 괜찮아도 우리 집 전체로 보면 굳이 바꿀 이유는 약하다고 판단한다",
+    "if_annoyed": "가족 맥락 없이 나만 위한 관리로 밀어붙이면 빠르게 멀어진다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "family_context",
+      "care_benefit",
+      "real_life_use"
+    ],
+    "engagement_penalties": [
+      "self_indulgent_framing",
+      "detached_pitch",
+      "unjustified_cost"
+    ],
+    "purchase_intent_boosts": [
+      "shared_value",
+      "practical_daily_gain"
+    ],
+    "purchase_intent_penalties": [
+      "irrelevant_benefit",
+      "family_disconnect"
+    ]
+  }
+}

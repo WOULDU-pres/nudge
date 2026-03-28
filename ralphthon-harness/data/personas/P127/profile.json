@@ -1,0 +1,102 @@
+{
+  "persona_id": "P127",
+  "archetype_id": "story_driven_dreamer",
+  "archetype_name": "Story Driven Dreamer",
+  "variation_slot": "high_urgency",
+  "summary": "일이 몰린 시기일수록 이번 주의 표정이 조금 덜 무너지는 장면을 먼저 상상하지만, 오늘 바로 챙길 수 있는 현실감이 없으면 움직이지 않는 서사형 실무자. 감정선과 실행 가능성을 동시에 보는 high_urgency variation.",
+  "cluster_tags": [
+    "story_driven",
+    "aspirational",
+    "emotionally_imaginative",
+    "high_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "일정이 몰린 주간에도 하루가 완전히 흐트러지지 않기를 바라는 감정선이 큰 실무자",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "커피와 당 보충, 손에 익은 기본 영양제로 버티며 더 나은 하루 그림을 찾는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "narrative",
+      "vision",
+      "emotional_coherence"
+    ],
+    "preferred_message_style": [
+      "storytelling",
+      "evocative",
+      "future_picture"
+    ],
+    "disliked_message_style": [
+      "dry",
+      "soulless",
+      "only_numbers"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "expressive",
+      "warm",
+      "engaging"
+    ],
+    "disliked_voice_style": [
+      "flat",
+      "clinical",
+      "monotone"
+    ],
+    "length_tolerance": "medium_to_long"
+  },
+  "persuasion_triggers": [
+    "transformation_story",
+    "aspirational_future",
+    "emotional_arc"
+  ],
+  "objection_profile": {
+    "primary_type": "emotional_disconnect",
+    "secondary_type": "relevance",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_flat",
+      "no_future_picture",
+      "only_factual_listing"
+    ],
+    "resolution_requirements": [
+      "story_arc",
+      "imaginable_outcome",
+      "emotionally_alive_delivery"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "이번 주를 덜 거칠게 넘기는 자기 모습을 구체적으로 떠올리며 빠르게 검토한다",
+    "if_unconvinced": "이야기는 예쁜데 오늘의 압박과는 연결되지 않는다고 느낀다",
+    "if_annoyed": "현실성 없는 감성이나 메마른 설명 둘 다 금방 끊어낸다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "narrative_opening",
+      "emotional_arc",
+      "expressive_voice"
+    ],
+    "engagement_penalties": [
+      "flat_listing",
+      "clinical_tone",
+      "no_story"
+    ],
+    "purchase_intent_boosts": [
+      "future_identity_fit",
+      "transformation_picture"
+    ],
+    "purchase_intent_penalties": [
+      "emotionless_delivery",
+      "dry_facts_only"
+    ]
+  }
+}

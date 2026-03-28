@@ -1,0 +1,51 @@
+{
+  "persona_id": "P005",
+  "archetype_id": "budget_practical_buyer",
+  "archetype_name": "Budget Practical Buyer",
+  "variation_slot": "office_professional",
+  "summary": "회사 책상 위에 둘 자기관리도 결국 숫자와 지속 가능성으로 판단하는 실용형 구매자. 사무직 루틴 안에서 부담 없이 계속 갈 수 있는 가성비를 보는 office_professional variation.",
+  "cluster_tags": ["budget_sensitive", "roi_driven", "practical", "office_professional"],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "office_professional",
+    "life_context": "실무 적합성과 설명 가능성을 중시하는 일반 직장 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "high",
+    "current_alternative": "집이나 회사에서 익숙하게 먹는 기본 제품만 꾸준히 유지 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": ["numbers", "roi", "concrete_comparison"],
+    "preferred_message_style": ["direct", "efficient", "specific"],
+    "disliked_message_style": ["fluffy", "dramatic", "vague"]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": ["clear", "steady", "direct"],
+    "disliked_voice_style": ["too_playful", "too_hyped", "too_soft"],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": ["price_per_day_value", "ingredient_value", "felt_effect_vs_cost"],
+  "objection_profile": {
+    "primary_type": "price",
+    "secondary_type": "relevance",
+    "intensity": "high",
+    "trigger_conditions": ["price_presented_without_daily_value", "benefits_not_tied_to_office_fatigue_pattern", "formula_feels_irrelevant"],
+    "resolution_requirements": ["simple_cost_per_day_explanation", "specific_office_context", "clear_difference_from_current_routine"]
+  },
+  "likely_reaction_style": {
+    "if_interested": "책상 루틴에 두고 계속 갈 수 있을지와 하루 비용을 함께 계산한다",
+    "if_unconvinced": "좋아 보여도 회사 생활에 비해 체감이 작다고 느낀다",
+    "if_annoyed": "말만 길고 직장인 장면이 안 보이면 빠르게 대화를 끝내려 한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": ["numbers_early", "clear_roi", "brief_structure"],
+    "engagement_penalties": ["hype_language", "long_intro", "abstract_claims"],
+    "purchase_intent_boosts": ["cost_per_day_proof", "routine_before_after_comparison"],
+    "purchase_intent_penalties": ["unclear_value", "high_price_without_ingredient_context"]
+  }
+}

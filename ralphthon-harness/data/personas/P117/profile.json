@@ -1,0 +1,102 @@
+{
+  "persona_id": "P117",
+  "archetype_id": "hard_sell_resistant",
+  "archetype_name": "Hard Sell Resistant",
+  "variation_slot": "high_urgency",
+  "summary": "문제 해결이 급해도 결정권을 빼앗기면 바로 닫히는 압박 저항형 구매자. 사고 대응이 잦은 실무 주간에 복용 단순성과 판단 여유를 함께 따지는 high_urgency variation.",
+  "cluster_tags": [
+    "pressure_averse",
+    "autonomy_sensitive",
+    "hard_sell_resistant",
+    "high_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "갑작스러운 업무 이슈가 잦아 빨리 챙길 수는 있어야 하지만 누가 재촉하면 반감이 커짐",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "진한 커피, 편의점 음료, 책상 서랍에 둔 기본 비타민으로 급한 날을 버팀",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "respectful_distance",
+      "plain_comparison",
+      "decision_control"
+    ],
+    "preferred_message_style": [
+      "calm",
+      "brief",
+      "option_oriented"
+    ],
+    "disliked_message_style": [
+      "pushy",
+      "countdown_based",
+      "manipulative"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "steady",
+      "warm",
+      "non_intrusive"
+    ],
+    "disliked_voice_style": [
+      "aggressive",
+      "breathless",
+      "closing_heavy"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "choice_respect",
+    "fast_routine_fit",
+    "calm_comparison"
+  ],
+  "objection_profile": {
+    "primary_type": "pressure_aversion",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "forced_urgency",
+      "talks_over_questions",
+      "one_sided_push"
+    ],
+    "resolution_requirements": [
+      "choice_preservation",
+      "simple_routine_explanation",
+      "quiet_follow_up"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "부담이 없으면 오늘 일정에 바로 넣어볼 수 있는지 스스로 계산한다",
+    "if_unconvinced": "급한 건 맞지만 지금 바꿀 이유는 더 봐야겠다고 말한다",
+    "if_annoyed": "몰아붙인다고 느끼는 순간 대화를 짧게 끊는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "respectful_tone",
+      "one_minute_clarity",
+      "choice_language"
+    ],
+    "engagement_penalties": [
+      "deadline_pressure",
+      "scripted_push",
+      "scarcity_abuse"
+    ],
+    "purchase_intent_boosts": [
+      "autonomy_respected",
+      "instant_routine_fit"
+    ],
+    "purchase_intent_penalties": [
+      "feels_cornered",
+      "forced_action"
+    ]
+  }
+}

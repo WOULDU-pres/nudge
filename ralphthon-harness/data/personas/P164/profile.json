@@ -1,0 +1,102 @@
+{
+  "persona_id": "P164",
+  "archetype_id": "identity_expressive_buyer",
+  "archetype_name": "Identity Expressive Buyer",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "작업 책상 위에 놓이는 영양제까지 자기 미감과 독립적인 일의 결에 맞아야 한다고 보는 정체성 표현형 구매자. 혼자 벌고 혼자 책임지는 1인 운영 환경에서 취향과 실용을 함께 따지는 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "identity_driven",
+    "taste_sensitive",
+    "self_expression",
+    "freelancer_solopreneur"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "시간과 비용이 바로 수익성과 연결되는 1인 운영 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "가성비 위주로 고른 기본 영양제를 작업실 서랍에 두고 챙기지만 만족감은 늘 애매한 상태",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "taste_fit",
+      "identity_alignment",
+      "distinctiveness"
+    ],
+    "preferred_message_style": [
+      "expressive",
+      "tasteful",
+      "identity_aligned"
+    ],
+    "disliked_message_style": [
+      "generic",
+      "mass_market",
+      "cookie_cutter"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "stylish",
+      "distinct",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "bland",
+      "generic",
+      "overly_corporate"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "identity_fit",
+    "taste_signal",
+    "self_expression"
+  ],
+  "objection_profile": {
+    "primary_type": "identity_mismatch",
+    "secondary_type": "premium_mismatch",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_generic",
+      "style_feels_off",
+      "brand_vibe_does_not_match_self_image"
+    ],
+    "resolution_requirements": [
+      "taste_aligned_language",
+      "distinct_positioning",
+      "identity_relevant_examples"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "작업 책상과 하루 루틴에 놓였을 때 자기 분위기를 해치지 않는지 감각적으로 확인한다",
+    "if_unconvinced": "몸에는 무난해 보여도 자기 일의 결과는 맞지 않는 선택이라고 느낀다",
+    "if_annoyed": "대중적이기만 한 설명이 나오면 금방 식는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "distinct_style",
+      "taste_signal",
+      "identity_language"
+    ],
+    "engagement_penalties": [
+      "generic_vibe",
+      "mass_market_copy",
+      "style_mismatch"
+    ],
+    "purchase_intent_boosts": [
+      "self_expression_fit",
+      "taste_alignment"
+    ],
+    "purchase_intent_penalties": [
+      "identity_mismatch",
+      "boring_presentation"
+    ]
+  }
+}

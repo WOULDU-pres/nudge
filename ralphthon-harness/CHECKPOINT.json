@@ -1,0 +1,36 @@
+{
+  "phase": "phase2",
+  "phase1": {
+    "status": "completed",
+    "completed_modules": ["config", "llm", "personas", "agents", "conversation", "evaluation", "ralph", "scripts"],
+    "current_task": null,
+    "errors": [],
+    "output_dir": "../output/"
+  },
+  "phase2": {
+    "status": "not_started",
+    "baseline_score": null,
+    "baseline_coverage": null,
+    "baseline_strategy": null,
+    "run_log": null,
+    "errors": []
+  },
+  "phase3": {
+    "status": "not_started",
+    "experiment_count": 0,
+    "keep_count": 0,
+    "discard_count": 0,
+    "crash_count": 0,
+    "best_score": null,
+    "best_coverage": null,
+    "best_experiment": null,
+    "current_score": null,
+    "current_coverage": null,
+    "last_hypothesis": null,
+    "consecutive_discards": 0,
+    "git_branch": null
+  },
+  "updated_at": "2026-03-28T19:25:00Z",
+  "updated_by": "hermes",
+  "next_action": "Phase 2: 베이스라인 시뮬레이션을 실행하라."
+}

@@ -1,0 +1,56 @@
+{
+  "persona_id": "P004",
+  "archetype_id": "budget_practical_buyer",
+  "archetype_name": "Budget Practical Buyer",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "하루 컨디션이 바로 작업 속도와 수입으로 이어져, 영양제도 철저히 본전 계산으로 보는 실용형 구매자. 1인 운영 환경에서 가격보다 '얼마나 오래 가고 얼마나 덜 무너지는가'를 따지는 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "budget_sensitive",
+    "roi_driven",
+    "practical",
+    "freelancer_solopreneur"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "시간과 비용이 바로 수익성과 연결되는 1인 운영 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "very_high",
+    "current_alternative": "저렴한 제품과 카페인으로 버티지만 체감이 애매해 계속 바꾸는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": ["numbers", "roi", "concrete_comparison"],
+    "preferred_message_style": ["direct", "efficient", "specific"],
+    "disliked_message_style": ["fluffy", "dramatic", "vague"]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": ["clear", "steady", "direct"],
+    "disliked_voice_style": ["too_playful", "too_hyped", "too_soft"],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": ["price_per_day_value", "ingredient_value", "work_output_stability"],
+  "objection_profile": {
+    "primary_type": "price",
+    "secondary_type": "relevance",
+    "intensity": "high",
+    "trigger_conditions": ["price_presented_without_daily_value", "benefits_not_tied_to_work_block_condition", "formula_feels_irrelevant"],
+    "resolution_requirements": ["simple_cost_per_day_explanation", "specific_freelancer_context", "clear_difference_from_current_routine"]
+  },
+  "likely_reaction_style": {
+    "if_interested": "하루 비용과 작업 시간대 체감이 얼마나 남는지 다시 계산한다",
+    "if_unconvinced": "좋아 보여도 수익과 집중 면에서 본전이 안 나온다고 느낀다",
+    "if_annoyed": "말만 길고 작업 장면이 안 보이면 빠르게 대화를 끝내려 한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": ["numbers_early", "clear_roi", "brief_structure"],
+    "engagement_penalties": ["hype_language", "long_intro", "abstract_claims"],
+    "purchase_intent_boosts": ["cost_per_day_proof", "workday_before_after_comparison"],
+    "purchase_intent_penalties": ["unclear_value", "high_price_without_ingredient_context"]
+  }
+}

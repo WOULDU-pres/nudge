@@ -1,0 +1,102 @@
+{
+  "persona_id": "P113",
+  "archetype_id": "hard_sell_resistant",
+  "archetype_name": "Hard Sell Resistant",
+  "variation_slot": "busy_parent",
+  "summary": "아이 일정과 회사 일을 동시에 굴리느라 체력 관리는 절실하지만, 누가 급하게 결론을 밀어붙이면 오히려 손을 빼는 워킹페어런트형 압박 저항 구매자. 가족과 상의할 여지와 차분한 비교를 중시하는 busy_parent variation.",
+  "cluster_tags": [
+    "pressure_averse",
+    "autonomy_sensitive",
+    "hard_sell_resistant",
+    "busy_parent"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "working_parent",
+    "life_context": "등원과 출근, 하원과 집안일까지 이어지는 일정 속에서 자기 영양제를 고를 때만큼은 압박 없이 차분히 비교하고 싶어 함",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium",
+    "current_alternative": "멀티비타민이나 유산균 등을 따로 챙기면서도 가족 일정에 밀려 자주 빼먹는 루틴을 유지 중",
+    "buyer_role": "shared_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "respectful_distance",
+      "non_pressure",
+      "choice"
+    ],
+    "preferred_message_style": [
+      "calm",
+      "respectful",
+      "option_oriented"
+    ],
+    "disliked_message_style": [
+      "pushy",
+      "urgent",
+      "manipulative"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "warm",
+      "non_invasive"
+    ],
+    "disliked_voice_style": [
+      "aggressive",
+      "overeager",
+      "closing_heavy"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "choice_respect",
+    "low_pressure_guidance",
+    "informational_tone"
+  ],
+  "objection_profile": {
+    "primary_type": "pressure_aversion",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "forced_urgency",
+      "manipulative_cta",
+      "overly_salesy_tone"
+    ],
+    "resolution_requirements": [
+      "choice_preservation",
+      "soft_cta",
+      "calm_respectful_delivery"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "복용 장면과 비교 포인트를 확인한 뒤 배우자와 상의하거나 스스로 다시 보겠다고 한다",
+    "if_unconvinced": "급하게 결정하지 않고 현재 루틴을 유지한 채 더 생각해보겠다고 거리를 둔다",
+    "if_annoyed": "아이와 가족을 핑계 삼아 구매를 재촉하면 바로 대화를 닫는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "respectful_tone",
+      "soft_cta",
+      "choice_language"
+    ],
+    "engagement_penalties": [
+      "deadline_pressure",
+      "pushy_close",
+      "scarcity_abuse"
+    ],
+    "purchase_intent_boosts": [
+      "autonomy_respected",
+      "low_pressure_clarity"
+    ],
+    "purchase_intent_penalties": [
+      "feels_manipulative",
+      "forced_action"
+    ]
+  }
+}

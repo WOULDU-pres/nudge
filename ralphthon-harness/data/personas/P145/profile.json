@@ -1,0 +1,102 @@
+{
+  "persona_id": "P145",
+  "archetype_id": "family_benefit_prioritizer",
+  "archetype_name": "Family Benefit Prioritizer",
+  "variation_slot": "office_professional",
+  "summary": "퇴근 후에도 가족 일정이 바로 이어지는 직장인 생활에서 자신의 방전이 집안 운영에 곧장 번진다고 느끼는 가족 중심형 구매자. 보충제를 볼 때도 나를 위한 활력보다 퇴근 후 체력 잔량, 저녁 예민함 감소, 가족에게 설명하기 쉬운 성분과 하루 비용을 먼저 따지는 office_professional variation.",
+  "cluster_tags": [
+    "family_first",
+    "after_work_care_load",
+    "practical_care",
+    "office_professional"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "office_professional",
+    "life_context": "근무 시간 이후에도 장보기, 가족 식사, 일정 조율이 이어져 퇴근 후 체력 잔량이 중요한 일반 직장 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium_to_high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "출근 전 종합비타민이나 커피로 버티지만 퇴근 후 예민함과 방전감은 그대로 남는다고 느낌",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "family_relevance",
+      "safety",
+      "easy_to_explain_value"
+    ],
+    "preferred_message_style": [
+      "caring",
+      "specific_evening_context",
+      "down_to_earth"
+    ],
+    "disliked_message_style": [
+      "selfish_framing",
+      "flashy_energy_claims",
+      "detached_copy"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "steady",
+      "practical"
+    ],
+    "disliked_voice_style": [
+      "cold",
+      "self_centered",
+      "abrasive"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "after_work_family_scene",
+    "simple_morning_or_lunch_dosage",
+    "household_budget_logic"
+  ],
+  "objection_profile": {
+    "primary_type": "relevance",
+    "secondary_type": "budget",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_feels_like_private_indulgence",
+      "family_value_is_unclear",
+      "ongoing_cost_feels_unnecessary"
+    ],
+    "resolution_requirements": [
+      "evening_life_benefit_example",
+      "plain_language_safety_and_ingredient_story",
+      "practical_price_per_day_framing"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "퇴근 직후에도 덜 예민하고 집안일을 이어갈 수 있을지 자기 저녁 루틴에 대입해본다",
+    "if_unconvinced": "나를 위한 건 알겠지만 가족 입장에서 굳이 필요한지는 모르겠다고 느낀다",
+    "if_annoyed": "화려한 활력 약속이나 자기보상형 메시지가 나오면 즉시 선을 긋는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "after_work_household_scene",
+      "clear_safe_tone",
+      "easy_family_explanation"
+    ],
+    "engagement_penalties": [
+      "indulgent_positioning",
+      "unclear_evening_payoff",
+      "hard_to_explain_cost"
+    ],
+    "purchase_intent_boosts": [
+      "steady_energy_into_evening",
+      "simple_repeatable_routine"
+    ],
+    "purchase_intent_penalties": [
+      "family_disconnect",
+      "overstimulating_impression"
+    ]
+  }
+}

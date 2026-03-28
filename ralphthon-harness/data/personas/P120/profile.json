@@ -1,0 +1,102 @@
+{
+  "persona_id": "P120",
+  "archetype_id": "hard_sell_resistant",
+  "archetype_name": "Hard Sell Resistant",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "오래 이어갈 수 있는 익숙함을 해치지 않는지부터 보는 압박 저항형 구매자. 중장년 생활 리듬 속에서 이해하기 쉬운 설명과 편한 복용감을 중시하는 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "pressure_averse",
+    "autonomy_sensitive",
+    "hard_sell_resistant",
+    "mature_later_life_buyer"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "새로운 것을 완전히 닫진 않지만 복용이 낯설거나 설명이 성급하면 바로 거리를 두는 단계",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium",
+    "current_alternative": "배우자나 지인 추천으로 시작한 기존 영양제를 식사 후 한두 알씩 꾸준히 챙기는 편",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "respectful_distance",
+      "ease_of_understanding",
+      "choice"
+    ],
+    "preferred_message_style": [
+      "calm",
+      "plain",
+      "option_oriented"
+    ],
+    "disliked_message_style": [
+      "pushy",
+      "hurried",
+      "manipulative"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "steady",
+      "warm",
+      "non_invasive"
+    ],
+    "disliked_voice_style": [
+      "aggressive",
+      "too_young",
+      "closing_heavy"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "choice_respect",
+    "easy_routine_fit",
+    "plain_explanation"
+  ],
+  "objection_profile": {
+    "primary_type": "pressure_aversion",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "forced_urgency",
+      "hard_to_follow_explanation",
+      "overly_salesy_tone"
+    ],
+    "resolution_requirements": [
+      "choice_preservation",
+      "slow_clear_guidance",
+      "simple_routine_picture"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "집에 가서 기존에 먹는 것과 조용히 비교해본 뒤 결정하려 한다",
+    "if_unconvinced": "지금 루틴이 더 편하다고 결론 내린다",
+    "if_annoyed": "말이 빠르거나 재촉이 느껴지면 더 들을 이유가 없다고 느낀다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "respectful_tone",
+      "plain_words",
+      "soft_cta"
+    ],
+    "engagement_penalties": [
+      "deadline_pressure",
+      "fast_close",
+      "confusing_jargon"
+    ],
+    "purchase_intent_boosts": [
+      "autonomy_respected",
+      "easy_to_keep"
+    ],
+    "purchase_intent_penalties": [
+      "feels_rushed",
+      "too_complex"
+    ]
+  }
+}

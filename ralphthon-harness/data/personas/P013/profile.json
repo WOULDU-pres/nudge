@@ -1,0 +1,102 @@
+{
+  "persona_id": "P013",
+  "archetype_id": "busy_convenience_seeker",
+  "archetype_name": "Busy Convenience Seeker",
+  "variation_slot": "busy_parent",
+  "summary": "아이 일정 사이에 자기 영양제까지 복잡해지는 것을 싫어하는 워킹페어런트형. 주방과 차 안 같은 실제 동선 안에서 한 번에 챙길 수 있어야 반응하는 busy_parent variation.",
+  "cluster_tags": [
+    "time_sensitive",
+    "convenience_first",
+    "fast_filtering",
+    "busy_parent"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "working_parent",
+    "life_context": "등원, 출근, 집안일 사이에 자기 챙김이 쉽게 뒤로 밀리는 생활",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium",
+    "current_alternative": "주방 한켠에 둔 여러 제품을 생각날 때마다 따로 챙기는 중",
+    "buyer_role": "shared_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "clarity",
+      "speed",
+      "friction_reduction"
+    ],
+    "preferred_message_style": [
+      "benefit_first",
+      "short",
+      "direct"
+    ],
+    "disliked_message_style": [
+      "long_intro",
+      "rambling",
+      "slow_build_up"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "energetic",
+      "clear",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "slow",
+      "overly_soft",
+      "dragging"
+    ],
+    "length_tolerance": "very_short"
+  },
+  "persuasion_triggers": [
+    "easy_intake",
+    "routine_fit",
+    "simple_next_step"
+  ],
+  "objection_profile": {
+    "primary_type": "timing",
+    "secondary_type": "complexity",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_not_stated_immediately",
+      "adds_another_family_chore",
+      "explanation_takes_too_long_to_get_to_daily_use"
+    ],
+    "resolution_requirements": [
+      "benefit_in_first_few_seconds",
+      "one_clear_intake_path",
+      "kitchen_or_car_routine_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "등원 전후나 회사 서랍에서 챙길 수 있는지 바로 자신의 동선에 대입한다",
+    "if_unconvinced": "좋아 보여도 결국 또 밀릴 것 같다며 우선 보류한다",
+    "if_annoyed": "아이들 일정 사이에 복잡한 복용 설명이 더해지면 금방 선을 긋는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "fast_hook",
+      "short_sentences",
+      "clear_cta"
+    ],
+    "engagement_penalties": [
+      "delayed_value",
+      "too_much_context",
+      "complex_setup"
+    ],
+    "purchase_intent_boosts": [
+      "quick_win",
+      "easy_daily_fit"
+    ],
+    "purchase_intent_penalties": [
+      "high_friction",
+      "unclear_intake_start"
+    ]
+  }
+}

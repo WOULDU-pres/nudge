@@ -1,0 +1,102 @@
+{
+  "persona_id": "P043",
+  "archetype_id": "premium_status_buyer",
+  "archetype_name": "Premium Status Buyer",
+  "variation_slot": "busy_parent",
+  "summary": "가격표보다 원료 출처와 완성도, 매일 손이 가는 방식의 품위를 더 따지는 프리미엄 지향형. 등원과 출근 사이 짧은 아침 틈에 자연스럽게 들어와야 선택이 성립하는 busy_parent variation.",
+  "cluster_tags": [
+    "premium",
+    "status_sensitive",
+    "quality_signal",
+    "busy_parent"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "working_parent",
+    "life_context": "가정과 일을 병행하며 여유 시간이 부족함",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "high",
+    "budget_sensitivity": "low",
+    "current_alternative": "백화점이나 약국에서 고른 개별 영양제를 현관 옆 서랍에 두고 그날그날 번갈아 챙기는 중",
+    "buyer_role": "shared_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "brand_quality",
+      "authority",
+      "refined_delivery"
+    ],
+    "preferred_message_style": [
+      "composed",
+      "elegant",
+      "high_signal"
+    ],
+    "disliked_message_style": [
+      "cheap_sounding",
+      "desperate",
+      "overly_casual"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "premium",
+      "calm",
+      "assured"
+    ],
+    "disliked_voice_style": [
+      "overexcited",
+      "chatty",
+      "loud"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "premium_quality_signal",
+    "credibility",
+    "effortless_wellness"
+  ],
+  "objection_profile": {
+    "primary_type": "premium_mismatch",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "tone_feels_too_salesy",
+      "messaging_sounds_mass_market",
+      "routine_fit_is_not_shown"
+    ],
+    "resolution_requirements": [
+      "more_composed_voice",
+      "confidence_without_pressure",
+      "premium_positioning_language"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "조용히 끄덕이며 원료 출처와 복용 경험이 얼마나 정돈돼 있는지 더 확인한다",
+    "if_unconvinced": "겉모습은 그럴듯하지만 자기 기준에 비해 완성도가 평범하다고 느낀다",
+    "if_annoyed": "할인점 전단 같은 어조가 섞이는 순간 바로 거리를 둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "refined_tone",
+      "premium_language",
+      "confidence"
+    ],
+    "engagement_penalties": [
+      "cheap_framing",
+      "pushiness",
+      "mass_market_vibe"
+    ],
+    "purchase_intent_boosts": [
+      "status_fit",
+      "quality_assurance"
+    ],
+    "purchase_intent_penalties": [
+      "premium_mismatch",
+      "brand_weakness"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "persona_id": "P218",
+  "archetype_id": "voice_sensitive_listener",
+  "archetype_name": "Voice Sensitive Listener",
+  "variation_slot": "low_urgency",
+  "summary": "설명 내용만큼 말하는 톤과 리듬에 민감한 청각 중심형 구매자. 지금 루틴에 큰 불만이 없어도, 부드럽고 자연스러운 전달일 때만 새 영양제를 편안하게 검토하는 low_urgency variation.",
+  "cluster_tags": [
+    "voice_sensitive",
+    "tone_matching",
+    "delivery_critical",
+    "low_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "현재 루틴은 안정적이지만 듣는 피로가 적은 설명에는 마음을 열 수 있는 상황",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "기존 영양 루틴에 큰 불만은 없어서, 새 선택지도 설명 톤이 편안할 때만 차분히 검토",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "tone_match",
+      "natural_delivery",
+      "rhythm"
+    ],
+    "preferred_message_style": [
+      "well_delivered",
+      "clear",
+      "emotionally_tuned"
+    ],
+    "disliked_message_style": [
+      "tone_mismatch",
+      "awkward_delivery",
+      "unnatural"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "natural",
+      "emotionally_matched",
+      "steady"
+    ],
+    "disliked_voice_style": [
+      "robotic",
+      "overacted",
+      "off_tone"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "voice_style_match",
+    "natural_rhythm",
+    "credible_emotion"
+  ],
+  "objection_profile": {
+    "primary_type": "voice_mismatch",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "tts_feels_unnatural",
+      "tone_does_not_match_message",
+      "delivery_breaks_immersion"
+    ],
+    "resolution_requirements": [
+      "better_tone_alignment",
+      "natural_pacing",
+      "credible_voice_direction"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "설명하는 톤이 편안하고 믿을 만하면 그제야 성분과 복용 이야기를 차분히 받아들인다",
+    "if_unconvinced": "내용보다 전달 방식이 어색해 끝까지 듣고 싶지 않다고 느낀다",
+    "if_annoyed": "부자연스럽거나 과장된 말투면 처음부터 거부감이 생긴다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "tone_alignment",
+      "natural_pacing",
+      "credible_delivery"
+    ],
+    "engagement_penalties": [
+      "robotic_voice",
+      "overacting",
+      "tone_mismatch"
+    ],
+    "purchase_intent_boosts": [
+      "voice_comfort",
+      "delivery_trust"
+    ],
+    "purchase_intent_penalties": [
+      "delivery_discomfort",
+      "unnatural_tts"
+    ]
+  }
+}

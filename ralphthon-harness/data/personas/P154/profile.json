@@ -1,0 +1,102 @@
+{
+  "persona_id": "P154",
+  "archetype_id": "career_efficiency_optimizer",
+  "archetype_name": "Career Efficiency Optimizer",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "견적, 제작, 수정, 정산을 혼자 처리하며 하루 흐름이 끊기는 것을 가장 싫어하는 효율형 구매자. 보충제도 성분 화려함보다 복용 시간 부담, 식사 불규칙성 대응, 오후 집중 유지, 하루 비용 대비 작업 손실 감소가 선명할 때 움직이는 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "focus_support",
+    "workflow_protective",
+    "efficiency_seeking",
+    "freelancer_solopreneur"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "견적 발송부터 제작, 수정, 정산까지 혼자 처리해 자잘한 컨디션 저하와 복용 번거로움이 곧 일정 지연과 수익 손실로 이어지는 1인 운영 환경",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "커피와 기본 영양제로 버티지만 식사 불규칙한 날에는 복용을 자주 놓치고 오후 집중 유지력은 부족하다고 느낌",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "workflow_fit",
+      "performance_gain",
+      "cost_efficiency"
+    ],
+    "preferred_message_style": [
+      "efficient",
+      "outcome_driven",
+      "supplement_use_case_specific"
+    ],
+    "disliked_message_style": [
+      "vague_inspiration",
+      "off_topic_emotion",
+      "feature_bloat"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "confident",
+      "clear",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "rambling",
+      "wishy_washy",
+      "casual"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "low_friction_dosage",
+    "afternoon_focus_protection",
+    "price_per_day_vs_work_loss"
+  ],
+  "objection_profile": {
+    "primary_type": "inertia",
+    "secondary_type": "relevance",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "adds_another_step_to_day",
+      "benefit_does_not_map_to_work_blocks",
+      "switch_cost_feels_unjustified"
+    ],
+    "resolution_requirements": [
+      "clear_workblock_use_case",
+      "simple_intake_logic",
+      "practical_roi_framing"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오전 깊은 작업 전이나 수정 요청 몰리는 오후에 실제로 얼마나 덜 흔들릴지 빠르게 계산해본다",
+    "if_unconvinced": "좋아 보여도 결국 기존 커피 루틴보다 나은 효율이 안 보인다고 느낀다",
+    "if_annoyed": "핵심 없는 감성 설명이나 복잡한 복용법이 나오면 바로 끊는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "workflow_specificity",
+      "simple_dosage",
+      "clear_cost_logic"
+    ],
+    "engagement_penalties": [
+      "abstract_positioning",
+      "meal_dependency_without_solution",
+      "unclear_time_of_day_fit"
+    ],
+    "purchase_intent_boosts": [
+      "deep_work_support",
+      "reliable_afternoon_stability"
+    ],
+    "purchase_intent_penalties": [
+      "extra_maintenance_feel",
+      "weak_difference_from_basics"
+    ]
+  }
+}

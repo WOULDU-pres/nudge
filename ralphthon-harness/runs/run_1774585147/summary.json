@@ -1,0 +1,69 @@
+{
+  "run_id": "run_1774585147",
+  "mode": "DEV",
+  "provider": "gemini",
+  "model": "gemini-2.0-flash",
+  "persona_count": 10,
+  "strategy_count": 1,
+  "strategies": [
+    {
+      "strategy_id": "strategy-fallback",
+      "hypothesis": "기본 접근",
+      "approach": "제품의 핵심 가치를 직접적으로 설명",
+      "opening_style": "친근한 인사 후 제품 소개",
+      "objection_handling": "가격 대비 가치 설명",
+      "tone": "친절하고 전문적인"
+    }
+  ],
+  "total_aggregate": {
+    "avg_score": 0,
+    "cluster_coverage": 0.0,
+    "cluster_scores": {
+      "budget_sensitive": 0.0,
+      "roi_driven": 0.0,
+      "practical": 0.0,
+      "young_starter": 0.0,
+      "early_career_worker": 0.0,
+      "busy_parent": 0.0,
+      "freelancer_solopreneur": 0.0,
+      "office_professional": 0.0,
+      "manager_influencer": 0.0,
+      "high_urgency": 0.0,
+      "low_urgency": 0.0,
+      "existing_alternative_user": 0.0,
+      "mature_later_life_buyer": 0.0
+    },
+    "outcome_distribution": {
+      "error": 10
+    },
+    "count": 10
+  },
+  "strategy_aggregates": {
+    "strategy-fallback": {
+      "avg_score": 0,
+      "cluster_coverage": 0.0,
+      "cluster_scores": {
+        "budget_sensitive": 0.0,
+        "roi_driven": 0.0,
+        "practical": 0.0,
+        "young_starter": 0.0,
+        "early_career_worker": 0.0,
+        "busy_parent": 0.0,
+        "freelancer_solopreneur": 0.0,
+        "office_professional": 0.0,
+        "manager_influencer": 0.0,
+        "high_urgency": 0.0,
+        "low_urgency": 0.0,
+        "existing_alternative_user": 0.0,
+        "mature_later_life_buyer": 0.0
+      },
+      "outcome_distribution": {
+        "error": 10
+      },
+      "count": 10
+    }
+  },
+  "best_strategy": "strategy-fallback",
+  "best_score": 0,
+  "elapsed_seconds": 3.3
+}

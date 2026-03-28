@@ -1,0 +1,80 @@
+{
+  "iteration_id": 1,
+  "strategies": [
+    {
+      "strategy_id": "strategy-roi-proof",
+      "hypothesis": "가격 대비 가치를 숫자로 보여주면 합리적 구매자에게 효과적",
+      "approach": "하루 500원, 커피보다 싸다는 프레이밍 + 30일 환불 강조",
+      "opening_style": "가격 비교로 시작",
+      "objection_handling": "30일 환불 보장 + 2주 체감 사례",
+      "tone": "친절하지만 데이터 중심"
+    },
+    {
+      "strategy_id": "strategy-empathy-care",
+      "hypothesis": "건강 걱정에 공감하면 감정적 연결이 구매로 이어짐",
+      "approach": "일상 피로/불편에 공감 → 자연스럽게 해결책 제시",
+      "opening_style": "요즘 피곤하시죠? 로 시작",
+      "objection_handling": "건강은 투자라는 프레이밍",
+      "tone": "따뜻하고 공감적"
+    },
+    {
+      "strategy_id": "strategy-social-proof",
+      "hypothesis": "또래 직장인들의 선택을 보여주면 신뢰가 올라감",
+      "approach": "비슷한 상황의 사람들 이야기 + 리뷰/후기 인용",
+      "opening_style": "주변에서 영양제 시작하신 분 있으세요? 로 시작",
+      "objection_handling": "실사용자 후기로 반론 대응",
+      "tone": "친근하고 대화체"
+    }
+  ],
+  "summary": {
+    "avg_score": 52.3,
+    "cluster_coverage": 62.5,
+    "best_strategy": "strategy-roi-proof",
+    "cluster_scores": {
+      "ROI": 64.3,
+      "EMPATHY": 58.3,
+      "TRUST": 44.1,
+      "VOICE-SENSITIVE": 55.7,
+      "PRESSURE-AVERSION": 52.0,
+      "PREMIUM": 38.7,
+      "LOW-ATTENTION": 48.9,
+      "COMPLEXITY-AVOIDER": 41.2
+    },
+    "outcome_distribution": {
+      "converted": 2,
+      "interested": 12,
+      "neutral": 18,
+      "resistant": 6,
+      "lost": 2
+    }
+  },
+  "reason": {
+    "winning_patterns": [
+      "ROI 전략의 가격 프레이밍(하루 500원)이 ROI 클러스터에서 일관되게 높은 engagement",
+      "첫 턴에서 질문으로 시작한 전략이 PRESSURE-AVERSION 클러스터에서 거부 반응 감소",
+      "30일 환불 보장 언급이 모든 클러스터에서 purchase_intent 상승 효과"
+    ],
+    "losing_patterns": [
+      "social-proof 전략의 '주변에서~' 오프닝이 TRUST 클러스터에서는 효과적이나 ROI에서는 약함",
+      "empathy 전략이 PREMIUM 클러스터에서 '저가 제품'으로 인식되어 역효과",
+      "긴 설명(3문장 이상)이 LOW-ATTENTION 클러스터에서 이탈 유발"
+    ],
+    "cluster_insights": {
+      "ROI": "가격 프레이밍에 가장 잘 반응. 숫자 제시가 핵심.",
+      "PREMIUM": "현재 전략 모두 약함. 프리미엄/독점 프레이밍 필요.",
+      "LOW-ATTENTION": "짧고 임팩트 있는 첫 턴이 중요. 2문장 이내 권장."
+    }
+  },
+  "learnings": {
+    "learnings": [
+      "ROI 클러스터에는 첫 턴에 가격을 숫자로 언급하면 engagement +5",
+      "PRESSURE-AVERSION 클러스터에는 질문형 오프닝이 압박형 대비 persuasion +8",
+      "모든 클러스터에서 '환불 보장' 언급 시 purchase_intent +3~5"
+    ],
+    "recommended_prompt_changes": [
+      "전략 유형 가이드에 '프리미엄/독점 접근' 추가 (PREMIUM 대응)",
+      "톤 가이드에 '첫 턴 2문장 이내' 원칙 추가 (LOW-ATTENTION 대응)",
+      "반론 대응에 '리스크 제거 프레이밍(환불 보장)' 기본 포함 권장"
+    ]
+  }
+}

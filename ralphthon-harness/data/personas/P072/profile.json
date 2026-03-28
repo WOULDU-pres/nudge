@@ -1,0 +1,102 @@
+{
+  "persona_id": "P072",
+  "archetype_id": "risk_averse_safety_first",
+  "archetype_name": "Risk Averse Safety First",
+  "variation_slot": "early_career_worker",
+  "summary": "출근 적응 중인 일상에서 예측 못 한 몸 반응이 생기지 않아야 움직이는 커리어 초반 안전 우선형 구매자. 성분보다도 무난함과 설명의 책임감을 먼저 보는 early_career_worker variation.",
+  "cluster_tags": [
+    "risk_averse",
+    "safety_first",
+    "stability_sensitive",
+    "early_career_worker"
+  ],
+  "profile": {
+    "age_band": "20s-30s early",
+    "occupation": "early_career_worker",
+    "life_context": "이른 출근과 긴장된 업무 적응 속에서 수면과 식사 리듬이 완벽하지 않은 커리어 초반",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "물 많이 마시기, 식사 챙기기, 기본 비타민처럼 가장 무난한 선택만 유지 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "stability",
+      "risk_reduction",
+      "predictability"
+    ],
+    "preferred_message_style": [
+      "reassuring",
+      "clear",
+      "non_risky"
+    ],
+    "disliked_message_style": [
+      "reckless",
+      "uncertain",
+      "overpromising"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "steady",
+      "reassuring"
+    ],
+    "disliked_voice_style": [
+      "too_fast",
+      "reckless",
+      "overexcited"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "risk_reduction",
+    "safety_signal",
+    "reliability"
+  ],
+  "objection_profile": {
+    "primary_type": "risk",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "unclear_body_outcome",
+      "too_much_novelty",
+      "missing_safety_explanation"
+    ],
+    "resolution_requirements": [
+      "reassuring_explanation",
+      "reliability_signal",
+      "clear_downside_control"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "식사 후 언제 챙기면 무난한지 같은 현실 질문을 먼저 한다",
+    "if_unconvinced": "업무 적응도 바쁜데 새 변수까지 만들고 싶지 않다고 한다",
+    "if_annoyed": "대충 괜찮다는 말만 반복하면 불안이 더 커진다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "risk_control",
+      "stable_tone",
+      "reliability"
+    ],
+    "engagement_penalties": [
+      "uncertainty",
+      "aggressive_innovation",
+      "overpromise"
+    ],
+    "purchase_intent_boosts": [
+      "safe_choice_framing",
+      "predictability"
+    ],
+    "purchase_intent_penalties": [
+      "unknowns",
+      "perceived_side_effect_risk"
+    ]
+  }
+}

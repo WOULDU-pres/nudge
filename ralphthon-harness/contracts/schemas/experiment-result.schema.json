@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "experiment-result.schema.json",
+  "title": "ExperimentResult",
+  "description": "autoresearch 외부 루프의 1회 실험 결과 (results.tsv 1행에 해당)",
+  "type": "object",
+  "required": [
+    "commit",
+    "avg_score",
+    "cluster_coverage",
+    "best_strategy",
+    "status",
+    "description"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "commit": {
+      "type": "string",
+      "description": "git commit hash (7자리)"
+    },
+    "avg_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "cluster_coverage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "best_strategy": {
+      "type": "string",
+      "description": "최고 점수 전략 ID"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "keep",
+        "discard",
+        "crash"
+      ],
+      "description": "keep/discard/crash"
+    },
+    "description": {
+      "type": "string",
+      "description": "실험 설명 (가설 요약)"
+    }
+  }
+}

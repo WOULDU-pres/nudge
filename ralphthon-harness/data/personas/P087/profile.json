@@ -1,0 +1,102 @@
+{
+  "persona_id": "P087",
+  "archetype_id": "trend_sensitive_early_adopter",
+  "archetype_name": "Trend Sensitive Early Adopter",
+  "variation_slot": "high_urgency",
+  "summary": "일이 몰린 시기일수록 남들보다 먼저 쓸 만한 조합을 찾지만, 오늘 바로 챙겨도 번거롭지 않아야 움직이는 선도형 실무자. 점심이 밀리고 일정이 꼬이는 날에도 차별점과 실행 가능성을 함께 보는 high_urgency variation.",
+  "cluster_tags": [
+    "trend_sensitive",
+    "novelty_seeking",
+    "early_adopter",
+    "high_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "마감과 일정 변경이 잦아 점심도 밀리지만, 즉시 적용 가능한 선택을 선호하는 실무자",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "커피와 단 음료, 책상 서랍 속 기본 영양제로 급한 날을 버티는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "novelty",
+      "differentiation",
+      "future_signal"
+    ],
+    "preferred_message_style": [
+      "fresh",
+      "distinctive",
+      "forward_looking"
+    ],
+    "disliked_message_style": [
+      "boring",
+      "generic",
+      "old_fashioned"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "energetic",
+      "fresh",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "flat",
+      "dated",
+      "too_stiff"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "new_formula",
+    "trend_signal",
+    "first_mover_advantage"
+  ],
+  "objection_profile": {
+    "primary_type": "novelty_mismatch",
+    "secondary_type": "relevance",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_generic",
+      "no_distinctive_angle",
+      "sounds_outdated"
+    ],
+    "resolution_requirements": [
+      "fresh_positioning",
+      "clear_whats_new",
+      "future_facing_benefit"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "지금 바로 넣었을 때 뭐가 달라지는지 빠르게 확인하며 시도 각을 본다",
+    "if_unconvinced": "신제품이어도 급한 하루를 바꿀 만큼 실용적이지 않다고 느낀다",
+    "if_annoyed": "뻔한 문구나 느린 설명이면 중간에 관심을 끊어버린다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "novel_angle",
+      "distinctiveness",
+      "energetic_freshness"
+    ],
+    "engagement_penalties": [
+      "generic_copy",
+      "dated_language",
+      "me_too_message"
+    ],
+    "purchase_intent_boosts": [
+      "first_mover_value",
+      "uniqueness"
+    ],
+    "purchase_intent_penalties": [
+      "boring_positioning",
+      "no_clear_delta"
+    ]
+  }
+}

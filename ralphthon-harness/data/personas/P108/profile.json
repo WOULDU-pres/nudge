@@ -1,0 +1,102 @@
+{
+  "persona_id": "P108",
+  "archetype_id": "overwhelmed_complexity_avoider",
+  "archetype_name": "Overwhelmed Complexity Avoider",
+  "variation_slot": "low_urgency",
+  "summary": "설명과 복용법이 복잡해지는 순간 관심이 식는 단순성 선호형. 지금 루틴을 굳이 크게 바꾸고 싶지 않아, 한눈에 이해되고 부담 없이 이어갈 수 있을 때만 반응하는 low_urgency variation.",
+  "cluster_tags": [
+    "complexity_averse",
+    "overwhelm_sensitive",
+    "simplicity_seeking",
+    "low_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "지금도 기본 루틴은 유지하고 있지만 복잡한 새 선택지는 피하고 싶은 상황",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "현재도 익숙한 제품을 간단히 챙기고 있어, 더 쉬운 관리가 아니면 굳이 바꾸지 않음",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "simplicity",
+      "guided_explanation",
+      "clarity"
+    ],
+    "preferred_message_style": [
+      "simple",
+      "one_thing_at_a_time",
+      "stepwise"
+    ],
+    "disliked_message_style": [
+      "feature_dump",
+      "jargon_heavy",
+      "dense"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "gentle",
+      "clear",
+      "steady"
+    ],
+    "disliked_voice_style": [
+      "fast",
+      "information_heavy",
+      "chaotic"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "easy_start",
+    "simplicity",
+    "one_clear_benefit"
+  ],
+  "objection_profile": {
+    "primary_type": "complexity",
+    "secondary_type": "confidence",
+    "intensity": "high",
+    "trigger_conditions": [
+      "too_many_ingredients",
+      "technical_terms_without_context",
+      "unclear_starting_point"
+    ],
+    "resolution_requirements": [
+      "step_by_step_guidance",
+      "one_core_benefit",
+      "simple_entry_path"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "복용 방법이 단순하다는 점에 안심하고, 지금 루틴에 바로 넣을 수 있는지 확인한다",
+    "if_unconvinced": "좋아 보여도 내가 꾸준히 챙길 자신이 없다며 미룬다",
+    "if_annoyed": "설명이 많아질수록 피곤해하며 현재 먹는 제품으로 돌아간다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "simple_flow",
+      "guided_explanation",
+      "gentle_pacing"
+    ],
+    "engagement_penalties": [
+      "feature_overload",
+      "jargon",
+      "unclear_entry"
+    ],
+    "purchase_intent_boosts": [
+      "easy_intake_start",
+      "confidence_building"
+    ],
+    "purchase_intent_penalties": [
+      "looks_complicated",
+      "feels_hard_to_keep_up"
+    ]
+  }
+}

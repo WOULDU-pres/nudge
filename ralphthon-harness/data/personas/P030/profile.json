@@ -1,0 +1,102 @@
+{
+  "persona_id": "P030",
+  "archetype_id": "skeptical_comparison_buyer",
+  "archetype_name": "Skeptical Comparison Buyer",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "아침 식사 뒤 챙기는 기존 제품과 새 성분표를 나란히 놓고 비교해야 움직이는 중장년 검증형 구매자. 익숙한 루틴을 해치지 않으면서 원료·함량 차이가 선명할 때만 새 선택지를 검토하는 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "skeptical",
+    "comparison_driven",
+    "evidence_seeking",
+    "mature_later_life_buyer"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "오전 산책과 식사 후 챙기는 기존 루틴은 지키되, 새 제품은 직접 비교해보고 결정하고 싶은 시기",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium",
+    "current_alternative": "지인이 추천한 종합영양제와 오메가3처럼 이미 익숙한 제품 몇 가지만 식후에 챙기는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "evidence",
+      "benchmark",
+      "specificity"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "clear",
+      "non_exaggerated"
+    ],
+    "disliked_message_style": [
+      "marketing_speak",
+      "empty_confidence",
+      "fake_urgency"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "professional",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "too_excited",
+      "too_casual",
+      "performative"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "ingredient_comparison",
+    "clear_differentiation",
+    "specific_body_example"
+  ],
+  "objection_profile": {
+    "primary_type": "trust",
+    "secondary_type": "inertia",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_lack_evidence",
+      "advantage_over_other_supplements_unclear",
+      "voice_sounds_overly_sales_driven"
+    ],
+    "resolution_requirements": [
+      "comparison_table",
+      "realistic_claims",
+      "specific_evidence_point"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "기존에 먹는 제품과의 함량 차이, 원료 형태, 복용 이유를 메모하듯 다시 확인한다",
+    "if_unconvinced": "결국 비슷해 보인다고 말하며 지금 루틴을 유지하겠다고 정리한다",
+    "if_annoyed": "근거 없는 자신감이 들리면 더 묻지 않고 대화를 닫는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "comparison_framing",
+      "evidence",
+      "precise_language"
+    ],
+    "engagement_penalties": [
+      "hype_language",
+      "vague_superiority",
+      "aggressive_urgency"
+    ],
+    "purchase_intent_boosts": [
+      "clear_differentiation",
+      "credible_evidence"
+    ],
+    "purchase_intent_penalties": [
+      "lack_of_evidence",
+      "me_too_positioning"
+    ]
+  }
+}

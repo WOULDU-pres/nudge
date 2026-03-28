@@ -1,0 +1,102 @@
+{
+  "persona_id": "P037",
+  "archetype_id": "emotionally_open_caregiver",
+  "archetype_name": "Emotionally Open Caregiver",
+  "variation_slot": "high_urgency",
+  "summary": "오늘부터 바로 시작할 수 있을 만큼 단순하면서도 심리적 부담이 적어야 움직이는 고압박 실무형 돌봄 민감 구매자. 피로가 누적된 상황에서도 부드럽고 실행 가능한 설명에 반응하는 high_urgency variation.",
+  "cluster_tags": [
+    "empathy_seeking",
+    "warmth_sensitive",
+    "care_context",
+    "high_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "마감과 보고가 몰려 커피로 버티지만 복잡한 새 루틴은 감당하기 어려운 압박 국면",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "커피, 단 음료, 짧은 낮잠처럼 그때그때 버티는 방식에 기대는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "empathy",
+      "clarity",
+      "gentle_guidance"
+    ],
+    "preferred_message_style": [
+      "warm",
+      "understanding",
+      "easy_to_follow"
+    ],
+    "disliked_message_style": [
+      "cold",
+      "technical",
+      "aggressive"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "gentle",
+      "reassuring"
+    ],
+    "disliked_voice_style": [
+      "sharp",
+      "fast",
+      "hard_sell"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "emotional_understanding",
+    "easy_intake",
+    "reduced_worry"
+  ],
+  "objection_profile": {
+    "primary_type": "complexity",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "too_many_ingredients_explained",
+      "technical_terms_without_help",
+      "tone_feels_pushy"
+    ],
+    "resolution_requirements": [
+      "simple_step_by_step_explanation",
+      "gentle_reassurance",
+      "one_clear_benefit_at_a_time"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오늘 바로 시작한다면 몇 시에 챙기면 좋은지부터 짚어달라고 한다",
+    "if_unconvinced": "좋아 보여도 지금은 챙길 여력조차 없다고 말한다",
+    "if_annoyed": "빨리 사라는 압박이 더해지면 피로감 때문에 바로 이탈한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "warm_opening",
+      "gentle_pacing",
+      "simple_language"
+    ],
+    "engagement_penalties": [
+      "cold_tone",
+      "jargon",
+      "pressure_cta"
+    ],
+    "purchase_intent_boosts": [
+      "worry_reduction",
+      "easy_routine_adoption"
+    ],
+    "purchase_intent_penalties": [
+      "feels_hard_to_keep_up",
+      "emotional_disconnect"
+    ]
+  }
+}

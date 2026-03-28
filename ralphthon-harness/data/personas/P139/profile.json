@@ -1,0 +1,102 @@
+{
+  "persona_id": "P139",
+  "archetype_id": "data_rational_analyst",
+  "archetype_name": "Data Rational Analyst",
+  "variation_slot": "existing_alternative_user",
+  "summary": "이미 여러 제품을 비교해본 경험이 있어 전환 이유를 항목으로 따지는 분석형 구매자. 성분, 복용 편의, 유지 비용을 현재 조합과 끝까지 대조하는 existing_alternative_user variation.",
+  "cluster_tags": [
+    "data_driven",
+    "rational",
+    "logic_first",
+    "existing_alternative_user"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "comparison_ready_user",
+    "life_context": "기존에 먹는 제품이 있어 새 선택지는 성분 차이와 루틴 단순화 여부를 끝까지 비교하는 상태",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "멀티비타민과 기능성 제품을 따로 챙기며 조합의 번거로움은 느끼지만 익숙함 때문에 유지 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "numbers",
+      "logic",
+      "switch_comparison"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "precise",
+      "evidence_backed"
+    ],
+    "disliked_message_style": [
+      "handwavy",
+      "emotional_only",
+      "ambiguous"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "measured",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "too_emotional",
+      "chaotic",
+      "vague"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "measurable_gain",
+    "logical_structure",
+    "clear_switch_reason"
+  ],
+  "objection_profile": {
+    "primary_type": "logic_gap",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_are_unstructured",
+      "numbers_are_missing",
+      "difference_vs_current_is_unclear"
+    ],
+    "resolution_requirements": [
+      "structured_reasoning",
+      "evidence",
+      "side_by_side_comparison"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 조합에서 무엇을 빼고 넣을지 스스로 표처럼 다시 정리한다",
+    "if_unconvinced": "갈아탈 만큼의 정량적 차이는 아니라고 결론 낸다",
+    "if_annoyed": "지금 먹는 제품을 무시하는 설명에 바로 방어적으로 변한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_logic",
+      "quantification",
+      "switch_comparison"
+    ],
+    "engagement_penalties": [
+      "ambiguity",
+      "emotion_only_pitch",
+      "logic_jump"
+    ],
+    "purchase_intent_boosts": [
+      "measurable_outcome",
+      "clear_upgrade_reason"
+    ],
+    "purchase_intent_penalties": [
+      "unproven_claims",
+      "vague_difference"
+    ]
+  }
+}

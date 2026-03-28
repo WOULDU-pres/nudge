@@ -1,0 +1,102 @@
+{
+  "persona_id": "P014",
+  "archetype_id": "busy_convenience_seeker",
+  "archetype_name": "Busy Convenience Seeker",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "수면과 식사 시간이 들쭉날쭉한 1인 운영자형. 첫 식사 시간과 상관없이 부담 없이 붙는 단순 루틴이어야 움직이는 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "time_sensitive",
+    "convenience_first",
+    "fast_filtering",
+    "freelancer_solopreneur"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "마감과 입금 주기에 따라 하루 리듬이 자주 흔들리는 1인 운영 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "모니터 옆 대용량 기본 영양제를 생각날 때만 집어 먹는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "clarity",
+      "speed",
+      "friction_reduction"
+    ],
+    "preferred_message_style": [
+      "benefit_first",
+      "short",
+      "direct"
+    ],
+    "disliked_message_style": [
+      "long_intro",
+      "rambling",
+      "slow_build_up"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "energetic",
+      "clear",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "slow",
+      "overly_soft",
+      "dragging"
+    ],
+    "length_tolerance": "very_short"
+  },
+  "persuasion_triggers": [
+    "easy_intake",
+    "routine_fit",
+    "simple_next_step"
+  ],
+  "objection_profile": {
+    "primary_type": "timing",
+    "secondary_type": "complexity",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_not_stated_immediately",
+      "requires_fixed_schedule_compliance",
+      "explanation_takes_too_long_to_get_to_irregular_day_use"
+    ],
+    "resolution_requirements": [
+      "benefit_in_first_few_seconds",
+      "one_clear_intake_path",
+      "first_meal_or_late_start_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "늦게 시작하는 날에도 언제 먹으면 되는지 바로 자기 일정에 끼워 넣어본다",
+    "if_unconvinced": "좋아 보여도 불규칙한 생활에 못 맞출 것 같다며 미룬다",
+    "if_annoyed": "정해진 시간과 규칙을 과하게 요구하면 바로 탈락시킨다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "fast_hook",
+      "short_sentences",
+      "clear_cta"
+    ],
+    "engagement_penalties": [
+      "delayed_value",
+      "too_much_context",
+      "complex_setup"
+    ],
+    "purchase_intent_boosts": [
+      "quick_win",
+      "easy_daily_fit"
+    ],
+    "purchase_intent_penalties": [
+      "high_friction",
+      "unclear_intake_start"
+    ]
+  }
+}

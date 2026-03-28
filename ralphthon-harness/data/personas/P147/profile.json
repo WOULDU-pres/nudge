@@ -1,0 +1,102 @@
+{
+  "persona_id": "P147",
+  "archetype_id": "family_benefit_prioritizer",
+  "archetype_name": "Family Benefit Prioritizer",
+  "variation_slot": "high_urgency",
+  "summary": "당장 컨디션을 붙잡아야 해도 결국 집안까지 덜 흔들리는 선택이어야 움직이는 가족 중심형 실무자. 빠른 실행과 가족에게 설명 가능한 단순함을 함께 따지는 high_urgency variation.",
+  "cluster_tags": [
+    "family_first",
+    "shared_benefit",
+    "care_driven",
+    "high_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "일도 급하지만 집에 돌아가면 돌봄과 생활 운영이 이어져 내 컨디션이 가족 분위기에 바로 닿는 실무자",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "커피와 기본 영양제로 급한 날을 넘기며 가족도 납득할 더 단순한 루틴을 찾는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "family_relevance",
+      "safety",
+      "practical_care"
+    ],
+    "preferred_message_style": [
+      "caring",
+      "relevant",
+      "down_to_earth"
+    ],
+    "disliked_message_style": [
+      "selfish_framing",
+      "flashy",
+      "detached"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "steady",
+      "caring"
+    ],
+    "disliked_voice_style": [
+      "cold",
+      "self_centered",
+      "abrasive"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "family_benefit",
+    "daily_life_improvement",
+    "safety_support"
+  ],
+  "objection_profile": {
+    "primary_type": "relevance",
+    "secondary_type": "budget",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_is_too_self_focused",
+      "family_value_is_unclear",
+      "cost_feels_hard_to_justify"
+    ],
+    "resolution_requirements": [
+      "shared_benefit_example",
+      "family_context_framing",
+      "practical_justification"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오늘부터 챙겼을 때 집안 리듬이 얼마나 덜 흔들릴지 빠르게 가늠한다",
+    "if_unconvinced": "급한 나에게도, 우리 집에도 애매한 선택이라고 느낀다",
+    "if_annoyed": "자기만을 위한 화려한 메시지면 바로 선을 긋는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "family_context",
+      "care_benefit",
+      "real_life_use"
+    ],
+    "engagement_penalties": [
+      "self_indulgent_framing",
+      "detached_pitch",
+      "unjustified_cost"
+    ],
+    "purchase_intent_boosts": [
+      "shared_value",
+      "practical_daily_gain"
+    ],
+    "purchase_intent_penalties": [
+      "irrelevant_benefit",
+      "family_disconnect"
+    ]
+  }
+}

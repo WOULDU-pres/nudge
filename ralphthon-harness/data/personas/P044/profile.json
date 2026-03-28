@@ -1,0 +1,51 @@
+{
+  "persona_id": "P044",
+  "archetype_id": "premium_status_buyer",
+  "archetype_name": "Premium Status Buyer",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "일의 퀄리티만큼 자기관리 도구의 결도 중요하게 보는 프리미엄 지향형 구매자. 1인 운영 환경에서 영양제조차 브랜드와 원료의 수준이 자신의 기준과 맞아야 손이 가는 freelancer_solopreneur variation.",
+  "cluster_tags": ["premium", "status_sensitive", "quality_signal", "freelancer_solopreneur"],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "시간과 비용이 바로 수익성과 연결되는 1인 운영 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "저렴하지만 체감과 만족도가 애매한 제품을 대충 이어 먹는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": ["brand_quality", "authority", "refined_delivery"],
+    "preferred_message_style": ["composed", "elegant", "high_signal"],
+    "disliked_message_style": ["cheap_sounding", "desperate", "overly_casual"]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": ["premium", "calm", "assured"],
+    "disliked_voice_style": ["overexcited", "chatty", "loud"],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": ["premium_quality_signal", "credibility", "refined_daily_ritual"],
+  "objection_profile": {
+    "primary_type": "premium_mismatch",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": ["tone_feels_too_salesy", "messaging_sounds_mass_market", "benefit_framing_lacks_refinement"],
+    "resolution_requirements": ["more_composed_voice", "confidence_without_pressure", "premium_positioning_language"]
+  },
+  "likely_reaction_style": {
+    "if_interested": "원료 출처와 브랜드 기준을 더 조용히 확인하며 오래 둘 만한 제품인지 본다",
+    "if_unconvinced": "가격이 아니라 제품의 결이 자기 작업 리듬과 안 맞는다고 느낀다",
+    "if_annoyed": "싸구려 세일즈처럼 느끼면 빠르게 신뢰를 잃는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": ["refined_tone", "premium_language", "confidence"],
+    "engagement_penalties": ["cheap_framing", "pushiness", "mass_market_vibe"],
+    "purchase_intent_boosts": ["status_fit", "quality_assurance"],
+    "purchase_intent_penalties": ["premium_mismatch", "brand_weakness"]
+  }
+}

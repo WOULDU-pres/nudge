@@ -1,0 +1,51 @@
+{
+  "persona_id": "P046",
+  "archetype_id": "premium_status_buyer",
+  "archetype_name": "Premium Status Buyer",
+  "variation_slot": "manager_influencer",
+  "summary": "본인 기준뿐 아니라 남에게도 품질과 선택 이유를 설명할 수 있어야 만족하는 프리미엄 지향형 구매자. 팀을 이끄는 위치라 영양제도 격과 근거를 함께 보는 manager_influencer variation.",
+  "cluster_tags": ["premium", "status_sensitive", "quality_signal", "manager_influencer"],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "개인 판단뿐 아니라 팀이나 조직 내 설명 책임이 있음",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "low",
+    "current_alternative": "기존 루틴과 다른 브랜드를 조심스럽게 비교만 하는 중",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": ["brand_quality", "authority", "refined_delivery"],
+    "preferred_message_style": ["composed", "elegant", "high_signal"],
+    "disliked_message_style": ["cheap_sounding", "desperate", "overly_casual"]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": ["premium", "calm", "assured"],
+    "disliked_voice_style": ["overexcited", "chatty", "loud"],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": ["premium_quality_signal", "credibility", "explainable_premium_choice"],
+  "objection_profile": {
+    "primary_type": "premium_mismatch",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": ["tone_feels_too_salesy", "messaging_sounds_mass_market", "benefit_framing_lacks_refinement"],
+    "resolution_requirements": ["more_composed_voice", "confidence_without_pressure", "premium_positioning_language"]
+  },
+  "likely_reaction_style": {
+    "if_interested": "원료와 품질 정보를 더 확인하며 왜 이걸 고를 만한지 설명 가능한지 본다",
+    "if_unconvinced": "브랜드나 제안의 격이 자기 기준과 안 맞는다고 느낀다",
+    "if_annoyed": "싸구려 세일즈처럼 느끼면 빠르게 신뢰를 잃는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": ["refined_tone", "premium_language", "confidence"],
+    "engagement_penalties": ["cheap_framing", "pushiness", "mass_market_vibe"],
+    "purchase_intent_boosts": ["status_fit", "quality_assurance"],
+    "purchase_intent_penalties": ["premium_mismatch", "brand_weakness"]
+  }
+}

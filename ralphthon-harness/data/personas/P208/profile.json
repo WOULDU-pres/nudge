@@ -1,0 +1,102 @@
+{
+  "persona_id": "P208",
+  "archetype_id": "low_attention_skimmer",
+  "archetype_name": "Low Attention Skimmer",
+  "variation_slot": "low_urgency",
+  "summary": "지금 루틴을 굳이 바꿀 가치가 있는지 첫 문장에서 판단할 수 있어야 읽는 저주의력형 구매자. 이미 무난한 생활을 보내고 있어 짧게 보완 가치만 가늠하려는 low_urgency variation.",
+  "cluster_tags": [
+    "low_attention",
+    "stable_routine",
+    "worth_switching",
+    "calm_filter"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "현재 식사와 산책 루틴이 무난해서, 새 영양제가 꼭 필요한지 짧게 판단하고 싶은 안정적 단계",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "아침 유산균과 저녁 기본 제품 정도를 큰 불편 없이 이어가는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "quick_relevance",
+      "calm_tone",
+      "routine_respect"
+    ],
+    "preferred_message_style": [
+      "concise",
+      "balanced",
+      "non_alarmist"
+    ],
+    "disliked_message_style": [
+      "dramatic",
+      "pushy",
+      "abstract"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "light",
+      "even"
+    ],
+    "disliked_voice_style": [
+      "sharp",
+      "salesy",
+      "overanimated"
+    ],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": [
+    "worth_switching_signal",
+    "no_scaring",
+    "simple_fit"
+  ],
+  "objection_profile": {
+    "primary_type": "attention",
+    "secondary_type": "inertia",
+    "intensity": "low",
+    "trigger_conditions": [
+      "fear_opening",
+      "vague_relevance",
+      "overlong_copy"
+    ],
+    "resolution_requirements": [
+      "plain_worth_it_frame",
+      "routine_compatibility",
+      "modest_tone"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "지금 먹는 것에 더하는지 바꾸는지 첫 부분에서 분명하면 계속 본다",
+    "if_unconvinced": "굳이 필요한 이유가 안 보이면 조용히 지나친다",
+    "if_annoyed": "평온한 루틴을 흔드는 불안 문구가 나오면 바로 접는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "worth_switching_signal",
+      "concise",
+      "quick_relevance"
+    ],
+    "engagement_penalties": [
+      "dramatic",
+      "fear_opening",
+      "sharp"
+    ],
+    "purchase_intent_boosts": [
+      "plain_worth_it_frame",
+      "routine_compatibility"
+    ],
+    "purchase_intent_penalties": [
+      "vague_relevance",
+      "overlong_copy"
+    ]
+  }
+}

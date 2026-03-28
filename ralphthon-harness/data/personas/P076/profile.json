@@ -1,0 +1,102 @@
+{
+  "persona_id": "P076",
+  "archetype_id": "risk_averse_safety_first",
+  "archetype_name": "Risk Averse Safety First",
+  "variation_slot": "manager_influencer",
+  "summary": "본인 선택의 안정성을 주변에도 설명할 수 있어야 움직이는 중간관리자 안전 우선형 구매자. 믿을 만한 기준과 예측 가능한 복용감을 중시하는 manager_influencer variation.",
+  "cluster_tags": [
+    "risk_averse",
+    "safety_first",
+    "stability_sensitive",
+    "manager_influencer"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "집과 회사 모두에서 판단의 근거를 요구받아, 사소한 선택도 신뢰감 있게 해야 하는 중간관리자 단계",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "이미 먹는 제품이 있어도 새 병을 들일 땐 제조 기준과 평판부터 다시 확인하는 중",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "stability",
+      "risk_reduction",
+      "predictability"
+    ],
+    "preferred_message_style": [
+      "reassuring",
+      "clear",
+      "non_risky"
+    ],
+    "disliked_message_style": [
+      "reckless",
+      "uncertain",
+      "overpromising"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "steady",
+      "reassuring"
+    ],
+    "disliked_voice_style": [
+      "too_fast",
+      "reckless",
+      "overexcited"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "risk_reduction",
+    "safety_signal",
+    "reliability"
+  ],
+  "objection_profile": {
+    "primary_type": "risk",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "unclear_body_outcome",
+      "too_much_novelty",
+      "missing_safety_explanation"
+    ],
+    "resolution_requirements": [
+      "reassuring_explanation",
+      "reliability_signal",
+      "clear_downside_control"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "인증, 제조 환경, 원료 설명처럼 남에게도 전달 가능한 근거를 챙긴다",
+    "if_unconvinced": "큰 하자도 큰 매력도 없으면 기존 선택을 유지한다",
+    "if_annoyed": "안전 질문에 감정적으로 대응하면 바로 후보에서 뺀다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "risk_control",
+      "stable_tone",
+      "reliability"
+    ],
+    "engagement_penalties": [
+      "uncertainty",
+      "aggressive_innovation",
+      "overpromise"
+    ],
+    "purchase_intent_boosts": [
+      "safe_choice_framing",
+      "predictability"
+    ],
+    "purchase_intent_penalties": [
+      "unknowns",
+      "perceived_side_effect_risk"
+    ]
+  }
+}

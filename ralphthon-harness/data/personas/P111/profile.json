@@ -1,0 +1,102 @@
+{
+  "persona_id": "P111",
+  "archetype_id": "hard_sell_resistant",
+  "archetype_name": "Hard Sell Resistant",
+  "variation_slot": "young_starter",
+  "summary": "영양제가 필요하긴 하지만 아직 자기 기준이 완전히 잡히지 않아, 누가 대신 결론을 내려주려 하면 오히려 한발 물러서는 자율성 민감형 구매자. 가성비와 기본 루틴을 유지하면서도 압박 없는 비교를 원하는 young_starter variation.",
+  "cluster_tags": [
+    "pressure_averse",
+    "autonomy_sensitive",
+    "hard_sell_resistant",
+    "young_starter"
+  ],
+  "profile": {
+    "age_band": "20s",
+    "occupation": "student_or_first_jobber",
+    "life_context": "수업과 아르바이트, 취업 준비 속에서 기본 영양제는 필요하지만 예산도 경험도 넉넉하지 않아 스스로 천천히 비교하고 결정하고 싶어 함",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "저렴한 멀티비타민이나 기본 제품을 필요할 때만 챙겨 먹는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "respectful_distance",
+      "non_pressure",
+      "choice"
+    ],
+    "preferred_message_style": [
+      "calm",
+      "respectful",
+      "option_oriented"
+    ],
+    "disliked_message_style": [
+      "pushy",
+      "urgent",
+      "manipulative"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "warm",
+      "non_invasive"
+    ],
+    "disliked_voice_style": [
+      "aggressive",
+      "overeager",
+      "closing_heavy"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "choice_respect",
+    "low_pressure_guidance",
+    "informational_tone"
+  ],
+  "objection_profile": {
+    "primary_type": "pressure_aversion",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "forced_urgency",
+      "manipulative_cta",
+      "overly_salesy_tone"
+    ],
+    "resolution_requirements": [
+      "choice_preservation",
+      "soft_cta",
+      "calm_respectful_delivery"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "비교 포인트와 복용법을 차분히 확인한 뒤 스스로 판단해보겠다고 한다",
+    "if_unconvinced": "당장 결정하지 않고 다른 기본 영양제와 더 비교해보겠다고 거리를 둔다",
+    "if_annoyed": "할인 마감이나 즉시 결정을 압박하면 바로 대화를 끊는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "respectful_tone",
+      "soft_cta",
+      "choice_language"
+    ],
+    "engagement_penalties": [
+      "deadline_pressure",
+      "pushy_close",
+      "scarcity_abuse"
+    ],
+    "purchase_intent_boosts": [
+      "autonomy_respected",
+      "low_pressure_clarity"
+    ],
+    "purchase_intent_penalties": [
+      "feels_manipulative",
+      "forced_action"
+    ]
+  }
+}

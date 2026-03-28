@@ -1,0 +1,102 @@
+{
+  "persona_id": "P171",
+  "archetype_id": "deal_hunter",
+  "archetype_name": "Deal Hunter",
+  "variation_slot": "young_starter",
+  "summary": "정가보다 쿠폰, 묶음, 첫 구매 혜택을 조합했을 때 만족도가 크게 올라가는 딜 민감형 구매자. 막 사회 진입 중이라 예산 제약이 크고, 같은 영양제라도 '어떻게 사느냐'를 먼저 계산하는 young_starter variation.",
+  "cluster_tags": [
+    "deal_sensitive",
+    "offer_driven",
+    "value_hunter",
+    "young_starter"
+  ],
+  "profile": {
+    "age_band": "20s",
+    "occupation": "student_or_first_jobber",
+    "life_context": "막 사회 진입 중이라 경험은 적고 예산 제약은 큰 편",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "very_high",
+    "current_alternative": "세일 때 산 기본 제품과 저가 멀티비타민을 번갈아 먹는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "concrete_offer",
+      "clear_savings",
+      "deal_clarity"
+    ],
+    "preferred_message_style": [
+      "clear_offer",
+      "specific",
+      "benefit_explicit"
+    ],
+    "disliked_message_style": [
+      "vague_urgency",
+      "hidden_terms",
+      "fuzzy_benefits"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "energetic",
+      "clear",
+      "sharp"
+    ],
+    "disliked_voice_style": [
+      "mushy",
+      "unclear",
+      "dragging"
+    ],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": [
+    "coupon_stackable_value",
+    "entry_bundle_gain",
+    "clear_cost_per_day_drop"
+  ],
+  "objection_profile": {
+    "primary_type": "offer_unclear",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "deal_is_vague",
+      "discount_claim_without_real_total",
+      "terms_are_unclear"
+    ],
+    "resolution_requirements": [
+      "specific_offer",
+      "transparent_terms",
+      "visible_savings"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "쿠폰 적용 후 총액과 하루 비용이 어떻게 바뀌는지 바로 계산한다",
+    "if_unconvinced": "혜택이 말보다 약하다고 느끼고 다음 세일을 기다린다",
+    "if_annoyed": "낚시성 할인처럼 보이면 브랜드 자체를 꺼린다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_offer",
+      "visible_discount",
+      "specific_bonus"
+    ],
+    "engagement_penalties": [
+      "vague_urgency",
+      "unclear_terms",
+      "hidden_costs"
+    ],
+    "purchase_intent_boosts": [
+      "immediate_savings",
+      "transparent_value"
+    ],
+    "purchase_intent_penalties": [
+      "weak_offer",
+      "bait_like_message"
+    ]
+  }
+}

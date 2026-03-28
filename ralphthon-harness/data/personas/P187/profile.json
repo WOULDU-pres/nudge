@@ -1,0 +1,102 @@
+{
+  "persona_id": "P187",
+  "archetype_id": "relationship_trust_buyer",
+  "archetype_name": "Relationship Trust Buyer",
+  "variation_slot": "high_urgency",
+  "summary": "커피로 버티는 오후에도 빨리 챙길 수 있지만 조급하게 몰지 않는 사람이 설명해야 움직이는 관계 신뢰형 구매자. 피곤한 날일수록 짧고 현실적인 답과 사람다운 태도를 더 따지는 high_urgency variation.",
+  "cluster_tags": [
+    "relationship_driven",
+    "pressure_fatigue",
+    "human_clarity",
+    "quick_start_need"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "오후 대응과 마감 압박이 커서 당장 덜 퍼지는 루틴이 필요하지만, 피곤할수록 사람다운 설명을 더 찾는 실무 환경",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "편의점 커피와 에너지드링크로 버티다가 밤에 종합비타민을 띄엄띄엄 챙기는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "sincerity",
+      "brevity",
+      "practicality"
+    ],
+    "preferred_message_style": [
+      "straightforward",
+      "humane",
+      "quick_to_point"
+    ],
+    "disliked_message_style": [
+      "fake_empathy",
+      "panic_inducing",
+      "longwinded"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "steady",
+      "clear",
+      "matter_of_fact"
+    ],
+    "disliked_voice_style": [
+      "chirpy",
+      "breathless",
+      "scripted"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "immediate_fit",
+    "non_pushy_help",
+    "realistic_routine"
+  ],
+  "objection_profile": {
+    "primary_type": "trust",
+    "secondary_type": "fatigue",
+    "intensity": "high",
+    "trigger_conditions": [
+      "urgent_pressure_language",
+      "empty_reassurance",
+      "vague_timing"
+    ],
+    "resolution_requirements": [
+      "calm_next_step",
+      "realistic_expectation",
+      "fast_clarity"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오늘 퇴근 전이나 내일 아침 중 언제 붙이면 좋을지 바로 묻는다",
+    "if_unconvinced": "좋은 말인데 지금 내 상황엔 막연하다고 선을 긋는다",
+    "if_annoyed": "피곤한데 영업당하는 느낌이 들면 읽던 것도 닫아버린다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "immediate_fit",
+      "straightforward",
+      "sincerity"
+    ],
+    "engagement_penalties": [
+      "fake_empathy",
+      "urgent_pressure_language",
+      "chirpy"
+    ],
+    "purchase_intent_boosts": [
+      "calm_next_step",
+      "realistic_expectation"
+    ],
+    "purchase_intent_penalties": [
+      "empty_reassurance",
+      "vague_timing"
+    ]
+  }
+}

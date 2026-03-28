@@ -1,0 +1,102 @@
+{
+  "persona_id": "P142",
+  "archetype_id": "family_benefit_prioritizer",
+  "archetype_name": "Family Benefit Prioritizer",
+  "variation_slot": "early_career_worker",
+  "summary": "내 월급과 컨디션이 결국 집안 분위기와 연결된다고 느끼는 가족 중심형 구매자. 커리어 초반이라 자기관리도 가족에게 설명 가능한 방향이어야 마음이 놓이는 early_career_worker variation.",
+  "cluster_tags": [
+    "family_first",
+    "shared_benefit",
+    "care_driven",
+    "early_career_worker"
+  ],
+  "profile": {
+    "age_band": "20s-30s early",
+    "occupation": "early_career_worker",
+    "life_context": "업무 적응과 성장 욕구가 공존하는 커리어 초반 단계",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "부모님이 챙겨준 기본 제품이나 익숙한 생활 루틴으로 버티는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "family_relevance",
+      "safety",
+      "practical_care"
+    ],
+    "preferred_message_style": [
+      "caring",
+      "relevant",
+      "down_to_earth"
+    ],
+    "disliked_message_style": [
+      "selfish_framing",
+      "flashy",
+      "detached"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "steady",
+      "caring"
+    ],
+    "disliked_voice_style": [
+      "cold",
+      "self_centered",
+      "abrasive"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "family_benefit",
+    "daily_life_improvement",
+    "safety_support"
+  ],
+  "objection_profile": {
+    "primary_type": "relevance",
+    "secondary_type": "budget",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_is_too_self_focused",
+      "family_value_is_unclear",
+      "cost_feels_hard_to_justify"
+    ],
+    "resolution_requirements": [
+      "shared_benefit_example",
+      "family_context_framing",
+      "practical_justification"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "내 컨디션이 좋아졌을 때 집에서 덜 걱정할 이유가 생기는지 따져본다",
+    "if_unconvinced": "나 혼자 편해지는 선택처럼 보여 마음이 안 간다",
+    "if_annoyed": "현실감 없는 메시지면 바로 멀어진다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "family_context",
+      "care_benefit",
+      "real_life_use"
+    ],
+    "engagement_penalties": [
+      "self_indulgent_framing",
+      "detached_pitch",
+      "unjustified_cost"
+    ],
+    "purchase_intent_boosts": [
+      "shared_value",
+      "practical_daily_gain"
+    ],
+    "purchase_intent_penalties": [
+      "irrelevant_benefit",
+      "family_disconnect"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "persona_id": "P106",
+  "archetype_id": "overwhelmed_complexity_avoider",
+  "archetype_name": "Overwhelmed Complexity Avoider",
+  "variation_slot": "manager_influencer",
+  "summary": "성분표가 복잡해지는 순간 피로를 느끼지만, 팀 안팎에 왜 이 루틴을 고르는지 설명은 또 분명해야 하는 단순성 선호형 관리자. 회의와 외근 사이에서 한 번에 이해되는 영양제만 검토하는 manager_influencer variation.",
+  "cluster_tags": [
+    "complexity_averse",
+    "overwhelm_sensitive",
+    "simplicity_seeking",
+    "manager_influencer"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "회의와 외근이 이어지는 일정 속에서도 설명 가능한 단순한 루틴을 선호하는 중간관리자",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "책상 위에 두는 기본 영양제 몇 가지를 번갈아 먹다가 더 단순한 선택지를 찾는 중",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "simplicity",
+      "guided_explanation",
+      "clarity"
+    ],
+    "preferred_message_style": [
+      "simple",
+      "one_thing_at_a_time",
+      "stepwise"
+    ],
+    "disliked_message_style": [
+      "feature_dump",
+      "jargon_heavy",
+      "dense"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "gentle",
+      "clear",
+      "steady"
+    ],
+    "disliked_voice_style": [
+      "fast",
+      "information_heavy",
+      "chaotic"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "easy_start",
+    "simplicity",
+    "one_clear_benefit"
+  ],
+  "objection_profile": {
+    "primary_type": "complexity",
+    "secondary_type": "confidence",
+    "intensity": "high",
+    "trigger_conditions": [
+      "too_many_ingredients",
+      "technical_terms_without_context",
+      "unclear_starting_point"
+    ],
+    "resolution_requirements": [
+      "step_by_step_guidance",
+      "one_core_benefit",
+      "simple_entry_path"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "하루 중 어디에 끼워 넣으면 되는지 바로 정리하며 안심한다",
+    "if_unconvinced": "또 하나의 숙제가 생기는 느낌이라 거리를 둔다",
+    "if_annoyed": "성분과 기능을 한꺼번에 쏟아내면 중간에 듣기를 멈춘다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "simple_flow",
+      "guided_explanation",
+      "gentle_pacing"
+    ],
+    "engagement_penalties": [
+      "feature_overload",
+      "jargon",
+      "unclear_entry"
+    ],
+    "purchase_intent_boosts": [
+      "easy_intake_start",
+      "confidence_building"
+    ],
+    "purchase_intent_penalties": [
+      "looks_complicated",
+      "feels_hard_to_keep_up"
+    ]
+  }
+}

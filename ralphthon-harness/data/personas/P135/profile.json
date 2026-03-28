@@ -1,0 +1,102 @@
+{
+  "persona_id": "P135",
+  "archetype_id": "data_rational_analyst",
+  "archetype_name": "Data Rational Analyst",
+  "variation_slot": "office_professional",
+  "summary": "사무직 일과 안에서 집중 저하를 구조적으로 관리하고 싶어 하는 분석형 구매자. 보고와 회의가 이어지는 책상 생활에 맞는 근거와 루틴 단순성을 보는 office_professional variation.",
+  "cluster_tags": [
+    "data_driven",
+    "rational",
+    "logic_first",
+    "office_professional"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "office_professional",
+    "life_context": "정해진 출퇴근 리듬과 회의 일정 속에서 오후 집중 저하를 줄일 현실적인 기준을 찾는 단계",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "출근 전 커피와 점심 후 간식, 기본 비타민 정도로 오후 흐름을 버티는 편",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "numbers",
+      "logic",
+      "desk_job_fit"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "precise",
+      "evidence_backed"
+    ],
+    "disliked_message_style": [
+      "handwavy",
+      "emotional_only",
+      "ambiguous"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "measured",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "too_emotional",
+      "chaotic",
+      "vague"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "measurable_gain",
+    "logical_structure",
+    "office_routine_fit"
+  ],
+  "objection_profile": {
+    "primary_type": "logic_gap",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_are_unstructured",
+      "numbers_are_missing",
+      "desk_job_relevance_is_unclear"
+    ],
+    "resolution_requirements": [
+      "structured_reasoning",
+      "evidence",
+      "office_day_example"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "회의 전후와 오후 보고 시간에 어떻게 챙길지 구체적으로 대입한다",
+    "if_unconvinced": "일상에 큰 차이를 만들 이유까지는 아니라고 본다",
+    "if_annoyed": "애매한 표현이 많으면 비전문적이라고 느낀다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_logic",
+      "quantification",
+      "office_routine_fit"
+    ],
+    "engagement_penalties": [
+      "ambiguity",
+      "emotion_only_pitch",
+      "logic_jump"
+    ],
+    "purchase_intent_boosts": [
+      "measurable_outcome",
+      "simple_daily_fit"
+    ],
+    "purchase_intent_penalties": [
+      "unproven_claims",
+      "lack_of_structure"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "persona_id": "P027",
+  "archetype_id": "skeptical_comparison_buyer",
+  "archetype_name": "Skeptical Comparison Buyer",
+  "variation_slot": "high_urgency",
+  "summary": "급한 상황에서도 과장보다 근거를 요구하는 압박형 비교자. 오늘 시작할 수 있으면서도 왜 이 배합인지 명확해야 움직이는 high_urgency variation.",
+  "cluster_tags": [
+    "skeptical",
+    "comparison_driven",
+    "evidence_seeking",
+    "high_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "급한 일정 속에서도 허술한 설명은 더 못 견디는 압박 상황",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "카페인과 휴식으로 급한 불만 끄며 검토는 미루는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "evidence",
+      "benchmark",
+      "specificity"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "clear",
+      "non_exaggerated"
+    ],
+    "disliked_message_style": [
+      "marketing_speak",
+      "empty_confidence",
+      "fake_urgency"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "professional",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "too_excited",
+      "too_casual",
+      "performative"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "ingredient_comparison",
+    "clear_differentiation",
+    "specific_body_example"
+  ],
+  "objection_profile": {
+    "primary_type": "trust",
+    "secondary_type": "inertia",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_lack_evidence",
+      "immediate_use_case_is_unclear",
+      "voice_sounds_overly_sales_driven"
+    ],
+    "resolution_requirements": [
+      "comparison_table",
+      "realistic_claims",
+      "same_day_use_example"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오늘 시작 가능한 복용 경로와 현재 임시방편 대비 차이를 집중적으로 묻는다",
+    "if_unconvinced": "근거가 부족하다고 보고 카페인 같은 기존 임시방편으로 돌아간다",
+    "if_annoyed": "급한 상황을 이용해 몰아붙이는 톤이면 즉시 차단한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "comparison_framing",
+      "evidence",
+      "precise_language"
+    ],
+    "engagement_penalties": [
+      "hype_language",
+      "vague_superiority",
+      "aggressive_urgency"
+    ],
+    "purchase_intent_boosts": [
+      "clear_differentiation",
+      "credible_evidence"
+    ],
+    "purchase_intent_penalties": [
+      "lack_of_evidence",
+      "me_too_positioning"
+    ]
+  }
+}

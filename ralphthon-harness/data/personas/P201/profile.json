@@ -1,0 +1,102 @@
+{
+  "persona_id": "P201",
+  "archetype_id": "low_attention_skimmer",
+  "archetype_name": "Low Attention Skimmer",
+  "variation_slot": "young_starter",
+  "summary": "첫 문장에 카페인 많은 날 누구에게 맞고 언제 챙기기 쉬운지가 보여야 멈추는 저주의력형 구매자. 수업과 아르바이트 사이에서 길게 읽지 않고도 나에게 맞는지 즉시 판단하려는 young_starter variation.",
+  "cluster_tags": [
+    "low_attention",
+    "young_budget",
+    "headline_fit",
+    "pouch_routine"
+  ],
+  "profile": {
+    "age_band": "20s",
+    "occupation": "student_or_first_jobber",
+    "life_context": "수업, 아르바이트, 취업 준비를 오가며 설명을 길게 볼 여유가 적고 예산도 예민한 사회 진입 초반",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "편의점 비타민 음료나 저가 멀티비타민을 생각날 때만 챙기는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "instant_relevance",
+      "clarity",
+      "affordability"
+    ],
+    "preferred_message_style": [
+      "headline_first",
+      "concrete",
+      "simple"
+    ],
+    "disliked_message_style": [
+      "slow_intro",
+      "abstract",
+      "repetitive"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "brisk",
+      "friendly"
+    ],
+    "disliked_voice_style": [
+      "draggy",
+      "overexplaining",
+      "salesy"
+    ],
+    "length_tolerance": "very_short"
+  },
+  "persuasion_triggers": [
+    "fit_in_first_sentence",
+    "easy_timing",
+    "low_commitment"
+  ],
+  "objection_profile": {
+    "primary_type": "attention",
+    "secondary_type": "price",
+    "intensity": "high",
+    "trigger_conditions": [
+      "vague_opening",
+      "long_context",
+      "unclear_target_user"
+    ],
+    "resolution_requirements": [
+      "one_line_fit",
+      "quick_cost_frame",
+      "simple_timing"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "나한테 맞는 상황이 첫 줄에 보이면 저장해 두고 가격까지 바로 본다",
+    "if_unconvinced": "핵심이 늦게 나오면 읽던 손을 바로 뗀다",
+    "if_annoyed": "같은 말만 돌면 광고로 느끼고 넘겨버린다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "fit_in_first_sentence",
+      "headline_first",
+      "instant_relevance"
+    ],
+    "engagement_penalties": [
+      "slow_intro",
+      "vague_opening",
+      "draggy"
+    ],
+    "purchase_intent_boosts": [
+      "one_line_fit",
+      "quick_cost_frame"
+    ],
+    "purchase_intent_penalties": [
+      "long_context",
+      "unclear_target_user"
+    ]
+  }
+}

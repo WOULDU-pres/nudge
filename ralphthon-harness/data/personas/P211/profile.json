@@ -1,0 +1,102 @@
+{
+  "persona_id": "P211",
+  "archetype_id": "voice_sensitive_listener",
+  "archetype_name": "Voice Sensitive Listener",
+  "variation_slot": "young_starter",
+  "summary": "설명 내용보다도 목소리의 진정성과 리듬에서 먼저 신뢰를 판단하는 청각 중심형 구매자. 막 사회 진입 중이라 영양제 선택 경험은 많지 않지만, 리뷰와 추천의 전달감이 어색하면 바로 마음을 거두는 young_starter variation.",
+  "cluster_tags": [
+    "voice_sensitive",
+    "tone_matching",
+    "delivery_critical",
+    "young_starter"
+  ],
+  "profile": {
+    "age_band": "20s",
+    "occupation": "student_or_first_jobber",
+    "life_context": "막 사회 진입 중이라 경험은 적고 예산 제약은 큰 편",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "영상 리뷰 보고 산 기본 제품을 감으로 골라 먹는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "tone_match",
+      "natural_delivery",
+      "rhythm"
+    ],
+    "preferred_message_style": [
+      "well_delivered",
+      "clear",
+      "emotionally_tuned"
+    ],
+    "disliked_message_style": [
+      "tone_mismatch",
+      "awkward_delivery",
+      "unnatural"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "natural",
+      "emotionally_matched",
+      "steady"
+    ],
+    "disliked_voice_style": [
+      "robotic",
+      "overacted",
+      "off_tone"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "review_voice_credibility",
+    "natural_rhythm",
+    "calm_human_recommendation"
+  ],
+  "objection_profile": {
+    "primary_type": "voice_mismatch",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "tts_feels_unnatural",
+      "tone_does_not_match_message",
+      "delivery_breaks_immersion"
+    ],
+    "resolution_requirements": [
+      "better_tone_alignment",
+      "natural_pacing",
+      "credible_voice_direction"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "설명하는 사람의 목소리 자체가 믿을 만하다고 느끼면 제품까지 긍정적으로 본다",
+    "if_unconvinced": "내용보다 전달 방식이 어색해서 제품도 과장돼 보인다고 느낀다",
+    "if_annoyed": "부자연스러운 톤이면 처음부터 리뷰 자체를 넘겨버린다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "tone_alignment",
+      "natural_pacing",
+      "credible_delivery"
+    ],
+    "engagement_penalties": [
+      "robotic_voice",
+      "overacting",
+      "tone_mismatch"
+    ],
+    "purchase_intent_boosts": [
+      "voice_comfort",
+      "delivery_trust"
+    ],
+    "purchase_intent_penalties": [
+      "delivery_discomfort",
+      "unnatural_tts"
+    ]
+  }
+}

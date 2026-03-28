@@ -1,0 +1,102 @@
+{
+  "persona_id": "P177",
+  "archetype_id": "deal_hunter",
+  "archetype_name": "Deal Hunter",
+  "variation_slot": "high_urgency",
+  "summary": "지금 바로 시작해야 하는 상황일수록 가격과 구성의 실속이 선명해야 움직이는 딜 민감형 실무자. 첫 구매 부담과 하루 비용을 빠르게 계산하는 high_urgency variation.",
+  "cluster_tags": [
+    "deal_sensitive",
+    "offer_driven",
+    "value_hunter",
+    "high_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "급한 일정 속에서도 비용 대비 실속이 선명하지 않으면 쉽게 결제하지 않는 실무자",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "커피와 에너지음료로 버티며 첫 구매 부담이 덜한 영양제 구성을 찾는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "concrete_offer",
+      "clear_savings",
+      "deal_clarity"
+    ],
+    "preferred_message_style": [
+      "clear_offer",
+      "specific",
+      "benefit_explicit"
+    ],
+    "disliked_message_style": [
+      "vague_urgency",
+      "hidden_terms",
+      "fuzzy_benefits"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "energetic",
+      "clear",
+      "sharp"
+    ],
+    "disliked_voice_style": [
+      "mushy",
+      "unclear",
+      "dragging"
+    ],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": [
+    "discount",
+    "limited_bonus",
+    "clear_savings"
+  ],
+  "objection_profile": {
+    "primary_type": "offer_unclear",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "deal_is_vague",
+      "urgency_without_benefit",
+      "terms_are_unclear"
+    ],
+    "resolution_requirements": [
+      "specific_offer",
+      "transparent_terms",
+      "visible_savings"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오늘 바로 시작할 때 얼마가 들고 무엇을 더 받는지 빠르게 확인한다",
+    "if_unconvinced": "급한 건 맞아도 혜택이 체감될 만큼 크지 않다고 느낀다",
+    "if_annoyed": "서두르라고만 하고 조건을 흐리면 바로 의심한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_offer",
+      "visible_discount",
+      "specific_bonus"
+    ],
+    "engagement_penalties": [
+      "vague_urgency",
+      "unclear_terms",
+      "hidden_costs"
+    ],
+    "purchase_intent_boosts": [
+      "immediate_savings",
+      "transparent_value"
+    ],
+    "purchase_intent_penalties": [
+      "weak_offer",
+      "bait_like_message"
+    ]
+  }
+}

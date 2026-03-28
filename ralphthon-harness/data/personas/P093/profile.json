@@ -1,0 +1,102 @@
+{
+  "persona_id": "P093",
+  "archetype_id": "inertia_bound_traditionalist",
+  "archetype_name": "Inertia Bound Traditionalist",
+  "variation_slot": "busy_parent",
+  "summary": "아이 챙기는 손이 먼저 가서 본인 영양제는 늘 주방 한켠에 밀려나는 워킹페어런트형 관성 구매자. 새 제품도 가족 일정 사이에 한 번으로 끝나고 기존 루틴을 더 복잡하게 만들지 않을 때만 검토하는 busy_parent variation.",
+  "cluster_tags": [
+    "inertia",
+    "status_quo_bias",
+    "change_resistant",
+    "busy_parent"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "working_parent",
+    "life_context": "등원·출근·하원 일정이 촘촘해 자기 영양제는 늘 뒤로 밀리기 쉬워서 기존에 겨우 유지하던 복용 흐름을 크게 바꾸기 싫어함",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium",
+    "current_alternative": "멀티비타민이나 유산균처럼 익숙한 제품을 식탁 위에 두고 생각날 때마다 챙기는 번거로운 루틴을 유지 중",
+    "buyer_role": "shared_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "familiarity",
+      "continuity",
+      "low_disruption"
+    ],
+    "preferred_message_style": [
+      "steady",
+      "non_disruptive",
+      "practical"
+    ],
+    "disliked_message_style": [
+      "dramatic_change",
+      "radical_shift",
+      "too_new"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "familiar",
+      "measured"
+    ],
+    "disliked_voice_style": [
+      "pushy",
+      "hyper",
+      "urgent"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "easy_transition",
+    "minimal_change",
+    "familiar_routine"
+  ],
+  "objection_profile": {
+    "primary_type": "inertia",
+    "secondary_type": "complexity",
+    "intensity": "high",
+    "trigger_conditions": [
+      "change_cost_seems_high",
+      "switching_routine_is_unclear",
+      "new_routine_feels_disruptive"
+    ],
+    "resolution_requirements": [
+      "low_transition_cost",
+      "familiarity_bridge",
+      "simple_switching_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "아이 챙기는 아침 동선 안에서 본인 것도 같이 챙길 수 있는지, 기존 제품을 하나로 줄일 수 있는지 확인한다",
+    "if_unconvinced": "좋아 보여도 지금보다 손이 더 가면 결국 못 챙길 거라고 생각한다",
+    "if_annoyed": "육아와 일 사이의 현실을 모른 채 복잡한 루틴을 권하면 바로 닫힌다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "continuity_framing",
+      "simple_transition",
+      "low_disruption"
+    ],
+    "engagement_penalties": [
+      "radical_change",
+      "many_new_steps",
+      "forced_switching"
+    ],
+    "purchase_intent_boosts": [
+      "easy_migration",
+      "familiarity"
+    ],
+    "purchase_intent_penalties": [
+      "switching_cost",
+      "routine_disruption"
+    ]
+  }
+}

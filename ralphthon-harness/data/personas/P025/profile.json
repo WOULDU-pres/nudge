@@ -1,0 +1,102 @@
+{
+  "persona_id": "P025",
+  "archetype_id": "skeptical_comparison_buyer",
+  "archetype_name": "Skeptical Comparison Buyer",
+  "variation_slot": "office_professional",
+  "summary": "회사 생활에 맞는 합리적 루틴을 비교표로 확인하는 사무직 검토형. 막연한 웰니스 말보다 하루 업무 흐름 속 차이를 구조적으로 봐야 선택하는 office_professional variation.",
+  "cluster_tags": [
+    "skeptical",
+    "comparison_driven",
+    "evidence_seeking",
+    "office_professional"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "office_professional",
+    "life_context": "업무 몰입을 해치지 않는 합리적 루틴과 설명 가능성을 중시하는 직장 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "집과 회사에 나눠 둔 기본 제품을 특별한 불만 없이 유지 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "evidence",
+      "benchmark",
+      "specificity"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "clear",
+      "non_exaggerated"
+    ],
+    "disliked_message_style": [
+      "marketing_speak",
+      "empty_confidence",
+      "fake_urgency"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "professional",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "too_excited",
+      "too_casual",
+      "performative"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "ingredient_comparison",
+    "clear_differentiation",
+    "specific_body_example"
+  ],
+  "objection_profile": {
+    "primary_type": "trust",
+    "secondary_type": "inertia",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_lack_evidence",
+      "difference_from_current_basic_is_unclear",
+      "voice_sounds_overly_sales_driven"
+    ],
+    "resolution_requirements": [
+      "comparison_table",
+      "realistic_claims",
+      "specific_work_routine_example"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 기본 제품과 업무 시간대 기준의 차이를 세부적으로 확인한다",
+    "if_unconvinced": "명확한 이유가 없다며 집과 회사에 둔 익숙한 제품을 유지한다",
+    "if_annoyed": "직장 생활 맥락 없이 과장된 표현만 나오면 바로 선을 긋는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "comparison_framing",
+      "evidence",
+      "precise_language"
+    ],
+    "engagement_penalties": [
+      "hype_language",
+      "vague_superiority",
+      "aggressive_urgency"
+    ],
+    "purchase_intent_boosts": [
+      "clear_differentiation",
+      "credible_evidence"
+    ],
+    "purchase_intent_penalties": [
+      "lack_of_evidence",
+      "me_too_positioning"
+    ]
+  }
+}

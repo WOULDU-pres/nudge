@@ -1,0 +1,102 @@
+{
+  "persona_id": "P016",
+  "archetype_id": "busy_convenience_seeker",
+  "archetype_name": "Busy Convenience Seeker",
+  "variation_slot": "manager_influencer",
+  "summary": "본인 기준뿐 아니라 주변에 설명할 근거까지 챙기는 관리형 리더. 아침 일정 전 빠르게 챙기고 선택 이유를 또렷하게 말할 수 있어야 반응하는 manager_influencer variation.",
+  "cluster_tags": [
+    "time_sensitive",
+    "convenience_first",
+    "fast_filtering",
+    "manager_influencer"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "본인 판단의 근거를 주변에도 설명해야 마음이 놓이는 관리 역할",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "기존 복용 제품을 유지하면서 새 후보를 가족, 주변 추천과 함께 비교 중",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "clarity",
+      "speed",
+      "friction_reduction"
+    ],
+    "preferred_message_style": [
+      "benefit_first",
+      "short",
+      "direct"
+    ],
+    "disliked_message_style": [
+      "long_intro",
+      "rambling",
+      "slow_build_up"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "energetic",
+      "clear",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "slow",
+      "overly_soft",
+      "dragging"
+    ],
+    "length_tolerance": "very_short"
+  },
+  "persuasion_triggers": [
+    "easy_intake",
+    "routine_fit",
+    "simple_next_step"
+  ],
+  "objection_profile": {
+    "primary_type": "timing",
+    "secondary_type": "complexity",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_not_stated_immediately",
+      "cannot_be_explained_simply_to_others",
+      "explanation_takes_too_long_to_get_to_clear_use_case"
+    ],
+    "resolution_requirements": [
+      "benefit_in_first_few_seconds",
+      "one_clear_intake_path",
+      "repeatable_reason_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "복용 타이밍과 함께 가족이나 주변에 어떻게 설명할지까지 정리해본다",
+    "if_unconvinced": "내가 왜 이걸 고르는지 말하기 애매하다며 기존 선택을 유지한다",
+    "if_annoyed": "기준이 흐릿하고 말만 많으면 바로 신뢰를 거둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "fast_hook",
+      "short_sentences",
+      "clear_cta"
+    ],
+    "engagement_penalties": [
+      "delayed_value",
+      "too_much_context",
+      "complex_setup"
+    ],
+    "purchase_intent_boosts": [
+      "quick_win",
+      "easy_daily_fit"
+    ],
+    "purchase_intent_penalties": [
+      "high_friction",
+      "unclear_intake_start"
+    ]
+  }
+}

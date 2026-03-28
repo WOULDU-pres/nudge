@@ -1,0 +1,102 @@
+{
+  "persona_id": "P205",
+  "archetype_id": "low_attention_skimmer",
+  "archetype_name": "Low Attention Skimmer",
+  "variation_slot": "office_professional",
+  "summary": "점심 뒤 회사 서랍에서 챙기기 좋은지 첫 문장에 보여야 귀가 가는 저주의력형 구매자. 짧은 점심시간 안에 사무실 루틴에 바로 붙는지 판단하려는 office_professional variation.",
+  "cluster_tags": [
+    "low_attention",
+    "office_drawer",
+    "lunch_break_filter",
+    "practical_headline"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "office_professional",
+    "life_context": "짧은 점심시간과 잦은 회의 사이에 긴 설명보다 사무실에서 바로 실천 가능한 핵심만 고르는 일반 직장 생활",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "집에 둔 종합비타민과 회사 서랍 비타민을 번갈아 챙기며 무난하게 유지 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "quick_practicality",
+      "clarity",
+      "no_fuss"
+    ],
+    "preferred_message_style": [
+      "punchy",
+      "workplace_specific",
+      "tidy"
+    ],
+    "disliked_message_style": [
+      "rambling",
+      "emotional",
+      "vague"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "neat",
+      "clean",
+      "moderate"
+    ],
+    "disliked_voice_style": [
+      "cluttered",
+      "too_excited",
+      "pushy"
+    ],
+    "length_tolerance": "very_short"
+  },
+  "persuasion_triggers": [
+    "desk_drawer_fit",
+    "one_sentence_benefit",
+    "low_social_visibility"
+  ],
+  "objection_profile": {
+    "primary_type": "attention",
+    "secondary_type": "routine_fit",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "generic_opening",
+      "too_many_steps",
+      "no_office_context"
+    ],
+    "resolution_requirements": [
+      "office_specific_hook",
+      "concise_how",
+      "subtle_use_case"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "회사에서 어디에 두고 언제 꺼내면 되는지가 바로 보이면 읽는다",
+    "if_unconvinced": "직장인용처럼 말하지만 실제 장면이 없으면 넘긴다",
+    "if_annoyed": "말만 많고 핵심이 늦으면 점심시간 안에 관심을 접는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "desk_drawer_fit",
+      "punchy",
+      "quick_practicality"
+    ],
+    "engagement_penalties": [
+      "rambling",
+      "generic_opening",
+      "cluttered"
+    ],
+    "purchase_intent_boosts": [
+      "office_specific_hook",
+      "concise_how"
+    ],
+    "purchase_intent_penalties": [
+      "too_many_steps",
+      "no_office_context"
+    ]
+  }
+}

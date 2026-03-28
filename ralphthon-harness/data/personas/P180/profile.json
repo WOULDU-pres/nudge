@@ -1,0 +1,102 @@
+{
+  "persona_id": "P180",
+  "archetype_id": "deal_hunter",
+  "archetype_name": "Deal Hunter",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "가격 혜택을 좋아해도 조건이 복잡하면 바로 물러나는 딜 민감형 구매자. 중장년 루틴에 맞게 오래 먹을 수 있는지와 월 기준 부담을 차분히 따지는 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "deal_sensitive",
+    "offer_driven",
+    "value_hunter",
+    "mature_later_life_buyer"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "속도보다 신뢰와 안정성, 무리 없는 이해를 중시하는 단계",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "high",
+    "current_alternative": "익숙한 영양제를 꾸준히 사 먹고 있어도 월 부담이 줄거나 구성이 더 납득되면 바꿔볼 마음은 있는 상태",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "concrete_offer",
+      "clear_savings",
+      "deal_clarity"
+    ],
+    "preferred_message_style": [
+      "clear_offer",
+      "specific",
+      "benefit_explicit"
+    ],
+    "disliked_message_style": [
+      "vague_urgency",
+      "hidden_terms",
+      "fuzzy_benefits"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "energetic",
+      "clear",
+      "sharp"
+    ],
+    "disliked_voice_style": [
+      "mushy",
+      "unclear",
+      "dragging"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "discount",
+    "limited_bonus",
+    "clear_savings"
+  ],
+  "objection_profile": {
+    "primary_type": "offer_unclear",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "deal_is_vague",
+      "urgency_without_benefit",
+      "terms_are_unclear"
+    ],
+    "resolution_requirements": [
+      "specific_offer",
+      "transparent_terms",
+      "visible_savings"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "한 통이 얼마나 가는지와 월 부담이 실제로 줄어드는지를 천천히 계산한다",
+    "if_unconvinced": "혜택은 있어 보여도 익숙한 선택을 바꿀 만큼 명확하지 않다고 느낀다",
+    "if_annoyed": "조건이 복잡하거나 급하게 몰아붙이면 바로 신뢰를 거둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_offer",
+      "visible_discount",
+      "specific_bonus"
+    ],
+    "engagement_penalties": [
+      "vague_urgency",
+      "unclear_terms",
+      "hidden_costs"
+    ],
+    "purchase_intent_boosts": [
+      "immediate_savings",
+      "transparent_value"
+    ],
+    "purchase_intent_penalties": [
+      "weak_offer",
+      "bait_like_message"
+    ]
+  }
+}

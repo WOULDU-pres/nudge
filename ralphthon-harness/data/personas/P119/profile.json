@@ -1,0 +1,102 @@
+{
+  "persona_id": "P119",
+  "archetype_id": "hard_sell_resistant",
+  "archetype_name": "Hard Sell Resistant",
+  "variation_slot": "existing_alternative_user",
+  "summary": "이미 챙겨 먹는 조합이 있어 새 제안의 전환 가치부터 따지는 압박 저항형 구매자. 갈아타는 이유와 중단 비용을 조용히 계산하는 existing_alternative_user variation.",
+  "cluster_tags": [
+    "pressure_averse",
+    "autonomy_sensitive",
+    "hard_sell_resistant",
+    "existing_alternative_user"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "comparison_ready_user",
+    "life_context": "기존 영양제 조합과 복용 습관이 있어 새 선택지는 차이와 전환 부담을 먼저 비교함",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "멀티비타민과 마그네슘처럼 익숙한 조합을 유지하며 필요한 날만 추가 제품을 챙김",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "respectful_distance",
+      "side_by_side_comparison",
+      "decision_control"
+    ],
+    "preferred_message_style": [
+      "calm",
+      "comparative",
+      "respectful"
+    ],
+    "disliked_message_style": [
+      "pushy",
+      "switch_now_pressure",
+      "manipulative"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "measured",
+      "warm",
+      "non_invasive"
+    ],
+    "disliked_voice_style": [
+      "aggressive",
+      "overeager",
+      "closing_heavy"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "low_pressure_guidance",
+    "clear_switch_reason",
+    "comparison_clarity"
+  ],
+  "objection_profile": {
+    "primary_type": "pressure_aversion",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "forced_urgency",
+      "skips_current_alternative",
+      "overly_salesy_tone"
+    ],
+    "resolution_requirements": [
+      "choice_preservation",
+      "switch_cost_explanation",
+      "calm_delivery"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 조합과 새 선택지를 나란히 두고 갈아탈 이유를 계산한다",
+    "if_unconvinced": "굳이 바꿀 정도 차이는 아니라고 결론 내린다",
+    "if_annoyed": "지금 제품을 무시당한다고 느끼면 바로 대화를 닫는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "respectful_tone",
+      "comparison_table",
+      "switch_clarity"
+    ],
+    "engagement_penalties": [
+      "deadline_pressure",
+      "dismisses_current_routine",
+      "scarcity_abuse"
+    ],
+    "purchase_intent_boosts": [
+      "clear_upgrade_reason",
+      "autonomy_respected"
+    ],
+    "purchase_intent_penalties": [
+      "forced_switch",
+      "vague_difference"
+    ]
+  }
+}

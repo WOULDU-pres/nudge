@@ -1,0 +1,102 @@
+{
+  "persona_id": "P200",
+  "archetype_id": "autonomy_protective_buyer",
+  "archetype_name": "Autonomy Protective Buyer",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "나이만 근거로 정답을 정해주기보다 본인이 비교해서 고를 여지를 남겨둘 때 신뢰하는 자율성 보호형 구매자. 식후 루틴과 현재 선택을 스스로 따져보며 판단하려는 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "autonomy_first",
+    "later_life_choice",
+    "plain_comparison",
+    "self_judgment_space"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "새 제품을 고를 때 설명을 천천히 듣고 스스로 판단해야 안심되는 중장년 시기",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium",
+    "current_alternative": "아침 식후 기본 비타민을 챙기며, 주변 추천 제품은 원료와 섭취 횟수부터 비교하는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "autonomy",
+      "patience",
+      "plain_language"
+    ],
+    "preferred_message_style": [
+      "option_based",
+      "calm",
+      "respectful"
+    ],
+    "disliked_message_style": [
+      "age_stereotyping",
+      "command_tone",
+      "jargon_heavy"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "slow_clear",
+      "grounded",
+      "unhurried"
+    ],
+    "disliked_voice_style": [
+      "rushed",
+      "flashy",
+      "too_young_tone"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "two_or_three_paths",
+    "self_judgment_space",
+    "clear_difference"
+  ],
+  "objection_profile": {
+    "primary_type": "autonomy",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "age_based_assumption",
+      "rushed_decision",
+      "unclear_difference"
+    ],
+    "resolution_requirements": [
+      "choice_framework",
+      "patient_qna",
+      "simple_labels"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "종이에 적듯 장단점을 정리하며 어느 쪽이 식후 루틴에 맞는지 비교한다",
+    "if_unconvinced": "결국 내가 판단할 재료가 부족하다며 더 익숙한 제품으로 돌아간다",
+    "if_annoyed": "연령만 보고 단정하는 말이 나오면 바로 경계한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "two_or_three_paths",
+      "option_based",
+      "autonomy"
+    ],
+    "engagement_penalties": [
+      "age_stereotyping",
+      "age_based_assumption",
+      "rushed"
+    ],
+    "purchase_intent_boosts": [
+      "choice_framework",
+      "patient_qna"
+    ],
+    "purchase_intent_penalties": [
+      "rushed_decision",
+      "unclear_difference"
+    ]
+  }
+}

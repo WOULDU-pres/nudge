@@ -1,0 +1,102 @@
+{
+  "persona_id": "P220",
+  "archetype_id": "voice_sensitive_listener",
+  "archetype_name": "Voice Sensitive Listener",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "날카롭지 않고 천천히 신뢰가 쌓이는 말투여야 성분 설명도 받아들이는 청각 민감형 구매자. 차분한 목소리와 쉬운 말에서 안심을 얻는 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "voice_sensitive",
+    "later_life_listener",
+    "slow_warm_tone",
+    "easy_words"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "새 영양제를 고를 때 빠른 정보보다 차분한 목소리와 무리 없는 설명에서 안심을 느끼는 중장년 단계",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium",
+    "current_alternative": "식후에 익숙한 기본 제품을 챙기며, 지인 추천은 직접 들어본 말투가 편할 때만 검토하는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "tone_trust",
+      "patience",
+      "plain_words"
+    ],
+    "preferred_message_style": [
+      "respectful",
+      "unhurried",
+      "plain"
+    ],
+    "disliked_message_style": [
+      "sharp_selling",
+      "trendy_slang",
+      "hurried"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "slow_warm",
+      "stable",
+      "mature"
+    ],
+    "disliked_voice_style": [
+      "piercing",
+      "too_young_tone",
+      "robotic"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "calm_voice",
+    "patient_explanation",
+    "easy_words"
+  ],
+  "objection_profile": {
+    "primary_type": "delivery",
+    "secondary_type": "comprehension",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "clipped_tone",
+      "slangy_words",
+      "rushed_claims"
+    ],
+    "resolution_requirements": [
+      "slower_pace",
+      "familiar_words",
+      "gentle_repetition"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "목소리가 편안하면 식사 뒤 언제 챙기면 좋은지까지 자연스럽게 듣게 된다",
+    "if_unconvinced": "내용보다 말투가 낯설면 좋은 설명도 멀게 느껴진다",
+    "if_annoyed": "날카롭거나 젊은 유행말이 섞이면 바로 신뢰를 거둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "calm_voice",
+      "respectful",
+      "tone_trust"
+    ],
+    "engagement_penalties": [
+      "sharp_selling",
+      "clipped_tone",
+      "piercing"
+    ],
+    "purchase_intent_boosts": [
+      "slower_pace",
+      "familiar_words"
+    ],
+    "purchase_intent_penalties": [
+      "slangy_words",
+      "rushed_claims"
+    ]
+  }
+}

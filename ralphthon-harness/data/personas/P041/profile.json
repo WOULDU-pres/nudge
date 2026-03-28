@@ -1,0 +1,102 @@
+{
+  "persona_id": "P041",
+  "archetype_id": "premium_status_buyer",
+  "archetype_name": "Premium Status Buyer",
+  "variation_slot": "young_starter",
+  "summary": "무조건 비싼 것보다, 또래 사이에서도 취향과 자기관리 기준이 느껴지는 제품을 고르는 프리미엄 지향형 구매자. 막 사회 진입 중이라 경험은 적고 예산 제약은 큰 편이지만, 싸 보여서 실망하는 선택은 더 싫어하는 young_starter variation.",
+  "cluster_tags": [
+    "premium",
+    "status_sensitive",
+    "quality_signal",
+    "young_starter"
+  ],
+  "profile": {
+    "age_band": "20s",
+    "occupation": "student_or_first_jobber",
+    "life_context": "막 사회 진입 중이라 경험은 적고 예산 제약은 큰 편",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "올리브영이나 편집숍에서 산 기본 제품을 간단히 챙겨 먹는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "brand_quality",
+      "authority",
+      "refined_delivery"
+    ],
+    "preferred_message_style": [
+      "composed",
+      "elegant",
+      "high_signal"
+    ],
+    "disliked_message_style": [
+      "cheap_sounding",
+      "desperate",
+      "overly_casual"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "premium",
+      "calm",
+      "assured"
+    ],
+    "disliked_voice_style": [
+      "overexcited",
+      "chatty",
+      "loud"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "ingredient_pedigree",
+    "brand_worldview_fit",
+    "effortless_daily_polish"
+  ],
+  "objection_profile": {
+    "primary_type": "premium_mismatch",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "tone_feels_too_salesy",
+      "packaging_or_message_feels_mass_market",
+      "ingredient_story_lacks_refinement"
+    ],
+    "resolution_requirements": [
+      "calm_high_end_explanation",
+      "confidence_without_pressure",
+      "clear_quality_signal_with_specific_origin"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "말수는 적지만 원료 출처와 브랜드 기준을 더 조용히 캐묻는다",
+    "if_unconvinced": "좋아 보이긴 해도 내 루틴에 둘 제품 같진 않다고 느낀다",
+    "if_annoyed": "값만 비싸고 감각은 뻔하다고 판단하면 빠르게 마음을 접는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "refined_tone",
+      "ingredient_origin_signal",
+      "confidence"
+    ],
+    "engagement_penalties": [
+      "cheap_framing",
+      "pushiness",
+      "mass_market_vibe"
+    ],
+    "purchase_intent_boosts": [
+      "ritual_fit",
+      "quality_assurance"
+    ],
+    "purchase_intent_penalties": [
+      "premium_mismatch",
+      "brand_weakness"
+    ]
+  }
+}

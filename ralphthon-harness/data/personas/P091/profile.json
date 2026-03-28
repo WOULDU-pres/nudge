@@ -1,0 +1,102 @@
+{
+  "persona_id": "P091",
+  "archetype_id": "inertia_bound_traditionalist",
+  "archetype_name": "Inertia Bound Traditionalist",
+  "variation_slot": "young_starter",
+  "summary": "수업, 아르바이트, 취업 준비 사이에서 이미 손에 익은 저가 영양제 한두 개만 간신히 챙기고 있어, 새 제품도 복용 방식이 거의 비슷해야 움직이는 관성형 구매자. 낯선 변화보다 번거롭지 않은 이어붙이기를 원하는 young_starter variation.",
+  "cluster_tags": [
+    "inertia",
+    "status_quo_bias",
+    "change_resistant",
+    "young_starter"
+  ],
+  "profile": {
+    "age_band": "20s",
+    "occupation": "student_or_first_jobber",
+    "life_context": "수업과 아르바이트, 취업 준비로 하루 리듬이 자주 흔들려서 영양제도 익숙한 제품 한두 개만 겨우 챙기는 편이며 새 루틴을 추가하는 데 부담을 느낌",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "편의점이나 온라인에서 산 가성비 멀티비타민 같은 기본 제품을 생각날 때만 챙겨 먹는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "familiarity",
+      "continuity",
+      "low_disruption"
+    ],
+    "preferred_message_style": [
+      "steady",
+      "non_disruptive",
+      "practical"
+    ],
+    "disliked_message_style": [
+      "dramatic_change",
+      "radical_shift",
+      "too_new"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "familiar",
+      "measured"
+    ],
+    "disliked_voice_style": [
+      "pushy",
+      "hyper",
+      "urgent"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "easy_transition",
+    "minimal_change",
+    "familiar_routine"
+  ],
+  "objection_profile": {
+    "primary_type": "inertia",
+    "secondary_type": "complexity",
+    "intensity": "high",
+    "trigger_conditions": [
+      "change_cost_seems_high",
+      "switching_routine_is_unclear",
+      "new_routine_feels_disruptive"
+    ],
+    "resolution_requirements": [
+      "low_transition_cost",
+      "familiarity_bridge",
+      "simple_switching_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "지금 챙기던 시간대에 그대로 붙일 수 있는지, 알 수나 가격이 크게 달라지지 않는지부터 본다",
+    "if_unconvinced": "현재도 대충 버티고 있어서 굳이 새로 적응할 이유가 없다고 느낀다",
+    "if_annoyed": "루틴을 바꾸라고 몰아붙이거나 여러 제품을 한꺼번에 권하면 바로 닫힌다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "continuity_framing",
+      "simple_transition",
+      "low_disruption"
+    ],
+    "engagement_penalties": [
+      "radical_change",
+      "many_new_steps",
+      "forced_switching"
+    ],
+    "purchase_intent_boosts": [
+      "easy_migration",
+      "familiarity"
+    ],
+    "purchase_intent_penalties": [
+      "switching_cost",
+      "routine_disruption"
+    ]
+  }
+}

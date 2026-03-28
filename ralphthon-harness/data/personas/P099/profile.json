@@ -1,0 +1,102 @@
+{
+  "persona_id": "P099",
+  "archetype_id": "inertia_bound_traditionalist",
+  "archetype_name": "Inertia Bound Traditionalist",
+  "variation_slot": "existing_alternative_user",
+  "summary": "이미 먹는 브랜드와 복용 타이밍이 손에 익어 있어 새 제품을 보더라도 성분보다 갈아타는 번거로움을 먼저 계산하는 관성형 구매자. 비교는 꼼꼼히 하지만 실제 전환은 느리고, 새 선택도 현재 루틴을 거의 건드리지 않을 때만 움직이는 existing_alternative_user variation.",
+  "cluster_tags": [
+    "inertia",
+    "status_quo_bias",
+    "change_resistant",
+    "existing_alternative_user"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "comparison_ready_user",
+    "life_context": "이미 먹는 영양제 브랜드와 복용 순서가 정해져 있어 새 제품을 볼 때마다 성분 차이뿐 아니라 갈아타는 수고와 재정리 비용까지 함께 계산함",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "멀티비타민, 유산균 등 기존 브랜드를 정해진 시간대에 나눠 먹는 루틴을 사용 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "familiarity",
+      "continuity",
+      "low_disruption"
+    ],
+    "preferred_message_style": [
+      "steady",
+      "non_disruptive",
+      "practical"
+    ],
+    "disliked_message_style": [
+      "dramatic_change",
+      "radical_shift",
+      "too_new"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "familiar",
+      "measured"
+    ],
+    "disliked_voice_style": [
+      "pushy",
+      "hyper",
+      "urgent"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "easy_transition",
+    "minimal_change",
+    "familiar_routine"
+  ],
+  "objection_profile": {
+    "primary_type": "inertia",
+    "secondary_type": "complexity",
+    "intensity": "high",
+    "trigger_conditions": [
+      "change_cost_seems_high",
+      "switching_routine_is_unclear",
+      "new_routine_feels_disruptive"
+    ],
+    "resolution_requirements": [
+      "low_transition_cost",
+      "familiarity_bridge",
+      "simple_switching_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 먹는 제품을 다 비우고 자연스럽게 넘어갈 수 있는지, 복용 시간과 품목 수가 거의 같게 유지되는지 확인한다",
+    "if_unconvinced": "차이가 있어도 루틴을 다시 짜야 한다면 그냥 익숙한 브랜드를 계속 먹는 편이 낫다고 본다",
+    "if_annoyed": "지금 제품을 무시하거나 즉시 갈아타라고 하면 방어적으로 변한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "continuity_framing",
+      "simple_transition",
+      "low_disruption"
+    ],
+    "engagement_penalties": [
+      "radical_change",
+      "many_new_steps",
+      "forced_switching"
+    ],
+    "purchase_intent_boosts": [
+      "easy_migration",
+      "familiarity"
+    ],
+    "purchase_intent_penalties": [
+      "switching_cost",
+      "routine_disruption"
+    ]
+  }
+}

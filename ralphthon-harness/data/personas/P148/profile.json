@@ -1,0 +1,102 @@
+{
+  "persona_id": "P148",
+  "archetype_id": "family_benefit_prioritizer",
+  "archetype_name": "Family Benefit Prioritizer",
+  "variation_slot": "low_urgency",
+  "summary": "내 컨디션보다 가족 전체의 흐름이 편해지는지를 먼저 보는 가족 중심형 구매자. 급하게 바꿀 이유는 없지만, 새 영양 루틴이 집안의 일상과 설명 가능성까지 자연스럽게 맞아떨어질 때 반응하는 low_urgency variation.",
+  "cluster_tags": [
+    "family_first",
+    "shared_benefit",
+    "care_driven",
+    "low_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "지금 루틴은 유지하지만 가족에게도 자연스럽게 설명되고 납득될 선택지에는 관심이 있는 상황",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "현재도 무난한 제품을 챙기고 있지만, 가족 생활 흐름에 더 잘 맞는 선택이 있으면 차분히 검토",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "family_relevance",
+      "safety",
+      "practical_care"
+    ],
+    "preferred_message_style": [
+      "caring",
+      "relevant",
+      "down_to_earth"
+    ],
+    "disliked_message_style": [
+      "selfish_framing",
+      "flashy",
+      "detached"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "steady",
+      "caring"
+    ],
+    "disliked_voice_style": [
+      "cold",
+      "self_centered",
+      "abrasive"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "family_benefit",
+    "daily_life_improvement",
+    "safety_support"
+  ],
+  "objection_profile": {
+    "primary_type": "relevance",
+    "secondary_type": "budget",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_is_too_self_focused",
+      "family_value_is_unclear",
+      "cost_feels_hard_to_justify"
+    ],
+    "resolution_requirements": [
+      "shared_benefit_example",
+      "family_context_framing",
+      "practical_justification"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "가족에게 설명하기 쉬운지, 집안 루틴에 무리 없는지부터 더 따져본다",
+    "if_unconvinced": "나한테는 괜찮아 보여도 우리 집 기준으로는 이유가 약하다고 느낀다",
+    "if_annoyed": "현실감 없는 자기관리 서사가 나오면 금방 거리를 둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "family_context",
+      "care_benefit",
+      "real_life_use"
+    ],
+    "engagement_penalties": [
+      "self_indulgent_framing",
+      "detached_pitch",
+      "unjustified_cost"
+    ],
+    "purchase_intent_boosts": [
+      "shared_value",
+      "practical_daily_gain"
+    ],
+    "purchase_intent_penalties": [
+      "irrelevant_benefit",
+      "family_disconnect"
+    ]
+  }
+}

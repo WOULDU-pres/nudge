@@ -1,0 +1,101 @@
+{
+  "persona_id": "P152",
+  "archetype_id": "career_efficiency_optimizer",
+  "archetype_name": "Career Efficiency Optimizer",
+  "variation_slot": "early_career_worker",
+  "summary": "바쁜 실무 속에서 집중 유지와 피로 관리가 바로 결과물 품질로 이어진다고 느끼는 효율형 구매자. 커리어 초반이라 영양제도 '예뻐 보이는가'보다 '일을 덜 밀리게 만드는가'로 판단하는 early_career_worker variation.",
+  "cluster_tags": [
+    "focus_support",
+    "career_focused",
+    "efficiency_seeking"
+  ],
+  "profile": {
+    "age_band": "20s-30s early",
+    "occupation": "early_career_worker",
+    "life_context": "업무 적응과 성장 욕구가 공존하는 커리어 초반 단계",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "점심 거르기와 커피로 버티며 기본 제품은 들쑥날쑥 챙기는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "performance_gain",
+      "workflow_fit",
+      "professional_value"
+    ],
+    "preferred_message_style": [
+      "efficient",
+      "outcome_driven",
+      "work_relevant"
+    ],
+    "disliked_message_style": [
+      "vague_inspiration",
+      "off_topic_emotion",
+      "fluff"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "confident",
+      "clear",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "rambling",
+      "too_soft",
+      "casual"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "energy_support",
+    "focus_support",
+    "fatigue_recovery"
+  ],
+  "objection_profile": {
+    "primary_type": "relevance",
+    "secondary_type": "inertia",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "workfit_is_unclear",
+      "benefit_does_not_map_to_workday",
+      "switch_cost_feels_unjustified"
+    ],
+    "resolution_requirements": [
+      "workday_specific_example",
+      "performance_gain",
+      "clear_use_case"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "언제 먹으면 회의록 정리나 보고 문장 다듬는 시간대에 덜 무너지는지 확인하려 한다",
+    "if_unconvinced": "좋아 보여도 실무에 바로 도움 되진 않는다고 느낀다",
+    "if_annoyed": "일과 무관한 이야기만 길면 흥미를 잃는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "workflow_fit",
+      "time_saved",
+      "professional_relevance"
+    ],
+    "engagement_penalties": [
+      "abstract_emotion",
+      "non_work_examples",
+      "unclear_gain"
+    ],
+    "purchase_intent_boosts": [
+      "workday_energy_gain",
+      "clear_focus_gain"
+    ],
+    "purchase_intent_penalties": [
+      "work_irrelevance",
+      "effort_gt_reward"
+    ]
+  }
+}

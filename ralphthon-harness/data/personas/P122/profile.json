@@ -1,0 +1,102 @@
+{
+  "persona_id": "P122",
+  "archetype_id": "story_driven_dreamer",
+  "archetype_name": "Story Driven Dreamer",
+  "variation_slot": "early_career_worker",
+  "summary": "몸 상태가 좋아졌다는 숫자보다, 덜 허둥대고 덜 지친 퇴근길의 자기 모습을 먼저 상상하는 서사형 구매자. 커리어 초반이라 하루 리듬이 흔들리기 쉬워, 영양제도 '어떤 하루를 데려오는가'로 판단하는 early_career_worker variation.",
+  "cluster_tags": [
+    "story_driven",
+    "aspirational",
+    "emotionally_imaginative",
+    "early_career_worker"
+  ],
+  "profile": {
+    "age_band": "20s-30s early",
+    "occupation": "early_career_worker",
+    "life_context": "업무 적응과 성장 욕구가 공존하는 커리어 초반 단계",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "커피와 식사 조절로 하루를 버티며 자기 몸 관리는 뒤로 미루는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "narrative",
+      "vision",
+      "emotional_coherence"
+    ],
+    "preferred_message_style": [
+      "storytelling",
+      "evocative",
+      "future_picture"
+    ],
+    "disliked_message_style": [
+      "dry",
+      "soulless",
+      "only_numbers"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "expressive",
+      "warm",
+      "engaging"
+    ],
+    "disliked_voice_style": [
+      "flat",
+      "clinical",
+      "monotone"
+    ],
+    "length_tolerance": "medium_to_long"
+  },
+  "persuasion_triggers": [
+    "transformation_story",
+    "aspirational_future",
+    "emotional_arc"
+  ],
+  "objection_profile": {
+    "primary_type": "emotional_disconnect",
+    "secondary_type": "relevance",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_flat",
+      "no_future_picture",
+      "only_factual_listing"
+    ],
+    "resolution_requirements": [
+      "story_arc",
+      "imaginable_outcome",
+      "emotionally_alive_delivery"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "이걸 챙긴 뒤 퇴근길의 자기 표정과 생활 리듬이 어떻게 달라질지 더 구체적으로 상상해본다",
+    "if_unconvinced": "정보는 이해되지만 내 하루의 장면으로 이어지지 않는다고 느낀다",
+    "if_annoyed": "기계적인 설명만 이어지면 집중을 놓는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "narrative_opening",
+      "emotional_arc",
+      "expressive_voice"
+    ],
+    "engagement_penalties": [
+      "flat_listing",
+      "clinical_tone",
+      "no_story"
+    ],
+    "purchase_intent_boosts": [
+      "future_identity_fit",
+      "transformation_picture"
+    ],
+    "purchase_intent_penalties": [
+      "emotionless_delivery",
+      "dry_facts_only"
+    ]
+  }
+}

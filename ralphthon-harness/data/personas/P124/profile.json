@@ -1,0 +1,102 @@
+{
+  "persona_id": "P124",
+  "archetype_id": "story_driven_dreamer",
+  "archetype_name": "Story Driven Dreamer",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "브랜딩·콘텐츠 일을 혼자 돌리며 마감 전후 컨디션 기복을 크게 체감하는 서사형 구매자. 성분표만 보기보다 이 보충제가 오후 집중, 밤 수정 작업, 다음 날 회복감에 어떤 장면 차이를 만드는지 상상될 때 움직이는 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "story_driven",
+    "deadline_sensitive",
+    "routine_fragile",
+    "freelancer_solopreneur"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "제안서 작성, 클라이언트 피드백, 야간 수정 작업을 혼자 감당하며 컨디션 관리가 곧 납기와 수입 안정성으로 연결되는 1인 운영 환경",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "커피와 가성비 종합비타민으로 버티지만 오후 집중력과 야간 회복감은 늘 아쉽다고 느낌",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "narrative",
+      "ingredient_plausibility",
+      "routine_fit"
+    ],
+    "preferred_message_style": [
+      "storytelling",
+      "supplement_context",
+      "day_in_the_life"
+    ],
+    "disliked_message_style": [
+      "dry_spec_sheet",
+      "overclaiming",
+      "vague_wellness_talk"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "lively",
+      "grounded"
+    ],
+    "disliked_voice_style": [
+      "flat",
+      "clinical",
+      "salesy"
+    ],
+    "length_tolerance": "medium_to_long"
+  },
+  "persuasion_triggers": [
+    "deadline_day_scene",
+    "easy_dosage",
+    "price_per_day_justification"
+  ],
+  "objection_profile": {
+    "primary_type": "routine_relevance",
+    "secondary_type": "value_for_money",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "no_clear_time_of_day_fit",
+      "dosage_feels_fussy",
+      "premium_price_without_daily_payoff"
+    ],
+    "resolution_requirements": [
+      "specific_workday_scene",
+      "simple_intake_explanation",
+      "credible_ingredient_and_cost_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오전 작업 시작 전과 오후 집중 저하 시간에 어떻게 챙기면 좋을지 자기 루틴에 대입해본다",
+    "if_unconvinced": "좋아 보이지만 결국 커피 대신 뭘 바꾸라는 건지 애매하다고 느낀다",
+    "if_annoyed": "추상적인 감성 문구나 과한 효능 암시가 나오면 바로 거리감을 둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "deadline_relevant_scene",
+      "ingredient_story_with_purpose",
+      "warm_grounded_voice"
+    ],
+    "engagement_penalties": [
+      "generic_wellness_copy",
+      "dosage_ambiguity",
+      "all_promise_no_routine"
+    ],
+    "purchase_intent_boosts": [
+      "afternoon_focus_fit",
+      "night_work_recovery_fit"
+    ],
+    "purchase_intent_penalties": [
+      "messy_multi_step_routine",
+      "price_without_daily_context"
+    ]
+  }
+}

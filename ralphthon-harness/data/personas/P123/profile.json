@@ -1,0 +1,102 @@
+{
+  "persona_id": "P123",
+  "archetype_id": "story_driven_dreamer",
+  "archetype_name": "Story Driven Dreamer",
+  "variation_slot": "busy_parent",
+  "summary": "수치보다 저녁 식탁의 표정과 하루의 리듬이 어떻게 달라질지를 먼저 그려보는 서사형 구매자. 일과 육아 사이에서 조금 덜 지치고 싶은 마음이 선택을 이끄는 busy_parent variation.",
+  "cluster_tags": [
+    "story_driven",
+    "aspirational",
+    "emotionally_imaginative",
+    "busy_parent"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "working_parent",
+    "life_context": "가정과 일을 병행하며 여유 시간이 부족함",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium",
+    "current_alternative": "익숙한 영양제를 이어 먹고 있지만, 저녁이면 표정이 무너지는 날이 많아 다른 루틴을 상상해보는 중",
+    "buyer_role": "shared_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "narrative",
+      "vision",
+      "emotional_coherence"
+    ],
+    "preferred_message_style": [
+      "storytelling",
+      "evocative",
+      "future_picture"
+    ],
+    "disliked_message_style": [
+      "dry",
+      "soulless",
+      "only_numbers"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "expressive",
+      "warm",
+      "engaging"
+    ],
+    "disliked_voice_style": [
+      "flat",
+      "clinical",
+      "monotone"
+    ],
+    "length_tolerance": "medium_to_long"
+  },
+  "persuasion_triggers": [
+    "transformation_story",
+    "aspirational_future",
+    "emotional_arc"
+  ],
+  "objection_profile": {
+    "primary_type": "emotional_disconnect",
+    "secondary_type": "relevance",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_flat",
+      "no_future_picture",
+      "only_factual_listing"
+    ],
+    "resolution_requirements": [
+      "story_arc",
+      "imaginable_outcome",
+      "emotionally_alive_delivery"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "이 영양제가 들어온 뒤 저녁의 표정과 말투가 어떻게 달라질지 구체적으로 상상해본다",
+    "if_unconvinced": "정보는 이해했지만 자기 하루와 연결되는 장면이 없다고 느낀다",
+    "if_annoyed": "기계적인 설명만 이어지면 금세 마음을 접는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "narrative_opening",
+      "emotional_arc",
+      "expressive_voice"
+    ],
+    "engagement_penalties": [
+      "flat_listing",
+      "clinical_tone",
+      "no_story"
+    ],
+    "purchase_intent_boosts": [
+      "future_identity_fit",
+      "transformation_picture"
+    ],
+    "purchase_intent_penalties": [
+      "emotionless_delivery",
+      "dry_facts_only"
+    ]
+  }
+}

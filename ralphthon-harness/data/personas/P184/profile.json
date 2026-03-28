@@ -1,0 +1,102 @@
+{
+  "persona_id": "P184",
+  "archetype_id": "relationship_trust_buyer",
+  "archetype_name": "Relationship Trust Buyer",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "혼자 일하는 시간이 길수록 말의 진정성과 일관성을 더 크게 보는 관계형 구매자. 수익과 시간이 바로 연결되는 1인 운영 환경에서, 과장보다 성실한 대화를 신뢰하는 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "relationship_driven",
+    "trust_building",
+    "human_connection",
+    "freelancer_solopreneur"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "시간과 비용이 바로 수익성과 연결되는 1인 운영 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "저렴한 기본 영양제를 작업 중간에 챙기지만 믿고 오래 갈 만한 설명은 늘 부족하다고 느끼는 상태",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "sincerity",
+      "consistency",
+      "human_tone"
+    ],
+    "preferred_message_style": [
+      "genuine",
+      "warm",
+      "steady"
+    ],
+    "disliked_message_style": [
+      "robotic",
+      "scripted",
+      "detached"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "sincere",
+      "gentle"
+    ],
+    "disliked_voice_style": [
+      "synthetic_feeling",
+      "too_salesy",
+      "harsh"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "sincerity",
+    "gentle_guidance",
+    "human_connection"
+  ],
+  "objection_profile": {
+    "primary_type": "trust",
+    "secondary_type": "pressure_aversion",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_scripted",
+      "tone_feels_fake_friendly",
+      "relationship_is_forced"
+    ],
+    "resolution_requirements": [
+      "natural_warmth",
+      "consistent_tone",
+      "non_forced_humanity"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "작업 리듬과 예산까지 솔직히 털어놓으며 이 사람이 끝까지 같은 온도로 답하는지 본다",
+    "if_unconvinced": "친절해도 결국 판에 박힌 응대 같아 혼자 판단하는 쪽으로 돌아선다",
+    "if_annoyed": "기계적인 공감이나 결론 재촉이 반복되면 바로 마음을 닫는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "natural_warmth",
+      "human_pacing",
+      "sincere_language"
+    ],
+    "engagement_penalties": [
+      "scripted_feel",
+      "fake_friendliness",
+      "coldness"
+    ],
+    "purchase_intent_boosts": [
+      "trust_buildup",
+      "consistent_human_tone"
+    ],
+    "purchase_intent_penalties": [
+      "synthetic_feel",
+      "performative_empathy"
+    ]
+  }
+}

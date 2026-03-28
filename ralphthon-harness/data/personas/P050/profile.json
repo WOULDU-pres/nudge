@@ -1,0 +1,102 @@
+{
+  "persona_id": "P050",
+  "archetype_id": "premium_status_buyer",
+  "archetype_name": "Premium Status Buyer",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "가격보다 원료 출처와 정제된 인상을 먼저 보는 중장년 프리미엄 지향 구매자. 이미 갖춘 자기관리 루틴에 어울리는 품질과 품위를 확인할 때만 움직이는 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "premium",
+    "status_sensitive",
+    "quality_signal",
+    "mature_later_life_buyer"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "무턱대고 많은 제품을 늘리기보다, 오래 두고 먹을 만한 품질과 인상을 따지는 안정된 생활 단계",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "low",
+    "current_alternative": "신뢰하는 채널에서 고른 기본 제품 몇 가지를 깔끔하게 정리해 두고 복용 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "brand_quality",
+      "authority",
+      "refined_delivery"
+    ],
+    "preferred_message_style": [
+      "composed",
+      "elegant",
+      "high_signal"
+    ],
+    "disliked_message_style": [
+      "cheap_sounding",
+      "desperate",
+      "overly_casual"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "premium",
+      "calm",
+      "assured"
+    ],
+    "disliked_voice_style": [
+      "overexcited",
+      "chatty",
+      "loud"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "premium_quality_signal",
+    "credibility",
+    "effortless_wellness"
+  ],
+  "objection_profile": {
+    "primary_type": "premium_mismatch",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "tone_feels_too_salesy",
+      "messaging_sounds_mass_market",
+      "benefit_framing_lacks_refinement"
+    ],
+    "resolution_requirements": [
+      "more_composed_voice",
+      "confidence_without_pressure",
+      "premium_positioning_language"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "원료 출처, 제조 기준, 캡슐 형태처럼 보이지 않는 품질 포인트를 더 캐묻는다",
+    "if_unconvinced": "값은 둘째치고 품격이나 완성도가 아직 애매하다고 정리한다",
+    "if_annoyed": "고급스러움만 흉내 내는 과장된 표현이 나오면 바로 식는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "refined_tone",
+      "premium_language",
+      "confidence"
+    ],
+    "engagement_penalties": [
+      "cheap_framing",
+      "pushiness",
+      "mass_market_vibe"
+    ],
+    "purchase_intent_boosts": [
+      "status_fit",
+      "quality_assurance"
+    ],
+    "purchase_intent_penalties": [
+      "premium_mismatch",
+      "brand_weakness"
+    ]
+  }
+}

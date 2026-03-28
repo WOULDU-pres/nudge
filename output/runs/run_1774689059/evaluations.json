@@ -1,0 +1,422 @@
+[
+  {
+    "session_id": "conv-strategy-1-P001",
+    "strategy_id": "strategy-1",
+    "persona_id": "P001",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-1-P002",
+    "strategy_id": "strategy-1",
+    "persona_id": "P002",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-1-P003",
+    "strategy_id": "strategy-1",
+    "persona_id": "P003",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-1-P004",
+    "strategy_id": "strategy-1",
+    "persona_id": "P004",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-1-P005",
+    "strategy_id": "strategy-1",
+    "persona_id": "P005",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-1-P006",
+    "strategy_id": "strategy-1",
+    "persona_id": "P006",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-1-P007",
+    "strategy_id": "strategy-1",
+    "persona_id": "P007",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-1-P008",
+    "strategy_id": "strategy-1",
+    "persona_id": "P008",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-1-P009",
+    "strategy_id": "strategy-1",
+    "persona_id": "P009",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-1-P010",
+    "strategy_id": "strategy-1",
+    "persona_id": "P010",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-2-P001",
+    "strategy_id": "strategy-2",
+    "persona_id": "P001",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-2-P002",
+    "strategy_id": "strategy-2",
+    "persona_id": "P002",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-2-P003",
+    "strategy_id": "strategy-2",
+    "persona_id": "P003",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-2-P004",
+    "strategy_id": "strategy-2",
+    "persona_id": "P004",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-2-P005",
+    "strategy_id": "strategy-2",
+    "persona_id": "P005",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-2-P006",
+    "strategy_id": "strategy-2",
+    "persona_id": "P006",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-2-P007",
+    "strategy_id": "strategy-2",
+    "persona_id": "P007",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-2-P008",
+    "strategy_id": "strategy-2",
+    "persona_id": "P008",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-2-P009",
+    "strategy_id": "strategy-2",
+    "persona_id": "P009",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-2-P010",
+    "strategy_id": "strategy-2",
+    "persona_id": "P010",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-3-P001",
+    "strategy_id": "strategy-3",
+    "persona_id": "P001",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-3-P002",
+    "strategy_id": "strategy-3",
+    "persona_id": "P002",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-3-P003",
+    "strategy_id": "strategy-3",
+    "persona_id": "P003",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-3-P004",
+    "strategy_id": "strategy-3",
+    "persona_id": "P004",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-3-P005",
+    "strategy_id": "strategy-3",
+    "persona_id": "P005",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-3-P006",
+    "strategy_id": "strategy-3",
+    "persona_id": "P006",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-3-P007",
+    "strategy_id": "strategy-3",
+    "persona_id": "P007",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-3-P008",
+    "strategy_id": "strategy-3",
+    "persona_id": "P008",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-3-P009",
+    "strategy_id": "strategy-3",
+    "persona_id": "P009",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  },
+  {
+    "session_id": "conv-strategy-3-P010",
+    "strategy_id": "strategy-3",
+    "persona_id": "P010",
+    "scores": {
+      "engagement": 0,
+      "relevance": 0,
+      "persuasion": 0,
+      "purchase_intent": 0,
+      "total": 0
+    },
+    "outcome": "error",
+    "reason": "JSON parse error: [LLM ERROR] Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: h"
+  }
+]

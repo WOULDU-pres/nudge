@@ -1,0 +1,51 @@
+{
+  "persona_id": "P047",
+  "archetype_id": "premium_status_buyer",
+  "archetype_name": "Premium Status Buyer",
+  "variation_slot": "high_urgency",
+  "summary": "급한 상황에서도 대충 고른 선택은 싫어하고, 빠르되 품질 기준은 놓치지 않는 프리미엄 지향형 구매자. 오늘 당장 도움이 필요하지만 조악한 제품으로 타협하지 않는 high_urgency variation.",
+  "cluster_tags": ["premium", "status_sensitive", "quality_signal", "high_urgency"],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "당장 문제를 해결해야 해서 속도와 실행 가능성을 크게 봄",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low",
+    "current_alternative": "커피와 에너지드링크로 급한 피로를 메우며 버티는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": ["brand_quality", "authority", "refined_delivery"],
+    "preferred_message_style": ["composed", "elegant", "high_signal"],
+    "disliked_message_style": ["cheap_sounding", "desperate", "overly_casual"]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": ["premium", "calm", "assured"],
+    "disliked_voice_style": ["overexcited", "chatty", "loud"],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": ["premium_quality_signal", "credibility", "fast_but_refined_relief"],
+  "objection_profile": {
+    "primary_type": "premium_mismatch",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": ["tone_feels_too_salesy", "messaging_sounds_mass_market", "benefit_framing_lacks_refinement"],
+    "resolution_requirements": ["more_composed_voice", "confidence_without_pressure", "premium_positioning_language"]
+  },
+  "likely_reaction_style": {
+    "if_interested": "빨리 시작할 수 있으면서도 품질 기준이 살아 있는지 조용히 확인한다",
+    "if_unconvinced": "급하더라도 이런 수준은 아니라며 물러선다",
+    "if_annoyed": "싸구려 세일즈처럼 느끼면 빠르게 신뢰를 잃는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": ["refined_tone", "premium_language", "confidence"],
+    "engagement_penalties": ["cheap_framing", "pushiness", "mass_market_vibe"],
+    "purchase_intent_boosts": ["status_fit", "quality_assurance"],
+    "purchase_intent_penalties": ["premium_mismatch", "brand_weakness"]
+  }
+}

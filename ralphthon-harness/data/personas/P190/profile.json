@@ -1,0 +1,102 @@
+{
+  "persona_id": "P190",
+  "archetype_id": "relationship_trust_buyer",
+  "archetype_name": "Relationship Trust Buyer",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "성분보다도 말하는 태도와 생활에 붙는 설명이 차분해야 믿고 움직이는 관계 신뢰형 구매자. 익숙함을 해치지 않는 쉬운 이해와 무리 없는 식후 루틴을 먼저 보는 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "relationship_driven",
+    "later_life_calm",
+    "plain_explanation",
+    "meal_after_routine"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "새 영양제를 고를 때 속도보다 이해하기 쉬운 설명과 오래 먹어도 부담 없는 느낌을 먼저 보는 시기",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium",
+    "current_alternative": "아침 식후 한두 가지 기본 제품을 챙기고, 지인 추천은 메모만 해두는 편",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "patience",
+      "plain_language",
+      "steadiness"
+    ],
+    "preferred_message_style": [
+      "easy_to_follow",
+      "respectful",
+      "calm"
+    ],
+    "disliked_message_style": [
+      "jargon_heavy",
+      "hurried",
+      "exaggerated"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "slow_clear",
+      "warm",
+      "reassuring"
+    ],
+    "disliked_voice_style": [
+      "sharp",
+      "trendy",
+      "machine_like"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "plain_explanation",
+    "routine_simplicity",
+    "modest_tone"
+  ],
+  "objection_profile": {
+    "primary_type": "trust",
+    "secondary_type": "comprehension",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "unfamiliar_jargon",
+      "rushed_explanation",
+      "big_promises"
+    ],
+    "resolution_requirements": [
+      "easy_words",
+      "patient_answers",
+      "simple_timing"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "메모해 두었다가 식후에 어떻게 챙기면 좋은지 다시 확인한다",
+    "if_unconvinced": "좋아 보이지만 아직은 익숙한 쪽이 낫겠다고 말한다",
+    "if_annoyed": "급하게 결론을 내리려 하면 더 듣지 않고 물러선다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "plain_explanation",
+      "easy_to_follow",
+      "patience"
+    ],
+    "engagement_penalties": [
+      "jargon_heavy",
+      "unfamiliar_jargon",
+      "sharp"
+    ],
+    "purchase_intent_boosts": [
+      "easy_words",
+      "patient_answers"
+    ],
+    "purchase_intent_penalties": [
+      "rushed_explanation",
+      "big_promises"
+    ]
+  }
+}

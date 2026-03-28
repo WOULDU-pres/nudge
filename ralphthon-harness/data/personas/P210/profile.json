@@ -1,0 +1,102 @@
+{
+  "persona_id": "P210",
+  "archetype_id": "low_attention_skimmer",
+  "archetype_name": "Low Attention Skimmer",
+  "variation_slot": "mature_later_life_buyer",
+  "summary": "어려운 말 없이 누구에게 맞고 언제 챙기면 되는지가 첫 문장에 보여야 읽는 저주의력형 구매자. 낯선 성분 설명보다 식후 한 번 같은 쉬운 기준으로 빨리 판단하려는 mature_later_life_buyer variation.",
+  "cluster_tags": [
+    "low_attention",
+    "later_life_simple",
+    "plain_first_line",
+    "meal_linked"
+  ],
+  "profile": {
+    "age_band": "50s+",
+    "occupation": "later_life_buyer",
+    "life_context": "낯선 성분 설명보다 식후 한 번처럼 이해하기 쉬운 기준으로 빨리 판단하고 싶은 중장년 단계",
+    "digital_fluency": "low_to_medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium",
+    "current_alternative": "익숙한 기본 제품을 식후에 챙기며, 주변 추천은 설명이 쉬울 때만 검토하는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "simplicity",
+      "relevance",
+      "plain_language"
+    ],
+    "preferred_message_style": [
+      "plain",
+      "short",
+      "respectful"
+    ],
+    "disliked_message_style": [
+      "jargon",
+      "speed_talk",
+      "overpacked"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "slow_clear",
+      "gentle",
+      "stable"
+    ],
+    "disliked_voice_style": [
+      "rushed",
+      "sharp",
+      "trendy"
+    ],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": [
+    "easy_first_sentence",
+    "simple_timing",
+    "no_jargon"
+  ],
+  "objection_profile": {
+    "primary_type": "comprehension",
+    "secondary_type": "attention",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "hard_terms_upfront",
+      "no_daily_scene",
+      "rushed_claims"
+    ],
+    "resolution_requirements": [
+      "plain_korean",
+      "meal_linked_timing",
+      "patient_summary"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "식후에 어떻게 챙기면 되는지 첫 부분에서 이해되면 더 읽는다",
+    "if_unconvinced": "말이 어려우면 좋은 제품이어도 나랑 거리가 있다고 느낀다",
+    "if_annoyed": "빨리 넘기듯 말하면 신뢰보다 피로가 먼저 온다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "easy_first_sentence",
+      "plain",
+      "simplicity"
+    ],
+    "engagement_penalties": [
+      "jargon",
+      "hard_terms_upfront",
+      "rushed"
+    ],
+    "purchase_intent_boosts": [
+      "plain_korean",
+      "meal_linked_timing"
+    ],
+    "purchase_intent_penalties": [
+      "no_daily_scene",
+      "rushed_claims"
+    ]
+  }
+}

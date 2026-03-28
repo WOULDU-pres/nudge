@@ -1,0 +1,102 @@
+{
+  "persona_id": "P029",
+  "archetype_id": "skeptical_comparison_buyer",
+  "archetype_name": "Skeptical Comparison Buyer",
+  "variation_slot": "existing_alternative_user",
+  "summary": "이미 여러 대안을 써본 상태에서 갈아타기 비용을 따지는 실사용 검증형. 중복 성분, 복용 번거로움, 체감 포인트 차이를 동시에 비교해야 움직이는 existing_alternative_user variation.",
+  "cluster_tags": [
+    "skeptical",
+    "comparison_driven",
+    "evidence_seeking",
+    "existing_alternative_user"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "comparison_ready_user",
+    "life_context": "이미 복용 중인 조합과 겹침 없이 더 나은 구성을 찾는 비교 단계",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "이미 다른 브랜드 제품과 직접 짠 복용 순서를 계속 운영 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "evidence",
+      "benchmark",
+      "specificity"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "clear",
+      "non_exaggerated"
+    ],
+    "disliked_message_style": [
+      "marketing_speak",
+      "empty_confidence",
+      "fake_urgency"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "professional",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "too_excited",
+      "too_casual",
+      "performative"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "ingredient_comparison",
+    "clear_differentiation",
+    "specific_body_example"
+  ],
+  "objection_profile": {
+    "primary_type": "trust",
+    "secondary_type": "inertia",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_lack_evidence",
+      "switching_path_and_overlap_are_unclear",
+      "voice_sounds_overly_sales_driven"
+    ],
+    "resolution_requirements": [
+      "comparison_table",
+      "realistic_claims",
+      "stepwise_switch_explanation"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 복용표를 기준으로 중복 성분과 전환 순서를 세세하게 확인한다",
+    "if_unconvinced": "갈아탈 이유가 약하다고 보고 직접 짠 기존 조합을 유지한다",
+    "if_annoyed": "전환 계획 없이 우월성만 강조하면 바로 신뢰를 철회한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "comparison_framing",
+      "evidence",
+      "precise_language"
+    ],
+    "engagement_penalties": [
+      "hype_language",
+      "vague_superiority",
+      "aggressive_urgency"
+    ],
+    "purchase_intent_boosts": [
+      "clear_differentiation",
+      "credible_evidence"
+    ],
+    "purchase_intent_penalties": [
+      "lack_of_evidence",
+      "me_too_positioning"
+    ]
+  }
+}

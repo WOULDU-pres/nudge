@@ -1,0 +1,102 @@
+{
+  "persona_id": "P199",
+  "archetype_id": "autonomy_protective_buyer",
+  "archetype_name": "Autonomy Protective Buyer",
+  "variation_slot": "existing_alternative_user",
+  "summary": "이미 챙겨 먹는 기준이 있어도 결론을 스스로 내릴 수 있어야 움직이는 자율성 보호형 구매자. 현재 루틴과 새 선택지를 공정하게 비교할 공간이 있을 때만 전환을 검토하는 existing_alternative_user variation.",
+  "cluster_tags": [
+    "autonomy",
+    "control_sensitive",
+    "self_directed",
+    "existing_alternative_user"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "comparison_ready_user",
+    "life_context": "이미 챙기는 영양 루틴이 있어 새 제품도 스스로 비교하고 판단해야 안심하는 상황",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "기존 브랜드와 수동 복용 루틴을 사용 중이며, 새 제품은 차이와 선택지를 충분히 열어둘 때만 검토",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "choice",
+      "agency",
+      "information_before_commitment"
+    ],
+    "preferred_message_style": [
+      "informative",
+      "option_based",
+      "non_directive"
+    ],
+    "disliked_message_style": [
+      "controlling",
+      "pushy",
+      "leading"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "respectful",
+      "clear"
+    ],
+    "disliked_voice_style": [
+      "commanding",
+      "overbearing",
+      "high_pressure"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "option_visibility",
+    "self_paced_choice",
+    "non_forced_guidance"
+  ],
+  "objection_profile": {
+    "primary_type": "autonomy_threat",
+    "secondary_type": "pressure_aversion",
+    "intensity": "high",
+    "trigger_conditions": [
+      "message_feels_controlling",
+      "single_path_is_forced",
+      "cta_limits_choice"
+    ],
+    "resolution_requirements": [
+      "multiple_options",
+      "decision_space",
+      "information_first_approach"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 먹는 조합과 새 선택지를 나란히 놓고 스스로 판단할 재료가 충분하면 비교를 이어간다",
+    "if_unconvinced": "결론을 몰아가는 설명이 나오면 기존 루틴을 더 방어적으로 지킨다",
+    "if_annoyed": "선택권이 줄어드는 느낌이 들면 즉시 반감을 가진다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "choice_language",
+      "options",
+      "respectful_information"
+    ],
+    "engagement_penalties": [
+      "forced_decision",
+      "directive_cta",
+      "closed_options"
+    ],
+    "purchase_intent_boosts": [
+      "agency_preserved",
+      "self_paced_evaluation"
+    ],
+    "purchase_intent_penalties": [
+      "autonomy_threat",
+      "control_loss"
+    ]
+  }
+}

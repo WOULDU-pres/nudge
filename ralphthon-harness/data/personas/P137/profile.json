@@ -1,0 +1,102 @@
+{
+  "persona_id": "P137",
+  "archetype_id": "data_rational_analyst",
+  "archetype_name": "Data Rational Analyst",
+  "variation_slot": "high_urgency",
+  "summary": "급한 프로젝트 상황에서도 근거 없는 단축 설명은 용납하지 않는 분석형 구매자. 빠른 실행과 정확한 기준을 동시에 요구하는 high_urgency variation.",
+  "cluster_tags": [
+    "data_driven",
+    "rational",
+    "logic_first",
+    "high_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "문제 해결 압박이 커서 바로 실행 가능한 정보는 원하지만 구조 없는 말에는 더 예민해짐",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "짙은 커피와 기본 비타민으로 밤까지 버티며 급한 주에는 식사도 자주 밀림",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "numbers",
+      "logic",
+      "triage_clarity"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "precise",
+      "fast_readable"
+    ],
+    "disliked_message_style": [
+      "handwavy",
+      "emotional_only",
+      "ambiguous"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "measured",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "too_emotional",
+      "chaotic",
+      "vague"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "measurable_gain",
+    "logical_structure",
+    "immediate_routine_fit"
+  ],
+  "objection_profile": {
+    "primary_type": "logic_gap",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_are_unstructured",
+      "numbers_are_missing",
+      "setup_time_is_unclear"
+    ],
+    "resolution_requirements": [
+      "structured_reasoning",
+      "evidence",
+      "one_step_start_example"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오늘 일정에 바로 넣을 수 있는지와 현재 대안 대비 차이를 빠르게 본다",
+    "if_unconvinced": "급한 상황이지만 근거가 약하면 지금 대안을 유지한다",
+    "if_annoyed": "말은 많은데 기준이 없다고 느끼면 즉시 검토를 멈춘다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_logic",
+      "quantification",
+      "instant_start_clarity"
+    ],
+    "engagement_penalties": [
+      "ambiguity",
+      "emotion_only_pitch",
+      "logic_jump"
+    ],
+    "purchase_intent_boosts": [
+      "measurable_outcome",
+      "immediate_fit"
+    ],
+    "purchase_intent_penalties": [
+      "unproven_claims",
+      "setup_friction"
+    ]
+  }
+}

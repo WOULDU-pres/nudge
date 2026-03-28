@@ -1,0 +1,14 @@
+{
+  "session_id": "conv-strategy-roi-P001",
+  "strategy_id": "strategy-roi-proof",
+  "persona_id": "P001",
+  "scores": {
+    "engagement": 18,
+    "relevance": 20,
+    "persuasion": 16,
+    "purchase_intent": 13,
+    "total": 67
+  },
+  "outcome": "interested",
+  "reason": "가격 프레이밍(하루 500원)이 예산 민감형 페르소나에게 효과적. 환불 보장이 리스크 감소로 작용. 다만 구매 확정까지는 도달하지 못함."
+}

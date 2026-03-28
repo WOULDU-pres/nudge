@@ -1,0 +1,102 @@
+{
+  "persona_id": "P215",
+  "archetype_id": "voice_sensitive_listener",
+  "archetype_name": "Voice Sensitive Listener",
+  "variation_slot": "office_professional",
+  "summary": "업무 설명에 익숙한 직장인답게 보충제 정보도 전달의 정돈감에서 먼저 신뢰를 판단하는 청각 중심형 구매자. 차분한 발화로 성분 목적, 복용 시간, 속 부담 여부, 하루 비용을 또렷하게 정리해줄 때 반응하는 office_professional variation.",
+  "cluster_tags": [
+    "voice_sensitive",
+    "tone_matching",
+    "delivery_critical",
+    "office_professional"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "office_professional",
+    "life_context": "업무용 설명과 보고를 자주 듣는 환경이라 보충제 정보 역시 전달의 정돈감과 전문성을 강하게 보는 일반 직장 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "무난한 제품을 이미 챙기고 있지만 설명 톤이 믿음직스럽고 회사 루틴에 맞는 대안이면 바꿀 의향이 있음",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "tone_match",
+      "natural_delivery",
+      "professional_rhythm"
+    ],
+    "preferred_message_style": [
+      "well_delivered",
+      "clear",
+      "emotionally_tuned"
+    ],
+    "disliked_message_style": [
+      "tone_mismatch",
+      "awkward_delivery",
+      "unnatural"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "natural",
+      "professionally_steady",
+      "clear"
+    ],
+    "disliked_voice_style": [
+      "robotic",
+      "overacted",
+      "off_tone"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "voice_style_match",
+    "natural_rhythm",
+    "credible_emotion"
+  ],
+  "objection_profile": {
+    "primary_type": "voice_mismatch",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "delivery_feels_unnatural",
+      "tone_does_not_match_message",
+      "delivery_breaks_focus"
+    ],
+    "resolution_requirements": [
+      "better_tone_alignment",
+      "natural_pacing",
+      "credible_voice_direction"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "목소리가 안정적이면 성분과 복용 정보도 더 전문적으로 느끼며 끝까지 듣는다",
+    "if_unconvinced": "내용보다 전달 방식이 어색해 제품 자체도 정돈되지 않았다고 본다",
+    "if_annoyed": "들뜨거나 기계적인 톤이면 초반부터 신뢰를 접는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "tone_alignment",
+      "natural_pacing",
+      "credible_delivery"
+    ],
+    "engagement_penalties": [
+      "robotic_voice",
+      "overacting",
+      "tone_mismatch"
+    ],
+    "purchase_intent_boosts": [
+      "voice_comfort",
+      "delivery_trust"
+    ],
+    "purchase_intent_penalties": [
+      "delivery_discomfort",
+      "unnatural_pacing"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "persona_id": "P128",
+  "archetype_id": "story_driven_dreamer",
+  "archetype_name": "Story Driven Dreamer",
+  "variation_slot": "low_urgency",
+  "summary": "수치보다 하루의 분위기와 달라질 생활 장면에 더 반응하는 서사형 구매자. 당장 급한 문제는 없지만, 새로운 영양 루틴이 자신에게 더 안정적이고 기분 좋은 하루를 그려줄 때 마음이 움직이는 low_urgency variation.",
+  "cluster_tags": [
+    "story_driven",
+    "aspirational",
+    "emotionally_imaginative",
+    "low_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "지금 루틴은 유지하되, 생활 리듬이 더 부드러워질 선택지에는 관심이 있는 상황",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "현재도 익숙한 제품을 챙기고 있지만, 하루의 리듬과 기분이 더 자연스럽게 정돈되는 선택이 있으면 귀를 기울임",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "narrative",
+      "vision",
+      "emotional_coherence"
+    ],
+    "preferred_message_style": [
+      "storytelling",
+      "evocative",
+      "future_picture"
+    ],
+    "disliked_message_style": [
+      "dry",
+      "soulless",
+      "only_numbers"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "expressive",
+      "warm",
+      "engaging"
+    ],
+    "disliked_voice_style": [
+      "flat",
+      "clinical",
+      "monotone"
+    ],
+    "length_tolerance": "medium_to_long"
+  },
+  "persuasion_triggers": [
+    "transformation_story",
+    "aspirational_future",
+    "emotional_arc"
+  ],
+  "objection_profile": {
+    "primary_type": "emotional_disconnect",
+    "secondary_type": "relevance",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_flat",
+      "no_future_picture",
+      "only_factual_listing"
+    ],
+    "resolution_requirements": [
+      "story_arc",
+      "imaginable_outcome",
+      "emotionally_alive_delivery"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "이걸 챙기는 자신의 하루를 자연스럽게 상상하며, 어느 시간대가 가장 달라질지 묻는다",
+    "if_unconvinced": "정보는 이해했지만 마음속 장면이 그려지지 않아 보류한다",
+    "if_annoyed": "숫자와 사실만 나열되면 금방 집중을 놓고 감정적으로 멀어진다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "narrative_opening",
+      "emotional_arc",
+      "expressive_voice"
+    ],
+    "engagement_penalties": [
+      "flat_listing",
+      "clinical_tone",
+      "no_story"
+    ],
+    "purchase_intent_boosts": [
+      "future_identity_fit",
+      "transformation_picture"
+    ],
+    "purchase_intent_penalties": [
+      "emotionless_delivery",
+      "dry_facts_only"
+    ]
+  }
+}

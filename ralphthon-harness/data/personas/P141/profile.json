@@ -1,0 +1,102 @@
+{
+  "persona_id": "P141",
+  "archetype_id": "family_benefit_prioritizer",
+  "archetype_name": "Family Benefit Prioritizer",
+  "variation_slot": "young_starter",
+  "summary": "내 몸만 챙기는 소비보다 집에서 덜 걱정할 선택을 더 마음 편하게 여기는 가족 중심형 구매자. 막 사회 진입 중이라 예산 제약은 크지만, 부모님이 보기에도 무리 없는 자기관리 선택을 찾는 young_starter variation.",
+  "cluster_tags": [
+    "family_first",
+    "shared_benefit",
+    "care_driven",
+    "young_starter"
+  ],
+  "profile": {
+    "age_band": "20s",
+    "occupation": "student_or_first_jobber",
+    "life_context": "막 사회 진입 중이라 경험은 적고 예산 제약은 큰 편",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "집에서 부모님이 챙겨주는 기본 비타민이나 저가 제품으로 버티는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "family_relevance",
+      "safety",
+      "practical_care"
+    ],
+    "preferred_message_style": [
+      "caring",
+      "relevant",
+      "down_to_earth"
+    ],
+    "disliked_message_style": [
+      "selfish_framing",
+      "flashy",
+      "detached"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "steady",
+      "caring"
+    ],
+    "disliked_voice_style": [
+      "cold",
+      "self_centered",
+      "abrasive"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "explainable_to_family",
+    "daily_routine_stability",
+    "safe_practical_care"
+  ],
+  "objection_profile": {
+    "primary_type": "relevance",
+    "secondary_type": "budget",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "benefit_is_too_self_focused",
+      "hard_to_explain_to_parents",
+      "cost_feels_hard_to_justify"
+    ],
+    "resolution_requirements": [
+      "shared_benefit_example",
+      "family_context_framing",
+      "practical_cost_explanation"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "부모님이나 집에서 들었을 때도 납득될 설명인지 다시 확인한다",
+    "if_unconvinced": "나 혼자 만족하는 소비처럼 보여서 마음이 가지 않는다고 느낀다",
+    "if_annoyed": "현실감 없거나 철없는 소비처럼 들리면 바로 멀어진다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "family_context",
+      "care_benefit",
+      "real_life_use"
+    ],
+    "engagement_penalties": [
+      "self_indulgent_framing",
+      "detached_pitch",
+      "unjustified_cost"
+    ],
+    "purchase_intent_boosts": [
+      "shared_value",
+      "easy_family_explanation"
+    ],
+    "purchase_intent_penalties": [
+      "irrelevant_benefit",
+      "family_disconnect"
+    ]
+  }
+}

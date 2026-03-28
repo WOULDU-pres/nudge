@@ -1,0 +1,102 @@
+{
+  "persona_id": "P102",
+  "archetype_id": "overwhelmed_complexity_avoider",
+  "archetype_name": "Overwhelmed Complexity Avoider",
+  "variation_slot": "early_career_worker",
+  "summary": "컨디션 관리 필요성은 느끼지만, 복잡한 설명과 복용법이 나오면 바로 피로해지는 단순성 선호형 구매자. 커리어 초반이라 머릿속에 할 일이 많아 영양제까지 관리 포인트가 늘어나는 걸 싫어하는 early_career_worker variation.",
+  "cluster_tags": [
+    "complexity_averse",
+    "overwhelm_sensitive",
+    "simplicity_seeking",
+    "early_career_worker"
+  ],
+  "profile": {
+    "age_band": "20s-30s early",
+    "occupation": "early_career_worker",
+    "life_context": "업무 적응과 성장 욕구가 공존하는 커리어 초반 단계",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "기본 제품이나 식사 조절로 버티지만 꾸준히 챙기진 못하는 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "simplicity",
+      "guided_explanation",
+      "clarity"
+    ],
+    "preferred_message_style": [
+      "simple",
+      "one_thing_at_a_time",
+      "stepwise"
+    ],
+    "disliked_message_style": [
+      "feature_dump",
+      "jargon_heavy",
+      "dense"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "gentle",
+      "clear",
+      "steady"
+    ],
+    "disliked_voice_style": [
+      "fast",
+      "information_heavy",
+      "chaotic"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "easy_start",
+    "simplicity",
+    "one_clear_benefit"
+  ],
+  "objection_profile": {
+    "primary_type": "complexity",
+    "secondary_type": "confidence",
+    "intensity": "high",
+    "trigger_conditions": [
+      "too_many_ingredients",
+      "technical_terms_without_context",
+      "unclear_starting_point"
+    ],
+    "resolution_requirements": [
+      "step_by_step_guidance",
+      "one_core_benefit",
+      "simple_entry_path"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "출근 전에 생각 없이 챙길 수 있을 만큼 단순하면 안심한다",
+    "if_unconvinced": "이건 또 공부해야 할 것 같다고 느낀다",
+    "if_annoyed": "설명이 많아지는 순간 바로 피로해한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "simple_flow",
+      "guided_explanation",
+      "gentle_pacing"
+    ],
+    "engagement_penalties": [
+      "feature_overload",
+      "jargon",
+      "unclear_entry"
+    ],
+    "purchase_intent_boosts": [
+      "easy_intake_start",
+      "confidence_building"
+    ],
+    "purchase_intent_penalties": [
+      "looks_complicated",
+      "feels_hard_to_keep_up"
+    ]
+  }
+}

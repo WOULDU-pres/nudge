@@ -1,0 +1,102 @@
+{
+  "persona_id": "P114",
+  "archetype_id": "hard_sell_resistant",
+  "archetype_name": "Hard Sell Resistant",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "혼자 일정을 짜고 비용을 관리하는 1인 운영자라, 영양제도 남이 재촉하는 순간 오히려 판단을 미루는 압박 저항형 구매자. 불규칙한 생활에 맞는지 스스로 따져보고 싶어 하며, 강한 마감 화법보다 조용한 비교를 선호하는 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "pressure_averse",
+    "autonomy_sensitive",
+    "hard_sell_resistant",
+    "freelancer_solopreneur"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "작업 시간과 수입이 직접 연결되는 생활이라 영양제도 본인 스케줄과 예산에 맞춰 자율적으로 판단하고 싶어 함",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "가성비 위주의 기본 영양제를 책상에 두고 먹거나, 컨디션이 안 좋을 때만 임시로 챙기는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "respectful_distance",
+      "non_pressure",
+      "choice"
+    ],
+    "preferred_message_style": [
+      "calm",
+      "respectful",
+      "option_oriented"
+    ],
+    "disliked_message_style": [
+      "pushy",
+      "urgent",
+      "manipulative"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "warm",
+      "non_invasive"
+    ],
+    "disliked_voice_style": [
+      "aggressive",
+      "overeager",
+      "closing_heavy"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "choice_respect",
+    "low_pressure_guidance",
+    "informational_tone"
+  ],
+  "objection_profile": {
+    "primary_type": "pressure_aversion",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "forced_urgency",
+      "manipulative_cta",
+      "overly_salesy_tone"
+    ],
+    "resolution_requirements": [
+      "choice_preservation",
+      "soft_cta",
+      "calm_respectful_delivery"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "복용 난이도와 예산 기준만 확인한 뒤, 스케줄에 맞는지 혼자 다시 계산해보려 한다",
+    "if_unconvinced": "지금 결제하지 않고 현재 제품과 더 비교해보겠다고 선을 그린다",
+    "if_annoyed": "오늘만 혜택이나 즉시 구매 압박이 들어오면 영업으로 받아들이고 바로 대화를 닫는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "respectful_tone",
+      "soft_cta",
+      "choice_language"
+    ],
+    "engagement_penalties": [
+      "deadline_pressure",
+      "pushy_close",
+      "scarcity_abuse"
+    ],
+    "purchase_intent_boosts": [
+      "autonomy_respected",
+      "low_pressure_clarity"
+    ],
+    "purchase_intent_penalties": [
+      "feels_manipulative",
+      "forced_action"
+    ]
+  }
+}

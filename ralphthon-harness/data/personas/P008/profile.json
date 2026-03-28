@@ -1,0 +1,102 @@
+{
+  "persona_id": "P008",
+  "archetype_id": "budget_practical_buyer",
+  "archetype_name": "Budget Practical Buyer",
+  "variation_slot": "low_urgency",
+  "summary": "가계부 감각이 몸에 밴 실용형 구매자. 기존 영양 루틴이 크게 불편하지 않은 상태에서, 새 제품이 하루 비용과 실제 체감 포인트로 납득될 때만 움직이는 low_urgency variation.",
+  "cluster_tags": [
+    "budget_sensitive",
+    "roi_driven",
+    "practical",
+    "low_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "기존 영양 루틴은 유지하되 당장 바꿀 이유는 약한 상황",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "very_high",
+    "current_alternative": "출근 전 익숙하게 챙기는 기본 영양제 몇 가지만 유지하며, 새 제품은 기존 루틴을 흐트러뜨리지 않을 때만 검토",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "numbers",
+      "roi",
+      "concrete_comparison"
+    ],
+    "preferred_message_style": [
+      "direct",
+      "efficient",
+      "specific"
+    ],
+    "disliked_message_style": [
+      "fluffy",
+      "dramatic",
+      "vague"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "steady",
+      "direct"
+    ],
+    "disliked_voice_style": [
+      "too_playful",
+      "too_hyped",
+      "too_soft"
+    ],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": [
+    "price_per_day_value",
+    "ingredient_value",
+    "felt_effect_vs_cost"
+  ],
+  "objection_profile": {
+    "primary_type": "price",
+    "secondary_type": "relevance",
+    "intensity": "high",
+    "trigger_conditions": [
+      "price_presented_without_daily_value",
+      "benefits_not_tied_to_body_condition",
+      "formula_feels_irrelevant"
+    ],
+    "resolution_requirements": [
+      "simple_cost_per_day_explanation",
+      "specific_body_context",
+      "clear_difference_from_current_routine"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "하루 섭취 비용을 먼저 따져본 뒤, 지금 먹는 기본 조합에서 무엇을 빼고 넣을지 현실적으로 계산한다",
+    "if_unconvinced": "나쁘진 않지만 지금 루틴을 굳이 바꿀 만큼 이득이 크지 않다며 보류한다",
+    "if_annoyed": "숫자 없이 분위기만 띄우거나 과장된 표현이 이어지면 바로 거리를 둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "numbers_early",
+      "clear_roi",
+      "brief_structure"
+    ],
+    "engagement_penalties": [
+      "hype_language",
+      "long_intro",
+      "abstract_claims"
+    ],
+    "purchase_intent_boosts": [
+      "cost_per_day_proof",
+      "routine_before_after_comparison"
+    ],
+    "purchase_intent_penalties": [
+      "unclear_value",
+      "high_price_without_ingredient_context"
+    ]
+  }
+}

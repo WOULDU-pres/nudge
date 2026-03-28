@@ -1,0 +1,102 @@
+{
+  "persona_id": "P023",
+  "archetype_id": "skeptical_comparison_buyer",
+  "archetype_name": "Skeptical Comparison Buyer",
+  "variation_slot": "busy_parent",
+  "summary": "가족 루틴 속에서도 성분 근거를 놓치지 않는 워킹페어런트 검증형. 여러 제품을 합치거나 줄일 때 무엇이 달라지는지 명확해야 반응하는 busy_parent variation.",
+  "cluster_tags": [
+    "skeptical",
+    "comparison_driven",
+    "evidence_seeking",
+    "busy_parent"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "working_parent",
+    "life_context": "가족 일정이 우선이라 내 선택도 설명력과 실용성이 동시에 필요한 생활",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium",
+    "current_alternative": "필요할 때마다 가족용과 개인용 제품을 따로 꺼내 먹는 복잡한 루틴을 유지 중",
+    "buyer_role": "shared_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "evidence",
+      "benchmark",
+      "specificity"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "clear",
+      "non_exaggerated"
+    ],
+    "disliked_message_style": [
+      "marketing_speak",
+      "empty_confidence",
+      "fake_urgency"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "professional",
+      "confident"
+    ],
+    "disliked_voice_style": [
+      "too_excited",
+      "too_casual",
+      "performative"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "ingredient_comparison",
+    "clear_differentiation",
+    "specific_body_example"
+  ],
+  "objection_profile": {
+    "primary_type": "trust",
+    "secondary_type": "inertia",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_lack_evidence",
+      "cannot_show_what_it_replaces_in_family_routine",
+      "voice_sounds_overly_sales_driven"
+    ],
+    "resolution_requirements": [
+      "comparison_table",
+      "realistic_claims",
+      "family_routine_specific_example"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "가족용과 개인용 루틴 중 무엇을 줄이거나 바꿀 수 있는지 세부적으로 묻는다",
+    "if_unconvinced": "설명은 들었지만 바꾸는 수고가 더 크다며 현 상태를 유지한다",
+    "if_annoyed": "근거 없이 가족 상황에 공감만 앞세우면 신뢰를 빠르게 거둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "comparison_framing",
+      "evidence",
+      "precise_language"
+    ],
+    "engagement_penalties": [
+      "hype_language",
+      "vague_superiority",
+      "aggressive_urgency"
+    ],
+    "purchase_intent_boosts": [
+      "clear_differentiation",
+      "credible_evidence"
+    ],
+    "purchase_intent_penalties": [
+      "lack_of_evidence",
+      "me_too_positioning"
+    ]
+  }
+}

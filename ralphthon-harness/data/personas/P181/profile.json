@@ -1,0 +1,102 @@
+{
+  "persona_id": "P181",
+  "archetype_id": "relationship_trust_buyer",
+  "archetype_name": "Relationship Trust Buyer",
+  "variation_slot": "young_starter",
+  "summary": "성분표보다 말투의 진심과 거리감을 먼저 읽는 관계형 구매자. 대학 수업과 사회초년생 생활 사이에서 예산은 빠듯하지만, 무시당하지 않는 설명에는 마음을 여는 young_starter variation.",
+  "cluster_tags": [
+    "relationship_driven",
+    "trust_building",
+    "human_connection",
+    "young_starter"
+  ],
+  "profile": {
+    "age_band": "20s",
+    "occupation": "student_or_first_jobber",
+    "life_context": "막 사회 진입 중이라 경험은 적고 예산 제약은 큰 편",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "편의점 식사와 불규칙한 생활 속에서 가성비 기본 영양제를 가끔 챙기지만 꾸준함은 약한 상태",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "sincerity",
+      "consistency",
+      "human_tone"
+    ],
+    "preferred_message_style": [
+      "genuine",
+      "warm",
+      "steady"
+    ],
+    "disliked_message_style": [
+      "robotic",
+      "scripted",
+      "detached"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "sincere",
+      "gentle"
+    ],
+    "disliked_voice_style": [
+      "synthetic_feeling",
+      "too_salesy",
+      "harsh"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "sincerity",
+    "gentle_guidance",
+    "human_connection"
+  ],
+  "objection_profile": {
+    "primary_type": "trust",
+    "secondary_type": "pressure_aversion",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "message_feels_scripted",
+      "tone_feels_fake_friendly",
+      "relationship_is_forced"
+    ],
+    "resolution_requirements": [
+      "natural_warmth",
+      "consistent_tone",
+      "non_forced_humanity"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "부담 없이 더 물어보며 이 사람이 나를 가볍게 보지 않는지 천천히 확인한다",
+    "if_unconvinced": "친절하긴 한데 멘트 같아서 거리감을 둔다",
+    "if_annoyed": "기계적인 친절이나 결론 재촉이 반복되면 바로 피곤해한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "natural_warmth",
+      "human_pacing",
+      "sincere_language"
+    ],
+    "engagement_penalties": [
+      "scripted_feel",
+      "fake_friendliness",
+      "coldness"
+    ],
+    "purchase_intent_boosts": [
+      "trust_buildup",
+      "consistent_human_tone"
+    ],
+    "purchase_intent_penalties": [
+      "synthetic_feel",
+      "performative_empathy"
+    ]
+  }
+}

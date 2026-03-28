@@ -1,0 +1,102 @@
+{
+  "persona_id": "P136",
+  "archetype_id": "data_rational_analyst",
+  "archetype_name": "Data Rational Analyst",
+  "variation_slot": "manager_influencer",
+  "summary": "자기 선택을 주변에도 설명할 수 있어야 안심하는 분석형 구매자. 이동과 의사결정이 많은 관리자 위치에서 근거와 전달 가능성을 함께 보는 manager_influencer variation.",
+  "cluster_tags": [
+    "data_driven",
+    "rational",
+    "logic_first",
+    "manager_influencer"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "본인 판단이 곧 주변 설명 책임으로 이어져 선택 이유를 간단히 정리할 수 있어야 마음이 놓임",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "기본 영양제를 꾸준히 챙기되 출장이나 외근이 많은 주에는 자주 빠뜨리는 편",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "numbers",
+      "logic",
+      "explainability"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "precise",
+      "evidence_backed"
+    ],
+    "disliked_message_style": [
+      "handwavy",
+      "emotional_only",
+      "ambiguous"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "measured",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "too_emotional",
+      "chaotic",
+      "vague"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "measurable_gain",
+    "logical_structure",
+    "portable_routine_fit"
+  ],
+  "objection_profile": {
+    "primary_type": "logic_gap",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_are_unstructured",
+      "numbers_are_missing",
+      "reason_is_hard_to_repeat"
+    ],
+    "resolution_requirements": [
+      "structured_reasoning",
+      "evidence",
+      "one_sentence_explanation"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "본인이 이해한 이유를 한두 문장으로 다시 정리해본다",
+    "if_unconvinced": "설명할 만큼 정리되지 않아 보류한다",
+    "if_annoyed": "근거 없는 확신을 무책임한 말로 받아들인다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_logic",
+      "quantification",
+      "explainability"
+    ],
+    "engagement_penalties": [
+      "ambiguity",
+      "emotion_only_pitch",
+      "logic_jump"
+    ],
+    "purchase_intent_boosts": [
+      "measurable_outcome",
+      "easy_to_explain"
+    ],
+    "purchase_intent_penalties": [
+      "unproven_claims",
+      "hard_to_repeat_reason"
+    ]
+  }
+}

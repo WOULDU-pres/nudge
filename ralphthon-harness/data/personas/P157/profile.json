@@ -1,0 +1,101 @@
+{
+  "persona_id": "P157",
+  "archetype_id": "career_efficiency_optimizer",
+  "archetype_name": "Career Efficiency Optimizer",
+  "variation_slot": "high_urgency",
+  "summary": "급한 일정 속에서도 커피만으로 버티는 방식을 거칠다고 느껴 더 효율적인 루틴을 찾는 실무형 구매자. 오늘 바로 업무 흐름에 붙는지와 설명의 군더더기 없는지를 보는 high_urgency variation.",
+  "cluster_tags": [
+    "focus_support",
+    "career_focused",
+    "efficiency_seeking"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "problem_under_pressure",
+    "life_context": "마감과 즉시 대응이 이어지는 환경에서 집중 흐름을 덜 거칠게 관리하고 싶은 실무자",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "low_to_medium",
+    "current_alternative": "커피와 단 음료, 익숙한 기본 영양제로 급한 날을 버티며 더 정돈된 대안을 찾는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "fast",
+    "trust_style": [
+      "performance_gain",
+      "workflow_fit",
+      "professional_value"
+    ],
+    "preferred_message_style": [
+      "efficient",
+      "outcome_driven",
+      "work_relevant"
+    ],
+    "disliked_message_style": [
+      "vague_inspiration",
+      "off_topic_emotion",
+      "fluff"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "confident",
+      "clear",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "rambling",
+      "too_soft",
+      "casual"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "energy_support",
+    "focus_support",
+    "fatigue_recovery"
+  ],
+  "objection_profile": {
+    "primary_type": "relevance",
+    "secondary_type": "inertia",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "workfit_is_unclear",
+      "benefit_does_not_map_to_workday",
+      "switch_cost_feels_unjustified"
+    ],
+    "resolution_requirements": [
+      "workday_specific_example",
+      "performance_gain",
+      "clear_use_case"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "오늘의 일정 안에서 어느 구간이 덜 무너질지 바로 계산해본다",
+    "if_unconvinced": "실무 피로를 줄이기보다 또 다른 관리 대상이 될 것 같다고 느낀다",
+    "if_annoyed": "핵심 없이 멋만 부린 설명이면 바로 흥미를 끊는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "workflow_fit",
+      "time_saved",
+      "professional_relevance"
+    ],
+    "engagement_penalties": [
+      "abstract_emotion",
+      "non_work_examples",
+      "unclear_gain"
+    ],
+    "purchase_intent_boosts": [
+      "workday_energy_gain",
+      "clear_focus_gain"
+    ],
+    "purchase_intent_penalties": [
+      "work_irrelevance",
+      "effort_gt_reward"
+    ]
+  }
+}

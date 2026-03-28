@@ -1,0 +1,102 @@
+{
+  "persona_id": "P003",
+  "archetype_id": "budget_practical_buyer",
+  "archetype_name": "Budget Practical Buyer",
+  "variation_slot": "busy_parent",
+  "summary": "가족 예산과 자기관리 비용을 동시에 계산하며, 번거로운 루틴까지 포함해 본전이 맞아야 움직이는 실용형 구매자. 가정과 일을 병행하느라 여유 시간이 부족해 영양제도 '꾸준히 먹을 수 있는 가성비'를 보는 busy_parent variation.",
+  "cluster_tags": [
+    "budget_sensitive",
+    "roi_driven",
+    "practical",
+    "busy_parent"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "working_parent",
+    "life_context": "가정과 일을 병행하며 여유 시간이 부족함",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "high",
+    "budget_sensitivity": "high",
+    "current_alternative": "비타민, 유산균 같은 제품을 제각각 따로 챙겨 먹다 자주 빼먹는 중",
+    "buyer_role": "shared_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "numbers",
+      "roi",
+      "concrete_comparison"
+    ],
+    "preferred_message_style": [
+      "direct",
+      "efficient",
+      "specific"
+    ],
+    "disliked_message_style": [
+      "fluffy",
+      "dramatic",
+      "vague"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "steady",
+      "direct"
+    ],
+    "disliked_voice_style": [
+      "too_playful",
+      "too_hyped",
+      "too_soft"
+    ],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": [
+    "price_per_day_value",
+    "ingredient_value",
+    "routine_simplification"
+  ],
+  "objection_profile": {
+    "primary_type": "price",
+    "secondary_type": "relevance",
+    "intensity": "high",
+    "trigger_conditions": [
+      "price_presented_without_daily_value",
+      "benefits_not_tied_to_busy_day_body_condition",
+      "formula_feels_irrelevant"
+    ],
+    "resolution_requirements": [
+      "simple_cost_per_day_explanation",
+      "specific_busy_parent_context",
+      "clear_difference_from_current_routine"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "하루 비용과 빼먹는 횟수가 얼마나 줄어들지 같이 계산한다",
+    "if_unconvinced": "좋아 보여도 집안 예산과 루틴을 흔들 만큼의 가치는 아니라고 느낀다",
+    "if_annoyed": "말만 길고 아침 전쟁 같은 생활 장면이 안 보이면 빠르게 대화를 끝내려 한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "numbers_early",
+      "clear_roi",
+      "brief_structure"
+    ],
+    "engagement_penalties": [
+      "hype_language",
+      "long_intro",
+      "abstract_claims"
+    ],
+    "purchase_intent_boosts": [
+      "cost_per_day_proof",
+      "routine_before_after_comparison"
+    ],
+    "purchase_intent_penalties": [
+      "unclear_value",
+      "high_price_without_ingredient_context"
+    ]
+  }
+}

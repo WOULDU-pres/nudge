@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ralph-iteration.schema.json",
+  "title": "RALPHIteration",
+  "description": "RALPH Loop 1회 실행 결과",
+  "type": "object",
+  "required": [
+    "iteration_id",
+    "strategies",
+    "summary"
+  ],
+  "properties": {
+    "iteration_id": {
+      "type": "integer",
+      "description": "반복 번호"
+    },
+    "strategies": {
+      "type": "array",
+      "items": {
+        "$ref": "strategy.schema.json"
+      },
+      "description": "H에서 생성한 전략들"
+    },
+    "evaluations": {
+      "type": "array",
+      "items": {
+        "$ref": "evaluation-result.schema.json"
+      },
+      "description": "E에서 채점한 결과들"
+    },
+    "reason": {
+      "type": "object",
+      "description": "R(Reason)의 패턴 분석 결과",
+      "properties": {
+        "winning_patterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "losing_patterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cluster_insights": {
+          "type": "object"
+        }
+      }
+    },
+    "learnings": {
+      "type": "object",
+      "description": "L(Learn)의 학습 포인트",
+      "properties": {
+        "learnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "recommended_prompt_changes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "avg_score",
+        "cluster_coverage",
+        "best_strategy"
+      ],
+      "properties": {
+        "avg_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "cluster_coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "best_strategy": {
+          "type": "string"
+        },
+        "cluster_scores": {
+          "type": "object"
+        },
+        "outcome_distribution": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

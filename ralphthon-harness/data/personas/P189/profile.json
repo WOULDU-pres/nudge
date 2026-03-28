@@ -1,0 +1,102 @@
+{
+  "persona_id": "P189",
+  "archetype_id": "relationship_trust_buyer",
+  "archetype_name": "Relationship Trust Buyer",
+  "variation_slot": "existing_alternative_user",
+  "summary": "이미 먹는 제품이 있어도 지금 선택을 함부로 깎아내리지 않고 비교해주는 사람에게만 마음을 여는 관계 신뢰형 구매자. 갈아탈 이유와 번거로움을 함께 따져보는 existing_alternative_user variation.",
+  "cluster_tags": [
+    "relationship_driven",
+    "fair_comparison",
+    "switching_cost",
+    "label_checker"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "comparison_ready_user",
+    "life_context": "현재 먹는 브랜드가 있어 갈아탈 이유와 번거로움을 함께 따져야 하는 비교 검토 단계",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "점심 뒤 종합비타민, 운동하는 날 마그네슘처럼 이미 정해둔 조합을 유지하면서 새 브랜드를 비교 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "respect_for_current_choice",
+      "candor",
+      "comparison_fairness"
+    ],
+    "preferred_message_style": [
+      "comparative",
+      "courteous",
+      "specific"
+    ],
+    "disliked_message_style": [
+      "dismissive",
+      "tribal",
+      "smug"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "measured",
+      "respectful",
+      "steady"
+    ],
+    "disliked_voice_style": [
+      "mocking",
+      "overly_confident",
+      "pushy"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "side_by_side_comparison",
+    "no_brand_bashing",
+    "transition_ease"
+  ],
+  "objection_profile": {
+    "primary_type": "switching_cost",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "insulting_current_routine",
+      "vague_difference",
+      "extra_complexity"
+    ],
+    "resolution_requirements": [
+      "fair_comparison",
+      "acknowledge_existing_good",
+      "clear_switch_reason"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 제품과 무엇을 바꾸고 무엇은 유지할지 스스로 조합을 계산해 본다",
+    "if_unconvinced": "지금 먹는 걸 버릴 정도 차이는 아니라며 보류한다",
+    "if_annoyed": "기존 선택을 무시하는 말투가 나오면 비교 자체를 멈춘다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "side_by_side_comparison",
+      "comparative",
+      "respect_for_current_choice"
+    ],
+    "engagement_penalties": [
+      "dismissive",
+      "insulting_current_routine",
+      "mocking"
+    ],
+    "purchase_intent_boosts": [
+      "fair_comparison",
+      "acknowledge_existing_good"
+    ],
+    "purchase_intent_penalties": [
+      "vague_difference",
+      "extra_complexity"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "persona_id": "P198",
+  "archetype_id": "autonomy_protective_buyer",
+  "archetype_name": "Autonomy Protective Buyer",
+  "variation_slot": "low_urgency",
+  "summary": "스스로 비교하고 자신의 속도로 결정할 권리를 중시하는 자율성 보호형 구매자. 지금 루틴에 큰 불만은 없어서, 정보는 열어두되 선택을 강요하지 않을 때만 천천히 검토하는 low_urgency variation.",
+  "cluster_tags": [
+    "autonomy",
+    "control_sensitive",
+    "self_directed",
+    "low_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "현재 루틴은 유지하고 싶지만 스스로 판단할 수 있는 선택지는 열어두는 상황",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "기존 영양 루틴에 큰 불만은 없어서, 새 제품도 강요 없이 비교할 수 있을 때만 관심을 가짐",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "choice",
+      "agency",
+      "information_before_commitment"
+    ],
+    "preferred_message_style": [
+      "informative",
+      "option_based",
+      "non_directive"
+    ],
+    "disliked_message_style": [
+      "controlling",
+      "pushy",
+      "leading"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "respectful",
+      "clear"
+    ],
+    "disliked_voice_style": [
+      "commanding",
+      "overbearing",
+      "high_pressure"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "option_visibility",
+    "self_paced_choice",
+    "non_forced_guidance"
+  ],
+  "objection_profile": {
+    "primary_type": "autonomy_threat",
+    "secondary_type": "pressure_aversion",
+    "intensity": "high",
+    "trigger_conditions": [
+      "message_feels_controlling",
+      "single_path_is_forced",
+      "cta_limits_choice"
+    ],
+    "resolution_requirements": [
+      "multiple_options",
+      "decision_space",
+      "information_first_approach"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "비교할 재료가 충분하고 선택 속도를 스스로 정할 수 있을 때 조용히 검토를 이어간다",
+    "if_unconvinced": "결론을 미리 정해둔 듯한 설명이 나오면 현재 루틴으로 물러선다",
+    "if_annoyed": "선택권을 빼앗기는 느낌이 들면 즉시 반감을 가진다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "choice_language",
+      "options",
+      "respectful_information"
+    ],
+    "engagement_penalties": [
+      "forced_decision",
+      "directive_cta",
+      "closed_options"
+    ],
+    "purchase_intent_boosts": [
+      "agency_preserved",
+      "self_paced_evaluation"
+    ],
+    "purchase_intent_penalties": [
+      "autonomy_threat",
+      "control_loss"
+    ]
+  }
+}

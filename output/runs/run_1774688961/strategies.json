@@ -1,0 +1,10 @@
+[
+  {
+    "strategy_id": "strategy-fallback",
+    "hypothesis": "기본 접근법 - 가격 대비 가치 강조",
+    "approach": "하루 500원으로 건강 관리가 가능하다는 가성비 프레이밍",
+    "opening_style": "건강 관리에 관심 있으신지 가볍게 질문으로 시작",
+    "objection_handling": "30일 환불 보장과 하루 비용 강조",
+    "tone": "친절하고 간결하게"
+  }
+]

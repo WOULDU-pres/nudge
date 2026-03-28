@@ -1,0 +1,102 @@
+{
+  "persona_id": "P175",
+  "archetype_id": "deal_hunter",
+  "archetype_name": "Deal Hunter",
+  "variation_slot": "office_professional",
+  "summary": "고정 월급 안에서 건강 지출을 관리하며 보충제도 회사용 소모품처럼 계산하는 딜 민감형 구매자. 총가격보다 한 통이 실제 몇 주 가는지, 점심 이후 집중 관리 기준으로 하루 비용이 합리적인지, 할인·배송 조건이 투명한지를 먼저 따지는 office_professional variation.",
+  "cluster_tags": [
+    "deal_sensitive",
+    "office_budgeting",
+    "value_hunter",
+    "office_professional"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "office_professional",
+    "life_context": "점심 이후 집중 저하를 관리하고 싶지만 정해진 월급 안에서 반복 구매 비용과 복용 편의를 꼼꼼히 따지는 일반 직장 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "high",
+    "current_alternative": "드럭스토어 할인 제품이나 무난한 종합비타민을 번갈아 사며 할인 시점에 맞춰 구매하는 편",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "concrete_offer",
+      "clear_savings",
+      "transparent_repurchase_cost"
+    ],
+    "preferred_message_style": [
+      "clear_offer",
+      "specific",
+      "benefit_explicit"
+    ],
+    "disliked_message_style": [
+      "vague_urgency",
+      "hidden_terms",
+      "fuzzy_benefits"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "sharp",
+      "controlled"
+    ],
+    "disliked_voice_style": [
+      "mushy",
+      "unclear",
+      "dragging"
+    ],
+    "length_tolerance": "short"
+  },
+  "persuasion_triggers": [
+    "workday_price_per_day",
+    "transparent_monthly_cost",
+    "simple_desk_friendly_usage"
+  ],
+  "objection_profile": {
+    "primary_type": "offer_unclear",
+    "secondary_type": "trust",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "deal_is_vague",
+      "discount_ignores_refill_cost",
+      "terms_are_unclear"
+    ],
+    "resolution_requirements": [
+      "monthly_cost_breakdown",
+      "clear_duration_per_bottle",
+      "simple_terms_and_shipping_info"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "현재 먹는 할인 제품과 비교해 실제 한 달 비용과 복용 편의 차이를 계산해본다",
+    "if_unconvinced": "프로모션은 있어도 재구매 기준 가성비가 약하다고 느끼면 미련 없이 넘긴다",
+    "if_annoyed": "회사원 심리를 자극하는 한정 문구만 많고 조건이 흐리면 광고라고 판단한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "upfront_price_breakdown",
+      "clear_refill_logic",
+      "office_use_specificity"
+    ],
+    "engagement_penalties": [
+      "shipping_surprises",
+      "unclear_duration",
+      "benefit_without_math"
+    ],
+    "purchase_intent_boosts": [
+      "reasonable_monthly_commitment",
+      "better_value_than_discount_basics"
+    ],
+    "purchase_intent_penalties": [
+      "weak_offer",
+      "bait_like_message"
+    ]
+  }
+}

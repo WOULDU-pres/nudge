@@ -1,0 +1,102 @@
+{
+  "persona_id": "P131",
+  "archetype_id": "data_rational_analyst",
+  "archetype_name": "Data Rational Analyst",
+  "variation_slot": "young_starter",
+  "summary": "예산이 빠듯한 사회초년 단계에서 함량과 1일 비용을 직접 따져보는 분석형 구매자. 기대 범위를 차갑게 구분하고 가성비를 수치로 확인하려는 young_starter variation.",
+  "cluster_tags": [
+    "data_driven",
+    "rational",
+    "logic_first",
+    "young_starter"
+  ],
+  "profile": {
+    "age_band": "20s",
+    "occupation": "student_or_first_jobber",
+    "life_context": "취업 준비와 초반 업무 적응 사이에서 돈과 시간을 아껴야 해 함량 대비 비용을 특히 꼼꼼히 봄",
+    "digital_fluency": "high"
+  },
+  "purchase_context": {
+    "problem_awareness": "medium",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "세일 때 산 기본 비타민이나 편의점 음료로 버티며 비용이 크게 늘지 않는 선에서만 시도함",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "numbers",
+      "logic",
+      "budget_math"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "precise",
+      "evidence_backed"
+    ],
+    "disliked_message_style": [
+      "handwavy",
+      "emotional_only",
+      "ambiguous"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "measured",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "too_emotional",
+      "chaotic",
+      "vague"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "measurable_gain",
+    "logical_structure",
+    "cost_clarity"
+  ],
+  "objection_profile": {
+    "primary_type": "logic_gap",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_are_unstructured",
+      "numbers_are_missing",
+      "daily_cost_is_unclear"
+    ],
+    "resolution_requirements": [
+      "structured_reasoning",
+      "evidence",
+      "daily_cost_breakdown"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "함량과 1일 비용을 메모해 현재 제품과 다시 비교한다",
+    "if_unconvinced": "수치는 보였지만 자기 예산 안에서는 우선순위가 아니라고 본다",
+    "if_annoyed": "분위기만 강조하면 바로 비효율적인 설명으로 판단한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_logic",
+      "quantification",
+      "cost_breakdown"
+    ],
+    "engagement_penalties": [
+      "ambiguity",
+      "emotion_only_pitch",
+      "logic_jump"
+    ],
+    "purchase_intent_boosts": [
+      "measurable_outcome",
+      "budget_fit"
+    ],
+    "purchase_intent_penalties": [
+      "unproven_claims",
+      "hidden_cost"
+    ]
+  }
+}

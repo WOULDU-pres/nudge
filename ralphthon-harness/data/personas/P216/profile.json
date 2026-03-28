@@ -1,0 +1,102 @@
+{
+  "persona_id": "P216",
+  "archetype_id": "voice_sensitive_listener",
+  "archetype_name": "Voice Sensitive Listener",
+  "variation_slot": "manager_influencer",
+  "summary": "설명 내용만큼 말의 온도와 리듬에 민감하며, 그 전달감이 주변에 공유해도 민망하지 않아야 신뢰하는 청각 중심형 관리자. 영양제 선택에서도 톤과 품격을 중요한 필터로 쓰는 manager_influencer variation.",
+  "cluster_tags": [
+    "voice_sensitive",
+    "tone_matching",
+    "delivery_critical",
+    "manager_influencer"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "좋은 정보라도 전달 톤이 어색하면 주변에 다시 설명하기 꺼리는 관리자",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "익숙한 영양제를 유지하면서도 더 신뢰감 있게 설명되는 선택지를 비교 중",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "tone_match",
+      "natural_delivery",
+      "rhythm"
+    ],
+    "preferred_message_style": [
+      "well_delivered",
+      "clear",
+      "emotionally_tuned"
+    ],
+    "disliked_message_style": [
+      "tone_mismatch",
+      "awkward_delivery",
+      "unnatural"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "natural",
+      "emotionally_matched",
+      "steady"
+    ],
+    "disliked_voice_style": [
+      "robotic",
+      "overacted",
+      "off_tone"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "voice_style_match",
+    "natural_rhythm",
+    "credible_emotion"
+  ],
+  "objection_profile": {
+    "primary_type": "voice_mismatch",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "tts_feels_unnatural",
+      "tone_does_not_match_message",
+      "delivery_breaks_immersion"
+    ],
+    "resolution_requirements": [
+      "better_tone_alignment",
+      "natural_pacing",
+      "credible_voice_direction"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "말의 안정감 덕분에 내용까지 믿고 주변에 전할 그림을 그린다",
+    "if_unconvinced": "정보보다 전달 방식이 먼저 걸려 신뢰가 올라오지 않는다",
+    "if_annoyed": "부자연스럽거나 과한 톤이면 처음부터 거리를 둔다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "tone_alignment",
+      "natural_pacing",
+      "credible_delivery"
+    ],
+    "engagement_penalties": [
+      "robotic_voice",
+      "overacting",
+      "tone_mismatch"
+    ],
+    "purchase_intent_boosts": [
+      "voice_comfort",
+      "delivery_trust"
+    ],
+    "purchase_intent_penalties": [
+      "delivery_discomfort",
+      "unnatural_tts"
+    ]
+  }
+}

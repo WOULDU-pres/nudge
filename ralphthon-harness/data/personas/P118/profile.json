@@ -1,0 +1,102 @@
+{
+  "persona_id": "P118",
+  "archetype_id": "hard_sell_resistant",
+  "archetype_name": "Hard Sell Resistant",
+  "variation_slot": "low_urgency",
+  "summary": "당장 불편하지 않으면 익숙한 루틴을 유지하려는 압박 저항형 구매자. 이미 무난한 생활 리듬이 있어 조용한 비교와 자연스러운 루틴 적합성을 보는 low_urgency variation.",
+  "cluster_tags": [
+    "pressure_averse",
+    "autonomy_sensitive",
+    "hard_sell_resistant",
+    "low_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "현재 생활 리듬이 크게 흔들리지 않아 필요는 느껴도 천천히 비교하고 결정하려 함",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "아침 식사, 가벼운 산책, 기존 멀티비타민 같은 익숙한 루틴을 큰 불만 없이 유지 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "respectful_distance",
+      "comparison_freedom",
+      "routine_compatibility"
+    ],
+    "preferred_message_style": [
+      "calm",
+      "measured",
+      "option_oriented"
+    ],
+    "disliked_message_style": [
+      "pushy",
+      "urgent",
+      "overdirected"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "warm",
+      "unhurried"
+    ],
+    "disliked_voice_style": [
+      "aggressive",
+      "hyper",
+      "closing_heavy"
+    ],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": [
+    "choice_respect",
+    "routine_fit",
+    "quiet_comparison"
+  ],
+  "objection_profile": {
+    "primary_type": "pressure_aversion",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "forced_urgency",
+      "too_many_assumptions",
+      "overly_salesy_tone"
+    ],
+    "resolution_requirements": [
+      "choice_preservation",
+      "low_pressure_clarity",
+      "time_to_consider"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "당장 바꾸진 않아도 다음 구매 시점에 넣을지 차분히 검토한다",
+    "if_unconvinced": "지금 루틴을 유지하는 편이 더 편하다고 판단한다",
+    "if_annoyed": "재촉받는다고 느끼면 필요 여부와 무관하게 멀어진다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "respectful_tone",
+      "routine_language",
+      "soft_cta"
+    ],
+    "engagement_penalties": [
+      "deadline_pressure",
+      "pushy_close",
+      "assumptive_pitch"
+    ],
+    "purchase_intent_boosts": [
+      "autonomy_respected",
+      "easy_swap_picture"
+    ],
+    "purchase_intent_penalties": [
+      "feels_rushed",
+      "forced_change"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "persona_id": "P104",
+  "archetype_id": "overwhelmed_complexity_avoider",
+  "archetype_name": "Overwhelmed Complexity Avoider",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "자기관리가 필요해도 성분과 복용법이 복잡하면 바로 미루게 되는 단순성 선호형 구매자. 불규칙한 1인 운영 일정 속에서 영양제를 또 하나의 관리 과제로 느끼기 싫어하는 freelancer_solopreneur variation.",
+  "cluster_tags": ["complexity_averse", "overwhelm_sensitive", "simplicity_seeking", "freelancer_solopreneur"],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "시간과 비용이 바로 수익성과 연결되는 1인 운영 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "설명 짧은 기본 제품만 이어 먹거나 아예 빼먹는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": ["simplicity", "guided_explanation", "clarity"],
+    "preferred_message_style": ["simple", "one_thing_at_a_time", "stepwise"],
+    "disliked_message_style": ["feature_dump", "jargon_heavy", "dense"]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": ["gentle", "clear", "steady"],
+    "disliked_voice_style": ["fast", "information_heavy", "chaotic"],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": ["easy_start", "simplicity", "one_clear_benefit"],
+  "objection_profile": {
+    "primary_type": "complexity",
+    "secondary_type": "confidence",
+    "intensity": "high",
+    "trigger_conditions": ["too_many_ingredients", "technical_terms_without_context", "unclear_starting_point"],
+    "resolution_requirements": ["step_by_step_guidance", "one_core_benefit", "simple_entry_path"]
+  },
+  "likely_reaction_style": {
+    "if_interested": "불규칙한 일정에도 생각 없이 챙길 수 있을 만큼 단순하면 안심한다",
+    "if_unconvinced": "이건 또 관리 포인트가 늘 것 같다고 느낀다",
+    "if_annoyed": "설명이 많아지는 순간 바로 피로해한다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": ["simple_flow", "guided_explanation", "gentle_pacing"],
+    "engagement_penalties": ["feature_overload", "jargon", "unclear_entry"],
+    "purchase_intent_boosts": ["easy_intake_start", "confidence_building"],
+    "purchase_intent_penalties": ["looks_complicated", "feels_hard_to_keep_up"]
+  }
+}

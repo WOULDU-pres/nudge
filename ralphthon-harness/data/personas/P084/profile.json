@@ -1,0 +1,51 @@
+{
+  "persona_id": "P084",
+  "archetype_id": "trend_sensitive_early_adopter",
+  "archetype_name": "Trend Sensitive Early Adopter",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "남들보다 먼저 새로운 포뮬러를 발견해 자기 루틴에 붙이는 데서 만족을 느끼는 선도형 구매자. 시간과 비용이 바로 수익성과 연결되는 1인 운영 환경에서, 신선함과 실제 체감을 함께 따지는 freelancer_solopreneur variation.",
+  "cluster_tags": ["trend_sensitive", "novelty_seeking", "early_adopter", "freelancer_solopreneur"],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "시간과 비용이 바로 수익성과 연결되는 1인 운영 환경",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "무난한 제품을 이어 먹지만 늘 더 날카로운 조합을 찾고 있는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": ["novelty", "differentiation", "future_signal"],
+    "preferred_message_style": ["fresh", "distinctive", "forward_looking"],
+    "disliked_message_style": ["boring", "generic", "old_fashioned"]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": ["energetic", "fresh", "confident"],
+    "disliked_voice_style": ["flat", "dated", "too_stiff"],
+    "length_tolerance": "short_to_medium"
+  },
+  "persuasion_triggers": ["new_formula", "trend_signal", "first_mover_advantage"],
+  "objection_profile": {
+    "primary_type": "novelty_mismatch",
+    "secondary_type": "relevance",
+    "intensity": "medium",
+    "trigger_conditions": ["message_feels_generic", "no_distinctive_angle", "sounds_outdated"],
+    "resolution_requirements": ["fresh_positioning", "clear_whats_new", "future_facing_benefit"]
+  },
+  "likely_reaction_style": {
+    "if_interested": "새 조합이 불규칙한 작업 리듬에 어떻게 붙는지 더 캐묻는다",
+    "if_unconvinced": "신선해 보여도 결국 기존 제품과 다르지 않다고 느낀다",
+    "if_annoyed": "구식 느낌이면 바로 흥미를 잃는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": ["novel_angle", "distinctiveness", "energetic_freshness"],
+    "engagement_penalties": ["generic_copy", "dated_language", "me_too_message"],
+    "purchase_intent_boosts": ["first_mover_value", "uniqueness"],
+    "purchase_intent_penalties": ["boring_positioning", "no_clear_delta"]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "checkpoint.schema.json",
+  "title": "Harness Checkpoint",
+  "description": "하네스 실행 상태. 새 세션/에이전트가 이 파일을 읽고 이어간다.",
+  "type": "object",
+  "required": [
+    "phase",
+    "updated_at"
+  ],
+  "properties": {
+    "phase": {
+      "type": "string",
+      "enum": [
+        "init",
+        "phase1",
+        "phase2",
+        "phase3"
+      ],
+      "description": "현재 Phase. init=시작 전, phase1=코드 생성 중, phase2=베이스라인 중, phase3=autoresearch 루프 중"
+    },
+    "phase1": {
+      "type": "object",
+      "description": "Phase 1 상태",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "not_started",
+            "in_progress",
+            "completed",
+            "failed"
+          ]
+        },
+        "completed_modules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "완료된 모듈 목록 (llm, personas, agents, conversation, evaluation, ralph, scripts, config)"
+        },
+        "current_task": {
+          "type": "string",
+          "description": "현재 진행 중인 태스크"
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "마지막 에러들"
+        },
+        "output_dir": {
+          "type": "string",
+          "description": "코드 생성 디렉토리 경로 (하네스 기준 상대경로, 기본: ../output/)"
+        }
+      }
+    },
+    "phase2": {
+      "type": "object",
+      "description": "Phase 2 상태",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "not_started",
+            "in_progress",
+            "completed",
+            "failed"
+          ]
+        },
+        "baseline_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "베이스라인 avg_score"
+        },
+        "baseline_coverage": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "베이스라인 cluster_coverage"
+        },
+        "baseline_strategy": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "베이스라인 best_strategy"
+        },
+        "run_log": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "마지막 run.log 경로"
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "phase3": {
+      "type": "object",
+      "description": "Phase 3 상태",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "not_started",
+            "running",
+            "paused"
+          ]
+        },
+        "experiment_count": {
+          "type": "integer",
+          "description": "총 실험 횟수"
+        },
+        "keep_count": {
+          "type": "integer"
+        },
+        "discard_count": {
+          "type": "integer"
+        },
+        "crash_count": {
+          "type": "integer"
+        },
+        "best_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "역대 최고 avg_score"
+        },
+        "best_coverage": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "best_experiment": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "최고 점수 실험 번호"
+        },
+        "current_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "현재(마지막 keep) avg_score"
+        },
+        "current_coverage": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "last_hypothesis": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "마지막 실험 가설"
+        },
+        "consecutive_discards": {
+          "type": "integer",
+          "description": "연속 discard 횟수 (5 이상이면 급진적 변경)"
+        },
+        "git_branch": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "autoresearch 브랜치명"
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "마지막 업데이트 시각 (ISO 8601)"
+    },
+    "updated_by": {
+      "type": "string",
+      "description": "마지막 업데이트한 에이전트/세션 식별자"
+    },
+    "next_action": {
+      "type": "string",
+      "description": "다음에 해야 할 구체적 행동 (사람이 읽을 수 있는 문장)"
+    }
+  }
+}

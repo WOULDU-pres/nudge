@@ -1,0 +1,102 @@
+{
+  "persona_id": "P094",
+  "archetype_id": "inertia_bound_traditionalist",
+  "archetype_name": "Inertia Bound Traditionalist",
+  "variation_slot": "freelancer_solopreneur",
+  "summary": "일정이 들쭉날쭉한 1인 운영자라 영양제도 작업 흐름을 끊지 않는 선에서만 바꾸려는 관성형 구매자. 싸고 익숙한 제품을 계속 먹더라도 복용이 단순한 쪽을 택하며, 새 제품도 생산성보다 챙김 난이도가 먼저 통과돼야 하는 freelancer_solopreneur variation.",
+  "cluster_tags": [
+    "inertia",
+    "status_quo_bias",
+    "change_resistant",
+    "freelancer_solopreneur"
+  ],
+  "profile": {
+    "age_band": "30s-40s",
+    "occupation": "freelancer_or_solopreneur",
+    "life_context": "클라이언트 일정과 마감에 따라 식사와 수면 시간이 흔들려서 영양제도 작업 중 손쉽게 챙길 수 있는 익숙한 방식만 유지하려는 편",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "high",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "책상 위에 둔 저렴한 비타민이나 에너지 보조 성격의 기본 영양제를 생각날 때 챙기는 중",
+    "buyer_role": "primary_decision_maker"
+  },
+  "decision_style": {
+    "decision_speed": "moderate",
+    "trust_style": [
+      "familiarity",
+      "continuity",
+      "low_disruption"
+    ],
+    "preferred_message_style": [
+      "steady",
+      "non_disruptive",
+      "practical"
+    ],
+    "disliked_message_style": [
+      "dramatic_change",
+      "radical_shift",
+      "too_new"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "familiar",
+      "measured"
+    ],
+    "disliked_voice_style": [
+      "pushy",
+      "hyper",
+      "urgent"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "easy_transition",
+    "minimal_change",
+    "familiar_routine"
+  ],
+  "objection_profile": {
+    "primary_type": "inertia",
+    "secondary_type": "complexity",
+    "intensity": "high",
+    "trigger_conditions": [
+      "change_cost_seems_high",
+      "switching_routine_is_unclear",
+      "new_routine_feels_disruptive"
+    ],
+    "resolution_requirements": [
+      "low_transition_cost",
+      "familiarity_bridge",
+      "simple_switching_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "작업 중 책상에 두고도 쉽게 챙길 수 있는지, 기존 저가 제품에서 갈아타는 과정이 번거롭지 않은지부터 본다",
+    "if_unconvinced": "지금 제품도 아주 만족스럽진 않지만 일단 익숙하니 굳이 새로 적응할 필요는 없다고 느낀다",
+    "if_annoyed": "마감 많은 생활을 고려하지 않고 복용 단계를 늘리면 바로 반감이 생긴다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "continuity_framing",
+      "simple_transition",
+      "low_disruption"
+    ],
+    "engagement_penalties": [
+      "radical_change",
+      "many_new_steps",
+      "forced_switching"
+    ],
+    "purchase_intent_boosts": [
+      "easy_migration",
+      "familiarity"
+    ],
+    "purchase_intent_penalties": [
+      "switching_cost",
+      "routine_disruption"
+    ]
+  }
+}

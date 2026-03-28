@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "conversation-session.schema.json",
+  "title": "ConversationSession",
+  "description": "A(Act) 단계에서 생성하는 대화 세션",
+  "type": "object",
+  "required": [
+    "session_id",
+    "strategy_id",
+    "persona_id",
+    "turns",
+    "ended_by"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "session_id": {
+      "type": "string",
+      "description": "세션 고유 ID"
+    },
+    "strategy_id": {
+      "type": "string",
+      "description": "사용된 전략 ID"
+    },
+    "persona_id": {
+      "type": "string",
+      "description": "대화 상대 페르소나 ID"
+    },
+    "turns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "role",
+          "content"
+        ],
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "agent",
+              "persona"
+            ]
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "ended_by": {
+      "type": "string",
+      "enum": [
+        "turn_limit",
+        "keyword_detected",
+        "customer_exit",
+        "error"
+      ],
+      "description": "대화 종료 사유"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "persona_id": "P096",
+  "archetype_id": "inertia_bound_traditionalist",
+  "archetype_name": "Inertia Bound Traditionalist",
+  "variation_slot": "manager_influencer",
+  "summary": "자기 루틴을 바꾸는 데도 신중하지만, 주변에서 '그거 괜찮냐'고 물어보면 설명까지 해야 해서 더 쉽게 움직이지 않는 관리형 구매자. 출장과 회의가 잦아 익숙한 복용 흐름을 선호하며, 새 제품도 본인과 주변 모두에게 납득 가능한 선택이어야 하는 manager_influencer variation.",
+  "cluster_tags": [
+    "inertia",
+    "status_quo_bias",
+    "change_resistant",
+    "manager_influencer"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "회의와 외근이 많아 복용 루틴이 단순해야 하고, 본인이 선택한 영양제에 대해 가족이나 팀원에게도 이유를 설명할 수 있어야 마음이 놓임",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "익숙한 영양제 브랜드를 계속 먹거나, 출장용으로 챙기기 쉬운 기본 제품만 유지 중",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "familiarity",
+      "continuity",
+      "low_disruption"
+    ],
+    "preferred_message_style": [
+      "steady",
+      "non_disruptive",
+      "practical"
+    ],
+    "disliked_message_style": [
+      "dramatic_change",
+      "radical_shift",
+      "too_new"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "calm",
+      "familiar",
+      "measured"
+    ],
+    "disliked_voice_style": [
+      "pushy",
+      "hyper",
+      "urgent"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "easy_transition",
+    "minimal_change",
+    "familiar_routine"
+  ],
+  "objection_profile": {
+    "primary_type": "inertia",
+    "secondary_type": "complexity",
+    "intensity": "high",
+    "trigger_conditions": [
+      "change_cost_seems_high",
+      "switching_routine_is_unclear",
+      "new_routine_feels_disruptive"
+    ],
+    "resolution_requirements": [
+      "low_transition_cost",
+      "familiarity_bridge",
+      "simple_switching_story"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "출장 가방이나 회사 서랍에 넣어도 무리 없는지 보고, 누가 물어봐도 설명 가능한 차이를 찾는다",
+    "if_unconvinced": "본인도 주변도 굳이 납득할 이유가 없다면 현재 브랜드를 유지하는 편이 낫다고 판단한다",
+    "if_annoyed": "복용이 복잡하거나 근거가 흐리면 책임질 수 없는 선택처럼 느껴 바로 선을 긋는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "continuity_framing",
+      "simple_transition",
+      "low_disruption"
+    ],
+    "engagement_penalties": [
+      "radical_change",
+      "many_new_steps",
+      "forced_switching"
+    ],
+    "purchase_intent_boosts": [
+      "easy_migration",
+      "familiarity"
+    ],
+    "purchase_intent_penalties": [
+      "switching_cost",
+      "routine_disruption"
+    ]
+  }
+}

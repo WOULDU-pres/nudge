@@ -1,0 +1,102 @@
+{
+  "persona_id": "P138",
+  "archetype_id": "data_rational_analyst",
+  "archetype_name": "Data Rational Analyst",
+  "variation_slot": "low_urgency",
+  "summary": "지금 루틴을 굳이 흔들 이유가 없으면 조용히 지나치는 분석형 구매자. 평온한 생활 안에서 자연스러운 대체 가능성만 검토하는 low_urgency variation.",
+  "cluster_tags": [
+    "data_driven",
+    "rational",
+    "logic_first",
+    "low_urgency"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "stable_routine_user",
+    "life_context": "현재 루틴이 크게 문제 없어서 수치와 비교 기준이 뚜렷할 때만 천천히 검토함",
+    "digital_fluency": "medium"
+  },
+  "purchase_context": {
+    "problem_awareness": "low",
+    "urgency_level": "low",
+    "budget_sensitivity": "medium_to_high",
+    "current_alternative": "기본 영양제와 규칙적인 식사, 가벼운 운동 정도로 무난한 생활 리듬을 유지 중",
+    "buyer_role": "self_buyer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "numbers",
+      "logic",
+      "routine_stability"
+    ],
+    "preferred_message_style": [
+      "structured",
+      "precise",
+      "evidence_backed"
+    ],
+    "disliked_message_style": [
+      "handwavy",
+      "emotional_only",
+      "ambiguous"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "clear",
+      "measured",
+      "professional"
+    ],
+    "disliked_voice_style": [
+      "too_emotional",
+      "chaotic",
+      "vague"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "measurable_gain",
+    "logical_structure",
+    "easy_swap_clarity"
+  ],
+  "objection_profile": {
+    "primary_type": "logic_gap",
+    "secondary_type": "trust",
+    "intensity": "high",
+    "trigger_conditions": [
+      "claims_are_unstructured",
+      "numbers_are_missing",
+      "reason_to_change_is_unclear"
+    ],
+    "resolution_requirements": [
+      "structured_reasoning",
+      "evidence",
+      "clear_difference_table"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "다음 구매 시점에 교체할 만한지 조용히 검토한다",
+    "if_unconvinced": "지금 루틴이 더 안정적이라고 본다",
+    "if_annoyed": "대수롭지 않은 문제를 크게 부풀린다고 느끼면 멀어진다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "clear_logic",
+      "quantification",
+      "routine_stability_language"
+    ],
+    "engagement_penalties": [
+      "ambiguity",
+      "emotion_only_pitch",
+      "logic_jump"
+    ],
+    "purchase_intent_boosts": [
+      "measurable_outcome",
+      "easy_swap_picture"
+    ],
+    "purchase_intent_penalties": [
+      "unproven_claims",
+      "unclear_reason_to_change"
+    ]
+  }
+}

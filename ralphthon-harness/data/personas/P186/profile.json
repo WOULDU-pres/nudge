@@ -1,0 +1,102 @@
+{
+  "persona_id": "P186",
+  "archetype_id": "relationship_trust_buyer",
+  "archetype_name": "Relationship Trust Buyer",
+  "variation_slot": "manager_influencer",
+  "summary": "회의 전 사무실 서랍에서 꺼낼 한 병도 스스로 납득하고 주변에 설명할 수 있어야 움직이는 관계 신뢰형 구매자. 팀원과 가족에게도 무리 없이 말할 수 있는 태도와 답변의 성실함을 함께 보는 manager_influencer variation.",
+  "cluster_tags": [
+    "relationship_driven",
+    "manager_filter",
+    "explainable_choice",
+    "office_drawer_routine"
+  ],
+  "profile": {
+    "age_band": "30s-50s",
+    "occupation": "manager_or_team_lead",
+    "life_context": "팀원 질문과 가족 추천까지 한 번에 검토해야 해서, 새 영양제는 본인 기준과 설명 가능성을 함께 따지는 중간관리자 생활",
+    "digital_fluency": "medium_to_high"
+  },
+  "purchase_context": {
+    "problem_awareness": "high",
+    "urgency_level": "medium",
+    "budget_sensitivity": "medium",
+    "current_alternative": "아침 식후 종합비타민과 눈 관련 제품을 챙기며, 동료가 권한 새 제품은 라벨 사진까지 비교해 보는 중",
+    "buyer_role": "influencer"
+  },
+  "decision_style": {
+    "decision_speed": "deliberate",
+    "trust_style": [
+      "sincerity",
+      "answer_quality",
+      "explainability"
+    ],
+    "preferred_message_style": [
+      "grounded",
+      "honest",
+      "composed"
+    ],
+    "disliked_message_style": [
+      "overfriendly",
+      "evasive",
+      "performative"
+    ]
+  },
+  "voice_preferences": {
+    "preferred_voice_style": [
+      "warm",
+      "stable",
+      "low_pressure"
+    ],
+    "disliked_voice_style": [
+      "sugary",
+      "too_salesy",
+      "rushed"
+    ],
+    "length_tolerance": "medium"
+  },
+  "persuasion_triggers": [
+    "honest_limits",
+    "clear_reasoning",
+    "explainable_benefit"
+  ],
+  "objection_profile": {
+    "primary_type": "trust",
+    "secondary_type": "explainability",
+    "intensity": "medium",
+    "trigger_conditions": [
+      "ducking_questions",
+      "hiding_tradeoffs",
+      "pushy_closing"
+    ],
+    "resolution_requirements": [
+      "direct_answers",
+      "calm_specifics",
+      "acknowledge_limits"
+    ]
+  },
+  "likely_reaction_style": {
+    "if_interested": "회의 끝나고 다시 볼 생각으로 핵심 근거를 따로 메모한다",
+    "if_unconvinced": "사람은 괜찮아도 주변에 설명할 만한 문장이 없다고 느끼면 멈춘다",
+    "if_annoyed": "말만 부드럽고 내용이 비면 다음 질문 없이 대화를 접는다"
+  },
+  "scoring_hints": {
+    "engagement_boosts": [
+      "honest_limits",
+      "grounded",
+      "sincerity"
+    ],
+    "engagement_penalties": [
+      "overfriendly",
+      "ducking_questions",
+      "sugary"
+    ],
+    "purchase_intent_boosts": [
+      "direct_answers",
+      "calm_specifics"
+    ],
+    "purchase_intent_penalties": [
+      "hiding_tradeoffs",
+      "pushy_closing"
+    ]
+  }
+}
