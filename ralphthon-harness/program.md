@@ -196,13 +196,30 @@ python scripts/run_simulation.py --dry-run              # 구조 확인
 
 오케스트레이터가 직접 실행한다 (코더 불필요).
 
+### 제품 정보 전달
+
+시뮬레이션에는 반드시 제품 정보가 필요하다. 3가지 방법 중 택 1:
+
+```bash
+# 방법 1: YAML 파일로 전달
+python scripts/run_simulation.py --product config/product.yaml
+
+# 방법 2: 텍스트 파일로 전달
+python scripts/run_simulation.py --product my_product.txt
+
+# 방법 3: config/product.yaml이 있으면 자동 로드 (fallback)
+python scripts/run_simulation.py
+```
+
+**제품 정보가 없으면 시뮬레이션이 시작되지 않는다.**
+
 ```bash
 cd ../output
 
 # 환경변수 확인
 echo $GEMINI_API_KEY
 
-# DEV 모드 실행
+# DEV 모드 실행 (제품 정보는 product.yaml 또는 --product로 지정)
 RALPHTHON_MODE=DEV python scripts/run_simulation.py > run.log 2>&1
 
 # 결과 확인

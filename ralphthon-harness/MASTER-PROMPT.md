@@ -241,9 +241,11 @@ cd output && python -c "from src.ralph.loop import run_ralph_loop; print('OK')"
 
 ## Phase 2: 베이스라인 실행
 
+**제품 정보 필수.** config/product.yaml 또는 --product로 지정.
+
 ```bash
 cd ../output
-RALPHTHON_MODE=DEV python scripts/run_simulation.py > run.log 2>&1
+RALPHTHON_MODE=DEV python scripts/run_simulation.py --product config/product.yaml > run.log 2>&1
 grep "^avg_score:\|^cluster_coverage:\|^best_strategy:" run.log
 ```
 
@@ -400,15 +402,69 @@ G. Conversation Viewer    — 대화 원문 열람 (채팅 UI)
 7. Persona Drilldown (E) + Experiment Trend (F)
 8. Conversation Viewer (G)
 9. 빌드 + 동작 확인
+10. 코드 리뷰 + 동작 검증 (Codex 서브에이전트)
+11. 리뷰 피드백 반영 + 최종 빌드
+```
+
+### 코드 리뷰 + 동작 검증 (Step 10)
+
+빌드가 성공한 후, Codex CLI 서브에이전트를 호출하여 코드 리뷰와 동작 검증을 수행한다.
+오케스트레이터가 직접 코드를 보는 것이 아니라, **코더(Codex)에게 리뷰를 위임**한다.
+
+#### 리뷰 위임 방식
+
+```bash
+codex exec --full-auto \
+  '아래 체크리스트에 따라 output/frontend/ 코드를 리뷰하고,
+   발견된 문제를 직접 수정하라.
+
+   ## 코드 품질 체크리스트
+   1. TypeScript 타입 에러 없음 (npm run build 통과)
+   2. 사용하지 않는 import/변수 제거
+   3. any 타입 최소화 — runs/ JSON 데이터에 proper interface 적용
+   4. 컴포넌트 분리가 적절한지 (파일당 200줄 이하 권장)
+
+   ## 동작 검증 체크리스트
+   5. npm run dev 실행 후 localhost 접속 — 빈 화면이 아닌지 확인
+   6. 히트맵(B)에 실제 점수가 5단계 색상으로 표시되는지
+   7. 히트맵 셀 클릭 → Cell Explanation(C) 패널이 업데이트되는지
+   8. Experiment Trend(F)에 results.tsv 기반 그래프가 그려지는지
+   9. Conversation Viewer(G)에서 대화 원문이 채팅 형태로 보이는지
+   10. 반응형: 1024px 미만에서 1열 스택 레이아웃으로 전환되는지
+
+   ## 접근성 체크리스트
+   11. 히트맵 셀에 숫자 점수가 항상 표시 (색맹 대응)
+   12. 색상 대비 WCAG AA (4.5:1) 이상
+
+   ## 수정 규칙
+   - 발견된 문제는 직접 코드를 수정하라 (리포트만 하지 마라)
+   - 수정 후 npm run build가 통과하는지 재확인
+   - 수정할 수 없는 구조적 문제는 REVIEW_REPORT.md에 기록
+
+   완료 후 output/frontend/REVIEW_REPORT.md에 결과를 기록하라:
+   - PASS 항목
+   - FIXED 항목 (무엇을 어떻게 고쳤는지)
+   - REMAINING 항목 (수정 불가한 것)' \
+  --workdir ../output/frontend/
+```
+
+#### 리뷰 결과 처리
+
+```
+오케스트레이터가 REVIEW_REPORT.md를 읽고:
+  - REMAINING 항목이 있으면 → 추가 수정 지시 또는 수용 판단
+  - REMAINING 없으면 → Phase 4 완료 진행
 ```
 
 ### Phase 4 완료 조건
 
 - [ ] `npm run build` 성공
 - [ ] `npm run dev`로 로컬 서버 실행 가능
-- [ ] 히트맵이 실제 runs/ 데이터를 표시
+- [ ] 히트맵이 실제 runs/ 데이터를 5단계 색상으로 표시
 - [ ] 셀 클릭 → Cell Explanation 업데이트
 - [ ] Experiment Trend가 results.tsv 데이터를 그래프로 표시
+- [ ] Conversation Viewer에서 대화 원문 열람 가능
+- [ ] Codex 코드 리뷰 통과 (REVIEW_REPORT.md에 REMAINING 없음)
 
 ### Phase 4 실패 시
 
@@ -418,12 +474,18 @@ G. Conversation Viewer    — 대화 원문 열람 (채팅 UI)
 3. 다시 빌드
 4. 반복 (사람에게 묻지 않음)
 
+코드 리뷰에서 REMAINING이 있으면:
+1. REVIEW_REPORT.md 읽기
+2. 코더에게 수정 지시 또는 수용 판단
+3. 재리뷰 (최대 2회)
+
 ### Phase 4 완료 시
 
 ```
 CHECKPOINT 업데이트:
   phase → "done"
   phase4.status → "completed"
+  phase4.review_status → "passed"
   next_action → "완료. 대시보드는 npm run dev로 실행."
 ```
 

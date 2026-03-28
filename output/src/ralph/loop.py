@@ -71,7 +71,7 @@ async def run_ralph_loop(
 
     # ── A (Act) ──────────────────────────────────────────
     logger.info("A (Act) — 대화 시뮬레이션")
-    sessions: list[ConversationSession] = await act(strategies, personas)
+    sessions: list[ConversationSession] = await act(strategies, personas, product_brief=product_brief)
     logger.info(f"  Completed {len(sessions)} conversations")
 
     # ── E (Evaluate) ─────────────────────────────────────
@@ -80,12 +80,8 @@ async def run_ralph_loop(
 
     async def _judge_one(sess: ConversationSession) -> EvaluationResult:
         async with semaphore:
-            persona_profile = None
-            for p in personas:
-                if p["id"] == sess.persona_id:
-                    persona_profile = p.get("profile", {})
-                    break
-            return await judge_conversation(sess, persona_profile)
+            # Judge는 transcript만 보고 채점 — 페르소나 정보 전달 안 함 (편향 방지)
+            return await judge_conversation(sess)
 
     eval_tasks = [_judge_one(s) for s in sessions]
     evaluations: list[EvaluationResult] = await asyncio.gather(*eval_tasks)

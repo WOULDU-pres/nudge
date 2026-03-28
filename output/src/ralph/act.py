@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import asyncio
 import logging
-import yaml
 from pathlib import Path
 
 from src.agents.sales_agent import SalesAgent
@@ -15,28 +14,23 @@ from config.settings import get_settings
 logger = logging.getLogger("ralphthon.ralph.act")
 
 
-def _load_product_brief() -> str:
-    """product.yaml에서 product_brief 로드."""
-    product_path = Path(__file__).resolve().parent.parent.parent / "config" / "product.yaml"
-    if product_path.exists():
-        with open(product_path, "r", encoding="utf-8") as f:
-            data = yaml.safe_load(f)
-        return data.get("product_brief", "바이탈케어 데일리 멀티비타민")
-    return "바이탈케어 데일리 멀티비타민 — 하루 500원, 60정 2개월분"
-
-
 async def act(
     strategies: list[dict],
     personas: list[dict],
+    product_brief: str = "",
 ) -> list[ConversationSession]:
     """전략 × 페르소나 조합으로 대화 시뮬레이션 실행.
+
+    Args:
+        strategies: H에서 생성한 전략 목록
+        personas: P에서 선택한 페르소나 목록
+        product_brief: 제품 정보 텍스트
 
     Returns:
         ConversationSession 리스트
     """
     settings = get_settings()
     semaphore = asyncio.Semaphore(settings.RALPHTHON_MAX_CONCURRENT)
-    product_brief = _load_product_brief()
 
     async def _run_one(strategy: dict, persona: dict) -> ConversationSession:
         async with semaphore:
