@@ -404,6 +404,7 @@ G. Conversation Viewer    — 대화 원문 열람 (채팅 UI)
 9. 빌드 + 동작 확인
 10. 코드 리뷰 + 동작 검증 (Codex 서브에이전트)
 11. 리뷰 피드백 반영 + 최종 빌드
+12. 오케스트레이터 시각 검증 (Hermes가 직접 브라우저로 확인)
 ```
 
 ### 코드 리뷰 + 동작 검증 (Step 10)
@@ -453,7 +454,56 @@ codex exec --full-auto \
 ```
 오케스트레이터가 REVIEW_REPORT.md를 읽고:
   - REMAINING 항목이 있으면 → 추가 수정 지시 또는 수용 판단
-  - REMAINING 없으면 → Phase 4 완료 진행
+  - REMAINING 없으면 → Step 12 시각 검증으로 진행
+```
+
+### 오케스트레이터 시각 검증 (Step 12)
+
+Codex 코드 리뷰를 통과한 후, **오케스트레이터(Hermes)가 직접** 웹서버를 띄우고
+브라우저로 접속하여 최종 시각 검증을 수행한다.
+
+이 단계는 코더에게 위임하지 않는다. 오케스트레이터가 직접 눈으로 확인한다.
+
+#### 검증 절차
+
+```
+1. 웹서버 시작
+   cd output/frontend && npm run dev &  (background)
+   → localhost URL 확인
+
+2. 브라우저로 접속 (browser_navigate)
+   → 페이지 로드 확인
+
+3. 전체 화면 스크린샷 (browser_vision)
+   → "대시보드 전체 레이아웃이 보이는가? 빈 화면이 아닌가?" 확인
+
+4. 히트맵 검증 (browser_vision)
+   → "히트맵에 숫자와 5단계 색상이 표시되는가?" 확인
+
+5. 히트맵 셀 클릭 (browser_click)
+   → 셀 하나 클릭 후 스크린샷
+   → "Cell Explanation 패널이 업데이트되었는가?" 확인
+
+6. 스크롤 다운 → 하단 패널 검증 (browser_scroll + browser_vision)
+   → "Experiment Trend 그래프가 표시되는가?"
+   → "Conversation Viewer에 대화가 채팅 형태로 보이는가?"
+
+7. 검증 결과 판정
+   → 모든 항목 PASS → Phase 4 완료
+   → 문제 발견 → 코더에게 수정 지시 → 재검증 (최대 2회)
+
+8. 웹서버 종료
+```
+
+#### 검증 실패 시
+
+```
+문제 발견:
+  1. 스크린샷에서 문제 부분 식별
+  2. 코더(Codex)에게 구체적 수정 지시 (스크린샷 기반 설명)
+  3. 수정 후 npm run build → npm run dev → 재검증
+  4. 최대 2회 반복
+  5. 2회 후에도 미해결 → CHECKPOINT에 기록하고 완료 처리
 ```
 
 ### Phase 4 완료 조건
@@ -465,6 +515,7 @@ codex exec --full-auto \
 - [ ] Experiment Trend가 results.tsv 데이터를 그래프로 표시
 - [ ] Conversation Viewer에서 대화 원문 열람 가능
 - [ ] Codex 코드 리뷰 통과 (REVIEW_REPORT.md에 REMAINING 없음)
+- [ ] Hermes 시각 검증 통과 (브라우저 스크린샷 기반 확인)
 
 ### Phase 4 실패 시
 
@@ -479,6 +530,11 @@ codex exec --full-auto \
 2. 코더에게 수정 지시 또는 수용 판단
 3. 재리뷰 (최대 2회)
 
+시각 검증에서 문제가 있으면:
+1. 스크린샷에서 문제 식별
+2. 코더에게 수정 지시
+3. 빌드 → 재검증 (최대 2회)
+
 ### Phase 4 완료 시
 
 ```
@@ -486,6 +542,7 @@ CHECKPOINT 업데이트:
   phase → "done"
   phase4.status → "completed"
   phase4.review_status → "passed"
+  phase4.visual_verification → "passed"
   next_action → "완료. 대시보드는 npm run dev로 실행."
 ```
 

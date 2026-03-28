@@ -1,0 +1,17 @@
+06:34:35 [run_simulation] Ralphthon Simulation — mode=DEV, provider=gemini, cheap=gemini-3.1-flash-lite-preview, expensive=gemini-3.1-pro-preview
+06:34:35 [run_simulation] Product: 제품명: 바이탈케어 데일리 멀티비타민
+가격: 29,900원 / 60정 (2개월분, 하루 약 500원)
+특징:
+- 비타민 B군 고함량 (피로회복)
+- 아연 + 비타민D (면역력)
+-...
+06:34:35 [run_simulation] Run ID: run_1774733675
+06:34:35 [run_simulation] Run dir: /home/hwjoo/01-projects/2026/hwjoo-idea/ralphton/output/runs/run_1774733675
+06:34:35 [ralphthon.ralph] ============================================================
+06:34:35 [ralphthon.ralph] H (Hypothesize) — 전략 가설 생성
+06:34:36 [google_genai.models] AFC is enabled with max remote calls: 10.
+06:34:37 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 429 Too Many Requests"
+06:34:37 [ralphthon.llm] Rate limited (attempt 1), waiting 15s
+06:34:52 [google_genai.models] AFC is enabled with max remote calls: 10.
+06:34:52 [httpx] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent "HTTP/1.1 429 Too Many Requests"
+06:34:52 [ralphthon.llm] Rate limited (attempt 2), waiting 30s
