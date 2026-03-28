@@ -15,6 +15,8 @@ if CHECKPOINT.json 존재:
   if phase == "phase3":      → Phase 3 루프 이어서 진행
                                phase3.current_score, experiment_count 확인
                                results.tsv 읽고 → 다음 실험
+  if phase == "phase4":      → Phase 4 대시보드 이어서 진행
+                               phase4.current_task 확인
 
 if CHECKPOINT.json 없음:
   → 초기 상태로 생성 후 Phase 1부터 시작
@@ -101,8 +103,8 @@ CHECKPOINT.json 읽기
 └──────────────────────┬──────────────────────────────┘
                        ▼
 ┌─────────────────────────────────────────────────────┐
-│ Phase 3: Autoresearch (NEVER STOP)                  │
-│   LOOP FOREVER:                                      │
+│ Phase 3: Autoresearch (최대 5회 실험)                │
+│   LOOP (최대 5회):                                    │
 │     1. CHECKPOINT 읽기 (이어가기 지점 확인)          │
 │     2. results.tsv 읽기 (이전 실험 패턴 분석)        │
 │     3. 가설 수립 → strategy_prompt.md 수정            │
@@ -111,8 +113,16 @@ CHECKPOINT.json 읽기
 │     6. 결과 추출 → keep/discard 판정                  │
 │     7. results.tsv 기록                               │
 │     8. CHECKPOINT 업데이트                            │
-│     9. 다음 실험                                     │
-│   사람이 멈출 때까지 계속                             │
+│     9. 다음 실험 (5회 완료 시 Phase 4로 전환)         │
+│   5회 실험 후 자동으로 Phase 4로 전환                 │
+└──────────────────────┬──────────────────────────────┘
+                       ▼
+┌─────────────────────────────────────────────────────┐
+│ Phase 4: 웹 대시보드                                  │
+│   architecture/visualization-spec.md 참조             │
+│   HeroUI v3 + Tailwind CSS v4 + Recharts             │
+│   runs/ 데이터를 시각화하는 웹 대시보드 구현          │
+│   완료 → CHECKPOINT 업데이트                          │
 └─────────────────────────────────────────────────────┘
 ```
 
@@ -131,6 +141,9 @@ CHECKPOINT.json 읽기
 | Phase 3 discard | discard_count++, consecutive_discards++ |
 | Phase 3 crash | crash_count++ |
 | Phase 3 역대 최고 | best_score/best_experiment 갱신 |
+| Phase 3 5회 완료 | phase → "phase4" |
+| Phase 4 모듈 완료 | phase4.completed_modules에 추가 |
+| Phase 4 전체 완료 | phase → "done" |
 | 세션 종료 전 | next_action에 "다음에 해야 할 일" 기록 |
 
 ---
@@ -258,7 +271,7 @@ tail -n 50 run.log
 
 ---
 
-## Phase 3: Autoresearch (NEVER STOP)
+## Phase 3: Autoresearch (최대 5회 실험)
 
 `program.md`를 따른다. 핵심만 여기 요약:
 
@@ -274,10 +287,11 @@ git checkout -b autoresearch/$(date +%b%d | tr '[:upper:]' '[:lower:]')
 ### 루프
 
 ```
-LOOP FOREVER:
+LOOP (최대 5회 — experiment_count가 5에 도달하면 종료):
 
   1. CHECKPOINT.json 읽기
      → experiment_count, current_score, consecutive_discards 확인
+     → experiment_count >= 5이면 루프 종료 → Phase 4로 전환
 
   2. results.tsv 읽기
      → 이전 실험 패턴 분석
@@ -312,17 +326,106 @@ LOOP FOREVER:
      → best_score 갱신 여부
      → next_action
 
-  10. 다음 실험으로
+  10. experiment_count < 5 → 다음 실험으로
+      experiment_count >= 5 → Phase 4로 전환
 ```
 
-### 절대 규칙
+### Phase 3 완료 시
 
-1. **NEVER STOP**: 사람이 멈출 때까지 계속.
+```
+CHECKPOINT 업데이트:
+  phase → "phase4"
+  phase3.status → "completed"
+  next_action → "Phase 4 웹 대시보드를 구현하라."
+```
+
+### 규칙
+
+1. **5회 제한**: 최대 5회 실험 후 Phase 4로 자동 전환.
 2. **NEVER ASK**: 사람에게 묻지 마라.
 3. **ONE FILE**: Phase 3에서는 strategy_prompt.md만 수정.
 4. **CHECKPOINT ALWAYS**: 매 실험 후 CHECKPOINT.json 업데이트.
-5. **THINK HARDER**: 5회 연속 discard면 급진적 변경.
+5. **THINK HARDER**: 연속 discard면 방향을 바꿔라.
 6. **FIX IT**: crash면 코더에게 수정 시키고 이어가라.
+
+---
+
+## Phase 4: 웹 대시보드
+
+`architecture/visualization-spec.md`를 따른다. 핵심만 여기 요약:
+
+### 목적
+
+Phase 2~3의 시뮬레이션 결과(runs/ 데이터)를 시각화하는 웹 대시보드를 구현한다.
+
+### 기술 스택
+
+- **React 19 + TypeScript**
+- **HeroUI v3** (`@heroui/react` + `@heroui/styles`)
+- **Tailwind CSS v4**
+- **Recharts** (차트)
+- Vite 빌드
+
+### 구현할 패널 (visualization-spec.md 참조)
+
+```
+A. Strategy Leaderboard  — 전략 순위표 (Table)
+B. Heatmap               — 전략 × 클러스터 점수 행렬 (CSS Grid, 5단계 색상)
+C. Cell Explanation       — 히트맵 셀 클릭 시 상세 (Card)
+D. Cluster Insight        — 클러스터별 분석 (Accordion)
+E. Persona Drilldown      — 대표 페르소나 3명 (best/median/failure)
+F. Experiment Trend       — 점수 추이 그래프 (Recharts LineChart)
+G. Conversation Viewer    — 대화 원문 열람 (채팅 UI)
+```
+
+### 데이터 소스
+
+- `../output/runs/<run_id>/summary.json` — 집계 데이터
+- `../output/runs/<run_id>/evaluations.json` — 개별 채점
+- `../output/runs/<run_id>/strategies.json` — 전략 목록
+- `../output/runs/<run_id>/transcripts/<strategy>/<persona>.json` — 대화 원문
+- `../output/runs/<run_id>/reason.json` — 패턴 분석
+- `../output/runs/<run_id>/learnings.json` — 학습 포인트
+- `../output/results.tsv` — 실험 로그 (Experiment Trend용)
+
+### 구현 순서
+
+```
+1. 프로젝트 초기화 (Vite + React + TS + HeroUI + Tailwind + Recharts)
+2. 데이터 로딩 레이어 (runs/ JSON 파싱)
+3. Layout + Header
+4. Strategy Leaderboard (A)
+5. Heatmap (B) — 핵심 시각화
+6. Cell Explanation (C) + Cluster Insight (D)
+7. Persona Drilldown (E) + Experiment Trend (F)
+8. Conversation Viewer (G)
+9. 빌드 + 동작 확인
+```
+
+### Phase 4 완료 조건
+
+- [ ] `npm run build` 성공
+- [ ] `npm run dev`로 로컬 서버 실행 가능
+- [ ] 히트맵이 실제 runs/ 데이터를 표시
+- [ ] 셀 클릭 → Cell Explanation 업데이트
+- [ ] Experiment Trend가 results.tsv 데이터를 그래프로 표시
+
+### Phase 4 실패 시
+
+코드가 빌드되지 않으면:
+1. 에러 메시지 읽기
+2. 수정
+3. 다시 빌드
+4. 반복 (사람에게 묻지 않음)
+
+### Phase 4 완료 시
+
+```
+CHECKPOINT 업데이트:
+  phase → "done"
+  phase4.status → "completed"
+  next_action → "완료. 대시보드는 npm run dev로 실행."
+```
 
 ---
 
@@ -332,7 +435,7 @@ LOOP FOREVER:
 2. **세션이 끝나기 전에 반드시 CHECKPOINT를 업데이트하라.**
 3. **새 세션은 CHECKPOINT를 먼저 읽고 이어간다.**
 4. **코드 생성은 코더에게, 실행/판단은 직접 한다.**
-5. **Phase 3는 NEVER STOP. 사람이 중단할 때까지.**
+5. **Phase 3는 최대 5회 실험. 완료 시 Phase 4로 전환.**
 6. **페르소나(data/personas/)를 절대 수정하지 마라.**
 
 ---
@@ -359,6 +462,7 @@ ralphton/
     ├── src/
     ├── scripts/
     ├── config/
+    ├── frontend/          ← Phase 4에서 생성. React + HeroUI 대시보드.
     ├── strategy_prompt.md  (prompts/에서 복사)
     ├── results.tsv
     └── runs/
@@ -391,4 +495,4 @@ output/은 하네스와 같은 레벨(형제 디렉토리)에 생성한다.
 
 1. CHECKPOINT.json을 읽어라.
 2. phase에 따라 분기하라.
-3. 끝까지 자율로 완료하라.
+3. Phase 1 → 2 → 3(5회) → 4(대시보드) 순서로 끝까지 자율로 완료하라.
