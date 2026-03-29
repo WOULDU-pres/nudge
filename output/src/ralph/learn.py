@@ -1,73 +1,67 @@
-"""L (Learn) — 학습 추출."""
-from __future__ import annotations
-
+"""L (Learn) — Extract reusable learnings from Reason analysis."""
 import json
 import logging
-from src.llm import call_llm, parse_json_response
+from pathlib import Path
 
-logger = logging.getLogger("ralphthon.ralph.learn")
+from src.llm import call_llm_expensive
 
-LEARN_SYSTEM = """당신은 세일즈 전략 학습 시스템입니다.
+logger = logging.getLogger(__name__)
 
-## 지시
-
-Reason 분석에서 발견된 패턴을 바탕으로,
-다음 전략 생성에 활용할 수 있는 학습 포인트를 추출하세요.
-
-반드시 아래 JSON 형식으로 응답하세요:
-
-```json
-{
-  "learnings": [
-    "재사용 가능한 학습 포인트 (구체적, 실행 가능한 형태)"
-  ],
-  "recommended_prompt_changes": [
-    "strategy_prompt.md에 대한 구체적 수정 제안"
-  ]
-}
-```
-
-## 추출 원칙
-
-- 일반화 가능한 학습만. 특정 페르소나 1명에만 해당되는 것은 제외.
-- 실행 가능한 형태로. "더 좋게 하라"가 아니라 "첫 턴에 가격을 먼저 언급하라".
-- strategy_prompt.md 수정 제안은 구체적으로.
-- 이전 학습과 중복되는 것은 제외.
-"""
+PROMPTS_DIR = Path(__file__).parent.parent.parent.parent / "harness" / "prompts"
 
 
-async def learn(
-    reason_output: dict,
-    current_strategy_prompt: str,
-) -> dict:
-    """패턴 분석에서 재사용 학습 포인트 추출.
+def _load_learn_prompt() -> str:
+    path = PROMPTS_DIR / "learn-system.md"
+    if not path.exists():
+        raise FileNotFoundError(f"Learn prompt not found: {path}")
+    return path.read_text(encoding="utf-8")
+
+
+def _load_current_strategy_prompt() -> str:
+    local = Path(__file__).parent.parent.parent / "strategy_prompt.md"
+    if local.exists():
+        return local.read_text(encoding="utf-8")
+    harness = PROMPTS_DIR / "strategy_prompt.md"
+    if harness.exists():
+        return harness.read_text(encoding="utf-8")
+    return "(strategy_prompt.md not found)"
+
+
+async def learn(reason_output: dict) -> dict:
+    """Extract reusable learning points from Reason analysis.
+
+    Args:
+        reason_output: Dict from R stage with patterns.
 
     Returns:
-        {"learnings": [...], "recommended_prompt_changes": [...]}
+        Dict with learnings, recommended_prompt_changes, etc.
     """
-    user_msg = f"""## Reason 분석 결과
-{json.dumps(reason_output, ensure_ascii=False, indent=2)}
+    template = _load_learn_prompt()
+    current_strategy = _load_current_strategy_prompt()
 
-## 현재 strategy_prompt.md
-{current_strategy_prompt}"""
-
-    raw = await call_llm(
-        system_prompt=LEARN_SYSTEM,
-        user_message=user_msg,
-        temperature=0.3,
-        model_tier="expensive",
+    system_prompt = (
+        template
+        .replace("{reason_output}", json.dumps(reason_output, ensure_ascii=False, indent=2))
+        .replace("{current_strategy_prompt}", current_strategy)
     )
 
-    if "[LLM ERROR]" in raw:
-        logger.warning(f"Learn LLM error: {raw[:200]}")
-        return {"learnings": [], "recommended_prompt_changes": []}
+    user_message = (
+        "Reason 분석 결과에서 재사용 가능한 학습 포인트를 추출하세요.\n"
+        "JSON 형식으로만 응답하세요."
+    )
 
-    parsed = parse_json_response(raw)
-    if parsed is None:
-        logger.warning("Learn JSON parse failed")
-        return {"learnings": [], "recommended_prompt_changes": []}
+    response = await call_llm_expensive(
+        system_prompt=system_prompt,
+        user_message=user_message,
+        temperature=0.3,
+        expect_json=True,
+    )
 
-    return {
-        "learnings": parsed.get("learnings", []),
-        "recommended_prompt_changes": parsed.get("recommended_prompt_changes", []),
-    }
+    result = json.loads(response) if isinstance(response, str) else response
+
+    # Ensure required keys
+    result.setdefault("learnings", [])
+    result.setdefault("recommended_prompt_changes", [])
+
+    logger.info(f"L stage: Extracted {len(result['learnings'])} learnings")
+    return result

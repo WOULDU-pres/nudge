@@ -1,157 +1,69 @@
-"""RALPH Loop — H→P→A→E→R→L 전체 순환."""
-from __future__ import annotations
-
-import asyncio
+"""RALPH Loop — H -> P -> A -> E -> R -> L orchestration."""
 import json
 import logging
-import time
+import os
+from datetime import datetime, timezone
 from pathlib import Path
 
 from src.ralph.hypothesize import hypothesize
-from src.ralph.plan import plan
+from src.ralph.plan import plan_personas
 from src.ralph.act import act
+from src.ralph.evaluate import evaluate
 from src.ralph.reason import reason
 from src.ralph.learn import learn
-from src.evaluation.evaluator import judge_conversation
-from src.evaluation.aggregator import aggregate_results
-from src.conversation.turn import ConversationSession
-from src.evaluation.schema import EvaluationResult
-from config.settings import get_settings
+from src.evaluation.aggregator import (
+    aggregate_results,
+    compute_strategy_scores,
+    compute_strategy_cluster_matrix,
+    compute_funnel_distribution,
+)
 
-logger = logging.getLogger("ralphthon.ralph")
-
-
-async def run_ralph_loop(
-    strategy_prompt: str,
-    product_brief: str,
-    personas: list[dict] | None = None,
-    previous_learnings: str = "",
-    best_strategy_summary: str = "",
-    run_dir: Path | None = None,
-) -> dict:
-    """RALPH Loop 1회 실행.
-
-    Args:
-        strategy_prompt: strategy_prompt.md 내용
-        product_brief: 제품 정보
-        personas: 페르소나 리스트 (None이면 plan()으로 로드)
-        previous_learnings: 이전 L 출력
-        best_strategy_summary: 이전 최고 전략 요약
-        run_dir: 실행 결과 저장 디렉토리
-
-    Returns:
-        {
-            "summary": {avg_score, cluster_coverage, best_strategy, ...},
-            "strategies": [...],
-            "evaluations": [...],
-            "reason": {...},
-            "learnings": {...},
-            "sessions": [...],  # ConversationSession dicts
-        }
-    """
-    settings = get_settings()
-    start_time = time.time()
-
-    # ── H (Hypothesize) ──────────────────────────────────
-    logger.info("=" * 60)
-    logger.info("H (Hypothesize) — 전략 가설 생성")
-    strategies = await hypothesize(
-        strategy_prompt=strategy_prompt,
-        product_brief=product_brief,
-        previous_learnings=previous_learnings,
-        best_strategy_summary=best_strategy_summary,
-    )
-    logger.info(f"  Generated {len(strategies)} strategies: {[s['strategy_id'] for s in strategies]}")
-
-    # ── P (Plan) ─────────────────────────────────────────
-    logger.info("P (Plan) — 페르소나 선택")
-    if personas is None:
-        personas = plan()
-    logger.info(f"  Selected {len(personas)} personas ({settings.RALPHTHON_MODE} mode)")
-
-    # ── A (Act) ──────────────────────────────────────────
-    logger.info("A (Act) — 대화 시뮬레이션")
-    sessions: list[ConversationSession] = await act(strategies, personas, product_brief=product_brief)
-    logger.info(f"  Completed {len(sessions)} conversations")
-
-    # ── E (Evaluate) ─────────────────────────────────────
-    logger.info("E (Evaluate) — Judge 채점")
-    semaphore = asyncio.Semaphore(settings.RALPHTHON_MAX_CONCURRENT)
-
-    async def _judge_one(sess: ConversationSession) -> EvaluationResult:
-        async with semaphore:
-            # Judge는 transcript만 보고 채점 — 페르소나 정보 전달 안 함 (편향 방지)
-            return await judge_conversation(sess)
-
-    eval_tasks = [_judge_one(s) for s in sessions]
-    evaluations: list[EvaluationResult] = await asyncio.gather(*eval_tasks)
-    logger.info(f"  Evaluated {len(evaluations)} conversations")
-
-    # Log individual scores
-    for ev in evaluations:
-        logger.info(f"    {ev.strategy_id} × {ev.persona_id}: total={ev.scores.total}, outcome={ev.outcome}")
-
-    # ── Aggregate ────────────────────────────────────────
-    summary = aggregate_results(evaluations, personas)
-    logger.info(f"  avg_score={summary['avg_score']}, cluster_coverage={summary['cluster_coverage']}")
-    logger.info(f"  best_strategy={summary['best_strategy']}")
-
-    # ── R (Reason) ───────────────────────────────────────
-    logger.info("R (Reason) — 패턴 분석")
-    reason_output = await reason(evaluations, sessions, personas)
-    logger.info(f"  winning_patterns: {len(reason_output.get('winning_patterns', []))}")
-    logger.info(f"  losing_patterns: {len(reason_output.get('losing_patterns', []))}")
-
-    # ── L (Learn) ────────────────────────────────────────
-    logger.info("L (Learn) — 학습 추출")
-    learnings_output = await learn(reason_output, strategy_prompt)
-    logger.info(f"  learnings: {len(learnings_output.get('learnings', []))}")
-    logger.info(f"  recommended_changes: {len(learnings_output.get('recommended_prompt_changes', []))}")
-
-    elapsed = time.time() - start_time
-    logger.info(f"RALPH Loop completed in {elapsed:.1f}s")
-    logger.info("=" * 60)
-
-    # ── Assemble result ──────────────────────────────────
-    result = {
-        "summary": summary,
-        "strategies": strategies,
-        "evaluations": [ev.model_dump() for ev in evaluations],
-        "reason": reason_output,
-        "learnings": learnings_output,
-        "sessions": [s.model_dump() for s in sessions],
-        "elapsed_seconds": round(elapsed, 1),
-    }
-
-    # ── Save to run_dir ──────────────────────────────────
-    if run_dir:
-        run_dir.mkdir(parents=True, exist_ok=True)
-        _save_run(result, strategies, evaluations, sessions, reason_output, learnings_output, run_dir)
-
-    return result
+logger = logging.getLogger(__name__)
 
 
-def _save_run(
-    result: dict,
-    strategies: list[dict],
-    evaluations: list[EvaluationResult],
-    sessions: list[ConversationSession],
-    reason_output: dict,
-    learnings_output: dict,
+def _save_run_artifacts(
     run_dir: Path,
+    strategies: list[dict],
+    sessions: list,
+    eval_results: list,
+    reason_output: dict,
+    learn_output: dict,
+    summary: dict,
 ):
-    """결과를 run_dir에 저장."""
-    # summary.json
-    with open(run_dir / "summary.json", "w", encoding="utf-8") as f:
-        json.dump(result["summary"], f, ensure_ascii=False, indent=2)
+    """Save all RALPH artifacts to runs/<run_id>/."""
+    run_dir.mkdir(parents=True, exist_ok=True)
 
     # strategies.json
     with open(run_dir / "strategies.json", "w", encoding="utf-8") as f:
         json.dump(strategies, f, ensure_ascii=False, indent=2)
 
     # evaluations.json
+    evals_data = [r.model_dump() for r in eval_results]
+    # Convert enums to strings
+    for e in evals_data:
+        if hasattr(e.get("outcome", ""), "value"):
+            e["outcome"] = e["outcome"].value
+        if "scores" in e and hasattr(e["scores"], "items"):
+            pass  # already dict from model_dump
+        if hasattr(e.get("objection_handling", ""), "value"):
+            e["objection_handling"] = e["objection_handling"].value
     with open(run_dir / "evaluations.json", "w", encoding="utf-8") as f:
-        json.dump([ev.model_dump() for ev in evaluations], f, ensure_ascii=False, indent=2)
+        json.dump(evals_data, f, ensure_ascii=False, indent=2)
+
+    # transcripts/<strategy_id>/<persona_id>.json
+    transcripts_dir = run_dir / "transcripts"
+    for session in sessions:
+        strat_dir = transcripts_dir / session.strategy_id
+        strat_dir.mkdir(parents=True, exist_ok=True)
+        session_data = session.model_dump()
+        # Convert enums
+        for t in session_data.get("turns", []):
+            if hasattr(t.get("role", ""), "value"):
+                t["role"] = t["role"].value
+        if hasattr(session_data.get("ended_by", ""), "value"):
+            session_data["ended_by"] = session_data["ended_by"].value
+        with open(strat_dir / f"{session.persona_id}.json", "w", encoding="utf-8") as f:
+            json.dump(session_data, f, ensure_ascii=False, indent=2)
 
     # reason.json
     with open(run_dir / "reason.json", "w", encoding="utf-8") as f:
@@ -159,14 +71,131 @@ def _save_run(
 
     # learnings.json
     with open(run_dir / "learnings.json", "w", encoding="utf-8") as f:
-        json.dump(learnings_output, f, ensure_ascii=False, indent=2)
+        json.dump(learn_output, f, ensure_ascii=False, indent=2)
 
-    # transcripts/<strategy_id>/<persona_id>.json
-    transcripts_dir = run_dir / "transcripts"
-    for sess in sessions:
-        strat_dir = transcripts_dir / sess.strategy_id
-        strat_dir.mkdir(parents=True, exist_ok=True)
-        with open(strat_dir / f"{sess.persona_id}.json", "w", encoding="utf-8") as f:
-            json.dump(sess.model_dump(), f, ensure_ascii=False, indent=2)
+    # summary.json
+    with open(run_dir / "summary.json", "w", encoding="utf-8") as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
 
-    logger.info(f"  Saved run artifacts to {run_dir}")
+
+async def run_ralph_loop(
+    product_brief: str,
+    persona_count: int = 50,
+    num_strategies: int = 3,
+    max_round_trips: int = 3,
+    max_concurrent: int = 20,
+    previous_learnings: dict | None = None,
+    strategy_ledger: dict | None = None,
+    run_id: str | None = None,
+) -> dict:
+    """Execute one full RALPH cycle: H -> P -> A -> E -> R -> L.
+
+    Args:
+        product_brief: Product information text.
+        persona_count: Number of personas to use.
+        num_strategies: Number of strategies to generate.
+        max_round_trips: Conversation turns.
+        max_concurrent: Max parallel LLM calls.
+        previous_learnings: Learnings from previous cycle.
+        strategy_ledger: Strategy history ledger.
+        run_id: Optional run identifier.
+
+    Returns:
+        Dict matching ralph-iteration.schema.json with all results.
+    """
+    from config.settings import settings
+
+    if run_id is None:
+        run_id = datetime.now(timezone.utc).strftime("run-%Y%m%d-%H%M%S")
+
+    output_dir = settings.output_dir
+    run_dir = output_dir / "runs" / run_id
+
+    logger.info(f"=== RALPH Loop Start: {run_id} ===")
+    logger.info(f"Personas: {persona_count}, Strategies: {num_strategies}, Turns: {max_round_trips}")
+
+    # H — Hypothesize
+    logger.info("--- H (Hypothesize) ---")
+    strategies = await hypothesize(
+        product_brief=product_brief,
+        num_strategies=num_strategies,
+        previous_learnings=previous_learnings,
+        strategy_ledger=strategy_ledger,
+    )
+    logger.info(f"Generated {len(strategies)} strategies")
+
+    # P — Plan
+    logger.info("--- P (Plan) ---")
+    personas = plan_personas(count=persona_count)
+    logger.info(f"Selected {len(personas)} personas")
+
+    # A — Act
+    logger.info("--- A (Act) ---")
+    sessions = await act(
+        strategies=strategies,
+        personas=personas,
+        product_brief=product_brief,
+        max_round_trips=max_round_trips,
+        max_concurrent=max_concurrent,
+    )
+    logger.info(f"Completed {len(sessions)} conversations")
+
+    # E — Evaluate
+    logger.info("--- E (Evaluate) ---")
+    eval_results = await evaluate(
+        sessions=sessions,
+        personas=personas,
+        max_concurrent=max_concurrent,
+    )
+    logger.info(f"Evaluated {len(eval_results)} conversations")
+
+    # Aggregate results
+    summary = aggregate_results(eval_results, personas)
+
+    # R — Reason
+    logger.info("--- R (Reason) ---")
+    reason_output = await reason(
+        eval_results=eval_results,
+        sessions=sessions,
+        top_n=min(5, len(eval_results) // 2 or 1),
+    )
+
+    # L — Learn
+    logger.info("--- L (Learn) ---")
+    learn_output = await learn(reason_output=reason_output)
+
+    # Add extra summary fields
+    summary["strategy_scores"] = compute_strategy_scores(eval_results)
+    summary["strategy_cluster_matrix"] = compute_strategy_cluster_matrix(eval_results, personas)
+    summary["funnel_distribution"] = compute_funnel_distribution(eval_results)
+
+    # Save artifacts
+    logger.info(f"Saving artifacts to {run_dir}")
+    _save_run_artifacts(
+        run_dir=run_dir,
+        strategies=strategies,
+        sessions=sessions,
+        eval_results=eval_results,
+        reason_output=reason_output,
+        learn_output=learn_output,
+        summary=summary,
+    )
+
+    # Build full iteration result
+    iteration_result = {
+        "iteration_id": 0,
+        "run_id": run_id,
+        "strategies": strategies,
+        "evaluations": [r.to_schema_dict() for r in eval_results],
+        "reason": reason_output,
+        "learnings": learn_output,
+        "summary": summary,
+    }
+
+    # Print grep-able output
+    print(f"avg_score: {summary['avg_score']}")
+    print(f"cluster_coverage: {summary['cluster_coverage']}")
+    print(f"best_strategy: {summary['best_strategy']}")
+
+    logger.info(f"=== RALPH Loop Complete: avg={summary['avg_score']}, coverage={summary['cluster_coverage']}% ===")
+    return iteration_result

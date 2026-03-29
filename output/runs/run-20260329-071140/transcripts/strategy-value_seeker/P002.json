@@ -1,0 +1,17 @@
+{
+  "session_id": "conv-strategy-value_seeker-P002",
+  "strategy_id": "strategy-value_seeker",
+  "persona_id": "P002",
+  "turns": [
+    {
+      "role": "agent",
+      "content": "안녕하세요! 혹시 매일 마시는 커피 한 잔 값으로 20가지 필수 영양소를 모두 챙길 수 있다면 믿으시겠어요? 🤔"
+    },
+    {
+      "role": "persona",
+      "content": "\"커피 한 잔 값이요? 하루에 얼마인데요? 요즘 이것저것 사 먹기도 부담스러워서요. 그리고 영양제는 먹어봐야 별 차이 못 느끼겠던데, 굳이 커피 끊고 이걸 먹어야 할 이유가 있을까요?\""
+    }
+  ],
+  "ended_by": "error",
+  "error_message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 56.403083493s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '56s'}]}}"
+}

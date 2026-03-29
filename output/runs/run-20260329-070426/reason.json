@@ -1,0 +1,108 @@
+{
+  "winning_patterns": [
+    "고객의 현재 상황(피로감, 바쁜 일상, 기존 영양제 섭취)과 구체적인 불편함(점심 후 졸림, 커피 의존도, 영양제 챙기기 번거로움, 효과 불확실)을 먼저 경청하고 공감하며 대화를 시작한다.",
+    "고객이 느끼는 불편함을 '데일리 멀티비타민 플러스'가 해결해 줄 수 있는 핵심 가치(오후 활력 증진, 커피 의존도 감소, 간편함, 한국인 맞춤 배합, 활성형 비타민)와 명확하게 연결하여 제시한다.",
+    "제품의 특징(하루 한 알, 13종 비타민, 7종 미네랄)을 설명할 때, 단순히 나열하는 것이 아니라 고객의 기존 영양제 섭취 경험과 비교하며 '더 나은 점'을 강조한다 (예: '기존 루틴을 한 단계 업그레이드', '훨씬 간편하고 효과적').",
+    "고객의 질문(가격, 성분 비교, 대체 가능 여부)에 대해 구체적이고 명확한 정보를 제공하며, 잠재적 우려를 해소하려 노력한다 (예: '월 29,900원, 하루 1,000원', '식약처 인증, 최적의 비율 배합').",
+    "고객의 발언 톤과 감정을 적극적으로 반영하고 공감하는 말투를 유지하여 신뢰감을 형성한다 (예: '좋은 지적이세요!', '솔직한 말씀 감사드립니다.')."
+  ],
+  "losing_patterns": [
+    "대화 시작부터 제품의 가격이나 성분 수치를 직접적으로 비교하며 가치를 제시하려 한다. (예: '하루 1,000원으로 편의점 비타민보다 3배 많은 성분')",
+    "고객의 현재 상황이나 니즈를 충분히 파악하지 않고, 일반적인 건강 고민을 던지며 대화를 시작한다. (예: '2% 아쉬운 점은 없으신가요?'에 대한 고객의 모호한 반응)",
+    "고객이 질문이나 반론을 제기했을 때, 질문의 핵심을 파악하지 못하고 다시 일반적인 질문으로 돌아가거나, 고객의 불편함을 해소하기 위한 구체적인 정보를 제공하지 못한다.",
+    "고객의 비협조적이거나 회피적인 태도에 대해 적극적으로 공감하거나 대화의 방향을 전환하려는 노력이 부족하다. (예: '뭘 그렇게 자세히 묻고 그래요'에 대한 반복적인 질문)",
+    "고객이 '뭘 그렇게 챙겨주시려고 그래요', '뭘 더 채우고 말고 할 정신도 없어요'와 같이 바쁘거나 회의적인 반응을 보일 때, 그 감정을 충분히 인정하지 않고 제품의 장점을 설명하려 한다."
+  ],
+  "objection_handling_analysis": {
+    "acknowledged_and_pivoted": {
+      "count": 5,
+      "avg_score": 70.2,
+      "examples": [
+        "P005 Turn 4: '과장된 것 같다'는 생각, 충분히 하실 수 있죠. 저희 제품이 기존에 드시던 영양제와 다른 점은 바로 '한국인 맞춤 배합'과 '활성형 비타민'에 있습니다.",
+        "P003 Turn 4: 말씀하신 대로 비타민 13종과 미네랄 7종을 한 번에 섭취하는 것에 대해 걱정하실 수 있는데요, 저희 제품은 식약처에서 인증받은 한국인에게 꼭 필요한 영양소들로 최적의 비율을 맞춰 배합했기 때문에 안심하고 드셔도 좋습니다.",
+        "P008 Turn 4: 이미 아침에 종합비타민 하나 드시고 계시는군요! 좋은 습관을 가지고 계시네요. 데일리 멀티비타민 플러스는 혹시 놓칠 수 있는 영양소까지 꼼꼼하게 채워드릴 수 있어요."
+      ]
+    },
+    "acknowledged_only": {
+      "count": 1,
+      "avg_score": 40,
+      "examples": [
+        "P010 Turn 2: 고객님의 바쁘신 일상 속에 영양제까지 챙기시는 것도 정말 대단하세요. 이것저것 드시는 것도 좋지만, 혹시라도 놓치는 영양소가 있을까 봐 걱정되실 수도 있겠네요."
+      ]
+    },
+    "ignored": {
+      "count": 0,
+      "avg_score": 0
+    },
+    "no_objection": {
+      "count": 1,
+      "avg_score": 40
+    }
+  },
+  "tone_matching_analysis": {
+    "matched": {
+      "count": 7,
+      "avg_score": 67.57
+    },
+    "mismatched": {
+      "count": 1,
+      "avg_score": 10
+    },
+    "notes": "톤 매칭이 잘 이루어진 대화는 높은 점수를 기록한 반면, 톤 매칭이 실패한 P006 대화는 가장 낮은 점수를 기록했다. 고객의 질문에 대한 명확한 답변 없이 일반적인 멘트를 반복하는 것은 톤 불일치로 이어져 고객의 이탈을 야기한다. 상위 대화들은 고객의 말투(바쁨, 솔직함, 의심)에 맞춰 공감하고 구체적인 답변을 제공하며 톤 매칭을 성공적으로 수행했다."
+  },
+  "cluster_insights": {
+    "skeptical_existing_user": "기존 영양제를 섭취하고 있지만 효과에 의구심을 갖거나 불편함을 느끼는 고객들에게는, 그들의 구체적인 불편함을 경청하고 공감한 후, '데일리 멀티비타민 플러스'가 기존 제품보다 '더 나은 점' (간편함, 활력 증진, 한국인 맞춤)을 명확히 제시하는 것이 효과적이다. 가격이나 성분 비교 질문에 대해 명확하고 설득력 있는 답변을 제공하는 것이 중요하다.",
+    "busy_professional_upgrade": "바쁜 일상으로 건강 관리가 어려운 전문직 고객들에게는 '간편함'과 '효율성'을 최우선 가치로 제시해야 한다. 기존 영양제 섭취 고객에게는 '업그레이드' 프레이밍을 통해 더 나은 솔루션임을 강조하고, 짧은 시간 안에 얻을 수 있는 명확한 이점을 부각하는 것이 중요하다.",
+    "value_seeker_comparison": "가격 대비 성능을 중시하는 고객들에게는 단순히 저렴하다는 것보다 '가치'를 비교하여 제시해야 한다. (예: '편의점 비타민보다 3배 많은 성분'과 같은 직접적인 비교는 오히려 반감을 살 수 있다.) 고객의 니즈를 먼저 파악하고 그에 맞는 가치를 연결하는 것이 중요하다."
+  },
+  "funnel_analysis": {
+    "attention_to_interest_rate": "87.5%",
+    "interest_to_desire_rate": "85.7%",
+    "desire_to_action_rate": "0%",
+    "bottleneck_stage": "Desire to Action",
+    "cluster_bottlenecks": {
+      "skeptical_existing_user": "Desire to Action",
+      "busy_professional_upgrade": "Desire to Action",
+      "value_seeker_comparison": "Attention to Interest"
+    },
+    "cluster_conversion_rates": {
+      "skeptical_existing_user": {
+        "attention_to_interest": "100%",
+        "interest_to_desire": "100%",
+        "desire_to_action": "0%"
+      },
+      "busy_professional_upgrade": {
+        "attention_to_interest": "100%",
+        "interest_to_desire": "100%",
+        "desire_to_action": "0%"
+      },
+      "value_seeker_comparison": {
+        "attention_to_interest": "50%",
+        "interest_to_desire": "0%",
+        "desire_to_action": "0%"
+      }
+    }
+  },
+  "technique_effectiveness": {
+    "relative_numbers": {
+      "used": 1,
+      "avg_score_when_used": 40,
+      "avg_score_when_not": 53.75
+    },
+    "lifestyle_connection": {
+      "used": 7,
+      "avg_score_when_used": 65.71,
+      "avg_score_when_not": 10
+    },
+    "risk_removal": {
+      "used": 0,
+      "avg_score_when_used": 0,
+      "avg_score_when_not": 50
+    },
+    "upgrade_framing": {
+      "used": 5,
+      "avg_score_when_used": 70.6,
+      "avg_score_when_not": 26.67
+    }
+  }
+}

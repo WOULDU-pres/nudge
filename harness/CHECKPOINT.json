@@ -1,0 +1,47 @@
+{
+  "phase": "init",
+  "phase1": {
+    "status": "pending",
+    "completed_modules": [],
+    "current_task": null,
+    "errors": []
+  },
+  "phase2": {
+    "status": "pending",
+    "baseline_score": null,
+    "baseline_coverage": null,
+    "baseline_strategy": null,
+    "run_id": null,
+    "errors": []
+  },
+  "phase3": {
+    "status": "pending",
+    "experiment_count": 0,
+    "max_experiments": 5,
+    "keep_count": 0,
+    "discard_count": 0,
+    "crash_count": 0,
+    "best_score": null,
+    "best_coverage": null,
+    "best_experiment": null,
+    "current_score": null,
+    "current_coverage": null,
+    "consecutive_discards": 0,
+    "last_hypothesis": null,
+    "git_branch": null
+  },
+  "phase4": {
+    "status": "pending",
+    "completed_modules": [],
+    "review_status": null,
+    "visual_verification": null
+  },
+  "config": {
+    "total_personas": 50,
+    "phase2_runs": 1,
+    "phase3_max_experiments": 5
+  },
+  "updated_at": "2026-03-29T15:04:00Z",
+  "updated_by": "hermes",
+  "next_action": "Phase 1 코드 생성을 시작하라."
+}

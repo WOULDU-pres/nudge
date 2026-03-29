@@ -1,6 +1,7 @@
-commit	avg_score	cluster_coverage	best_strategy	status	description
-b08d85e	96.8	100.0	strategy-EMPATHY_LOSS_AVERSION	keep	baseline
-57391c6	96.2	100.0	strategy-SIMPLIFICATION_LOSS_AVERSION	discard	experiment 1: data-driven + logical contrast
-3ab963c	94.93	100.0	strategy-strategy_1_empathy_simplicity	discard	experiment 2: customer-type differentiation
-7207698	94.2	100.0	strategy-Expert_Authority_Trust	discard	experiment 3: turn-by-turn flow guide
-1253d38	95.1	100.0	strategy-strategy_3_authority_loss_aversion	discard	experiment 4: Cialdini 6 principles
+run_id	avg_score	cluster_coverage	best_strategy	verdict	note
+run-20260329-065718	63.8	100.0	strategy-health-conscious	keep	baseline
+run-20260329-070104	62.67	100.0	strategy-busy_professional	discard	exp1: concrete numbers + personalization
+run-20260329-070426	55.17	100.0	strategy-busy_professional_upgrade	discard	exp2: deep empathy + pivot strengthening
+run-20260329-070737	63.17	100.0	strategy-upgrade-existing-routine	discard	exp3: anti-abstract + immediate answers
+run-20260329-071140	61.21	100.0	strategy-value_seeker	discard	exp4: daily scenario + cluster differentiation
+run-20260329-071537	64.66	100.0	strategy-busy-professional	keep	exp5: strategy diversity enforcement

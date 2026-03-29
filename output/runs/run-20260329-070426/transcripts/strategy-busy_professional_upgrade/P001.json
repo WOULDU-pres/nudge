@@ -1,0 +1,21 @@
+{
+  "session_id": "conv-strategy-busy_professional_upgrade-P001",
+  "strategy_id": "strategy-busy_professional_upgrade",
+  "persona_id": "P001",
+  "turns": [
+    {
+      "role": "agent",
+      "content": "안녕하세요! 혹시 아침 출근 준비 5분 안에 건강까지 챙길 수 있다면 어떠세요? 😊"
+    },
+    {
+      "role": "persona",
+      "content": "음... 5분 안에요? 솔직히 아침엔 정신없어서 그냥 물 한 잔 마시고 뛰쳐나갈 때가 많은데요. 그래도 건강 챙길 수 있으면 좋긴 하죠. 근데 그런 게 진짜 있어요?"
+    },
+    {
+      "role": "agent",
+      "content": "맞아요, 아침엔 정말 시간이 없죠! 저도 예전엔 그랬어요. 😅 그런데 데일리 멀티비타민 플러스는 정말 딱 30초면 충분해요. 물이랑 같이 꿀꺽! 삼키기만 하면 되거든요.\n\n바쁘신 와중에도 놓칠 수 없는 건강, 이젠 정말 간편하게 챙기실 수 있어요. 혹시 '이런 간편한 게 효과가 있을까?' 싶으실 수도 있는데, 한국인에게 꼭 필요한 비타민 13종과 미네랄 7종을 식약처 기준에 맞춰 한 알에 담았답니다. 👍"
+    }
+  ],
+  "ended_by": "error",
+  "error_message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 11.254323401s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '11s'}]}}"
+}

@@ -1,114 +1,135 @@
-"""H (Hypothesize) — 전략 가설 생성."""
-from __future__ import annotations
-
+"""H (Hypothesize) — Generate persuasion strategies via LLM."""
+import json
 import logging
-from src.llm import call_llm, parse_json_response
-from config.settings import get_settings
+from pathlib import Path
 
-logger = logging.getLogger("ralphthon.ralph.hypothesize")
+from src.llm import call_llm_expensive, extract_json
 
-HYPOTHESIZE_SUPPLEMENT = """
-## 이전 학습 결과
-{previous_learnings}
+logger = logging.getLogger(__name__)
 
-## 이전 최고 전략
-{best_strategy_summary}
+PROMPTS_DIR = Path(__file__).parent.parent.parent.parent / "harness" / "prompts"
 
-## 지시
-이전 학습을 바탕으로, 기존 전략의 약점을 보완하거나
-아직 시도하지 않은 새로운 접근을 시도하세요.
 
-특히:
-- 점수가 낮았던 클러스터에 대한 개선 방안을 포함하세요.
-- 이전에 효과적이었던 패턴을 유지하되, 새로운 변형을 시도하세요.
-- 가설을 명확하게 서술하세요.
+def _load_strategy_prompt() -> str:
+    """Load strategy_prompt.md from output directory."""
+    # First try output/strategy_prompt.md (autoresearch may modify this)
+    local_path = Path(__file__).parent.parent.parent / "strategy_prompt.md"
+    if local_path.exists():
+        return local_path.read_text(encoding="utf-8")
+    # Fallback to harness version
+    harness_path = PROMPTS_DIR / "strategy_prompt.md"
+    if harness_path.exists():
+        return harness_path.read_text(encoding="utf-8")
+    raise FileNotFoundError("strategy_prompt.md not found")
 
-## 출력
-strategy_prompt.md의 출력 규칙에 따라 JSON 배열로 전략을 생성하세요.
-"""
+
+def _load_hypothesize_prompt() -> str:
+    """Load hypothesize-system.md template."""
+    path = PROMPTS_DIR / "hypothesize-system.md"
+    if not path.exists():
+        return ""
+    return path.read_text(encoding="utf-8")
+
+
+def _build_hypothesize_context(
+    product_brief: str,
+    previous_learnings: dict | None = None,
+    strategy_ledger: dict | None = None,
+) -> str:
+    """Build the user message for H stage."""
+    lines = []
+
+    lines.append("## 제품 정보")
+    lines.append(product_brief)
+    lines.append("")
+
+    if strategy_ledger:
+        ci = strategy_ledger.get("cumulative_insights", {})
+        lines.append("## 이전 세대 결과")
+        if ci.get("never_repeat"):
+            lines.append("### 절대 반복 금지")
+            for p in ci["never_repeat"]:
+                lines.append(f"- {p}")
+        if ci.get("proven_effective"):
+            lines.append("### 검증된 성공 패턴")
+            for p in ci["proven_effective"]:
+                lines.append(f"- {p}")
+        lines.append(f"### 역대 최고: {ci.get('best_score_ever', 0)}점")
+        lines.append("")
+
+    if previous_learnings:
+        lines.append("## 직전 학습 결과")
+        for l in previous_learnings.get("learnings", []):
+            lines.append(f"- {l}")
+        lines.append("")
+
+    return "\n".join(lines)
 
 
 async def hypothesize(
-    strategy_prompt: str,
     product_brief: str,
-    previous_learnings: str = "",
-    best_strategy_summary: str = "",
+    num_strategies: int = 3,
+    previous_learnings: dict | None = None,
+    strategy_ledger: dict | None = None,
 ) -> list[dict]:
-    """전략 가설 N개 생성.
-
-    Args:
-        strategy_prompt: strategy_prompt.md 내용 (system prompt)
-        product_brief: 제품 정보 (user message)
-        previous_learnings: 이전 L의 출력 (있으면)
-        best_strategy_summary: 이전 최고 전략 요약
+    """Generate N persuasion strategies using the expensive LLM.
 
     Returns:
-        Strategy[] (dict 배열). 실패 시 fallback 전략 1개.
+        List of strategy dicts conforming to strategy.schema.json.
     """
-    settings = get_settings()
-    n_strategies = settings.RALPHTHON_STRATEGIES_PER_RUN
+    strategy_prompt = _load_strategy_prompt()
+    hypothesize_template = _load_hypothesize_prompt()
 
-    # Build system prompt
-    system = strategy_prompt
-    if previous_learnings or best_strategy_summary:
-        system += "\n\n" + HYPOTHESIZE_SUPPLEMENT.format(
-            previous_learnings=previous_learnings or "없음",
-            best_strategy_summary=best_strategy_summary or "없음",
-        )
+    # Build system prompt: strategy_prompt is the main, hypothesize adds context
+    if hypothesize_template and (strategy_ledger or previous_learnings):
+        # Fill in ledger placeholders
+        hyp = hypothesize_template
+        if strategy_ledger:
+            ci = strategy_ledger.get("cumulative_insights", {})
+            hyp = hyp.replace("{ledger.never_repeat}", "\n".join(ci.get("never_repeat", ["없음"])))
+            hyp = hyp.replace("{ledger.proven_effective}", "\n".join(ci.get("proven_effective", ["없음"])))
+            hyp = hyp.replace("{ledger.best_score_ever}", str(ci.get("best_score_ever", 0)))
+            hyp = hyp.replace("{ledger.best_strategy_ever.generation}", str(ci.get("best_strategy_ever", {}).get("generation", 0)))
+            hyp = hyp.replace("{ledger.recent_3_generations}", "없음")
+            hyp = hyp.replace("{ledger.past_summary}", "없음")
+        else:
+            hyp = hyp.replace("{ledger.never_repeat}", "없음")
+            hyp = hyp.replace("{ledger.proven_effective}", "없음")
+            hyp = hyp.replace("{ledger.best_score_ever}", "0")
+            hyp = hyp.replace("{ledger.best_strategy_ever.generation}", "0")
+            hyp = hyp.replace("{ledger.recent_3_generations}", "없음")
+            hyp = hyp.replace("{ledger.past_summary}", "없음")
 
-    user_msg = f"""아래 제품에 대한 설득 전략 {n_strategies}개를 JSON 배열로 생성하세요.
+        if previous_learnings:
+            hyp = hyp.replace("{previous_learnings}", json.dumps(previous_learnings, ensure_ascii=False, indent=2))
+        else:
+            hyp = hyp.replace("{previous_learnings}", "없음")
 
-제품 정보:
-{product_brief}
+        system_prompt = strategy_prompt + "\n\n---\n\n" + hyp
+    else:
+        system_prompt = strategy_prompt
 
-반드시 JSON 배열만 반환하세요. 각 전략은 strategy_id, hypothesis, approach, opening_style, objection_handling, tone 필드를 포함해야 합니다."""
+    user_message = _build_hypothesize_context(product_brief, previous_learnings, strategy_ledger)
+    user_message += f"\n\n{num_strategies}개의 서로 다른 전략을 생성하세요. JSON 배열로만 반환하세요."
 
-    raw = await call_llm(
-        system_prompt=system,
-        user_message=user_msg,
-        temperature=0.8,
-        model_tier="expensive",
+    response = await call_llm_expensive(
+        system_prompt=system_prompt,
+        user_message=user_message,
+        temperature=0.9,
+        max_tokens=8192,
+        expect_json=True,
     )
 
-    if "[LLM ERROR]" in raw:
-        logger.warning(f"Hypothesize LLM error: {raw[:200]}")
-        return [_fallback_strategy()]
+    strategies = json.loads(response) if isinstance(response, str) else response
 
-    parsed = parse_json_response(raw)
-    if parsed is None or not isinstance(parsed, list):
-        logger.warning("Hypothesize JSON parse failed, using fallback")
-        return [_fallback_strategy()]
+    # Ensure it's a list
+    if isinstance(strategies, dict):
+        strategies = [strategies]
 
-    # Validate and clean
-    strategies = []
-    for i, s in enumerate(parsed):
-        if not isinstance(s, dict):
-            continue
-        strategy = {
-            "strategy_id": s.get("strategy_id", f"strategy-{i+1}"),
-            "hypothesis": s.get("hypothesis", ""),
-            "approach": s.get("approach", ""),
-            "opening_style": s.get("opening_style", ""),
-            "objection_handling": s.get("objection_handling", ""),
-            "tone": s.get("tone", ""),
-        }
-        # Ensure strategy_id prefix
-        if not strategy["strategy_id"].startswith("strategy-"):
-            strategy["strategy_id"] = f"strategy-{strategy['strategy_id']}"
-        strategies.append(strategy)
+    # Validate and ensure strategy_id
+    for i, s in enumerate(strategies):
+        if "strategy_id" not in s or not s["strategy_id"]:
+            s["strategy_id"] = f"strategy-gen-{i}"
 
-    if not strategies:
-        return [_fallback_strategy()]
-
-    return strategies[:n_strategies]
-
-
-def _fallback_strategy() -> dict:
-    return {
-        "strategy_id": "strategy-fallback",
-        "hypothesis": "기본 가치 프레이밍으로 넓은 고객층 접근",
-        "approach": "하루 500원으로 건강 관리를 시작할 수 있다는 가격 대비 가치 강조",
-        "opening_style": "일상적 건강 고민으로 시작하는 친근한 접근",
-        "objection_handling": "30일 환불 보장으로 리스크 완화",
-        "tone": "친절하고 정보 중심적",
-    }
+    logger.info(f"H stage: Generated {len(strategies)} strategies: {[s['strategy_id'] for s in strategies]}")
+    return strategies[:num_strategies]

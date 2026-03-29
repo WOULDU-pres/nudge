@@ -1,0 +1,6 @@
+# Default runtime config
+mode: TEST
+strategies_per_run: 3
+conversation_turns: 3
+max_concurrent: 20
+rate_limit_delay: 0.05

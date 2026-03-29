@@ -1,0 +1,38 @@
+{
+  "avg_score": 63.8,
+  "cluster_coverage": 100.0,
+  "best_strategy": "strategy-health-conscious",
+  "cluster_scores": {
+    "budget_sensitive": 63.8
+  },
+  "outcome_distribution": {
+    "converted": 0,
+    "interested": 10,
+    "neutral": 19,
+    "resistant": 0,
+    "lost": 1,
+    "error": 0
+  },
+  "strategy_scores": {
+    "strategy-health-conscious": 66.4,
+    "strategy-cost-sensitive": 64.8,
+    "strategy-busy-professional": 60.2
+  },
+  "strategy_cluster_matrix": {
+    "strategy-busy-professional": {
+      "budget_sensitive": 60.2
+    },
+    "strategy-cost-sensitive": {
+      "budget_sensitive": 64.8
+    },
+    "strategy-health-conscious": {
+      "budget_sensitive": 66.4
+    }
+  },
+  "funnel_distribution": {
+    "0": 1,
+    "1": 6,
+    "2": 23,
+    "3": 0
+  }
+}

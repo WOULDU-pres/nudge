@@ -1,16 +1,28 @@
-"""P (Plan) — 페르소나 선택. LLM 불필요, 순수 코드."""
-from __future__ import annotations
+"""P (Plan) — Select personas for this run. Pure code, no LLM."""
+import logging
+from pathlib import Path
 
 from src.personas.loader import load_personas
+from src.personas.schema import Persona
+
+logger = logging.getLogger(__name__)
 
 
-def plan(count: int | None = None) -> list[dict]:
-    """이번 실행 대상 페르소나 선택.
+def plan_personas(count: int = 50) -> list[Persona]:
+    """Select personas for this simulation run.
 
     Args:
-        count: 로드할 수. None이면 settings 기반 (DEV=10, TEST=50, DEMO=200).
+        count: Number of personas to load (DEV=10, TEST=50, DEMO=200).
 
     Returns:
-        Persona dict 리스트 (ID 순).
+        List of Persona objects sorted by ID.
     """
-    return load_personas(count)
+    from config.settings import settings
+
+    personas = load_personas(settings.personas_dir, count=count)
+    logger.info(f"P stage: Selected {len(personas)} personas from {settings.personas_dir}")
+
+    if not personas:
+        raise ValueError(f"No personas found in {settings.personas_dir}")
+
+    return personas

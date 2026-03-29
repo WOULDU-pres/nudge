@@ -1,0 +1,43 @@
+# ═══ API Keys & Secrets ═══
+.env
+*.key
+*.pem
+
+# ═══ 에이전트 생성 코드 + 실행 결과물 ═══
+output/
+
+# ═══ Python ═══
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# ═══ 실행 로그 ═══
+*.log
+runs/
+
+# ═══ 압축 파일 ═══
+*.zip
+*.tar.gz
+
+# ═══ OS ═══
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ═══ IDE ═══
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ═══ Checkpoint (실행 상태) ═══
+CHECKPOINT.json

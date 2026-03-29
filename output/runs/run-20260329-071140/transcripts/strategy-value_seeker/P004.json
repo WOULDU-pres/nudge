@@ -1,0 +1,21 @@
+{
+  "session_id": "conv-strategy-value_seeker-P004",
+  "strategy_id": "strategy-value_seeker",
+  "persona_id": "P004",
+  "turns": [
+    {
+      "role": "agent",
+      "content": "매일 마시는 커피 한 잔 값보다 저렴하게, 20가지 필수 영양소를 모두 챙길 수 있다면 믿으시겠어요? 😮\n\n아침 출근 준비로 바쁘거나, 야근 후 지친 일상 속에서도 놓치고 싶지 않은 당신의 건강, 이제는 간편하고 합리적으로 챙기세요!"
+    },
+    {
+      "role": "persona",
+      "content": "커피 한 잔 값이요? 음... 그래서 하루에 얼마 정도 나오는데요? 20가지요. 굳이 그걸 다 챙겨야 하는 건지 모르겠네요. 지금 먹는 기본 영양제도 있는데, 그거랑 뭐가 다른가요?"
+    },
+    {
+      "role": "agent",
+      "content": "좋은 질문이세요! 20가지 필수 영양소를 다 챙겨야 하는지, 기존 영양제와 무엇이 다른지 궁금하실 수 있죠.\n\n먼저, '데일리 멀티비타민 플러스'는 하루에 딱 1정으로 비타민 13종과 미네랄 7종을 간편하게 섭취할 수 있어요. 단순히 종류만 많은 게 아니라, 한국인에게 꼭 필요한 영양소들을 식약처 기준에 맞춰 최적으로 배합했답니다.\n\n지금 드시는 영양제가 있다면, 혹시 어떤 종류인지 여쭤봐도 될까요? 비교해서 설명해 드리면 더 명확하게 차이를 아실 수 있을 거예요. 😊"
+    }
+  ],
+  "ended_by": "error",
+  "error_message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 46.925227045s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '46s'}]}}"
+}

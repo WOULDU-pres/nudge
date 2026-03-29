@@ -1,0 +1,111 @@
+{
+  "winning_patterns": [
+    "고객의 질문이나 반론을 긍정적으로 인정('좋은 질문이세요!', '맞아요!')하고, 그에 대한 구체적이고 차별화된 정보(한국인 맞춤 배합, 활성형 비타민, 식약처 기준)를 즉시 제공하여 신뢰를 구축한다.",
+    "제품의 핵심 가치(간편함, 올인원, 한국인 맞춤)를 반복적으로 강조하며 고객의 현재 상황(피로감, 번거로움, 집중력 저하)과 연결하여 공감대를 형성한다.",
+    "가격 정보를 명확하고 설득력 있게 제시하며('하루 약 1,000원', '커피 한 잔 값') 다른 제품과의 비교 우위(편의점 비타민보다 3배 강력)를 수치화하여 전달한다.",
+    "고객의 다음 질문을 유도하는 개방형 질문이나 제안('성분표를 비교해 볼 수 있는 자료를 보내드릴까요?')을 통해 대화를 이어가고 고객 참여를 높인다.",
+    "고객의 구체적인 니즈(피로 해소, 집중력 향상)에 맞춰 제품의 효과를 설명하려는 노력을 보이며, 단순히 '좋다'가 아닌 '어떻게' 좋은지를 설명한다."
+  ],
+  "losing_patterns": [
+    "고객의 반론이나 의심에 대해 충분히 공감하거나 구체적인 해결책을 제시하기보다, 제품의 일반적인 장점만을 나열하여 고객의 핵심 질문을 해소하지 못한다.",
+    "가격 비교 시 고객이 이미 인지하고 있는 다른 제품(편의점 비타민 음료)과의 단순 가격 비교에서 우위를 점하지 못하거나, 제품의 '가치'를 충분히 설명하지 못해 가격 저항을 극복하지 못한다.",
+    "고객의 구체적인 효과 요구('전반적인 활력 증진이라는 게 구체적으로 뭘 말하는 건지')에 대해 추상적인 답변으로 일관하여 설득력을 잃는다.",
+    "고객이 '굳이 바꿀 필요가 있을까'라는 의문을 제기할 때, 기존 제품과의 명확한 차별점이나 업그레이드 가치를 효과적으로 전달하지 못한다.",
+    "고객의 불확실한 니즈('뭘 먹어야 나한테 제대로 맞는 건지 모르겠어서')에 대해 맞춤형 정보를 제공하기보다 일반적인 제품 소개에 그쳐 고객의 흥미를 잃게 한다."
+  ],
+  "objection_handling_analysis": {
+    "acknowledged_and_pivoted": {
+      "count": 5,
+      "avg_score": 74.8,
+      "examples": [
+        "conv-strategy-upgrade-existing-routine-P007 (Turn 4): '좋은 질문이세요! 하루 비용은 월 29,900원으로... 기존에 드시는 기본 비타민과 비교하자면, '데일리 멀티비타민 플러스'는 한국인에게 부족하기 쉬운 비타민 13종과 미네랄 7종을 식약처 기준에 맞춰 한 알에 모두 담았습니다.'",
+        "conv-strategy-daily-boost-routine-P010 (Turn 4): '고객님, 정말 좋은 질문이세요! 😊 기존에 드시던 종합비타민과 '데일리 멀티비타민 플러스'가 어떻게 다른지 궁금하실 수밖에 없죠. '데일리 멀티비타민 플러스'는 단순히 비타민과 미네랄을 모아놓은 것이 아니라, 한국인에게 꼭 필요한 영양소들을 식약처 권장량에 맞춰 최적의 비율로 배합했다는 점이 가장 큰 차별점입니다.'",
+        "conv-strategy-value-comparison-P002 (Turn 4): '네, 좋은 질문입니다! '편의점 비타민보다 3배 강력하다'는 것은 단순히 함량만 높은 것이 아니라, 우리 몸에 더 잘 흡수되고 효과적으로 작용하는 활성형 비타민을 사용했기 때문입니다.'",
+        "conv-strategy-value-comparison-P007 (Turn 4): '고객님, 좋은 지적이세요! 20가지나 되는 영양소를 한 번에 섭취하면 흡수가 잘 될지 걱정되시는군요. 맞습니다. 단순히 많이 넣는 것보다 중요한 것은 '어떻게' 넣느냐죠. 저희 '데일리 멀티비타민 플러스'는 한국인의 식습관과 건강 상태를 고려하여 식약처 기준에 맞춘 최적의 배합비로 설계되었습니다.'"
+      ]
+    },
+    "acknowledged_only": {
+      "count": 3,
+      "avg_score": 48.3,
+      "examples": [
+        "conv-strategy-daily-boost-routine-P001 (Turn 2): '좋은 지적이세요! 편의점 비타민 음료도 간편하게 영양을 보충할 수 있는 좋은 방법이죠. 다만, '데일리 멀티비타민 플러스'는 조금 더 특별한 이유가 있어요.'",
+        "conv-strategy-upgrade-existing-routine-P006 (Turn 2): '정말 좋은 지적이세요! 단순히 챙겨 먹는 것보다 '나에게 맞는 영양소를 제대로 알고 섭취하는 것'이 훨씬 중요하죠. 많은 분들이 비슷한 고민을 하시더라고요.'",
+        "conv-strategy-daily-boost-routine-P008 (Turn 4): '아, 종합비타민을 드시고 계시는군요! 😊 지금도 충분히 바쁘신데 굳이 왜 더 해야 하는지 궁금하실 수 있죠.'"
+      ]
+    },
+    "ignored": {
+      "count": 0,
+      "avg_score": 0
+    },
+    "no_objection": {
+      "count": 1,
+      "avg_score": 53
+    }
+  },
+  "tone_matching_analysis": {
+    "matched": {
+      "count": 9,
+      "avg_score": 63.6
+    },
+    "mismatched": {
+      "count": 1,
+      "avg_score": 0
+    },
+    "notes": "대부분의 대화에서 톤 매칭이 이루어졌으며, 톤 매칭이 잘 된 대화들이 전반적으로 높은 점수를 기록했다. 특히 고객의 질문에 공감하고 친근한 이모티콘(😊)을 사용하는 등 긍정적이고 적극적인 톤이 고객의 참여를 유도하는 데 효과적이었다. 톤 불일치가 있었던 conv-strategy-value-comparison-P010의 경우 대화 자체가 진행되지 않아 점수가 0점이었다."
+  },
+  "cluster_insights": {
+    "strategy-upgrade-existing-routine": "기존 영양제 복용 고객에게는 단순히 '좋다'가 아닌, 기존 제품과의 명확한 차별점(한국인 맞춤 배합, 활성형 비타민)과 구체적인 효능(피로 해소, 흡수율)을 제시해야 전환율이 높다. 비용 효율성(하루 1,000원)과 함께 '왜 바꿔야 하는지'에 대한 강력한 이유를 제공하는 것이 중요하다.",
+    "strategy-daily-boost-routine": "바쁜 일상 속 간편함을 추구하는 고객에게는 '하루 30초', '한 알'과 같은 간편성을 강조하고, 이로 인해 얻을 수 있는 구체적인 이점(영양 불균형 해소, 활력 증진)을 연결하는 것이 효과적이다. 기존 종합비타민과의 차별점을 명확히 설명해야 중복 구매에 대한 우려를 해소할 수 있다.",
+    "strategy-value-comparison": "가격 민감도가 높은 고객에게는 '커피 한 잔 값', '하루 1,000원'과 같은 상대적 가치를 제시하고, 편의점 비타민 등 경쟁 제품 대비 '3배 강력한' 성분 함량이나 활성형 비타민 사용 등 구체적인 우위를 강조하여 가격 이상의 가치를 느끼게 해야 한다. 특히 피로, 집중력 저하 등 고객의 구체적인 문제 해결에 어떻게 기여하는지 명확히 설명하는 것이 중요하다."
+  },
+  "funnel_analysis": {
+    "attention_to_interest_rate": "100%",
+    "interest_to_desire_rate": "55.5%",
+    "desire_to_action_rate": "0%",
+    "bottleneck_stage": "Desire to Action",
+    "cluster_bottlenecks": {
+      "strategy-upgrade-existing-routine": "Desire to Action",
+      "strategy-daily-boost-routine": "Desire to Action",
+      "strategy-value-comparison": "Desire to Action"
+    },
+    "cluster_conversion_rates": {
+      "strategy-upgrade-existing-routine": {
+        "attention_to_interest": "100%",
+        "interest_to_desire": "50%",
+        "desire_to_action": "0%"
+      },
+      "strategy-daily-boost-routine": {
+        "attention_to_interest": "100%",
+        "interest_to_desire": "66.6%",
+        "desire_to_action": "0%"
+      },
+      "strategy-value-comparison": {
+        "attention_to_interest": "100%",
+        "interest_to_desire": "50%",
+        "desire_to_action": "0%"
+      }
+    }
+  },
+  "technique_effectiveness": {
+    "relative_numbers": {
+      "used": 4,
+      "avg_score_when_used": 74.5,
+      "avg_score_when_not": 57.8
+    },
+    "lifestyle_connection": {
+      "used": 9,
+      "avg_score_when_used": 63.6,
+      "avg_score_when_not": 0
+    },
+    "risk_removal": {
+      "used": 0,
+      "avg_score_when_used": 0,
+      "avg_score_when_not": 59.3
+    },
+    "upgrade_framing": {
+      "used": 4,
+      "avg_score_when_used": 60.5,
+      "avg_score_when_not": 60.1
+    }
+  }
+}

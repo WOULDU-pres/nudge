@@ -1,0 +1,512 @@
+[
+  {
+    "session_id": "conv-strategy-busy-professional-P001",
+    "strategy_id": "strategy-busy-professional",
+    "persona_id": "P001",
+    "scores": {
+      "engagement": 15,
+      "relevance": 20,
+      "persuasion": 18,
+      "purchase_intent": 8,
+      "total": 61
+    },
+    "outcome": "neutral",
+    "reason": "고객의 반론을 잘 인정하고 전환하려 했으나, 가격에 대한 부담을 완전히 해소하지 못해 구매 의향까지는 이어지지 못했습니다. 고객은 여전히 가격 비교에 머물러 있습니다.",
+    "funnel_progress": 1,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-busy-professional-P002",
+    "strategy_id": "strategy-busy-professional",
+    "persona_id": "P002",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 17,
+      "purchase_intent": 10,
+      "total": 65
+    },
+    "outcome": "neutral",
+    "reason": "고객이 가격에 긍정적 반응을 보였고, 제품의 차별점에 대해 구체적인 근거를 요구하며 관심을 보였으나, 구매 의사까지는 도달하지 못했습니다. 에이전트가 반론을 잘 처리했으나, 고객의 '숫자로 보여줄 수 있는 근거' 요구에 명확한 답변을 주지 못해 설득력이 다소 부족했습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-busy-professional-P003",
+    "strategy_id": "strategy-busy-professional",
+    "persona_id": "P003",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 17,
+      "purchase_intent": 10,
+      "total": 65
+    },
+    "outcome": "neutral",
+    "reason": "고객이 가격과 성분에 대해 구체적으로 질문하며 관심을 보였고, 에이전트가 이에 맞춰 잘 대응했으나, 구매 의사까지는 연결되지 못하고 '효과가 있을까 걱정'이라는 반론으로 대화가 종료됨.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-busy-professional-P004",
+    "strategy_id": "strategy-busy-professional",
+    "persona_id": "P004",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 17,
+      "purchase_intent": 10,
+      "total": 65
+    },
+    "outcome": "neutral",
+    "reason": "고객이 가격과 제품 차이에 대해 구체적으로 질문하며 관심을 보였으나, 드라마틱한 효과에 대한 의구심을 표현하며 구매 의사까지는 도달하지 못했습니다. 에이전트는 반론을 잘 처리하고 관련 정보를 제공했지만, 고객의 마지막 질문에 대한 답변이 없어 구매 의향을 높이지 못했습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-busy-professional-P005",
+    "strategy_id": "strategy-busy-professional",
+    "persona_id": "P005",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 15,
+      "purchase_intent": 10,
+      "total": 63
+    },
+    "outcome": "neutral",
+    "reason": "고객이 가격에 긍정적인 반응을 보였고, 환불 보장에 대한 언급도 있었으나, 기존 영양제와의 차별점과 체감 효과에 대한 의문을 제기하며 구매 의사까지는 도달하지 못했습니다. 에이전트가 반론을 잘 다루고 가격을 효과적으로 제시했으나, 고객의 니즈를 완전히 충족시키지는 못했습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-busy-professional-P006",
+    "strategy_id": "strategy-busy-professional",
+    "persona_id": "P006",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 15,
+      "purchase_intent": 10,
+      "total": 63
+    },
+    "outcome": "neutral",
+    "reason": "고객이 기존 비타민 복용 중이라는 반론을 제기했으나, 에이전트가 이를 효과적으로 전환하지 못하고 대화가 종료됨. 가격과 비교 우위를 질문하며 관심을 보였으나, 구매 의사까지는 미치지 못함.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-busy-professional-P007",
+    "strategy_id": "strategy-busy-professional",
+    "persona_id": "P007",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 15,
+      "purchase_intent": 10,
+      "total": 63
+    },
+    "outcome": "neutral",
+    "reason": "고객이 가격에 긍정적인 반응을 보였고, 제품에 대한 추가 정보를 요청하며 관심을 표현했으나, 기존 제품과의 차별점을 명확히 설득하지 못해 구매 의향까지는 이어지지 못했습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-busy-professional-P008",
+    "strategy_id": "strategy-busy-professional",
+    "persona_id": "P008",
+    "scores": {
+      "engagement": 5,
+      "relevance": 10,
+      "persuasion": 5,
+      "purchase_intent": 3,
+      "total": 23
+    },
+    "outcome": "lost",
+    "reason": "고객의 반응이 없어 대화가 시작되지 않았습니다. 에이전트의 질문은 고객의 상황을 고려했으나, 고객의 응답이 없어 평가가 어렵습니다.",
+    "funnel_progress": 0,
+    "objection_handling": "none",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-busy-professional-P009",
+    "strategy_id": "strategy-busy-professional",
+    "persona_id": "P009",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 15,
+      "purchase_intent": 10,
+      "total": 63
+    },
+    "outcome": "neutral",
+    "reason": "고객이 기존 제품과의 비교를 요청하며 구체적인 질문을 했고, 에이전트가 이에 맞춰 성분 비교와 비용 절감 가능성을 제시하며 설득을 시도했습니다. 고객은 여전히 성분 비교에 대한 니즈가 강하지만, 비용에 대한 긍정적 반응을 보이며 Desire 단계에 도달했습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-busy-professional-P010",
+    "strategy_id": "strategy-busy-professional",
+    "persona_id": "P010",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 18,
+      "purchase_intent": 15,
+      "total": 71
+    },
+    "outcome": "interested",
+    "reason": "고객이 가격에 긍정적인 반응을 보였고, 기존 복용 중인 비타민과의 중복 여부를 질문하며 구체적인 관심사를 표현했습니다. 에이전트가 고객의 반론을 잘 다루고 설득력 있게 가격을 제시했습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-health-conscious-P001",
+    "strategy_id": "strategy-health-conscious",
+    "persona_id": "P001",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 17,
+      "purchase_intent": 12,
+      "total": 67
+    },
+    "outcome": "interested",
+    "reason": "고객이 가격에 대한 부담이 없다고 언급하고, 제품의 구체적인 성분과 흡수율에 대해 추가 질문하며 관심을 보였습니다. 에이전트가 고객의 질문에 구체적인 수치와 비교로 잘 대응했습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-health-conscious-P002",
+    "strategy_id": "strategy-health-conscious",
+    "persona_id": "P002",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 18,
+      "purchase_intent": 15,
+      "total": 71
+    },
+    "outcome": "interested",
+    "reason": "고객이 비용에 대한 구체적인 질문을 했고, 에이전트가 커피값과 비교하며 합리적인 가격을 제시하여 고객의 관심을 끌었습니다. 구매 의사까지는 아니지만, 긍정적인 반응을 이끌어냈습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-health-conscious-P003",
+    "strategy_id": "strategy-health-conscious",
+    "persona_id": "P003",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 19,
+      "purchase_intent": 15,
+      "total": 72
+    },
+    "outcome": "interested",
+    "reason": "고객이 여러 번 질문하며 관심을 보였고, 에이전트가 고객의 반론을 잘 처리하며 제품의 장점을 효과적으로 설명했습니다. 가격에 대한 긍정적인 반응과 추가 성분에 대한 질문으로 구매 의향이 높아졌습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-health-conscious-P004",
+    "strategy_id": "strategy-health-conscious",
+    "persona_id": "P004",
+    "scores": {
+      "engagement": 20,
+      "relevance": 22,
+      "persuasion": 20,
+      "purchase_intent": 15,
+      "total": 77
+    },
+    "outcome": "interested",
+    "reason": "고객이 프리랜서 디자이너로서의 고충을 언급하며 적극적으로 질문했고, 에이전트가 이에 맞춰 제품의 특징과 장점을 구체적인 수치와 사례로 설명하며 설득력을 높였습니다. 고객은 '솔깃하다'는 표현을 사용하며 추가 정보를 요청하는 등 높은 관심을 보였으나, 아직 구매 의사를 직접적으로 표현하지는 않았습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-health-conscious-P005",
+    "strategy_id": "strategy-health-conscious",
+    "persona_id": "P005",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 15,
+      "purchase_intent": 10,
+      "total": 63
+    },
+    "outcome": "neutral",
+    "reason": "고객이 제품에 대한 구체적인 질문을 하며 관심을 보였고, 에이전트도 고객의 질문에 맞춰 잘 응대했습니다. 하지만 고객은 여전히 기존 제품과 비교하며 전환의 필요성을 느끼지 못하고 있으며, 가격 질문을 통해 구매 의향이 높지 않음을 시사했습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-health-conscious-P006",
+    "strategy_id": "strategy-health-conscious",
+    "persona_id": "P006",
+    "scores": {
+      "engagement": 15,
+      "relevance": 18,
+      "persuasion": 15,
+      "purchase_intent": 10,
+      "total": 58
+    },
+    "outcome": "neutral",
+    "reason": "고객이 가격에 솔깃했으나, 기존 영양제와의 차별점과 추가 섭취의 필요성에 대한 설득이 부족하여 구매 의향까지 이어지지 못했습니다. '생각해볼게요'와 유사한 '굳이 이걸 추가로 더 먹어야 할 이유를 명확히 모르겠네요'는 중립적인 거절로 해석됩니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-health-conscious-P007",
+    "strategy_id": "strategy-health-conscious",
+    "persona_id": "P007",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 18,
+      "purchase_intent": 15,
+      "total": 71
+    },
+    "outcome": "interested",
+    "reason": "고객이 제품에 대한 구체적인 질문을 하며 관심을 보였고, 에이전트가 고객의 니즈(커피 의존도)에 맞춰 제품의 효능을 잘 설명했습니다. 다만, 아직 구매 의사까지는 도달하지 못했습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-health-conscious-P008",
+    "strategy_id": "strategy-health-conscious",
+    "persona_id": "P008",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 17,
+      "purchase_intent": 15,
+      "total": 70
+    },
+    "outcome": "interested",
+    "reason": "고객이 기존 영양제에 만족하고 있었으나, 에이전트가 한국인 맞춤 배합과 비타민 B군 함량 강조로 관심을 유도하여 구체적인 성분 비교를 요청하게 만들었습니다. 가격도 합리적으로 제시하여 구매 의향을 높였습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-health-conscious-P009",
+    "strategy_id": "strategy-health-conscious",
+    "persona_id": "P009",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 17,
+      "purchase_intent": 10,
+      "total": 65
+    },
+    "outcome": "interested",
+    "reason": "고객이 가격에 솔깃하고 구체적인 추가 정보를 요청하며 관심을 보였으나, 아직 구매 의사까지는 도달하지 못했습니다. 에이전트가 반론을 잘 다루고 구체적인 수치를 제시하려 노력했습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-health-conscious-P010",
+    "strategy_id": "strategy-health-conscious",
+    "persona_id": "P010",
+    "scores": {
+      "engagement": 15,
+      "relevance": 18,
+      "persuasion": 12,
+      "purchase_intent": 5,
+      "total": 50
+    },
+    "outcome": "neutral",
+    "reason": "고객이 기존 영양제와의 중복 및 번거로움을 지속적으로 언급하며 저항을 보였고, 에이전트가 이를 완전히 해소하지 못해 구매 의향으로 이어지지 못했습니다. 한국인 맞춤 배합 강조는 좋았으나, 고객의 핵심 우려를 해결하지 못했습니다.",
+    "funnel_progress": 1,
+    "objection_handling": "acknowledged",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-cost-sensitive-P001",
+    "strategy_id": "strategy-cost-sensitive",
+    "persona_id": "P001",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 17,
+      "purchase_intent": 10,
+      "total": 65
+    },
+    "outcome": "neutral",
+    "reason": "고객이 가격에 대한 긍정적인 반응과 함께 구체적인 성분 정보를 요청하며 관심을 보였으나, 구매 의사까지는 도달하지 못했습니다. '생각해볼게요'와 유사한 '잘 모르겠어요'로 대화가 마무리되어 중립적인 상태입니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-cost-sensitive-P002",
+    "strategy_id": "strategy-cost-sensitive",
+    "persona_id": "P002",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 17,
+      "purchase_intent": 10,
+      "total": 65
+    },
+    "outcome": "neutral",
+    "reason": "고객이 가격에 혹하고 기존 제품의 효과 부족을 인정하며 관심을 보였으나, 구매 의사까지는 도달하지 못했습니다. 에이전트가 반론을 잘 다루고 구체적인 질문을 유도했습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-cost-sensitive-P003",
+    "strategy_id": "strategy-cost-sensitive",
+    "persona_id": "P003",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 15,
+      "purchase_intent": 8,
+      "total": 61
+    },
+    "outcome": "neutral",
+    "reason": "고객의 의심과 기존 복용 영양제에 대한 반론을 잘 다루고, 올인원 제품의 장점을 설명하며 대화를 이어갔으나, 고객의 구매 의향을 높이는 데는 부족했습니다. 고객은 여전히 기존 제품과의 관계에 대해 질문하며 회의적인 태도를 보였습니다.",
+    "funnel_progress": 1,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-cost-sensitive-P004",
+    "strategy_id": "strategy-cost-sensitive",
+    "persona_id": "P004",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 17,
+      "purchase_intent": 10,
+      "total": 65
+    },
+    "outcome": "neutral",
+    "reason": "고객이 제품에 대한 구체적인 질문을 하고, 기존 제품과의 비교를 요청하며 관심을 보였으나, 에이전트의 반복적인 가격 언급에 광고처럼 들린다는 피드백을 주어 구매 의사까지는 이어지지 못했습니다. 반론을 인정하고 전환하려는 시도는 좋았으나, 고객의 의구심을 완전히 해소하지 못했습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-cost-sensitive-P005",
+    "strategy_id": "strategy-cost-sensitive",
+    "persona_id": "P005",
+    "scores": {
+      "engagement": 15,
+      "relevance": 18,
+      "persuasion": 15,
+      "purchase_intent": 10,
+      "total": 58
+    },
+    "outcome": "neutral",
+    "reason": "고객이 가격과 기존 제품과의 비교에 대한 구체적인 정보를 계속 요구하고 있으나, 에이전트가 추상적인 설명으로 일관하여 고객의 니즈를 완전히 충족시키지 못했습니다. '한국인에게 꼭 필요한' 같은 모호한 표현은 설득력을 떨어뜨립니다. 고객은 여전히 '그래서 뭐가 더 나은 건데?'라는 질문에 대한 명확한 답을 얻지 못했습니다.",
+    "funnel_progress": 1,
+    "objection_handling": "acknowledged",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-cost-sensitive-P006",
+    "strategy_id": "strategy-cost-sensitive",
+    "persona_id": "P006",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 15,
+      "purchase_intent": 8,
+      "total": 61
+    },
+    "outcome": "neutral",
+    "reason": "고객이 가격에 대한 반론을 제기했으나, 에이전트가 이를 인정하고 구체적인 수치와 식약처 인증으로 설득을 시도했습니다. 하지만 고객은 여전히 기존 제품과의 차별점과 효과에 대한 의구심을 가지고 있어 구매 의향은 낮습니다.",
+    "funnel_progress": 1,
+    "objection_handling": "acknowledged",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-cost-sensitive-P007",
+    "strategy_id": "strategy-cost-sensitive",
+    "persona_id": "P007",
+    "scores": {
+      "engagement": 20,
+      "relevance": 22,
+      "persuasion": 20,
+      "purchase_intent": 15,
+      "total": 77
+    },
+    "outcome": "interested",
+    "reason": "고객이 가격에 대한 질문으로 대화를 시작했고, 에이전트는 명확한 가격 제시와 함께 간편함을 어필했습니다. 고객은 '솔깃하다'고 표현하며 기존 영양제와의 차이점을 질문했고, 에이전트는 활성형 비타민과 한국인 맞춤 배합을 강조하며 설득력 있게 답변했습니다. 고객은 활성형 비타민에 대한 추가 질문을 하며 관심을 보였으나, 아직 구매 의사까지는 도달하지 못했습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-cost-sensitive-P008",
+    "strategy_id": "strategy-cost-sensitive",
+    "persona_id": "P008",
+    "scores": {
+      "engagement": 18,
+      "relevance": 20,
+      "persuasion": 15,
+      "purchase_intent": 10,
+      "total": 63
+    },
+    "outcome": "neutral",
+    "reason": "고객이 가격에 긍정적인 반응을 보였고, 기존 영양제와의 비교를 요청하며 관심을 표현했으나, 에이전트가 구체적인 비교 정보를 제공하지 못해 설득력이 부족했습니다. '생각해볼게요'는 완곡한 거절에 가깝습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-cost-sensitive-P009",
+    "strategy_id": "strategy-cost-sensitive",
+    "persona_id": "P009",
+    "scores": {
+      "engagement": 20,
+      "relevance": 22,
+      "persuasion": 18,
+      "purchase_intent": 10,
+      "total": 70
+    },
+    "outcome": "interested",
+    "reason": "고객이 가격과 성분에 대해 구체적인 질문을 계속하며 관심을 보였고, 에이전트도 고객의 질문에 맞춰 상세한 정보를 제공하려 노력했습니다. 특히 활성형 비타민 B군과 비타민 D, 마그네슘 함량을 강조하며 차별점을 부각한 점이 좋았습니다. 다만, 고객이 여전히 구체적인 함량 비교를 요구하며 망설이는 부분이 있어 구매 의향이 높다고 보기는 어렵습니다.",
+    "funnel_progress": 2,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  },
+  {
+    "session_id": "conv-strategy-cost-sensitive-P010",
+    "strategy_id": "strategy-cost-sensitive",
+    "persona_id": "P010",
+    "scores": {
+      "engagement": 15,
+      "relevance": 20,
+      "persuasion": 18,
+      "purchase_intent": 10,
+      "total": 63
+    },
+    "outcome": "neutral",
+    "reason": "고객의 의구심을 잘 인정하고 구체적인 정보로 전환했으나, 아직 고객의 구매 의향을 끌어내기에는 부족합니다. '커피 한 잔보다 싸다'는 점을 강조했지만, 고객은 여전히 '글쎄요'라는 반응을 보이며 구체적인 설명을 요구하고 있습니다. 에이전트가 이에 맞춰 비타민과 미네랄 종류, 한국인 최적화 배합, 복용법 등을 설명하며 고객의 질문에 적절하게 대응했습니다. 하지만 아직 고객이 '괜찮다'거나 '더 알고 싶다'는 명확한 긍정적 반응은 보이지 않았습니다.",
+    "funnel_progress": 1,
+    "objection_handling": "acknowledged_and_pivoted",
+    "tone_match": true
+  }
+]

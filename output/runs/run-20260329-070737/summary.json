@@ -1,0 +1,38 @@
+{
+  "avg_score": 63.17,
+  "cluster_coverage": 100.0,
+  "best_strategy": "strategy-upgrade-existing-routine",
+  "cluster_scores": {
+    "budget_sensitive": 63.17
+  },
+  "outcome_distribution": {
+    "converted": 0,
+    "interested": 17,
+    "neutral": 11,
+    "resistant": 0,
+    "lost": 1,
+    "error": 1
+  },
+  "strategy_scores": {
+    "strategy-upgrade-existing-routine": 66.2,
+    "strategy-daily-boost-routine": 64.2,
+    "strategy-value-comparison": 58.666666666666664
+  },
+  "strategy_cluster_matrix": {
+    "strategy-daily-boost-routine": {
+      "budget_sensitive": 64.2
+    },
+    "strategy-upgrade-existing-routine": {
+      "budget_sensitive": 66.2
+    },
+    "strategy-value-comparison": {
+      "budget_sensitive": 58.666666666666664
+    }
+  },
+  "funnel_distribution": {
+    "0": 1,
+    "1": 5,
+    "2": 22,
+    "3": 1
+  }
+}

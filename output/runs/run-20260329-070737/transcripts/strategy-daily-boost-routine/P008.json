@@ -1,0 +1,29 @@
+{
+  "session_id": "conv-strategy-daily-boost-routine-P008",
+  "strategy_id": "strategy-daily-boost-routine",
+  "persona_id": "P008",
+  "turns": [
+    {
+      "role": "agent",
+      "content": "안녕하세요! 혹시 아침 출근 준비 5분 만에 건강까지 챙길 수 있는 방법이 있다면 어떠세요? 😊"
+    },
+    {
+      "role": "persona",
+      "content": "아침 준비요? 그냥 늘 하던 대로 하는데요. 뭘 또 5분 만에 챙겨요. 그냥 물이랑 영양제 하나 먹고 나가면 그만인데."
+    },
+    {
+      "role": "agent",
+      "content": "아, 늘 하시던 대로 물이랑 영양제 챙겨 드시는군요! 👍 바쁘신 와중에도 건강 챙기시는 모습 정말 보기 좋습니다.\n\n혹시 지금 드시는 영양제가 어떤 건지 여쭤봐도 될까요? 지금 드시는 루틴에서 딱 30초만 추가해서 더 확실하게 건강을 챙길 수 있는 방법이 있거든요. 😊"
+    },
+    {
+      "role": "persona",
+      "content": "지금 먹는 영양제요? 그냥 종합비타민 하나예요. 30초 추가라... 그래서 뭘 더 챙기라는 건데요? 지금도 충분히 바쁜데, 굳이 뭘 더 해야 하는 이유를 모르겠네요."
+    },
+    {
+      "role": "agent",
+      "content": "아, 종합비타민을 드시고 계시는군요! 😊 지금도 충분히 바쁘신데 굳이 왜 더 해야 하는지 궁금하실 수 있죠.\n\n사실 많은 분들이 '종합비타민 하나면 되지 않나?' 생각하시는데, 맞아요. 하지만 '데일리 멀티비타민 플러스'는 지금 드시는 종합비타민에서 놓치기 쉬운 부분을 확실하게 채워드릴 수 있어요. 한국인에게 꼭 필요한 비타민 13종과 미네랄 7종을 식약처 권장량에 맞춰 한 번에 담았거든요. 덕분에 아침 식후 딱 1정, 30초면 평소 부족하기 쉬운 영양 불균형을 확실하게 잡아드릴 수 있습니다. 👍"
+    }
+  ],
+  "ended_by": "error",
+  "error_message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 50.060940426s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '50s'}]}}"
+}

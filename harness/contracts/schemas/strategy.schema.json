@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "strategy.schema.json",
+  "title": "Strategy",
+  "description": "H(Hypothesize) 단계에서 생성하는 설득 전략 1개 — AIDA 퍼널 기반",
+  "type": "object",
+  "required": [
+    "strategy_id",
+    "hypothesis",
+    "funnel",
+    "tone"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "strategy_id": {
+      "type": "string",
+      "pattern": "^strategy-",
+      "description": "전략 고유 ID (strategy- 접두사)"
+    },
+    "hypothesis": {
+      "type": "string",
+      "description": "이 전략이 왜 효과적인지 가설"
+    },
+    "funnel": {
+      "type": "object",
+      "description": "AIDA 모델 기반 설득 퍼널 — 각 단계별 전략 정의",
+      "required": [
+        "attention",
+        "interest",
+        "desire",
+        "action"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attention": {
+          "type": "object",
+          "description": "주의(Attention) 단계 — 고객의 관심을 끄는 오프닝 전략",
+          "required": [
+            "hook_type",
+            "opening_line_guide",
+            "target_emotion"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "hook_type": {
+              "type": "string",
+              "enum": [
+                "질문형",
+                "데이터형",
+                "공감형",
+                "충격형"
+              ],
+              "description": "오프닝 훅 유형"
+            },
+            "opening_line_guide": {
+              "type": "string",
+              "description": "첫 마디 가이드라인 (구체적 예시 또는 방향)"
+            },
+            "target_emotion": {
+              "type": "string",
+              "description": "오프닝에서 유발할 목표 감정"
+            }
+          }
+        },
+        "interest": {
+          "type": "object",
+          "description": "흥미(Interest) 단계 — 고객이 계속 듣고 싶게 만드는 전략",
+          "required": [
+            "value_framing",
+            "information_depth",
+            "engagement_trigger"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "value_framing": {
+              "type": "string",
+              "description": "가치를 프레이밍하는 방식 (예: 비용절감, 성장기회 등)"
+            },
+            "information_depth": {
+              "type": "string",
+              "enum": [
+                "핵심1개",
+                "비교데이터",
+                "스토리텔링"
+              ],
+              "description": "정보 전달 깊이 수준"
+            },
+            "engagement_trigger": {
+              "type": "string",
+              "description": "고객 참여를 유도하는 트리거 (질문, 퀴즈 등)"
+            }
+          }
+        },
+        "desire": {
+          "type": "object",
+          "description": "욕구(Desire) 단계 — 고객이 제품/서비스를 원하게 만드는 전략",
+          "required": [
+            "emotional_driver",
+            "proof_type",
+            "objection_preempt"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "emotional_driver": {
+              "type": "string",
+              "description": "구매 욕구를 자극하는 감정적 동인"
+            },
+            "proof_type": {
+              "type": "string",
+              "enum": [
+                "사회적증거",
+                "전문가권위",
+                "ROI계산",
+                "체험후기"
+              ],
+              "description": "신뢰를 구축하는 증거 유형"
+            },
+            "objection_preempt": {
+              "type": "string",
+              "description": "예상 반론을 선제적으로 해소하는 전략"
+            }
+          }
+        },
+        "action": {
+          "type": "object",
+          "description": "행동(Action) 단계 — 고객을 최종 행동으로 이끄는 전략",
+          "required": [
+            "cta_style",
+            "urgency_type",
+            "fallback"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "cta_style": {
+              "type": "string",
+              "enum": [
+                "직접제안",
+                "소프트CTA",
+                "시험제안",
+                "한정제안"
+              ],
+              "description": "행동 유도 스타일 (CTA 방식)"
+            },
+            "urgency_type": {
+              "type": "string",
+              "enum": [
+                "없음",
+                "시간한정",
+                "수량한정",
+                "가격변동"
+              ],
+              "description": "긴급성 부여 유형"
+            },
+            "fallback": {
+              "type": "string",
+              "description": "고객이 거절 시 대안 제안 또는 후속 전략"
+            }
+          }
+        }
+      }
+    },
+    "tone": {
+      "type": "string",
+      "description": "전체 대화 톤"
+    },
+    "persona_adaptation": {
+      "type": "string",
+      "description": "페르소나별 전략 적용 시 조정 가이드 (선택사항)"
+    },
+    "approach": {
+      "type": "string",
+      "description": "[레거시] 구체적인 설득 접근법 — funnel로 대체됨"
+    },
+    "opening_style": {
+      "type": "string",
+      "description": "[레거시] 첫 인사/오프닝 방식 — funnel.attention으로 대체됨"
+    },
+    "objection_handling": {
+      "type": "string",
+      "description": "[레거시] 예상 반론 대응법 — funnel.desire.objection_preempt로 대체됨"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "avg_score": 61.21,
+  "cluster_coverage": 100.0,
+  "best_strategy": "strategy-value_seeker",
+  "cluster_scores": {
+    "budget_sensitive": 61.21
+  },
+  "outcome_distribution": {
+    "converted": 0,
+    "interested": 13,
+    "neutral": 14,
+    "resistant": 0,
+    "lost": 2,
+    "error": 1
+  },
+  "strategy_scores": {
+    "strategy-value_seeker": 66.0,
+    "strategy-skeptical_customer": 59.0,
+    "strategy-busy_professional": 58.333333333333336
+  },
+  "strategy_cluster_matrix": {
+    "strategy-busy_professional": {
+      "budget_sensitive": 58.333333333333336
+    },
+    "strategy-skeptical_customer": {
+      "budget_sensitive": 59.0
+    },
+    "strategy-value_seeker": {
+      "budget_sensitive": 66.0
+    }
+  },
+  "funnel_distribution": {
+    "0": 2,
+    "1": 6,
+    "2": 21,
+    "3": 0
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "strategy-ledger.schema.json",
+  "title": "Strategy Ledger",
+  "description": "전 세대 전략 이력을 압축 요약으로 추적하는 원장. Ralph가 과거 실험을 참조해 반복을 피하고 진화 방향을 결정한다.",
+  "type": "object",
+  "required": [
+    "generations",
+    "cumulative_insights"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "generations": {
+      "type": "array",
+      "description": "세대별 전략 실행 기록 (시간순 정렬)",
+      "items": {
+        "type": "object",
+        "required": [
+          "generation",
+          "run_id",
+          "timestamp",
+          "strategies_tried",
+          "overall_avg_score",
+          "cluster_coverage",
+          "key_learnings",
+          "winning_patterns",
+          "losing_patterns"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "generation": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "세대 번호 (0 = 베이스라인)"
+          },
+          "run_id": {
+            "type": "string",
+            "description": "해당 세대 실행 고유 ID"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "세대 실행 완료 시각 (ISO 8601)"
+          },
+          "strategies_tried": {
+            "type": "array",
+            "description": "해당 세대에서 시도한 전략 목록",
+            "items": {
+              "type": "object",
+              "required": [
+                "strategy_id",
+                "hypothesis",
+                "avg_score",
+                "outcome_distribution",
+                "best_cluster",
+                "worst_cluster"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "strategy_id": {
+                  "type": "string",
+                  "pattern": "^strategy-",
+                  "description": "전략 고유 ID (strategy- 접두사)"
+                },
+                "hypothesis": {
+                  "type": "string",
+                  "description": "이 전략의 핵심 가설 (한 줄 요약)"
+                },
+                "avg_score": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 10,
+                  "description": "전체 클러스터 평균 점수 (0-10)"
+                },
+                "outcome_distribution": {
+                  "type": "object",
+                  "description": "결과 분포 (예: {\"success\": 5, \"partial\": 3, \"fail\": 2})",
+                  "additionalProperties": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "best_cluster": {
+                  "type": "string",
+                  "description": "가장 높은 점수를 받은 클러스터 ID"
+                },
+                "worst_cluster": {
+                  "type": "string",
+                  "description": "가장 낮은 점수를 받은 클러스터 ID"
+                }
+              }
+            }
+          },
+          "overall_avg_score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10,
+            "description": "해당 세대 전체 평균 점수 (0-10)"
+          },
+          "cluster_coverage": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "클러스터 커버리지 비율 (0.0-1.0, 1.0 = 전체 클러스터 커버)"
+          },
+          "key_learnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "해당 세대에서 얻은 핵심 교훈 목록"
+          },
+          "winning_patterns": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "효과가 입증된 패턴 (높은 점수 기여)"
+          },
+          "losing_patterns": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "효과가 없거나 역효과인 패턴 (낮은 점수 원인)"
+          }
+        }
+      }
+    },
+    "cumulative_insights": {
+      "type": "object",
+      "description": "전 세대에 걸친 누적 인사이트. Ralph가 전략 생성 시 최우선 참조.",
+      "required": [
+        "never_repeat",
+        "proven_effective",
+        "best_score_ever",
+        "best_strategy_ever"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "never_repeat": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "절대 반복 금지 접근법 (3세대 연속 실패 확인됨)"
+        },
+        "proven_effective": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "효과 입증된 패턴 (3세대 연속 성공 확인됨)"
+        },
+        "best_score_ever": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10,
+          "description": "역대 최고 평균 점수 (0-10)"
+        },
+        "best_strategy_ever": {
+          "type": "object",
+          "description": "역대 최고 점수를 기록한 전략 정보",
+          "required": [
+            "generation",
+            "strategy_id",
+            "avg_score"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "generation": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "최고 점수 달성 세대 번호"
+            },
+            "strategy_id": {
+              "type": "string",
+              "pattern": "^strategy-",
+              "description": "최고 점수 전략 ID"
+            },
+            "avg_score": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10,
+              "description": "해당 전략의 평균 점수 (0-10)"
+            }
+          }
+        }
+      }
+    }
+  }
+}
