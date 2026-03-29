@@ -1,9 +1,0 @@
-{
-  "session_id": "omx-1774326421738-clwml9",
-  "started_at": "2026-03-24T04:27:01.837Z",
-  "cwd": "/home/hwjoo/01-projects/2026/hwjoo-idea/ralphton",
-  "pid": 28132,
-  "platform": "linux",
-  "pid_start_ticks": 85010257,
-  "pid_cmdline": "node /home/hwjoo/.nvm/versions/node/v24.11.0/bin/omx --madmax"
-}
