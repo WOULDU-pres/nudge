@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280,height=720">
+<title>Ralphthon Harness 전체 흐름</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px; height: 720px;
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    background: #fffdf7;
+    color: #1e293b;
+    padding: 24px 50px;
+    overflow: hidden;
+  }
+  h2 { font-size: 26px; font-weight: 700; margin-bottom: 12px; color: #0f172a; }
+  .diagram {
+    display: flex; gap: 28px; height: auto;
+  }
+  .phases {
+    flex: 1; display: flex; flex-direction: column; gap: 3px;
+  }
+  .phase-label {
+    font-size: 11px; font-weight: 700; color: #6366f1;
+    text-transform: uppercase; letter-spacing: 2px;
+    margin-bottom: 1px;
+  }
+  .box {
+    border-radius: 8px; padding: 6px 12px;
+    font-size: 12px; line-height: 1.3;
+    border: 2px solid;
+    position: relative;
+  }
+  .purple { background: #f5f3ff; border-color: #a78bfa; color: #5b21b6; }
+  .blue { background: #eff6ff; border-color: #60a5fa; color: #1e40af; }
+  .orange { background: #fff7ed; border-color: #fb923c; color: #9a3412; }
+  .yellow { background: #fefce8; border-color: #facc15; color: #854d0e; }
+  .green { background: #f0fdf4; border-color: #4ade80; color: #166534; }
+  .arrow-down {
+    text-align: center; font-size: 14px; color: #94a3b8;
+    margin: 0;
+    line-height: 1;
+  }
+  .loop-wrap {
+    border: 2px dashed #6366f1;
+    border-radius: 10px;
+    padding: 8px 10px;
+    position: relative;
+  }
+  .loop-label {
+    position: absolute; top: -10px; left: 20px;
+    background: #fffdf7; padding: 0 8px;
+    font-size: 12px; font-weight: 700; color: #6366f1;
+  }
+  .sidebar {
+    width: 300px; display: flex; flex-direction: column; gap: 8px;
+    justify-content: center;
+  }
+  .side-card {
+    border-radius: 8px; padding: 8px 12px;
+    border: 2px solid; font-size: 12px; line-height: 1.4;
+  }
+  .side-card h4 {
+    font-size: 12px; font-weight: 700; margin-bottom: 3px;
+  }
+  .side-card p { color: #475569; font-size: 11px; }
+  .feedback { font-size: 12px; margin-top: 4px; }
+  .fb-green { color: #16a34a; }
+  .fb-red { color: #dc2626; }
+  .small-note { font-size: 12px; color: #94a3b8; margin-top: 4px; }
+</style>
+</head>
+<body>
+  <h2>Ralphthon Harness 전체 흐름</h2>
+  <div class="diagram">
+    <div class="phases">
+      <!-- Agent -->
+      <div class="box green" style="text-align:center; padding: 8px;">
+        <strong>🤖 Agent</strong> (오케스트레이터: Claude Code / Hermes)
+      </div>
+      <div class="arrow-down">↓</div>
+
+      <!-- Phase 1 -->
+      <div class="phase-label">Phase 1 — 코드 생성</div>
+      <div class="box purple">📄 MASTER-PROMPT.md 읽기 → 설계 문서 전체 이해</div>
+      <div class="arrow-down">↓</div>
+      <div class="box blue">💻 코더에게 코드 생성 위임 (모듈별 순차 생성)</div>
+      <div class="arrow-down">↓</div>
+
+      <!-- Phase 2 -->
+      <div class="phase-label">Phase 2 — 베이스라인</div>
+      <div class="box purple">▶️ 시뮬레이션 실행 (run_simulation.py) → baseline 점수 확립</div>
+      <div class="arrow-down">↓</div>
+
+      <!-- Phase 3 -->
+      <div class="phase-label">Phase 3 — Autoresearch</div>
+      <div class="loop-wrap">
+        <span class="loop-label">♾️ 무한 루프</span>
+        <div class="box purple" style="margin-bottom:2px;">① results.tsv 분석 — 이전 실험 패턴 파악</div>
+        <div class="arrow-down">↓</div>
+        <div class="box purple" style="margin-bottom:2px;">② 가설 수립 — "이렇게 바꾸면 점수가 오를 것"</div>
+        <div class="arrow-down">↓</div>
+        <div class="box yellow" style="margin-bottom:2px;">③ strategy_prompt.md 수정 → 시뮬레이션 재실행</div>
+        <div class="arrow-down">↓</div>
+        <div class="box green" style="text-align:center;">
+          점수 비교 →
+          <span class="fb-green"><strong>keep ✓</strong></span> /
+          <span class="fb-red"><strong>discard ✗</strong></span>
+          → ①로 반복
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="side-card orange">
+        <h4>🌐 외부 LLM API</h4>
+        <p>Gemini 2.5 Flash (대화·채점)<br>Phase 2~3에서 내부적으로 호출</p>
+      </div>
+      <div class="side-card purple">
+        <h4>📁 하네스 = 설계도</h4>
+        <p>코드가 아니라 설계도.<br>에이전트가 읽고 스스로 코드를 생성, 실행, 진화시킴.</p>
+      </div>
+      <div class="side-card yellow">
+        <h4>🎯 수정 대상은 딱 하나</h4>
+        <p><strong>strategy_prompt.md</strong>만 수정.<br>평가 기준·페르소나·코드는 고정.</p>
+      </div>
+      <div class="side-card green">
+        <h4>🔑 핵심 원리</h4>
+        <p>전략이 아니라<br><strong>"전략을 만드는 방법론"</strong>을<br>진화시킨다.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

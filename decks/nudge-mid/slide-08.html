@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280,height=720">
+<title>References</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px; height: 720px;
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    padding: 36px 60px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  h2 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+  .sub { font-size: 14px; color: #64748b; margin-bottom: 24px; }
+  .refs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 32px;
+  }
+  .ref {
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .ref-letter {
+    width: 24px; height: 24px; border-radius: 50%;
+    background: #6366f1; color: white;
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .ref-body { flex: 1; }
+  .ref-category {
+    font-size: 11px; font-weight: 700; color: #6366f1;
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+  .ref-citation {
+    font-size: 12px; color: #334155; line-height: 1.5;
+  }
+  .ref-doi {
+    font-size: 10px; color: #94a3b8;
+    font-family: 'JetBrains Mono', monospace;
+    word-break: break-all;
+  }
+  .refs { flex: 1; }
+  .footer {
+    font-size: 11px; color: #94a3b8;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 8px;
+    margin-top: 12px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <h2>References</h2>
+  <p class="sub">페르소나 클러스터 설계의 학술적 근거</p>
+
+  <div class="refs">
+    <div class="ref">
+      <div class="ref-letter">A</div>
+      <div class="ref-body">
+        <div class="ref-category">의사결정 프로파일링</div>
+        <div class="ref-citation">Sproles, G.B. & Kendall, E.L. (1986). A Methodology for Profiling Consumers' Decision-Making Styles. <em>J. Consumer Affairs.</em></div>
+        <div class="ref-doi">doi:10.1111/j.1745-6606.1986.tb00382.x</div>
+      </div>
+    </div>
+
+    <div class="ref">
+      <div class="ref-letter">B</div>
+      <div class="ref-body">
+        <div class="ref-category">가격/가치 지각</div>
+        <div class="ref-citation">Lichtenstein, D.R., Ridgway, N.M. & Netemeyer, R.G. (1993). Price Perceptions and Consumer Shopping Behavior. <em>J. Marketing Research.</em></div>
+        <div class="ref-doi">doi:10.1177/002224379303000204</div>
+      </div>
+    </div>
+
+    <div class="ref">
+      <div class="ref-letter">C</div>
+      <div class="ref-body">
+        <div class="ref-category">혁신확산이론</div>
+        <div class="ref-citation">Rogers, E.M. (2003). <em>Diffusion of Innovations</em> (5th ed.). Free Press.</div>
+      </div>
+    </div>
+
+    <div class="ref">
+      <div class="ref-letter">D</div>
+      <div class="ref-body">
+        <div class="ref-category">위험 회피</div>
+        <div class="ref-citation">Bauer, R.A. (1960). Consumer Behavior as Risk Taking. <em>AMA Proceedings.</em><br>Mitchell, V.W. (1999). Consumer Perceived Risk. <em>European J. Marketing.</em></div>
+        <div class="ref-doi">doi:10.1108/03090569910249229</div>
+      </div>
+    </div>
+
+    <div class="ref">
+      <div class="ref-letter">E</div>
+      <div class="ref-body">
+        <div class="ref-category">심리적 반발 / 자기결정이론</div>
+        <div class="ref-citation">Brehm, J.W. (1966). <em>A Theory of Psychological Reactance.</em> Academic Press.<br>Deci, E.L. & Ryan, R.M. (2000). The "What" and "Why" of Goal Pursuits. <em>Psychological Inquiry.</em></div>
+        <div class="ref-doi">doi:10.1207/S15327965PLI1104_01</div>
+      </div>
+    </div>
+
+    <div class="ref">
+      <div class="ref-letter">F</div>
+      <div class="ref-body">
+        <div class="ref-category">자아일치성 / 확장된 자아</div>
+        <div class="ref-citation">Sirgy, M.J. (1982). Self-Concept in Consumer Behavior. <em>J. Consumer Research.</em><br>Belk, R.W. (1988). Possessions and the Extended Self. <em>J. Consumer Research.</em></div>
+        <div class="ref-doi">doi:10.1086/208924 / doi:10.1086/209154</div>
+      </div>
+    </div>
+
+    <div class="ref">
+      <div class="ref-letter">G</div>
+      <div class="ref-body">
+        <div class="ref-category">내러티브 설득</div>
+        <div class="ref-citation">Green, M.C. & Brock, T.C. (2000). The Role of Transportation in the Persuasiveness of Public Narratives. <em>JPSP.</em></div>
+        <div class="ref-doi">doi:10.1037/0022-3514.79.5.701</div>
+      </div>
+    </div>
+
+    <div class="ref">
+      <div class="ref-letter">H</div>
+      <div class="ref-body">
+        <div class="ref-category">정보과부하 / 휴리스틱</div>
+        <div class="ref-citation">Jacoby, J. et al. (1974). Brand Choice as Information Load. <em>JMR.</em><br>Shah, A.K. & Oppenheimer, D.M. (2008). Heuristics Made Easy. <em>Psych. Bulletin.</em></div>
+        <div class="ref-doi">doi:10.1177/002224377401100105</div>
+      </div>
+    </div>
+
+    <div class="ref">
+      <div class="ref-letter">I</div>
+      <div class="ref-body">
+        <div class="ref-category">신뢰 모델</div>
+        <div class="ref-citation">Mayer, R.C., Davis, J.H. & Schoorman, F.D. (1995). An Integrative Model of Organizational Trust. <em>AMR.</em></div>
+        <div class="ref-doi">doi:10.5465/amr.1995.9509220070</div>
+      </div>
+    </div>
+
+    <div class="ref">
+      <div class="ref-letter">J</div>
+      <div class="ref-body">
+        <div class="ref-category">음성 인터페이스</div>
+        <div class="ref-citation">Nass, C. & Brave, S. (2005). <em>Wired for Speech.</em> MIT Press.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    NUDGE — Sales Agent Simulation System · github.com/WOULDU-pres/nudge · Ralphthon Seoul 2025
+  </div>
+</body>
+</html>

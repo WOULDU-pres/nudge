@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280,height=720">
+<title>페르소나 & 평가 — 학술 근거</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px; height: 720px;
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    padding: 36px 56px;
+    overflow: hidden;
+  }
+  h2 { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+  .sub { font-size: 14px; color: #64748b; margin-bottom: 20px; }
+  .content { display: flex; gap: 28px; }
+  .left { flex: 1; }
+  .right { width: 380px; }
+  table {
+    width: 100%; border-collapse: collapse;
+    font-size: 12px;
+  }
+  th {
+    background: #6366f1; color: white;
+    padding: 8px 10px; text-align: left;
+    font-weight: 600;
+  }
+  td {
+    padding: 7px 10px; border-bottom: 1px solid #e2e8f0;
+    vertical-align: top;
+  }
+  tr:nth-child(even) { background: #f8fafc; }
+  tr:hover { background: #eef2ff; }
+  .cluster-name { font-weight: 700; color: #4338ca; white-space: nowrap; }
+  .theory { color: #475569; }
+  .citation { color: #94a3b8; font-style: italic; font-size: 11px; }
+  .eval-card {
+    background: white; border-radius: 12px;
+    padding: 16px; margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .eval-card h4 {
+    font-size: 13px; font-weight: 700; color: #6366f1;
+    margin-bottom: 8px;
+  }
+  .eval-row {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 12px; margin-bottom: 4px;
+  }
+  .eval-bar {
+    height: 6px; border-radius: 3px; flex: 1;
+  }
+  .eval-label { width: 100px; color: #475569; }
+  .eval-aida { width: 120px; color: #94a3b8; font-size: 11px; }
+  .bottom-msg {
+    background: linear-gradient(90deg, #eef2ff, #e0e7ff);
+    border-radius: 8px; padding: 12px 16px;
+    font-size: 12px; color: #4338ca; line-height: 1.5;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <h2>200명의 가상 고객 — 심리학 기반 설계</h2>
+  <p class="sub">행동경제학·소비자심리학 10개 이론으로 구조화한 8개 클러스터 × 200명 페르소나</p>
+
+  <div class="content">
+    <div class="left">
+      <table>
+        <tr>
+          <th>클러스터</th>
+          <th>심리 특성</th>
+          <th>학술 근거</th>
+        </tr>
+        <tr>
+          <td class="cluster-name">budget_practical</td>
+          <td class="theory">가격 민감성, ROI 중심 의사결정</td>
+          <td class="citation">Lichtenstein, Ridgway & Netemeyer (1993)<br>J. Marketing Research</td>
+        </tr>
+        <tr>
+          <td class="cluster-name">health_anxious</td>
+          <td class="theory">위험 회피, 불확실성 기피</td>
+          <td class="citation">Bauer (1960) Risk Taking<br>Mitchell (1999) European J. Marketing</td>
+        </tr>
+        <tr>
+          <td class="cluster-name">hard_sell_resistant</td>
+          <td class="theory">심리적 반발, 자율성 욕구</td>
+          <td class="citation">Brehm (1966) Reactance Theory<br>Deci & Ryan (2000) SDT</td>
+        </tr>
+        <tr>
+          <td class="cluster-name">impulse_curious</td>
+          <td class="theory">혁신 수용, 새로움 추구</td>
+          <td class="citation">Rogers (2003)<br>Diffusion of Innovations</td>
+        </tr>
+        <tr>
+          <td class="cluster-name">evidence_driven</td>
+          <td class="theory">분석적 의사결정 스타일</td>
+          <td class="citation">Sproles & Kendall (1986)<br>J. Consumer Affairs</td>
+        </tr>
+        <tr>
+          <td class="cluster-name">social_follower</td>
+          <td class="theory">자아일치성, 사회적 동조</td>
+          <td class="citation">Sirgy (1982), Belk (1988)<br>J. Consumer Research</td>
+        </tr>
+        <tr>
+          <td class="cluster-name">routine_seeker</td>
+          <td class="theory">습관 유지, 내러티브 설득 필요</td>
+          <td class="citation">Green & Brock (2000)<br>JPSP</td>
+        </tr>
+        <tr>
+          <td class="cluster-name">low_attention</td>
+          <td class="theory">정보과부하, 휴리스틱 의존</td>
+          <td class="citation">Jacoby et al. (1974)<br>Shah & Oppenheimer (2008)</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="right">
+      <div class="eval-card">
+        <h4>⚖️ 4차원 평가 × AIDA 매핑</h4>
+        <div class="eval-row">
+          <span class="eval-label">engagement</span>
+          <div class="eval-bar" style="background: linear-gradient(90deg, #a78bfa, #818cf8); width: 100%;"></div>
+          <span class="eval-aida">← Attention→Interest</span>
+        </div>
+        <div class="eval-row">
+          <span class="eval-label">relevance</span>
+          <div class="eval-bar" style="background: linear-gradient(90deg, #60a5fa, #38bdf8); width: 100%;"></div>
+          <span class="eval-aida">← Interest 단계</span>
+        </div>
+        <div class="eval-row">
+          <span class="eval-label">persuasion</span>
+          <div class="eval-bar" style="background: linear-gradient(90deg, #fb923c, #f97316); width: 100%;"></div>
+          <span class="eval-aida">← Interest→Desire</span>
+        </div>
+        <div class="eval-row">
+          <span class="eval-label">purchase_intent</span>
+          <div class="eval-bar" style="background: linear-gradient(90deg, #4ade80, #22c55e); width: 100%;"></div>
+          <span class="eval-aida">← Desire→Action</span>
+        </div>
+      </div>
+
+      <div class="eval-card">
+        <h4>📊 funnel_progress (0-3)</h4>
+        <div class="eval-row"><span class="eval-label">0: Attention 이탈</span><span class="eval-aida">관심 없음, 즉시 이탈</span></div>
+        <div class="eval-row"><span class="eval-label">1: Interest 도달</span><span class="eval-aida">질문은 했으나 욕구 미형성</span></div>
+        <div class="eval-row"><span class="eval-label">2: Desire 도달</span><span class="eval-aida">"괜찮네요", "얼마예요?"</span></div>
+        <div class="eval-row"><span class="eval-label">3: Action 도달</span><span class="eval-aida">"링크 보내줘요" 구체적 행동</span></div>
+      </div>
+
+      <div class="eval-card">
+        <h4>🇰🇷 한국어 문화 맥락</h4>
+        <div class="eval-row" style="font-size: 11px;">
+          <span class="eval-label">"생각해볼게요"</span>
+          <span class="eval-aida" style="color:#ef4444;">= 대부분 거절</span>
+        </div>
+        <div class="eval-row" style="font-size: 11px;">
+          <span class="eval-label">"링크 보내주세요"</span>
+          <span class="eval-aida" style="color:#22c55e;">= 진짜 관심</span>
+        </div>
+      </div>
+
+      <div class="bottom-msg">
+        + Mayer, Davis & Schoorman (1995) 신뢰 모델<br>
+        + Nass & Brave (2005) 음성 인터페이스 반응
+      </div>
+    </div>
+  </div>
+</body>
+</html>

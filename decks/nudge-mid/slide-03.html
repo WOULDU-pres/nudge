@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280,height=720">
+<title>솔루션 — NUDGE</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px; height: 720px;
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    padding: 60px 80px;
+    overflow: hidden;
+  }
+  h2 { font-size: 36px; font-weight: 700; margin-bottom: 6px; }
+  .tagline {
+    font-size: 20px; color: #6366f1; font-weight: 600;
+    margin-bottom: 36px;
+  }
+  .comparison {
+    display: flex; gap: 32px; margin-bottom: 36px;
+  }
+  .col {
+    flex: 1; border-radius: 16px; padding: 28px;
+  }
+  .before {
+    background: #fef2f2; border: 1px solid #fecaca;
+  }
+  .after {
+    background: #f0fdf4; border: 1px solid #bbf7d0;
+  }
+  .col h3 {
+    font-size: 16px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+  .before h3 { color: #dc2626; }
+  .after h3 { color: #16a34a; }
+  .col ul {
+    list-style: none; padding: 0;
+  }
+  .col li {
+    font-size: 16px; line-height: 1.8; color: #475569;
+    padding-left: 24px; position: relative;
+  }
+  .before li::before { content: "✗"; position: absolute; left: 0; color: #ef4444; font-weight: 700; }
+  .after li::before { content: "✓"; position: absolute; left: 0; color: #22c55e; font-weight: 700; }
+  .definition-box {
+    background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+    border: 1px solid #c7d2fe;
+    border-radius: 16px;
+    padding: 24px 32px;
+  }
+  .definition-box p {
+    font-size: 17px; line-height: 1.7; color: #3730a3;
+  }
+  .definition-box strong {
+    color: #4338ca; font-weight: 700;
+  }
+  .keywords {
+    display: flex; gap: 12px; margin-top: 16px;
+  }
+  .kw {
+    background: #6366f1; color: white;
+    padding: 6px 16px; border-radius: 20px;
+    font-size: 13px; font-weight: 600;
+  }
+</style>
+</head>
+<body>
+  <h2>AI 시뮬레이션으로 대체한다</h2>
+  <p class="tagline">수천 번의 시뮬레이션이 쌓일수록, AI의 판단은 베테랑의 멘탈맵에 수렴합니다.</p>
+
+  <div class="comparison">
+    <div class="col before">
+      <h3>❌ Before</h3>
+      <ul>
+        <li>실제 고객에게 전화 → 데이터 축적</li>
+        <li>전략 1개 검증에 수 주 소요</li>
+        <li>실패 = 고객 이탈 (비가역적)</li>
+        <li>노하우는 사람 머릿속에만 존재</li>
+      </ul>
+    </div>
+    <div class="col after">
+      <h3>✅ After — NUDGE</h3>
+      <ul>
+        <li>200명 AI 페르소나로 시뮬레이션</li>
+        <li>전략 3개를 5분 만에 검증</li>
+        <li>리스크 제로 (가상 고객)</li>
+        <li>Strategy Ledger에 데이터로 누적</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="definition-box">
+    <p>
+      <strong>NUDGE</strong>는 <strong>200개의 심리학 기반 가상 고객 페르소나</strong>에게
+      AIDA 퍼널 구조의 세일즈 전략을 자동 시뮬레이션하고,
+      <strong>LLM-as-Judge</strong>가 정량 평가 → 패턴 분석 → 다음 세대 전략을 스스로 설계하는
+      <strong>자가진화 시스템</strong>입니다.
+    </p>
+    <div class="keywords">
+      <span class="kw">200 AI 페르소나</span>
+      <span class="kw">AIDA 퍼널</span>
+      <span class="kw">LLM-as-Judge</span>
+      <span class="kw">자가진화</span>
+      <span class="kw">Strategy Ledger</span>
+    </div>
+  </div>
+</body>
+</html>

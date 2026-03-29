@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280,height=720">
+<title>문제 정의</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px; height: 720px;
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    padding: 60px 80px;
+    overflow: hidden;
+  }
+  h2 {
+    font-size: 36px; font-weight: 700;
+    margin-bottom: 8px;
+    color: #0f172a;
+  }
+  .subtitle {
+    font-size: 18px; color: #64748b;
+    margin-bottom: 40px;
+  }
+  .problems {
+    display: flex; gap: 28px;
+    margin-bottom: 36px;
+  }
+  .card {
+    flex: 1;
+    background: white;
+    border-radius: 16px;
+    padding: 28px 24px;
+    border-left: 4px solid;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .card:nth-child(1) { border-color: #ef4444; }
+  .card:nth-child(2) { border-color: #f59e0b; }
+  .card:nth-child(3) { border-color: #8b5cf6; }
+  .card .num {
+    font-size: 14px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .card:nth-child(1) .num { color: #ef4444; }
+  .card:nth-child(2) .num { color: #f59e0b; }
+  .card:nth-child(3) .num { color: #8b5cf6; }
+  .card h3 {
+    font-size: 22px; font-weight: 700;
+    margin-bottom: 10px; color: #0f172a;
+  }
+  .card p {
+    font-size: 15px; line-height: 1.6;
+    color: #475569;
+  }
+  .bottom-box {
+    background: linear-gradient(90deg, #fef3c7, #fde68a);
+    border-radius: 12px;
+    padding: 20px 28px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .bottom-box .icon { font-size: 28px; }
+  .bottom-box .text {
+    font-size: 16px; color: #92400e;
+    line-height: 1.5;
+  }
+  .bottom-box strong { color: #78350f; }
+</style>
+</head>
+<body>
+  <h2>베테랑의 노하우는 사라진다</h2>
+  <p class="subtitle">영업 성과는 개인의 감각에 의존하고, 어떤 말투·타이밍·혜택이 효과적인지 언어화조차 되지 않습니다.</p>
+
+  <div class="problems">
+    <div class="card">
+      <div class="num">Problem 01</div>
+      <h3>느리다</h3>
+      <p>전략 하나를 검증하려면 실제 고객 수백 명에게 시도해야 합니다. 10가지 전략을 비교하려면 몇 달이 걸립니다.</p>
+    </div>
+    <div class="card">
+      <div class="num">Problem 02</div>
+      <h3>비가역적이다</h3>
+      <p>실패한 전략에 노출된 고객은 돌아오지 않습니다. 실험 비용이 곧 고객 이탈입니다.</p>
+    </div>
+    <div class="card">
+      <div class="num">Problem 03</div>
+      <h3>전수가 안 된다</h3>
+      <p>"느낌"으로 하는 영업은 매뉴얼로 만들 수 없습니다. 베테랑이 떠나면 노하우도 사라집니다.</p>
+    </div>
+  </div>
+
+  <div class="bottom-box">
+    <span class="icon">📞</span>
+    <div class="text">
+      기존 세일즈 AI 회사들은 학습 데이터를 쌓기 위해 <strong>실제 소비자에게 직접 전화</strong>를 걸어야 했습니다.<br>
+      비용은 높고, 시간은 오래 걸리며, 실제 고객을 잃을 리스크가 있습니다.
+    </div>
+  </div>
+</body>
+</html>
