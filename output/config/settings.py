@@ -1,37 +1,43 @@
-"""Ralphthon project settings using Pydantic BaseSettings.
+"""Central settings for the merged Ralphthon output pipeline.
 
-The merged repository keeps the ralphton output codebase while using the
-root-level plz harness layout (`../harness/...`). This settings module exposes
-both the newer uppercase names used by the ralphton output code and the older
-lowercase aliases used by some retained compatibility modules.
+This project now supports two backend styles:
+1. acpx/Codex subprocess backend (default, restored from prior v2 work)
+2. Direct API backend (gemini/openai/anthropic/ollama) as fallback
 """
 
 from pathlib import Path
 
-from pydantic import Field
 from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    """Central configuration for the Ralphthon output pipeline."""
+    # Backend selection
+    LLM_BACKEND: str = "acpx"  # acpx | api
 
-    # Provider & model selection
-    RALPHTHON_PROVIDER: str = "gemini"  # gemini / openai / anthropic / ollama
+    # Provider & model selection (API fallback mode)
+    RALPHTHON_PROVIDER: str = "gemini"
     RALPHTHON_MODEL: str = "gemini-2.0-flash-lite"
-    RALPHTHON_MODEL_CHEAP: str = ""  # if empty, falls back to RALPHTHON_MODEL
-    RALPHTHON_MODEL_EXPENSIVE: str = ""  # if empty, falls back to RALPHTHON_MODEL
+    RALPHTHON_MODEL_CHEAP: str = ""
+    RALPHTHON_MODEL_EXPENSIVE: str = ""
+
+    # acpx / Codex subprocess mode
+    ACPX_AGENT: str = "codex"
+    ACPX_MODEL: str = ""
+    ACPX_TIMEOUT: int = 120
+    ACPX_APPROVE_ALL: bool = True
+    ACPX_ALLOWED_TOOLS: str = ""
 
     # Run mode
-    RALPHTHON_MODE: str = "DEMO"  # DEV=10, TEST=50, DEMO=200 personas
+    RALPHTHON_MODE: str = "DEV"
 
     # Concurrency & rate limiting
-    MAX_CONCURRENT: int = 20
-    MAX_RETRIES: int = 10
+    MAX_CONCURRENT: int = 8
+    MAX_RETRIES: int = 5
     RATE_LIMIT_DELAY: float = 0.05
 
     # Pipeline parameters
     STRATEGIES_PER_RUN: int = 3
-    MAX_TURNS: int = 3  # conversation round-trips
+    MAX_TURNS: int = 3
     RALPH_ITERATIONS: int = 1
 
     # API keys
@@ -58,24 +64,7 @@ class Settings(BaseSettings):
 
     @property
     def concurrent(self) -> int:
-        """Return MAX_CONCURRENT clamped to [10, 20]."""
-        return max(10, min(20, self.MAX_CONCURRENT))
-
-    @property
-    def cheap_model(self) -> str:
-        """Return the cheap model, falling back to the default model."""
-        return self.RALPHTHON_MODEL_CHEAP or self.RALPHTHON_MODEL
-
-    @property
-    def expensive_model(self) -> str:
-        """Return the expensive model, falling back to the default model."""
-        return self.RALPHTHON_MODEL_EXPENSIVE or self.RALPHTHON_MODEL
-
-    @property
-    def persona_count(self) -> int:
-        """Return persona count based on mode: DEV=10, TEST=50, DEMO=200."""
-        mode_map = {"DEV": 10, "TEST": 50, "DEMO": 200}
-        return mode_map.get(self.RALPHTHON_MODE.upper(), 200)
+        return max(1, min(20, self.MAX_CONCURRENT))
 
     @property
     def output_dir(self) -> Path:
@@ -94,18 +83,38 @@ class Settings(BaseSettings):
         return (self.output_dir / self.PROMPTS_DIR).resolve()
 
     @property
+    def persona_count(self) -> int:
+        mode_map = {"DEV": 10, "TEST": 50, "DEMO": 200}
+        return mode_map.get(self.RALPHTHON_MODE.upper(), 10)
+
+    @property
     def api_keys(self) -> list[str]:
-        """Return available Gemini API keys for round-robin usage."""
         keys = [self.GEMINI_API_KEY]
         if self.GEMINI_API_KEY_2:
             keys.append(self.GEMINI_API_KEY_2)
         return [k for k in keys if k]
 
-    # Compatibility aliases for retained v2 modules / dry-run helpers
     @property
     def provider(self) -> str:
-        return self.RALPHTHON_PROVIDER
+        return "acpx" if self.LLM_BACKEND.lower() == "acpx" else self.RALPHTHON_PROVIDER
 
+    @property
+    def cheap_model(self) -> str:
+        if self.LLM_BACKEND.lower() == "acpx":
+            return self.ACPX_MODEL or "acpx"
+        return self.RALPHTHON_MODEL_CHEAP or self.RALPHTHON_MODEL
+
+    @property
+    def expensive_model(self) -> str:
+        if self.LLM_BACKEND.lower() == "acpx":
+            return self.ACPX_MODEL or "acpx"
+        return self.RALPHTHON_MODEL_EXPENSIVE or self.RALPHTHON_MODEL
+
+    @property
+    def acpx_model(self) -> str:
+        return self.ACPX_MODEL or ""
+
+    # compatibility aliases used by older modules
     @property
     def model_cheap(self) -> str:
         return self.cheap_model
@@ -139,5 +148,4 @@ class Settings(BaseSettings):
         return self.RALPH_ITERATIONS
 
 
-# Singleton instance
 settings = Settings()

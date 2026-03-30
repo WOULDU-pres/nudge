@@ -15,6 +15,10 @@ node_modules/
 # Logs
 *.log
 
+# Generated simulation artifacts
+output/ralph_v2_result.json
+output/runs/ralph-v2-*/
+
 # OS
 .DS_Store
 Thumbs.db

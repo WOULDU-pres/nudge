@@ -8,11 +8,19 @@
 
 ## v2 변경사항
 
-- 저장소를 `ralphton-plz` 기준으로 정리하고, 설계 문서(`harness/`)를 루트 구조에 통합했습니다.
-- `output/`은 `ralphton` 구현을 기준으로 재정렬했습니다. 즉, 실행 파이프라인/LLM 호출/루프 오케스트레이션은 `ralphton` 버전을 우선 반영했습니다.
-- 실행 호환성을 위해 `output/config/default.yaml`, `output/frontend/`, 그리고 일부 typed compatibility 파일(`agents/base.py`, `conversation/turn.py`, `evaluation/schema.py`, `personas/schema.py`, `ralph/evaluate.py`)은 함께 유지했습니다.
-- `output/config/settings.py`는 현재 루트 `harness/` 구조에 맞게 경로를 수정했고, 구형/신형 설정명 모두 읽을 수 있게 호환 alias를 추가했습니다.
-- `output/scripts/run_simulation.py`는 `--dry-run`과 `--product` 옵션을 지원하도록 보강했습니다.
+- 이전 `test/nudge` 작업에서 진행됐던 **acpx/Codex subprocess 기반 v2 시뮬레이션 스택**을 `ralphton-plz/output/` 아래로 복구했습니다.
+- `output/src/llm.py`는 기본값이 **`LLM_BACKEND=acpx`** 인 통합 인터페이스로 교체했습니다. 즉, 기본 실행은 API 호출이 아니라 `acpx codex exec` subprocess를 사용합니다.
+- 아래 v2 모듈들을 복구했습니다.
+  - `output/src/agents/llm_sales_agent.py`
+  - `output/src/agents/llm_customer_agent.py`
+  - `output/src/conversation/engine_v2.py`
+  - `output/src/evaluation/llm_evaluator.py`
+  - `output/src/ralph/strategy.py`
+  - `output/src/ralph/loop_v2.py`
+  - `output/scripts/run_ralph_v2.py`
+  - `output/src/api/main.py`
+- `output/config/settings.py`는 acpx/Codex 실행을 위한 설정(`ACPX_AGENT`, `ACPX_TIMEOUT`, `LLM_BACKEND`)을 포함하도록 확장했습니다.
+- API 기반 경로는 fallback으로 남겨두었지만, 현재 권장 실행 경로는 **Codex 구독 기반 acpx backend** 입니다.
 
 ---
 
@@ -77,19 +85,29 @@ nudge/
 │   │   └── product.yaml        # 판매 제품 정보 (데일리 멀티비타민 플러스)
 │   ├── src/
 │   │   ├── ralph/
-│   │   │   ├── evaluate_stage.py # E: Judge 평가 fan-out (ralphton 기준)
-│   │   │   ├── evaluate.py       # v2 호환 레이어
-│   │   │   ├── reason.py       # R: 상위/하위 대화 패턴 비교 분석
-│   │   │   └── learn.py        # L: 학습 포인트 추출 + 전략 수정 권고
+│   │   │   ├── evaluate_stage.py # 기존 평가 fan-out 레이어
+│   │   │   ├── evaluate.py       # 기존 typed 평가 레이어
+│   │   │   ├── strategy.py       # v2 H/R/L 전략 생성/학습 helper
+│   │   │   └── loop_v2.py        # v2 Codex/acpx 기반 RALPH 루프
+│   │   ├── agents/
+│   │   │   ├── llm_sales_agent.py    # v2 Sales agent (acpx/Codex)
+│   │   │   └── llm_customer_agent.py # v2 Customer agent (acpx/Codex)
 │   │   ├── conversation/
-│   │   │   ├── engine.py       # 턴 기반 비동기 대화 엔진
-│   │   │   ├── turn.py         # 개별 턴 처리
-│   │   │   └── rules.py        # 대화 종료 조건 (턴 제한, 키워드 감지)
-│   │   ├── evaluation/schema.py # v2 typed 결과 스키마 호환
-│   │   ├── personas/schema.py   # v2 typed 페르소나 스키마 호환
-│   │   └── llm.py              # 멀티프로바이더 LLM 클라이언트
+│   │   │   ├── engine.py         # 기존 대화 엔진
+│   │   │   ├── engine_v2.py      # v2 async 대화 엔진
+│   │   │   ├── turn.py           # 개별 턴 처리
+│   │   │   └── rules.py          # 대화 종료 조건 (턴 제한, 키워드 감지)
+│   │   ├── evaluation/
+│   │   │   ├── evaluator.py      # 기존 evaluator
+│   │   │   └── llm_evaluator.py  # v2 LLM-as-Judge (acpx/Codex)
+│   │   ├── api/
+│   │   │   └── main.py           # v2 FastAPI wrapper
+│   │   ├── evaluation/schema.py  # v2 typed 결과 스키마 호환
+│   │   ├── personas/schema.py    # v2 typed 페르소나 스키마 호환
+│   │   └── llm.py                # 통합 LLM 인터페이스 (기본: acpx)
 │   ├── scripts/
-│   │   └── run_simulation.py   # 시뮬레이션 실행 진입점
+│   │   ├── run_simulation.py   # 기존 시뮬레이션 실행 진입점
+│   │   └── run_ralph_v2.py     # v2 Codex/acpx 루프 실행기
 │   ├── frontend/               # React 대시보드
 │   │   ├── src/App.tsx         # 대시보드 UI (7개 섹션)
 │   │   └── ...
@@ -223,11 +241,28 @@ RALPHTHON_MODE=DEV python scripts/run_simulation.py
 # 2. Dry Run (import 확인 + 설정 출력만)
 python scripts/run_simulation.py --dry-run
 
-# 3. 대시보드 실행
+# 3. acpx/Codex 기반 v2 루프 실행
+python scripts/run_ralph_v2.py --dry-run
+python scripts/run_ralph_v2.py --iterations 1 --personas-count 1 --max-turns 1
+
+# 4. 대시보드 실행
 cd output/frontend
 npm run dev
 # → http://localhost:5173
 ```
+
+### acpx / Codex 준비
+
+v2 루프는 기본적으로 `acpx codex exec` subprocess를 사용합니다.
+
+```bash
+which acpx
+which codex
+acpx --version
+codex --version
+```
+
+필요하면 Codex 로그인 상태를 먼저 확인하세요.
 
 ### 설정 조정
 
