@@ -204,7 +204,10 @@ Judge LLM이 각 대화를 독립적으로 채점합니다:
 
 - Python 3.11+
 - Node.js 18+ (대시보드)
-- LLM API 키 (Gemini / OpenAI / Anthropic 중 하나 이상)
+- `acpx` CLI
+- `codex` CLI
+- ChatGPT Plus / Codex 사용 가능한 로그인 세션
+- 선택 사항: Gemini / OpenAI / Anthropic API 키 (fallback 경로)
 
 ### 설치
 
@@ -225,11 +228,17 @@ npm install
 
 ```bash
 # output/.env
-GEMINI_API_KEY=your_key_here
-# 또는
-OPENAI_API_KEY=your_key_here
-ANTHROPIC_API_KEY=your_key_here
+LLM_BACKEND=acpx
+ACPX_AGENT=codex
+ACPX_TIMEOUT=120
+
+# fallback이 필요할 때만 사용
+# GEMINI_API_KEY=***
+# OPENAI_API_KEY=***
+# ANTHROPIC_API_KEY=***
 ```
+
+기본값은 `LLM_BACKEND=acpx` 입니다. 즉 v2 루프는 `acpx codex exec` subprocess를 통해 대화를 생성/평가합니다.
 
 ### 실행
 
@@ -264,16 +273,51 @@ codex --version
 
 필요하면 Codex 로그인 상태를 먼저 확인하세요.
 
+### FastAPI v2 실행
+
+```bash
+cd output
+uvicorn src.api.main:app --reload --port 8000
+```
+
+주요 엔드포인트:
+
+```bash
+# 상태 확인
+curl http://localhost:8000/health
+
+# 현재 설정 확인
+curl http://localhost:8000/config
+
+# acpx 직접 핑 테스트
+curl -X POST http://localhost:8000/acpx/ping \
+  -H 'Content-Type: application/json' \
+  -d '{"prompt":"한 줄로만 답해. 숫자 1만 출력해."}'
+
+# v2 실행
+curl -X POST http://localhost:8000/run/v2 \
+  -H 'Content-Type: application/json' \
+  -d '{"iterations":1,"personas_count":1,"max_turns":1}'
+```
+
 ### 설정 조정
 
-```yaml
-# output/config/default.yaml
-mode: TEST              # DEV(10명) / TEST(30명) / DEMO(200명)
-strategies_per_run: 3   # 한 번에 생성할 전략 수
-conversation_turns: 3   # 대화 라운드 수 (3턴 = 6메시지)
-max_concurrent: 20      # 동시 API 호출 수
-rate_limit_delay: 0.05  # API 호출 간 대기 시간(초)
+실사용 설정은 `output/.env` 와 `output/config/settings.py` 기준입니다.
+
+주로 조정하는 값:
+
+```bash
+LLM_BACKEND=acpx
+ACPX_AGENT=codex
+ACPX_TIMEOUT=120
+RALPHTHON_MODE=DEV
+STRATEGIES_PER_RUN=3
+MAX_TURNS=4
+MAX_CONCURRENT=8
+RALPH_ITERATIONS=3
 ```
+
+`output/config/default.yaml` 은 참고용 기본값 파일로 남아 있지만, 현재 v2 실행 경로는 `.env` 기반 설정을 우선 사용합니다.
 
 ---
 

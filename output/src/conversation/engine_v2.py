@@ -19,11 +19,23 @@ async def run_conversation_v2(
     started_at = time.time()
 
     for turn_idx in range(max_turns):
-        sales_message = await (sales_agent.send_opening() if turn_idx == 0 else sales_agent.respond(turns))
+        try:
+            sales_message = await (sales_agent.send_opening() if turn_idx == 0 else sales_agent.respond(turns))
+        except Exception as exc:
+            turns.append({'role': 'agent', 'content': f'[ERROR] sales turn failed: {exc}'})
+            ended_by = 'error'
+            break
+
         sales_message = truncate_message(sales_message)
         turns.append({'role': 'agent', 'content': sales_message})
 
-        customer_message = await customer_agent.respond(turns)
+        try:
+            customer_message = await customer_agent.respond(turns)
+        except Exception as exc:
+            turns.append({'role': 'persona', 'content': f'[ERROR] customer turn failed: {exc}'})
+            ended_by = 'error'
+            break
+
         customer_message = truncate_message(customer_message)
         turns.append({'role': 'persona', 'content': customer_message})
 

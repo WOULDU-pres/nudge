@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     # acpx / Codex subprocess mode
     ACPX_AGENT: str = "codex"
     ACPX_MODEL: str = ""
-    ACPX_TIMEOUT: int = 120
+    ACPX_TIMEOUT: int = 300
     ACPX_APPROVE_ALL: bool = True
     ACPX_ALLOWED_TOOLS: str = ""
 

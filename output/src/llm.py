@@ -139,7 +139,7 @@ def _call_acpx_sync(prompt: str, system: str = '', model: str = '') -> str:
         ]
         if settings.ACPX_APPROVE_ALL:
             cmd.append('--approve-all')
-        if settings.ACPX_ALLOWED_TOOLS is not None:
+        if settings.ACPX_ALLOWED_TOOLS:
             cmd.extend(['--allowed-tools', settings.ACPX_ALLOWED_TOOLS])
         selected_model = model or settings.acpx_model
         if selected_model and selected_model != 'acpx':
@@ -159,9 +159,13 @@ def _call_acpx_sync(prompt: str, system: str = '', model: str = '') -> str:
         )
         stdout = result.stdout or ''
         stderr = result.stderr or ''
-        if result.returncode != 0:
+        text = ''
+        try:
+            text = _parse_acpx_jsonl(stdout)
+        except Exception:
+            text = ''
+        if result.returncode != 0 and not text:
             raise RuntimeError(f'acpx command failed ({result.returncode}): {stderr or stdout}')
-        text = _parse_acpx_jsonl(stdout)
         if not text:
             raise RuntimeError(f'acpx returned empty output. stderr={stderr!r}')
         return text.strip()
