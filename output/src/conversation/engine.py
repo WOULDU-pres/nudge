@@ -1,119 +1,59 @@
-"""Turn-based conversation orchestration engine."""
-import logging
-from typing import Protocol, runtime_checkable
+"""Conversation engine — runs turn-based sales/customer dialogues."""
 
-from src.conversation.turn import (
-    Turn,
-    Role,
-    ConversationSession,
-    EndReason,
-)
-from src.conversation.rules import should_end_conversation
+from __future__ import annotations
 
-logger = logging.getLogger(__name__)
-
-
-@runtime_checkable
-class SalesAgentProtocol(Protocol):
-    """Protocol for sales agent — must implement send_opening and respond."""
-
-    async def send_opening(self) -> str: ...
-    async def respond(self, conversation_history: str) -> str: ...
-
-
-@runtime_checkable
-class CustomerAgentProtocol(Protocol):
-    """Protocol for customer agent — must implement respond."""
-
-    async def respond(self, conversation_history: str) -> str: ...
+from src.agents.sales_agent import SalesAgent
+from src.agents.customer_agent import CustomerAgent
+from src.conversation.rules import check_early_exit, truncate_message
 
 
 async def run_conversation(
-    sales_agent: SalesAgentProtocol,
-    customer_agent: CustomerAgentProtocol,
+    sales_agent: SalesAgent,
+    customer_agent: CustomerAgent,
     strategy_id: str,
     persona_id: str,
-    max_round_trips: int = 3,
-) -> ConversationSession:
-    """Run a turn-based conversation between sales agent and customer persona.
+    max_turns: int = 3,
+) -> dict:
+    """Run a turn-based conversation between a sales agent and customer agent.
 
-    Conversation flow (default 3 round-trips = 6 messages):
-      Turn 0: Sales Agent sends opening (gets product + strategy context)
-      Turn 1: Customer Agent responds
-      Turn 2: Sales Agent responds (gets conversation history)
-      Turn 3: Customer Agent responds
-      Turn 4: Sales Agent responds
-      Turn 5: Customer Agent final response
+    Each "turn" consists of one sales message and one customer response.
+    The sales agent always speaks first.
 
     Args:
-        sales_agent: Agent implementing SalesAgentProtocol.
-        customer_agent: Agent implementing CustomerAgentProtocol.
-        strategy_id: Strategy identifier for this conversation.
-        persona_id: Persona identifier for this conversation.
-        max_round_trips: Number of agent-persona exchanges (default: 3).
+        sales_agent: The sales agent instance.
+        customer_agent: The customer agent instance.
+        strategy_id: The strategy identifier.
+        persona_id: The persona identifier.
+        max_turns: Maximum number of turn pairs (default: 3).
 
     Returns:
-        Completed ConversationSession with all turns and end reason.
+        A conversation session dict matching conversation-session.schema.json:
+        {session_id, strategy_id, persona_id, turns: [{role, content}], ended_by}
     """
-    session_id = f"conv-{strategy_id}-{persona_id}"
-    max_turns = max_round_trips * 2  # Each round-trip = 2 turns
+    session_id = f"{strategy_id}_{persona_id}"
+    turns: list[dict] = []
+    ended_by = "turn_limit"
 
-    session = ConversationSession(
-        session_id=session_id,
-        strategy_id=strategy_id,
-        persona_id=persona_id,
-    )
+    for turn_idx in range(max_turns):
+        # Sales agent speaks
+        sales_message = await sales_agent.generate_message(turns, turn_idx)
+        sales_message = truncate_message(sales_message)
+        turns.append({"role": "agent", "content": sales_message})
 
-    logger.info(f"Starting conversation {session_id} ({max_round_trips} round-trips)")
+        # Customer agent responds
+        customer_message = await customer_agent.generate_response(turns, turn_idx)
+        customer_message = truncate_message(customer_message)
+        turns.append({"role": "persona", "content": customer_message})
 
-    try:
-        for turn_idx in range(max_turns):
-            is_agent_turn = turn_idx % 2 == 0  # Even turns = agent, odd = persona
+        # Check for early exit (customer expressed purchase intent)
+        if check_early_exit(customer_message):
+            ended_by = "keyword_detected"
+            break
 
-            if is_agent_turn:
-                # Sales agent turn
-                if turn_idx == 0:
-                    # Opening message — agent uses product/strategy context
-                    message = await sales_agent.send_opening()
-                else:
-                    # Follow-up — agent gets conversation history
-                    history = session.to_history_text()
-                    message = await sales_agent.respond(history)
-
-                session.turns.append(Turn(role=Role.AGENT, content=message))
-                logger.debug(f"[{session_id}] Turn {turn_idx} (Agent): {message[:80]}...")
-
-            else:
-                # Customer persona turn
-                history = session.to_history_text()
-                message = await customer_agent.respond(history)
-
-                session.turns.append(Turn(role=Role.PERSONA, content=message))
-                logger.debug(f"[{session_id}] Turn {turn_idx} (Customer): {message[:80]}...")
-
-                # Check end conditions after customer responds
-                should_end, reason = should_end_conversation(
-                    current_turn=turn_idx + 1,
-                    max_turns=max_turns,
-                    last_customer_message=message,
-                )
-                if should_end and reason == "keyword_detected":
-                    session.ended_by = EndReason.KEYWORD_DETECTED
-                    logger.info(
-                        f"[{session_id}] Customer exit keyword detected at turn {turn_idx}"
-                    )
-                    break
-
-        else:
-            # Loop completed without break — ended by turn limit
-            session.ended_by = EndReason.TURN_LIMIT
-
-    except Exception as e:
-        session.ended_by = EndReason.ERROR
-        session.error_message = str(e)
-        logger.error(f"[{session_id}] Conversation error: {e}")
-
-    logger.info(
-        f"Completed {session_id}: {session.turn_count} turns, ended_by={session.ended_by.value}"
-    )
-    return session
+    return {
+        "session_id": session_id,
+        "strategy_id": strategy_id,
+        "persona_id": persona_id,
+        "turns": turns,
+        "ended_by": ended_by,
+    }

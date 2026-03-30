@@ -1,90 +1,107 @@
-"""Sales agent — uses strategy + product brief to persuade customers."""
-import logging
+"""Sales Agent — reads sales-agent-system.md template and generates sales messages."""
+
+from __future__ import annotations
+
 from pathlib import Path
 
-from src.agents.base import BaseAgent
-from src.llm import call_llm_cheap
+from config.settings import Settings
+from src.llm import call_llm
 
-logger = logging.getLogger(__name__)
+settings = Settings()
 
 
-class SalesAgent(BaseAgent):
-    """LLM-backed sales agent using AIDA funnel strategy."""
+class SalesAgent:
+    """LLM-powered sales agent that follows an AIDA funnel strategy."""
 
-    def __init__(self, strategy: dict, product_brief: str):
-        """
-        Args:
-            strategy: Strategy dict from H stage (matches strategy.schema.json).
-            product_brief: Product information text.
-        """
-        template = self.load_prompt_template("sales-agent-system.md")
-
-        # Build system prompt by substituting strategy fields into template
-        system_prompt = self._build_system_prompt(template, strategy, product_brief)
-        super().__init__(system_prompt)
-
+    def __init__(self, strategy: dict, product: dict) -> None:
         self.strategy = strategy
-        self.product_brief = product_brief
-        self.strategy_id = strategy.get("strategy_id", "unknown")
+        self.product = product
+        self._system_prompt: str | None = None
 
-    def _build_system_prompt(self, template: str, strategy: dict, product_brief: str) -> str:
-        """Substitute strategy fields into the sales agent template."""
-        funnel = strategy.get("funnel", {})
+    def _build_product_brief(self) -> str:
+        """Build a product brief string from the product dict."""
+        name = self.product.get("name", "")
+        price = self.product.get("price", "")
+        benefits = self.product.get("key_benefits", self.product.get("benefits", []))
+        if isinstance(benefits, list):
+            benefits_str = ", ".join(benefits)
+        else:
+            benefits_str = str(benefits)
+        return f"제품명: {name}\n가격: {price}\n주요 효능: {benefits_str}"
+
+    def _build_system_prompt(self) -> str:
+        """Load the template and fill placeholders from strategy and product."""
+        if self._system_prompt is not None:
+            return self._system_prompt
+
+        template_path = Path(settings.PROMPTS_DIR) / "sales-agent-system.md"
+        template = template_path.read_text(encoding="utf-8")
+
+        funnel = self.strategy.get("funnel", {})
         attention = funnel.get("attention", {})
         interest = funnel.get("interest", {})
         desire = funnel.get("desire", {})
         action = funnel.get("action", {})
 
+        # Use .replace() one-by-one to avoid issues with other curly braces in template
         replacements = {
-            "{hook_type}": attention.get("hook_type", "공감형"),
-            "{opening_line_guide}": attention.get("opening_line_guide", "자연스러운 인사로 시작"),
-            "{target_emotion}": attention.get("target_emotion", "호기심"),
-            "{value_framing}": interest.get("value_framing", "건강 투자 가치"),
-            "{information_depth}": interest.get("information_depth", "핵심1개"),
-            "{engagement_trigger}": interest.get("engagement_trigger", "질문 유도"),
-            "{emotional_driver}": desire.get("emotional_driver", "건강한 생활"),
-            "{proof_type}": desire.get("proof_type", "사회적증거"),
-            "{objection_preempt}": desire.get("objection_preempt", "반론 인정 후 전환"),
-            "{cta_style}": action.get("cta_style", "소프트CTA"),
-            "{urgency_type}": action.get("urgency_type", "없음"),
-            "{fallback}": action.get("fallback", "무료 샘플 제안"),
-            "{product_brief}": product_brief,
-            "{tone}": strategy.get("tone", "친절하고 전문적"),
+            # Attention
+            "{hook_type}": str(attention.get("hook_type", "")),
+            "{opening_line_guide}": str(attention.get("opening_line_guide", "")),
+            "{target_emotion}": str(attention.get("target_emotion", "")),
+            # Interest
+            "{value_framing}": str(interest.get("value_framing", "")),
+            "{information_depth}": str(interest.get("information_depth", "")),
+            "{engagement_trigger}": str(interest.get("engagement_trigger", "")),
+            # Desire
+            "{emotional_driver}": str(desire.get("emotional_driver", "")),
+            "{proof_type}": str(desire.get("proof_type", "")),
+            "{objection_preempt}": str(desire.get("objection_preempt", "")),
+            # Action
+            "{cta_style}": str(action.get("cta_style", "")),
+            "{urgency_type}": str(action.get("urgency_type", "")),
+            "{fallback}": str(action.get("fallback", "")),
+            # Product & Tone
+            "{product_brief}": self._build_product_brief(),
+            "{tone}": str(self.strategy.get("tone", "")),
         }
 
         prompt = template
-        for key, value in replacements.items():
-            prompt = prompt.replace(key, str(value))
+        for placeholder, value in replacements.items():
+            prompt = prompt.replace(placeholder, value)
 
-        return prompt
+        self._system_prompt = prompt
+        return self._system_prompt
 
-    async def send_opening(self) -> str:
-        """Generate opening message (Turn 0: Attention -> Interest)."""
-        user_msg = (
-            "첫 인사를 시작하세요. 고객에게 처음 말을 거는 상황입니다.\n"
-            "퍼널의 Attention 단계에 맞게, 자연스럽고 간결한 오프닝 메시지를 보내세요.\n"
-            "1-2문단 이내로."
-        )
-        response = await call_llm_cheap(
-            system_prompt=self.system_prompt,
-            user_message=user_msg,
-            temperature=0.8,
-        )
-        self.add_to_history("sales", response)
-        return response
+    async def generate_message(
+        self, conversation_history: list[dict], turn: int
+    ) -> str:
+        """Generate the next sales message given conversation history and turn number.
 
-    async def respond(self, conversation_history: str) -> str:
-        """Generate follow-up response based on conversation history."""
-        user_msg = (
-            f"대화 기록:\n{conversation_history}\n\n"
-            "위 대화에 이어서 응답하세요.\n"
-            "퍼널 단계에 맞게 자연스럽게 대화를 이어가세요.\n"
-            "1-2문단 이내로 간결하게."
+        Args:
+            conversation_history: List of {role, content} dicts so far.
+            turn: Current turn number (0-indexed).
+
+        Returns:
+            The sales agent's message string.
+        """
+        system_prompt = self._build_system_prompt()
+
+        # Build user prompt from conversation history
+        if not conversation_history:
+            user_prompt = f"턴 {turn}/3. 고객에게 첫 메시지를 보내세요."
+        else:
+            lines = []
+            for entry in conversation_history:
+                role = entry.get("role", "")
+                label = "세일즈" if role == "agent" else "고객"
+                lines.append(f"[{label}]: {entry['content']}")
+            lines.append(f"\n턴 {turn}/3. 위 대화 이어서 고객에게 다음 메시지를 보내세요.")
+            user_prompt = "\n".join(lines)
+
+        response = await call_llm(
+            prompt=user_prompt,
+            system=system_prompt,
+            model=settings.cheap_model,
         )
-        response = await call_llm_cheap(
-            system_prompt=self.system_prompt,
-            user_message=user_msg,
-            temperature=0.7,
-        )
-        self.add_to_history("sales", response)
-        return response
+        return response.strip()

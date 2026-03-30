@@ -1,67 +1,71 @@
-"""L (Learn) — Extract reusable learnings from Reason analysis."""
+"""L(Learn) stage: Extract learnings from reason analysis."""
+
 import json
 import logging
 from pathlib import Path
 
-from src.llm import call_llm_expensive
+from config.settings import settings
+from src.llm import call_llm, extract_json
 
 logger = logging.getLogger(__name__)
 
-PROMPTS_DIR = Path(__file__).parent.parent.parent.parent / "harness" / "prompts"
+_learn_system: str | None = None
 
 
-def _load_learn_prompt() -> str:
-    path = PROMPTS_DIR / "learn-system.md"
-    if not path.exists():
-        raise FileNotFoundError(f"Learn prompt not found: {path}")
-    return path.read_text(encoding="utf-8")
+def _get_learn_system() -> str:
+    """Load learn-system.md template from PROMPTS_DIR."""
+    global _learn_system
+    if _learn_system is None:
+        path = Path(settings.PROMPTS_DIR) / "learn-system.md"
+        _learn_system = path.read_text(encoding="utf-8")
+    return _learn_system
 
 
-def _load_current_strategy_prompt() -> str:
-    local = Path(__file__).parent.parent.parent / "strategy_prompt.md"
-    if local.exists():
-        return local.read_text(encoding="utf-8")
-    harness = PROMPTS_DIR / "strategy_prompt.md"
-    if harness.exists():
-        return harness.read_text(encoding="utf-8")
-    return "(strategy_prompt.md not found)"
-
-
-async def learn(reason_output: dict) -> dict:
-    """Extract reusable learning points from Reason analysis.
+async def learn(reason_output: dict, current_strategy_prompt: str) -> dict:
+    """Extract learnings from the reason analysis.
 
     Args:
-        reason_output: Dict from R stage with patterns.
+        reason_output: The reason dict from R stage.
+        current_strategy_prompt: Current strategy_prompt.md content.
 
     Returns:
-        Dict with learnings, recommended_prompt_changes, etc.
+        Learnings dict with learnings, recommended_prompt_changes, etc.
     """
-    template = _load_learn_prompt()
-    current_strategy = _load_current_strategy_prompt()
+    system_template = _get_learn_system()
 
-    system_prompt = (
-        template
-        .replace("{reason_output}", json.dumps(reason_output, ensure_ascii=False, indent=2))
-        .replace("{current_strategy_prompt}", current_strategy)
+    # Fill placeholders
+    reason_text = json.dumps(reason_output, ensure_ascii=False, indent=2)
+    system_prompt = system_template.replace(
+        "{reason_output}", reason_text
+    ).replace("{current_strategy_prompt}", current_strategy_prompt)
+
+    user_prompt = (
+        "위 분석 결과를 바탕으로 다음 전략 생성에 활용할 학습 포인트를 추출하세요.\n"
+        "JSON 형식으로 응답하세요."
     )
 
-    user_message = (
-        "Reason 분석 결과에서 재사용 가능한 학습 포인트를 추출하세요.\n"
-        "JSON 형식으로만 응답하세요."
-    )
-
-    response = await call_llm_expensive(
-        system_prompt=system_prompt,
-        user_message=user_message,
+    response = await call_llm(
+        prompt=user_prompt,
+        system=system_prompt,
+        model=settings.expensive_model,
         temperature=0.3,
-        expect_json=True,
     )
 
-    result = json.loads(response) if isinstance(response, str) else response
+    try:
+        parsed = extract_json(response)
+    except ValueError:
+        logger.error("Failed to parse learn response, using empty result")
+        parsed = {}
 
-    # Ensure required keys
-    result.setdefault("learnings", [])
-    result.setdefault("recommended_prompt_changes", [])
+    # Ensure required fields exist
+    result = {
+        "learnings": parsed.get("learnings", []),
+        "recommended_prompt_changes": parsed.get("recommended_prompt_changes", []),
+    }
 
-    logger.info(f"L stage: Extracted {len(result['learnings'])} learnings")
+    # Include optional fields if present
+    for key in ("pattern_updates", "cluster_specific_learnings", "funnel_stage_learnings"):
+        if key in parsed:
+            result[key] = parsed[key]
+
     return result

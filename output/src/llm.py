@@ -1,203 +1,288 @@
-"""Multi-provider LLM client with retry, rate limiting, and dual-key round-robin."""
+"""Async multi-provider LLM client with retry logic and rate limiting."""
+
 import asyncio
 import json
+import logging
 import random
 import re
-import logging
-from typing import Optional
+from typing import Any
 
+import os
+
+import aiohttp
+import anthropic
+import openai
 from google import genai
 from google.genai import types as genai_types
 
+from config.settings import settings
+
 logger = logging.getLogger(__name__)
 
-# Global state
-_clients: list = []
-_client_idx: int = 0
-_semaphore: Optional[asyncio.Semaphore] = None
-_rate_delay: float = 0.05
-_lock = asyncio.Lock() if hasattr(asyncio, 'Lock') else None
+# Global semaphore for concurrency control
+_semaphore: asyncio.Semaphore | None = None
+
+# Gemini key rotation: use 2 keys round-robin to double rate limit
+_gemini_keys: list[str] = []
+_gemini_key_idx: int = 0
+_gemini_key_lock = None  # initialized lazily in event loop
 
 
-def _init_clients():
-    """Initialize genai clients from all available API keys."""
-    global _clients, _rate_delay
-    if _clients:
-        return
-    from config.settings import settings
-    _rate_delay = settings.rate_limit_delay
-    for key in settings.api_keys:
-        _clients.append(genai.Client(api_key=key))
-    if not _clients:
-        raise ValueError("No GEMINI_API_KEY configured")
+def _get_gemini_keys() -> list[str]:
+    """Initialize Gemini API keys from settings."""
+    global _gemini_keys
+    if not _gemini_keys:
+        keys = []
+        k1 = settings.GEMINI_API_KEY
+        if k1:
+            keys.append(k1)
+        k2 = getattr(settings, 'GEMINI_API_KEY_2', '') or os.environ.get('GEMINI_API_KEY_2', '')
+        if k2:
+            keys.append(k2)
+        _gemini_keys = keys if keys else ['']
+    return _gemini_keys
 
 
-def _get_client() -> genai.Client:
-    """Round-robin client selection for rate limit distribution."""
-    global _client_idx
-    _init_clients()
-    client = _clients[_client_idx % len(_clients)]
-    _client_idx += 1
-    return client
+def _next_gemini_key() -> str:
+    """Round-robin select next Gemini API key."""
+    global _gemini_key_idx
+    keys = _get_gemini_keys()
+    key = keys[_gemini_key_idx % len(keys)]
+    _gemini_key_idx += 1
+    return key
 
 
 def _get_semaphore() -> asyncio.Semaphore:
+    """Lazy-init semaphore (must be created inside a running event loop)."""
     global _semaphore
     if _semaphore is None:
-        from config.settings import settings
-        _semaphore = asyncio.Semaphore(settings.max_concurrent)
+        _semaphore = asyncio.Semaphore(settings.concurrent)
     return _semaphore
 
 
-def extract_json(text: str) -> dict | list:
-    """Extract JSON from LLM response (handles ```json blocks, thinking tags, etc)."""
-    text = text.strip()
+def _parse_retry_delay(exc: Exception) -> float:
+    """Extract server-suggested retry delay from error message."""
+    try:
+        err_str = str(exc)
+        # Look for "retry in XX.XXs" pattern
+        match = re.search(r'retry in (\d+(?:\.\d+)?)\s*s', err_str, re.IGNORECASE)
+        if match:
+            return float(match.group(1))
+        # Look for retryDelay field
+        match = re.search(r'"retryDelay"\s*:\s*"(\d+)s"', err_str)
+        if match:
+            return float(match.group(1))
+    except Exception:
+        pass
+    return 0.0
 
-    # Strip thinking tags if present (Gemini 2.5 thinking models)
-    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
 
-    # Direct parse
-    if text.startswith(("{", "[")):
-        try:
-            return json.loads(text)
-        except json.JSONDecodeError:
-            pass
+def _is_retryable(exc: Exception) -> bool:
+    """Check if an exception is retryable (429 or 5xx)."""
+    # google-genai errors
+    if hasattr(exc, "code"):
+        code = getattr(exc, "code", 0)
+        if code == 429 or (isinstance(code, int) and 500 <= code < 600):
+            return True
+    # openai errors
+    if isinstance(exc, openai.RateLimitError):
+        return True
+    if isinstance(exc, openai.APIStatusError) and exc.status_code >= 500:
+        return True
+    # anthropic errors
+    if isinstance(exc, anthropic.RateLimitError):
+        return True
+    if isinstance(exc, anthropic.APIStatusError) and exc.status_code >= 500:
+        return True
+    # aiohttp errors
+    if isinstance(exc, aiohttp.ClientResponseError):
+        if exc.status == 429 or exc.status >= 500:
+            return True
+    # Generic fallback
+    err_str = str(exc).lower()
+    if "429" in err_str or "rate limit" in err_str or "resource exhausted" in err_str:
+        return True
+    return False
 
-    # ```json ... ``` block (greedy to capture full content)
-    m = re.search(r"```(?:json)?\s*\n?(.*?)```", text, re.DOTALL)
-    if m:
-        try:
-            return json.loads(m.group(1).strip())
-        except json.JSONDecodeError:
-            pass
 
-    # Try all ```json blocks (there may be multiple)
-    blocks = re.findall(r"```(?:json)?\s*\n?(.*?)```", text, re.DOTALL)
-    for block in blocks:
-        try:
-            return json.loads(block.strip())
-        except json.JSONDecodeError:
-            continue
+async def _call_gemini(prompt: str, system: str, model: str, temperature: float) -> str:
+    """Call Gemini via google-genai SDK (synchronous, wrapped with to_thread)."""
+    api_key = _next_gemini_key()
+    client = genai.Client(api_key=api_key)
 
-    # Find first JSON object or array using bracket matching
-    for ch, end_ch in [("{", "}"), ("[", "]")]:
-        start = text.find(ch)
-        if start != -1:
-            # Try from start, find matching bracket by counting nesting
-            depth = 0
-            in_string = False
-            escape = False
-            for i in range(start, len(text)):
-                c = text[i]
-                if escape:
-                    escape = False
-                    continue
-                if c == '\\' and in_string:
-                    escape = True
-                    continue
-                if c == '"' and not escape:
-                    in_string = not in_string
-                    continue
-                if not in_string:
-                    if c == ch:
-                        depth += 1
-                    elif c == end_ch:
-                        depth -= 1
-                        if depth == 0:
-                            try:
-                                return json.loads(text[start:i + 1])
-                            except json.JSONDecodeError:
-                                break
+    def _sync_call() -> str:
+        response = client.models.generate_content(
+            model=model,
+            contents=prompt,
+            config=genai_types.GenerateContentConfig(
+                system_instruction=system if system else None,
+                temperature=temperature,
+            ),
+        )
+        return response.text
 
-    # Last resort: try rfind approach
-    for ch, end_ch in [("{", "}"), ("[", "]")]:
-        start = text.find(ch)
-        if start != -1:
-            end = text.rfind(end_ch)
-            if end > start:
-                try:
-                    return json.loads(text[start:end + 1])
-                except json.JSONDecodeError:
-                    pass
+    return await asyncio.to_thread(_sync_call)
 
-    raise ValueError(f"Cannot extract JSON from response: {text[:300]}...")
+async def _call_openai(prompt: str, system: str, model: str, temperature: float) -> str:
+    """Call OpenAI via async client."""
+    client = openai.AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
+    messages = []
+    if system:
+        messages.append({"role": "system", "content": system})
+    messages.append({"role": "user", "content": prompt})
+    response = await client.chat.completions.create(
+        model=model,
+        messages=messages,
+        temperature=temperature,
+    )
+    return response.choices[0].message.content or ""
+
+
+async def _call_anthropic(prompt: str, system: str, model: str, temperature: float) -> str:
+    """Call Anthropic via async client."""
+    client = anthropic.AsyncAnthropic(api_key=settings.ANTHROPIC_API_KEY)
+    kwargs: dict[str, Any] = {
+        "model": model,
+        "max_tokens": 4096,
+        "temperature": temperature,
+        "messages": [{"role": "user", "content": prompt}],
+    }
+    if system:
+        kwargs["system"] = system
+    response = await client.messages.create(**kwargs)
+    return response.content[0].text
+
+
+async def _call_ollama(prompt: str, system: str, model: str, temperature: float) -> str:
+    """Call Ollama via REST API."""
+    url = f"{settings.OLLAMA_BASE_URL}/api/generate"
+    payload: dict[str, Any] = {
+        "model": model,
+        "prompt": prompt,
+        "stream": False,
+        "options": {"temperature": temperature},
+    }
+    if system:
+        payload["system"] = system
+
+    async with aiohttp.ClientSession() as session:
+        async with session.post(url, json=payload) as resp:
+            resp.raise_for_status()
+            data = await resp.json()
+            return data.get("response", "")
 
 
 async def call_llm(
-    system_prompt: str,
-    user_message: str,
-    model: str = None,
+    prompt: str,
+    system: str = "",
+    model: str = "",
     temperature: float = 0.7,
-    max_tokens: int = 4096,
-    expect_json: bool = False,
+    provider: str = "",
 ) -> str:
-    """Call Gemini LLM with retry and rate limiting."""
-    from config.settings import settings
+    """Call an LLM with retry logic, rate limiting, and concurrency control.
 
-    if model is None:
-        model = settings.model_cheap
+    Args:
+        prompt: The user prompt.
+        system: Optional system instruction.
+        model: Model name override (uses settings default if empty).
+        temperature: Sampling temperature.
+        provider: Provider override (uses settings default if empty).
+
+    Returns:
+        The LLM response text.
+    """
+    provider = provider or settings.RALPHTHON_PROVIDER
+    model = model or settings.RALPHTHON_MODEL
+
+    provider_fn = {
+        "gemini": _call_gemini,
+        "openai": _call_openai,
+        "anthropic": _call_anthropic,
+        "ollama": _call_ollama,
+    }
+
+    fn = provider_fn.get(provider)
+    if fn is None:
+        raise ValueError(f"Unknown provider: {provider}. Choose from: {list(provider_fn.keys())}")
 
     sem = _get_semaphore()
 
-    for attempt in range(settings.max_retries + 1):
+    max_retries = 15  # generous retries for rate-limited free tier
+    last_exc = None
+    for attempt in range(max_retries + 1):
+        should_retry = False
         async with sem:
-            await asyncio.sleep(_rate_delay)
+            await asyncio.sleep(settings.RATE_LIMIT_DELAY)
             try:
-                client = _get_client()
-                config_dict = {
-                    "system_instruction": system_prompt,
-                    "temperature": temperature,
-                    "max_output_tokens": max_tokens,
-                }
-                # Disable thinking for models that support it
-                # to avoid contaminated output
-                if "2.5" in model:
-                    config_dict["thinking_config"] = genai_types.ThinkingConfig(
-                        thinking_budget=0,
-                    )
-                response = await asyncio.to_thread(
-                    client.models.generate_content,
-                    model=model,
-                    contents=[
-                        genai_types.Content(
-                            role="user",
-                            parts=[genai_types.Part(text=user_message)]
-                        )
-                    ],
-                    config=genai_types.GenerateContentConfig(**config_dict),
-                )
-
-                text = response.text
-                if not text:
-                    raise ValueError("Empty response from LLM")
-
-                if expect_json:
-                    parsed = extract_json(text)
-                    return json.dumps(parsed, ensure_ascii=False)
-
-                return text
-
-            except Exception as e:
-                err_str = str(e).lower()
-                # Fatal errors — don't retry
-                if any(x in err_str for x in ["401", "403", "404", "invalid api key", "permission", "not found"]):
-                    raise
-
-                if attempt < settings.max_retries:
-                    delay = settings.retry_base_delay * (2 ** attempt) + random.uniform(0, 0.5)
-                    logger.warning(f"LLM call failed (attempt {attempt+1}/{settings.max_retries}), retrying in {delay:.1f}s: {e}")
-                    await asyncio.sleep(delay)
+                result = await fn(prompt, system, model, temperature)
+                return result
+            except Exception as exc:
+                last_exc = exc
+                if attempt < max_retries and _is_retryable(exc):
+                    should_retry = True
                 else:
+                    logger.error("LLM call failed (%s, model=%s): %s", provider, model, str(exc)[:200])
                     raise
+        # Retry OUTSIDE semaphore so other tasks can proceed during our backoff
+        if should_retry:
+            server_delay = _parse_retry_delay(last_exc)
+            base_delay = max(5, (2 ** min(attempt, 5)) + random.uniform(1, 3))
+            delay = min(90, max(base_delay, server_delay))
+            if attempt % 3 == 0:
+                logger.warning(
+                    "Retry %d/%d for %s (model=%s): rate limited — waiting %.0fs",
+                    attempt + 1, max_retries, provider, model, delay,
+                )
+            await asyncio.sleep(delay)
+
+    raise RuntimeError("Exhausted all retries")
 
 
-async def call_llm_cheap(system_prompt: str, user_message: str, **kwargs) -> str:
-    """Call cheap model (for Act stage conversations)."""
-    from config.settings import settings
-    return await call_llm(system_prompt, user_message, model=settings.model_cheap, **kwargs)
+def extract_json(text: str) -> Any:
+    """Extract JSON object or array from LLM response text.
 
+    Looks for the first JSON block (object or array) in the text,
+    handling cases where LLM wraps JSON in markdown code fences.
 
-async def call_llm_expensive(system_prompt: str, user_message: str, **kwargs) -> str:
-    """Call expensive model (for H/E/R/L stages)."""
-    from config.settings import settings
-    return await call_llm(system_prompt, user_message, model=settings.model_expensive, **kwargs)
+    Args:
+        text: Raw LLM response text.
+
+    Returns:
+        Parsed JSON (dict or list).
+
+    Raises:
+        ValueError: If no valid JSON found in text.
+    """
+    if not text:
+        raise ValueError("Empty text, no JSON to extract")
+
+    # Try to parse the whole text first
+    text_stripped = text.strip()
+    if text_stripped.startswith(("{", "[")):
+        try:
+            return json.loads(text_stripped)
+        except json.JSONDecodeError:
+            pass
+
+    # Try to find JSON in code fences
+    fence_pattern = re.compile(r"```(?:json)?\s*\n?([\s\S]*?)```", re.MULTILINE)
+    for match in fence_pattern.finditer(text):
+        try:
+            return json.loads(match.group(1).strip())
+        except json.JSONDecodeError:
+            continue
+
+    # Try to find JSON object or array with regex
+    # Match outermost { ... } or [ ... ]
+    for pattern in [
+        re.compile(r"\{[\s\S]*\}", re.MULTILINE),
+        re.compile(r"\[[\s\S]*\]", re.MULTILINE),
+    ]:
+        match = pattern.search(text)
+        if match:
+            try:
+                return json.loads(match.group(0))
+            except json.JSONDecodeError:
+                continue
+
+    raise ValueError(f"No valid JSON found in text: {text[:200]}...")

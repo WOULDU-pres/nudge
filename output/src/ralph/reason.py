@@ -1,93 +1,132 @@
-"""R (Reason) — Pattern analysis comparing top vs bottom conversations."""
+"""R(Reason) stage: Analyze patterns from evaluation results."""
+
 import json
 import logging
 from pathlib import Path
 
-from src.llm import call_llm_expensive
-from src.evaluation.schema import EvaluationResult
-from src.evaluation.aggregator import get_top_bottom_results
-from src.conversation.turn import ConversationSession
+from config.settings import settings
+from src.llm import call_llm, extract_json
 
 logger = logging.getLogger(__name__)
 
-PROMPTS_DIR = Path(__file__).parent.parent.parent.parent / "harness" / "prompts"
+_reason_system: str | None = None
 
 
-def _load_reason_prompt() -> str:
-    path = PROMPTS_DIR / "reason-system.md"
-    if not path.exists():
-        raise FileNotFoundError(f"Reason prompt not found: {path}")
-    return path.read_text(encoding="utf-8")
+def _get_reason_system() -> str:
+    """Load reason-system.md template from PROMPTS_DIR."""
+    global _reason_system
+    if _reason_system is None:
+        path = Path(settings.PROMPTS_DIR) / "reason-system.md"
+        _reason_system = path.read_text(encoding="utf-8")
+    return _reason_system
 
 
-def _format_conversations(
-    results: list[EvaluationResult],
-    sessions: list[ConversationSession],
-    label: str,
-) -> str:
-    """Format evaluation results + transcripts for the Reason prompt."""
-    session_map = {s.session_id: s for s in sessions}
-    lines = []
-
-    for r in results:
-        session = session_map.get(r.session_id)
-        lines.append(f"### {r.session_id} (total={r.scores.total}, outcome={r.outcome.value}, funnel={r.funnel_progress})")
-        lines.append(f"- strategy: {r.strategy_id}")
-        lines.append(f"- persona: {r.persona_id}")
-        lines.append(f"- scores: engagement={r.scores.engagement}, relevance={r.scores.relevance}, persuasion={r.scores.persuasion}, purchase_intent={r.scores.purchase_intent}")
-        lines.append(f"- objection_handling: {r.objection_handling.value}")
-        lines.append(f"- tone_match: {r.tone_match}")
-        if session:
-            lines.append(f"- transcript:\n{session.transcript()}")
-        lines.append("")
-
+def _format_conversation_summary(session: dict, evaluation: dict) -> str:
+    """Format a conversation + evaluation for analysis."""
+    lines = [
+        f"### Session: {session.get('session_id', 'unknown')}",
+        f"- Strategy: {session.get('strategy_id', 'unknown')}",
+        f"- Persona: {session.get('persona_id', 'unknown')}",
+        f"- Score: {evaluation['scores']['total']}",
+        f"- Outcome: {evaluation.get('outcome', 'unknown')}",
+        f"- Reason: {evaluation.get('reason', 'N/A')}",
+        "",
+        "**대화:**",
+    ]
+    for turn in session.get("turns", []):
+        role = turn.get("role", "unknown")
+        content = turn.get("content", "")
+        label = "세일즈" if role == "agent" else "고객"
+        lines.append(f"[{label}] {content}")
     return "\n".join(lines)
 
 
-async def reason(
-    eval_results: list[EvaluationResult],
-    sessions: list[ConversationSession],
-    top_n: int = 5,
-) -> dict:
-    """Analyze patterns by comparing top and bottom conversations.
+async def reason(evaluations: list[dict], sessions: list[dict]) -> dict:
+    """Analyze evaluation results to find winning and losing patterns.
+
+    Selects top 5 and bottom 5 evaluations by score and builds
+    a comparative analysis.
 
     Args:
-        eval_results: All evaluation results from E stage.
-        sessions: All conversation sessions from A stage.
-        top_n: Number of top/bottom conversations to compare.
+        evaluations: List of evaluation result dicts.
+        sessions: List of conversation session dicts.
 
     Returns:
-        Dict with winning_patterns, losing_patterns, cluster_insights, etc.
+        Reason dict with winning_patterns, losing_patterns, cluster_insights, etc.
     """
-    top, bottom = get_top_bottom_results(eval_results, n=top_n)
+    # Filter out error evaluations
+    valid_evals = [e for e in evaluations if e.get("outcome") != "error"]
 
-    template = _load_reason_prompt()
-    top_text = _format_conversations(top, sessions, "TOP")
-    bottom_text = _format_conversations(bottom, sessions, "BOTTOM")
+    if not valid_evals:
+        return {
+            "winning_patterns": [],
+            "losing_patterns": [],
+            "cluster_insights": {},
+        }
 
-    system_prompt = template.replace("{top_conversations}", top_text).replace("{bottom_conversations}", bottom_text)
-
-    user_message = (
-        "위 상위/하위 대화를 비교 분석하세요.\n"
-        "JSON 형식으로만 응답하세요."
+    # Sort by total score
+    sorted_evals = sorted(
+        valid_evals, key=lambda e: e["scores"]["total"], reverse=True
     )
 
-    response = await call_llm_expensive(
-        system_prompt=system_prompt,
-        user_message=user_message,
+    top_evals = sorted_evals[:5]
+    bottom_evals = sorted_evals[-5:]
+
+    # Build session lookup
+    session_map = {s.get("session_id", ""): s for s in sessions}
+
+    # Format top conversations
+    top_texts = []
+    for e in top_evals:
+        session = session_map.get(e["session_id"], {})
+        top_texts.append(_format_conversation_summary(session, e))
+
+    # Format bottom conversations
+    bottom_texts = []
+    for e in bottom_evals:
+        session = session_map.get(e["session_id"], {})
+        bottom_texts.append(_format_conversation_summary(session, e))
+
+    # Build prompt with placeholders filled
+    system_template = _get_reason_system()
+    system_prompt = system_template.replace(
+        "{top_conversations}", "\n\n".join(top_texts)
+    ).replace("{bottom_conversations}", "\n\n".join(bottom_texts))
+
+    user_prompt = (
+        f"총 {len(valid_evals)}개 대화를 분석합니다.\n"
+        f"평균 점수: {sum(e['scores']['total'] for e in valid_evals) / len(valid_evals):.1f}\n"
+        f"상위 5개와 하위 5개 대화의 패턴을 비교 분석하여 JSON으로 응답하세요."
+    )
+
+    response = await call_llm(
+        prompt=user_prompt,
+        system=system_prompt,
+        model=settings.expensive_model,
         temperature=0.3,
-        expect_json=True,
     )
 
-    result = json.loads(response) if isinstance(response, str) else response
+    try:
+        parsed = extract_json(response)
+    except ValueError:
+        logger.error("Failed to parse reason response, using empty result")
+        parsed = {}
 
-    # Ensure required keys
-    result.setdefault("winning_patterns", [])
-    result.setdefault("losing_patterns", [])
-    result.setdefault("cluster_insights", {})
+    # Ensure required fields exist
+    result = {
+        "winning_patterns": parsed.get("winning_patterns", []),
+        "losing_patterns": parsed.get("losing_patterns", []),
+        "cluster_insights": parsed.get("cluster_insights", {}),
+    }
 
-    logger.info(
-        f"R stage: Found {len(result['winning_patterns'])} winning, "
-        f"{len(result['losing_patterns'])} losing patterns"
-    )
+    # Include optional analysis fields if present
+    for key in (
+        "objection_handling_analysis",
+        "tone_matching_analysis",
+        "funnel_analysis",
+        "technique_effectiveness",
+    ):
+        if key in parsed:
+            result[key] = parsed[key]
+
     return result

@@ -1,28 +1,32 @@
-"""P (Plan) — Select personas for this run. Pure code, no LLM."""
-import logging
-from pathlib import Path
+"""P(Plan) stage: Plan all conversation pairs."""
 
-from src.personas.loader import load_personas
-from src.personas.schema import Persona
+import logging
 
 logger = logging.getLogger(__name__)
 
 
-def plan_personas(count: int = 50) -> list[Persona]:
-    """Select personas for this simulation run.
+def plan_conversations(
+    strategies: list[dict], personas: list
+) -> list[tuple]:
+    """Generate all (strategy, persona) pairs to simulate.
 
     Args:
-        count: Number of personas to load (DEV=10, TEST=50, DEMO=200).
+        strategies: List of strategy dicts.
+        personas: List of Persona objects.
 
     Returns:
-        List of Persona objects sorted by ID.
+        List of (strategy, persona) tuples.
+        Total pairs = len(strategies) * len(personas).
     """
-    from config.settings import settings
+    pairs = []
+    for strategy in strategies:
+        for persona in personas:
+            pairs.append((strategy, persona))
 
-    personas = load_personas(settings.personas_dir, count=count)
-    logger.info(f"P stage: Selected {len(personas)} personas from {settings.personas_dir}")
-
-    if not personas:
-        raise ValueError(f"No personas found in {settings.personas_dir}")
-
-    return personas
+    logger.info(
+        "Planned %d conversations (%d strategies x %d personas)",
+        len(pairs),
+        len(strategies),
+        len(personas),
+    )
+    return pairs

@@ -1,201 +1,258 @@
-"""RALPH Loop — H -> P -> A -> E -> R -> L orchestration."""
+"""RALPH Loop orchestrator: H -> P -> A -> E -> R -> L cycle."""
+
+import asyncio
 import json
 import logging
-import os
-from datetime import datetime, timezone
+import time
 from pathlib import Path
 
+import yaml
+
+from config.settings import settings
+from src.personas.loader import load_personas, get_cluster_map
+from src.evaluation.aggregator import aggregate_results
 from src.ralph.hypothesize import hypothesize
-from src.ralph.plan import plan_personas
-from src.ralph.act import act
-from src.ralph.evaluate import evaluate
+from src.ralph.plan import plan_conversations
+from src.ralph.act import act_all
+from src.ralph.evaluate_stage import evaluate_all
 from src.ralph.reason import reason
 from src.ralph.learn import learn
-from src.evaluation.aggregator import (
-    aggregate_results,
-    compute_strategy_scores,
-    compute_strategy_cluster_matrix,
-    compute_funnel_distribution,
-)
 
 logger = logging.getLogger(__name__)
 
-
-def _save_run_artifacts(
-    run_dir: Path,
-    strategies: list[dict],
-    sessions: list,
-    eval_results: list,
-    reason_output: dict,
-    learn_output: dict,
-    summary: dict,
-):
-    """Save all RALPH artifacts to runs/<run_id>/."""
-    run_dir.mkdir(parents=True, exist_ok=True)
-
-    # strategies.json
-    with open(run_dir / "strategies.json", "w", encoding="utf-8") as f:
-        json.dump(strategies, f, ensure_ascii=False, indent=2)
-
-    # evaluations.json
-    evals_data = [r.model_dump() for r in eval_results]
-    # Convert enums to strings
-    for e in evals_data:
-        if hasattr(e.get("outcome", ""), "value"):
-            e["outcome"] = e["outcome"].value
-        if "scores" in e and hasattr(e["scores"], "items"):
-            pass  # already dict from model_dump
-        if hasattr(e.get("objection_handling", ""), "value"):
-            e["objection_handling"] = e["objection_handling"].value
-    with open(run_dir / "evaluations.json", "w", encoding="utf-8") as f:
-        json.dump(evals_data, f, ensure_ascii=False, indent=2)
-
-    # transcripts/<strategy_id>/<persona_id>.json
-    transcripts_dir = run_dir / "transcripts"
-    for session in sessions:
-        strat_dir = transcripts_dir / session.strategy_id
-        strat_dir.mkdir(parents=True, exist_ok=True)
-        session_data = session.model_dump()
-        # Convert enums
-        for t in session_data.get("turns", []):
-            if hasattr(t.get("role", ""), "value"):
-                t["role"] = t["role"].value
-        if hasattr(session_data.get("ended_by", ""), "value"):
-            session_data["ended_by"] = session_data["ended_by"].value
-        with open(strat_dir / f"{session.persona_id}.json", "w", encoding="utf-8") as f:
-            json.dump(session_data, f, ensure_ascii=False, indent=2)
-
-    # reason.json
-    with open(run_dir / "reason.json", "w", encoding="utf-8") as f:
-        json.dump(reason_output, f, ensure_ascii=False, indent=2)
-
-    # learnings.json
-    with open(run_dir / "learnings.json", "w", encoding="utf-8") as f:
-        json.dump(learn_output, f, ensure_ascii=False, indent=2)
-
-    # summary.json
-    with open(run_dir / "summary.json", "w", encoding="utf-8") as f:
-        json.dump(summary, f, ensure_ascii=False, indent=2)
+# Try to use rich for progress output
+try:
+    from rich.console import Console
+    from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
+    _console = Console()
+    _has_rich = True
+except ImportError:
+    _console = None
+    _has_rich = False
 
 
-async def run_ralph_loop(
-    product_brief: str,
-    persona_count: int = 50,
-    num_strategies: int = 3,
-    max_round_trips: int = 3,
-    max_concurrent: int = 20,
-    previous_learnings: dict | None = None,
-    strategy_ledger: dict | None = None,
-    run_id: str | None = None,
-) -> dict:
-    """Execute one full RALPH cycle: H -> P -> A -> E -> R -> L.
+def _print(msg: str):
+    """Print with rich if available, else plain print."""
+    if _has_rich and _console:
+        _console.print(msg)
+    else:
+        print(msg)
+
+
+def _load_product(product_path: str = "config/product.yaml") -> dict:
+    """Load product info from a YAML config path."""
+    path = Path(product_path)
+    with open(path, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
+
+def _load_strategy_ledger() -> dict | None:
+    """Load strategy ledger if it exists."""
+    path = Path("strategy_ledger.json")
+    if path.exists():
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except (json.JSONDecodeError, OSError) as exc:
+            logger.warning("Failed to load strategy_ledger.json: %s", exc)
+    return None
+
+
+def _load_strategy_prompt() -> str:
+    """Load current strategy_prompt.md."""
+    # Try local copy first
+    local_path = Path("strategy_prompt.md")
+    if local_path.exists():
+        return local_path.read_text(encoding="utf-8")
+    # Fallback to prompts dir
+    path = Path(settings.PROMPTS_DIR) / "strategy_prompt.md"
+    return path.read_text(encoding="utf-8")
+
+
+def _save_json(path: Path, data):
+    """Save data as JSON to path."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+async def run_ralph_loop(run_id: str = None, product_path: str = "config/product.yaml") -> dict:
+    """Orchestrate full H->P->A->E->R->L cycle for RALPH_ITERATIONS rounds.
+
+    Each iteration feeds the previous learnings into the next Hypothesize step,
+    creating an inner self-improvement loop within a single simulation run.
 
     Args:
-        product_brief: Product information text.
-        persona_count: Number of personas to use.
-        num_strategies: Number of strategies to generate.
-        max_round_trips: Conversation turns.
-        max_concurrent: Max parallel LLM calls.
-        previous_learnings: Learnings from previous cycle.
-        strategy_ledger: Strategy history ledger.
-        run_id: Optional run identifier.
+        run_id: Optional run ID. Auto-generated if not provided.
 
     Returns:
-        Dict matching ralph-iteration.schema.json with all results.
+        Summary dict from the final iteration with run_id and all results.
     """
-    from config.settings import settings
-
     if run_id is None:
-        run_id = datetime.now(timezone.utc).strftime("run-%Y%m%d-%H%M%S")
+        run_id = f"run_{int(time.time())}"
 
-    output_dir = settings.output_dir
-    run_dir = output_dir / "runs" / run_id
+    run_dir = Path("runs") / run_id
+    run_dir.mkdir(parents=True, exist_ok=True)
 
-    logger.info(f"=== RALPH Loop Start: {run_id} ===")
-    logger.info(f"Personas: {persona_count}, Strategies: {num_strategies}, Turns: {max_round_trips}")
+    max_iters = settings.RALPH_ITERATIONS
+    _print(f"[bold cyan]RALPH Loop starting: {run_id} ({max_iters} iterations)[/bold cyan]"
+           if _has_rich else f"=== RALPH Loop starting: {run_id} ({max_iters} iterations) ===")
 
-    # H — Hypothesize
-    logger.info("--- H (Hypothesize) ---")
-    strategies = await hypothesize(
-        product_brief=product_brief,
-        num_strategies=num_strategies,
-        previous_learnings=previous_learnings,
-        strategy_ledger=strategy_ledger,
-    )
-    logger.info(f"Generated {len(strategies)} strategies")
+    # Load inputs
+    product = _load_product(product_path)
+    strategy_ledger = _load_strategy_ledger()
+    strategy_prompt_text = _load_strategy_prompt()
 
-    # P — Plan
-    logger.info("--- P (Plan) ---")
-    personas = plan_personas(count=persona_count)
-    logger.info(f"Selected {len(personas)} personas")
+    # Load personas
+    _print("[bold]Loading personas...[/bold]" if _has_rich else "Loading personas...")
+    personas = load_personas(settings.PERSONAS_DIR, settings.RALPHTHON_MODE)
+    _print(f"  Loaded {len(personas)} personas (mode={settings.RALPHTHON_MODE})")
 
-    # A — Act
-    logger.info("--- A (Act) ---")
-    sessions = await act(
-        strategies=strategies,
-        personas=personas,
-        product_brief=product_brief,
-        max_round_trips=max_round_trips,
-        max_concurrent=max_concurrent,
-    )
-    logger.info(f"Completed {len(sessions)} conversations")
+    cluster_map = get_cluster_map(personas)
+    _print(f"  Found {len(cluster_map)} clusters")
 
-    # E — Evaluate
-    logger.info("--- E (Evaluate) ---")
-    eval_results = await evaluate(
-        sessions=sessions,
-        personas=personas,
-        max_concurrent=max_concurrent,
-    )
-    logger.info(f"Evaluated {len(eval_results)} conversations")
+    # Create semaphore for concurrency control
+    semaphore = asyncio.Semaphore(settings.concurrent)
 
-    # Aggregate results
-    summary = aggregate_results(eval_results, personas)
+    # State carried across iterations
+    prev_learnings = None
+    summary = None
 
-    # R — Reason
-    logger.info("--- R (Reason) ---")
-    reason_output = await reason(
-        eval_results=eval_results,
-        sessions=sessions,
-        top_n=min(5, len(eval_results) // 2 or 1),
-    )
+    for iteration in range(1, max_iters + 1):
+        iter_tag = f"[{iteration}/{max_iters}]"
+        _print("")
+        _print(f"[bold cyan]{'='*60}[/bold cyan]" if _has_rich else "=" * 60)
+        _print(f"[bold cyan]RALPH Iteration {iter_tag}[/bold cyan]"
+               if _has_rich else f"RALPH Iteration {iter_tag}")
+        _print(f"[bold cyan]{'='*60}[/bold cyan]" if _has_rich else "=" * 60)
 
-    # L — Learn
-    logger.info("--- L (Learn) ---")
-    learn_output = await learn(reason_output=reason_output)
+        iter_dir = run_dir / f"iter_{iteration}"
+        iter_dir.mkdir(parents=True, exist_ok=True)
 
-    # Add extra summary fields
-    summary["strategy_scores"] = compute_strategy_scores(eval_results)
-    summary["strategy_cluster_matrix"] = compute_strategy_cluster_matrix(eval_results, personas)
-    summary["funnel_distribution"] = compute_funnel_distribution(eval_results)
+        # === H: Hypothesize ===
+        _print(f"{iter_tag} [bold green]H: Generating strategies...[/bold green]"
+               if _has_rich else f"{iter_tag} H: Generating strategies...")
+        strategies = await hypothesize(
+            product=product,
+            strategy_ledger=strategy_ledger,
+            learnings=prev_learnings,
+            num_strategies=settings.STRATEGIES_PER_RUN,
+        )
+        _print(f"  Generated {len(strategies)} strategies: {[s['strategy_id'] for s in strategies]}")
+        _save_json(iter_dir / "strategies.json", strategies)
 
-    # Save artifacts
-    logger.info(f"Saving artifacts to {run_dir}")
-    _save_run_artifacts(
-        run_dir=run_dir,
-        strategies=strategies,
-        sessions=sessions,
-        eval_results=eval_results,
-        reason_output=reason_output,
-        learn_output=learn_output,
-        summary=summary,
-    )
+        # === P: Plan ===
+        _print(f"{iter_tag} [bold green]P: Planning conversations...[/bold green]"
+               if _has_rich else f"{iter_tag} P: Planning conversations...")
+        pairs = plan_conversations(strategies, personas)
+        _print(f"  Planned {len(pairs)} conversations")
 
-    # Build full iteration result
-    iteration_result = {
-        "iteration_id": 0,
-        "run_id": run_id,
-        "strategies": strategies,
-        "evaluations": [r.to_schema_dict() for r in eval_results],
-        "reason": reason_output,
-        "learnings": learn_output,
-        "summary": summary,
-    }
+        # === A: Act ===
+        _print(f"{iter_tag} [bold green]A: Running conversations...[/bold green]"
+               if _has_rich else f"{iter_tag} A: Running conversations...")
+        t_start = time.time()
+        sessions = await act_all(pairs, product, settings.MAX_TURNS, semaphore)
+        t_elapsed = time.time() - t_start
+        _print(f"  Completed {len(sessions)} conversations in {t_elapsed:.1f}s")
 
-    # Print grep-able output
-    print(f"avg_score: {summary['avg_score']}")
-    print(f"cluster_coverage: {summary['cluster_coverage']}")
-    print(f"best_strategy: {summary['best_strategy']}")
+        # Save transcripts per strategy per persona
+        transcripts_dir = iter_dir / "transcripts"
+        for session in sessions:
+            sid = session.get("strategy_id", "unknown")
+            pid = session.get("persona_id", "unknown")
+            transcript_path = transcripts_dir / sid / f"{pid}.json"
+            _save_json(transcript_path, session)
 
-    logger.info(f"=== RALPH Loop Complete: avg={summary['avg_score']}, coverage={summary['cluster_coverage']}% ===")
-    return iteration_result
+        # === E: Evaluate ===
+        _print(f"{iter_tag} [bold green]E: Evaluating conversations...[/bold green]"
+               if _has_rich else f"{iter_tag} E: Evaluating conversations...")
+        t_start = time.time()
+        evaluations = await evaluate_all(sessions, strategies, semaphore)
+        t_elapsed = time.time() - t_start
+        _print(f"  Evaluated {len(evaluations)} conversations in {t_elapsed:.1f}s")
+        _save_json(iter_dir / "evaluations.json", evaluations)
+
+        # === R: Reason ===
+        _print(f"{iter_tag} [bold green]R: Reasoning about results...[/bold green]"
+               if _has_rich else f"{iter_tag} R: Reasoning about results...")
+        reason_output = await reason(evaluations, sessions)
+        _save_json(iter_dir / "reason.json", reason_output)
+        _print(f"  Found {len(reason_output.get('winning_patterns', []))} winning patterns, "
+               f"{len(reason_output.get('losing_patterns', []))} losing patterns")
+
+        # === L: Learn ===
+        _print(f"{iter_tag} [bold green]L: Extracting learnings...[/bold green]"
+               if _has_rich else f"{iter_tag} L: Extracting learnings...")
+        learnings_output = await learn(reason_output, strategy_prompt_text)
+        _save_json(iter_dir / "learnings.json", learnings_output)
+        _print(f"  Extracted {len(learnings_output.get('learnings', []))} learning points")
+
+        # === Aggregate ===
+        _print(f"{iter_tag} [bold green]Aggregating results...[/bold green]"
+               if _has_rich else f"{iter_tag} Aggregating results...")
+        summary = aggregate_results(evaluations, personas, strategies)
+        summary["run_id"] = run_id
+        summary["iteration"] = iteration
+
+        iteration_result = {
+            "iteration_id": iteration,
+            "run_id": run_id,
+            "strategies": strategies,
+            "evaluations": evaluations,
+            "reason": reason_output,
+            "learnings": learnings_output,
+            "summary": summary,
+        }
+        _save_json(iter_dir / "summary.json", iteration_result)
+
+        # Print iteration result
+        _print(f"  {iter_tag} avg_score={summary['avg_score']}, "
+               f"cluster_coverage={summary['cluster_coverage']}%, "
+               f"best={summary['best_strategy']}")
+
+        # Carry learnings to next iteration
+        prev_learnings = learnings_output
+
+    # === Final output (from last iteration) ===
+    # Also save top-level summary for the whole run
+    _save_json(run_dir / "summary.json", iteration_result)
+
+    # Symlink/copy final transcripts & evaluations to run root for dashboard compat
+    import shutil
+    for name in ["strategies.json", "evaluations.json", "reason.json", "learnings.json"]:
+        src = iter_dir / name
+        dst = run_dir / name
+        if src.exists() and not dst.exists():
+            shutil.copy2(src, dst)
+    final_transcripts = run_dir / "transcripts"
+    if not final_transcripts.exists() and (iter_dir / "transcripts").exists():
+        shutil.copytree(iter_dir / "transcripts", final_transcripts)
+
+    # Print grep-friendly output
+    print(f"avg_score:{summary['avg_score']}")
+    print(f"cluster_coverage:{summary['cluster_coverage']}")
+    print(f"best_strategy:{summary['best_strategy']}")
+
+    _print("")
+    if _has_rich:
+        _print(f"[bold green]✓ RALPH Loop complete: {run_id} ({max_iters} iterations)[/bold green]")
+        _print(f"  avg_score: [bold]{summary['avg_score']}[/bold]")
+        _print(f"  cluster_coverage: [bold]{summary['cluster_coverage']}%[/bold]")
+        _print(f"  best_strategy: [bold]{summary['best_strategy']}[/bold]")
+        if summary.get("cluster_scores"):
+            _print("  cluster_scores:")
+            for cluster, score in sorted(summary["cluster_scores"].items()):
+                _print(f"    {cluster}: {score}")
+        if summary.get("outcome_distribution"):
+            _print("  outcomes:")
+            for outcome, count in sorted(summary["outcome_distribution"].items()):
+                _print(f"    {outcome}: {count}")
+    else:
+        print(f"=== RALPH Loop complete: {run_id} ({max_iters} iterations) ===")
+        print(f"  avg_score: {summary['avg_score']}")
+        print(f"  cluster_coverage: {summary['cluster_coverage']}%")
+        print(f"  best_strategy: {summary['best_strategy']}")
+
+    _print(f"\nResults saved to: {run_dir}/")
+
+    return summary

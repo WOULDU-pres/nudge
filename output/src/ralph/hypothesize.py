@@ -1,135 +1,203 @@
-"""H (Hypothesize) — Generate persuasion strategies via LLM."""
+"""H(Hypothesize) stage: Generate new sales strategies via LLM."""
+
 import json
 import logging
 from pathlib import Path
 
-from src.llm import call_llm_expensive, extract_json
+from config.settings import settings
+from src.llm import call_llm, extract_json
 
 logger = logging.getLogger(__name__)
 
-PROMPTS_DIR = Path(__file__).parent.parent.parent.parent / "harness" / "prompts"
+# Cache loaded templates
+_strategy_prompt: str | None = None
+_hypothesize_system: str | None = None
 
 
-def _load_strategy_prompt() -> str:
-    """Load strategy_prompt.md from output directory."""
-    # First try output/strategy_prompt.md (autoresearch may modify this)
-    local_path = Path(__file__).parent.parent.parent / "strategy_prompt.md"
-    if local_path.exists():
-        return local_path.read_text(encoding="utf-8")
-    # Fallback to harness version
-    harness_path = PROMPTS_DIR / "strategy_prompt.md"
-    if harness_path.exists():
-        return harness_path.read_text(encoding="utf-8")
-    raise FileNotFoundError("strategy_prompt.md not found")
+def _get_strategy_prompt() -> str:
+    """Load strategy_prompt.md from output/ directory (runtime copy)."""
+    global _strategy_prompt
+    if _strategy_prompt is None:
+        # First try output/strategy_prompt.md (runtime copy)
+        local_path = Path("strategy_prompt.md")
+        if local_path.exists():
+            _strategy_prompt = local_path.read_text(encoding="utf-8")
+        else:
+            # Fallback to prompts dir
+            path = Path(settings.PROMPTS_DIR) / "strategy_prompt.md"
+            _strategy_prompt = path.read_text(encoding="utf-8")
+    return _strategy_prompt
 
 
-def _load_hypothesize_prompt() -> str:
-    """Load hypothesize-system.md template."""
-    path = PROMPTS_DIR / "hypothesize-system.md"
-    if not path.exists():
-        return ""
-    return path.read_text(encoding="utf-8")
+def _get_hypothesize_system() -> str:
+    """Load hypothesize-system.md template from PROMPTS_DIR."""
+    global _hypothesize_system
+    if _hypothesize_system is None:
+        path = Path(settings.PROMPTS_DIR) / "hypothesize-system.md"
+        _hypothesize_system = path.read_text(encoding="utf-8")
+    return _hypothesize_system
 
 
-def _build_hypothesize_context(
-    product_brief: str,
-    previous_learnings: dict | None = None,
-    strategy_ledger: dict | None = None,
-) -> str:
-    """Build the user message for H stage."""
-    lines = []
+def _fill_ledger_placeholders(template: str, ledger: dict | None) -> str:
+    """Replace {ledger.*} and {previous_learnings} placeholders in the template."""
+    if ledger is None:
+        ledger = {}
 
-    lines.append("## 제품 정보")
-    lines.append(product_brief)
-    lines.append("")
+    replacements = {
+        "{ledger.never_repeat}": json.dumps(
+            ledger.get("never_repeat", []), ensure_ascii=False, indent=2
+        ),
+        "{ledger.proven_effective}": json.dumps(
+            ledger.get("proven_effective", []), ensure_ascii=False, indent=2
+        ),
+        "{ledger.best_score_ever}": str(ledger.get("best_score_ever", "N/A")),
+        "{ledger.best_strategy_ever.generation}": str(
+            ledger.get("best_strategy_ever", {}).get("generation", "N/A")
+        ),
+        "{ledger.recent_3_generations}": json.dumps(
+            ledger.get("recent_3_generations", []), ensure_ascii=False, indent=2
+        ),
+        "{ledger.past_summary}": str(ledger.get("past_summary", "No past data available.")),
+    }
 
-    if strategy_ledger:
-        ci = strategy_ledger.get("cumulative_insights", {})
-        lines.append("## 이전 세대 결과")
-        if ci.get("never_repeat"):
-            lines.append("### 절대 반복 금지")
-            for p in ci["never_repeat"]:
-                lines.append(f"- {p}")
-        if ci.get("proven_effective"):
-            lines.append("### 검증된 성공 패턴")
-            for p in ci["proven_effective"]:
-                lines.append(f"- {p}")
-        lines.append(f"### 역대 최고: {ci.get('best_score_ever', 0)}점")
-        lines.append("")
+    for placeholder, value in replacements.items():
+        template = template.replace(placeholder, value)
 
-    if previous_learnings:
-        lines.append("## 직전 학습 결과")
-        for l in previous_learnings.get("learnings", []):
-            lines.append(f"- {l}")
-        lines.append("")
-
-    return "\n".join(lines)
+    return template
 
 
 async def hypothesize(
-    product_brief: str,
-    num_strategies: int = 3,
-    previous_learnings: dict | None = None,
+    product: dict,
     strategy_ledger: dict | None = None,
+    learnings: dict | None = None,
+    num_strategies: int = 3,
 ) -> list[dict]:
-    """Generate N persuasion strategies using the expensive LLM.
+    """Generate new strategy hypotheses using LLM.
+
+    Args:
+        product: Product information dict (from product.yaml).
+        strategy_ledger: Optional strategy ledger with history.
+        learnings: Optional previous learnings dict.
+        num_strategies: Number of strategies to generate.
 
     Returns:
-        List of strategy dicts conforming to strategy.schema.json.
+        List of strategy dicts matching strategy schema.
     """
-    strategy_prompt = _load_strategy_prompt()
-    hypothesize_template = _load_hypothesize_prompt()
+    strategy_prompt = _get_strategy_prompt()
+    hypothesize_system = _get_hypothesize_system()
 
-    # Build system prompt: strategy_prompt is the main, hypothesize adds context
-    if hypothesize_template and (strategy_ledger or previous_learnings):
-        # Fill in ledger placeholders
-        hyp = hypothesize_template
-        if strategy_ledger:
-            ci = strategy_ledger.get("cumulative_insights", {})
-            hyp = hyp.replace("{ledger.never_repeat}", "\n".join(ci.get("never_repeat", ["없음"])))
-            hyp = hyp.replace("{ledger.proven_effective}", "\n".join(ci.get("proven_effective", ["없음"])))
-            hyp = hyp.replace("{ledger.best_score_ever}", str(ci.get("best_score_ever", 0)))
-            hyp = hyp.replace("{ledger.best_strategy_ever.generation}", str(ci.get("best_strategy_ever", {}).get("generation", 0)))
-            hyp = hyp.replace("{ledger.recent_3_generations}", "없음")
-            hyp = hyp.replace("{ledger.past_summary}", "없음")
-        else:
-            hyp = hyp.replace("{ledger.never_repeat}", "없음")
-            hyp = hyp.replace("{ledger.proven_effective}", "없음")
-            hyp = hyp.replace("{ledger.best_score_ever}", "0")
-            hyp = hyp.replace("{ledger.best_strategy_ever.generation}", "0")
-            hyp = hyp.replace("{ledger.recent_3_generations}", "없음")
-            hyp = hyp.replace("{ledger.past_summary}", "없음")
+    # Fill ledger placeholders in hypothesize system prompt
+    hypothesize_filled = _fill_ledger_placeholders(hypothesize_system, strategy_ledger)
 
-        if previous_learnings:
-            hyp = hyp.replace("{previous_learnings}", json.dumps(previous_learnings, ensure_ascii=False, indent=2))
-        else:
-            hyp = hyp.replace("{previous_learnings}", "없음")
+    # Fill {previous_learnings} placeholder
+    learnings_text = "No previous learnings available."
+    if learnings:
+        learnings_text = json.dumps(learnings, ensure_ascii=False, indent=2)
+    hypothesize_filled = hypothesize_filled.replace("{previous_learnings}", learnings_text)
 
-        system_prompt = strategy_prompt + "\n\n---\n\n" + hyp
-    else:
-        system_prompt = strategy_prompt
+    # Combine system prompts
+    system_prompt = strategy_prompt + "\n\n---\n\n" + hypothesize_filled
 
-    user_message = _build_hypothesize_context(product_brief, previous_learnings, strategy_ledger)
-    user_message += f"\n\n{num_strategies}개의 서로 다른 전략을 생성하세요. JSON 배열로만 반환하세요."
-
-    response = await call_llm_expensive(
-        system_prompt=system_prompt,
-        user_message=user_message,
-        temperature=0.9,
-        max_tokens=8192,
-        expect_json=True,
+    # Build user prompt with product info and request
+    product_brief = json.dumps(product, ensure_ascii=False, indent=2)
+    user_prompt = (
+        f"## 제품 정보\n{product_brief}\n\n"
+        f"## 요청\n"
+        f"{num_strategies}개의 서로 다른 설득 전략을 JSON 배열로 생성하세요.\n"
+        f"각 전략은 strategy_id, hypothesis, funnel (attention/interest/desire/action), tone 필드를 반드시 포함해야 합니다.\n"
+        f"JSON 배열만 반환하세요."
     )
 
-    strategies = json.loads(response) if isinstance(response, str) else response
+    response = await call_llm(
+        prompt=user_prompt,
+        system=system_prompt,
+        model=settings.expensive_model,
+        temperature=0.8,
+    )
+
+    parsed = extract_json(response)
 
     # Ensure it's a list
-    if isinstance(strategies, dict):
-        strategies = [strategies]
+    if isinstance(parsed, dict):
+        parsed = [parsed]
 
-    # Validate and ensure strategy_id
-    for i, s in enumerate(strategies):
-        if "strategy_id" not in s or not s["strategy_id"]:
-            s["strategy_id"] = f"strategy-gen-{i}"
+    # Validate required fields
+    required_fields = {"strategy_id", "hypothesis", "funnel", "tone"}
+    validated = []
+    for i, strategy in enumerate(parsed):
+        if not isinstance(strategy, dict):
+            logger.warning("Skipping non-dict strategy at index %d", i)
+            continue
 
-    logger.info(f"H stage: Generated {len(strategies)} strategies: {[s['strategy_id'] for s in strategies]}")
-    return strategies[:num_strategies]
+        missing = required_fields - set(strategy.keys())
+        if missing:
+            logger.warning(
+                "Strategy at index %d missing fields %s, adding defaults", i, missing
+            )
+            # Add defaults for missing fields
+            if "strategy_id" not in strategy:
+                strategy["strategy_id"] = f"strategy-auto-{i}"
+            if "hypothesis" not in strategy:
+                strategy["hypothesis"] = "Auto-generated hypothesis"
+            if "funnel" not in strategy:
+                strategy["funnel"] = {
+                    "attention": {
+                        "hook_type": "공감형",
+                        "opening_line_guide": "Auto-generated",
+                        "target_emotion": "공감",
+                    },
+                    "interest": {
+                        "value_framing": "Auto-generated",
+                        "information_depth": "핵심1개",
+                        "engagement_trigger": "Auto-generated",
+                    },
+                    "desire": {
+                        "emotional_driver": "Auto-generated",
+                        "proof_type": "사회적증거",
+                        "objection_preempt": "Auto-generated",
+                    },
+                    "action": {
+                        "cta_style": "소프트CTA",
+                        "urgency_type": "없음",
+                        "fallback": "무료 샘플 제안",
+                    },
+                }
+            if "tone" not in strategy:
+                strategy["tone"] = "친절하고 자연스러운"
+
+        validated.append(strategy)
+
+    if not validated:
+        logger.error("No valid strategies generated, creating fallback")
+        validated = [
+            {
+                "strategy_id": "strategy-fallback",
+                "hypothesis": "Fallback strategy when generation fails",
+                "funnel": {
+                    "attention": {
+                        "hook_type": "공감형",
+                        "opening_line_guide": "요즘 건강 관리 어떻게 하고 계세요?",
+                        "target_emotion": "공감",
+                    },
+                    "interest": {
+                        "value_framing": "하루 한 알로 간편한 건강 관리",
+                        "information_depth": "핵심1개",
+                        "engagement_trigger": "평소 영양제 드시나요?",
+                    },
+                    "desire": {
+                        "emotional_driver": "간편함",
+                        "proof_type": "사회적증거",
+                        "objection_preempt": "좋은 지적이세요. 하루 1정이라 부담 없이 시작하실 수 있어요.",
+                    },
+                    "action": {
+                        "cta_style": "소프트CTA",
+                        "urgency_type": "없음",
+                        "fallback": "성분표 링크 보내드릴까요?",
+                    },
+                },
+                "tone": "친절하고 자연스러운",
+            }
+        ]
+
+    logger.info("Generated %d strategies", len(validated))
+    return validated[:num_strategies]

@@ -1,189 +1,129 @@
-"""Judge evaluator — scores a conversation transcript via LLM.
+"""Evaluate a conversation session using the Judge LLM."""
 
-Uses prompts/judge-system.md as the system prompt.
-Calls expensive model with low temperature for scoring consistency.
-Returns EvaluationResult conforming to evaluation-result.schema.json.
-"""
 import json
 import logging
 from pathlib import Path
 
-from src.llm import call_llm_expensive, extract_json
-from src.conversation.turn import ConversationSession
-from src.personas.schema import Persona
-from src.evaluation.schema import (
-    EvaluationResult,
-    Scores,
-    Outcome,
-    ObjectionHandling,
-)
+from config.settings import settings
+from src.llm import call_llm, extract_json
 
 logger = logging.getLogger(__name__)
 
-# Load judge system prompt once
-_JUDGE_PROMPT: str | None = None
+# Load judge system prompt once at module level
+_judge_system: str | None = None
 
 
-def _load_judge_prompt() -> str:
-    """Load and cache the judge system prompt from harness prompts."""
-    global _JUDGE_PROMPT
-    if _JUDGE_PROMPT is not None:
-        return _JUDGE_PROMPT
-
-    prompts_dir = Path(__file__).parent.parent.parent.parent / "harness" / "prompts"
-    judge_path = prompts_dir / "judge-system.md"
-
-    if not judge_path.exists():
-        raise FileNotFoundError(f"Judge prompt not found: {judge_path}")
-
-    _JUDGE_PROMPT = judge_path.read_text(encoding="utf-8")
-    return _JUDGE_PROMPT
+def _get_judge_system() -> str:
+    """Load judge-system.md template from PROMPTS_DIR."""
+    global _judge_system
+    if _judge_system is None:
+        path = Path(settings.PROMPTS_DIR) / "judge-system.md"
+        _judge_system = path.read_text(encoding="utf-8")
+    return _judge_system
 
 
-def _format_transcript_for_judge(session: ConversationSession, persona: Persona) -> str:
-    """Format conversation + persona context as the user message for the judge."""
+def _format_transcript(turns: list[dict]) -> str:
+    """Format conversation turns into a readable transcript."""
     lines = []
-
-    # Persona context
-    lines.append("## 고객 프로필")
-    lines.append(f"- persona_id: {persona.persona_id}")
-    lines.append(f"- archetype: {persona.profile.archetype}")
-    lines.append(f"- cluster_tags: {', '.join(persona.profile.cluster_tags)}")
-    if persona.profile.variation:
-        lines.append(f"- variation: {persona.profile.variation}")
-    lines.append("")
-
-    # Session metadata
-    lines.append("## 대화 정보")
-    lines.append(f"- session_id: {session.session_id}")
-    lines.append(f"- strategy_id: {session.strategy_id}")
-    lines.append(f"- ended_by: {session.ended_by.value}")
-    lines.append("")
-
-    # Transcript
-    lines.append("## 대화 Transcript")
-    lines.append("")
-    lines.append(session.transcript())
-
-    return "\n".join(lines)
+    for turn in turns:
+        role = turn.get("role", "unknown")
+        content = turn.get("content", "")
+        label = "세일즈" if role == "agent" else "고객"
+        lines.append(f"[{label}] {content}")
+    return "\n\n".join(lines)
 
 
-def _clamp(value: int, lo: int, hi: int) -> int:
-    """Clamp value within [lo, hi]."""
-    return max(lo, min(hi, value))
-
-
-def _parse_judge_response(raw: dict, session: ConversationSession) -> EvaluationResult:
-    """Parse the raw JSON response from the judge into an EvaluationResult."""
-    # Extract and clamp scores
-    engagement = _clamp(int(raw.get("engagement", 0)), 0, 25)
-    relevance = _clamp(int(raw.get("relevance", 0)), 0, 25)
-    persuasion = _clamp(int(raw.get("persuasion", 0)), 0, 25)
-    purchase_intent = _clamp(int(raw.get("purchase_intent", 0)), 0, 25)
-
-    # Total: use judge's total if provided and valid, otherwise compute
-    raw_total = int(raw.get("total", 0))
-    computed_total = engagement + relevance + persuasion + purchase_intent
-    total = raw_total if 0 <= raw_total <= 100 else computed_total
-    # If judge total deviates from sum by more than 2, use computed
-    if abs(total - computed_total) > 2:
-        total = computed_total
-
-    scores = Scores(
-        engagement=engagement,
-        relevance=relevance,
-        persuasion=persuasion,
-        purchase_intent=purchase_intent,
-        total=_clamp(total, 0, 100),
-    )
-
-    # Outcome
-    outcome_str = raw.get("outcome", "neutral")
-    try:
-        outcome = Outcome(outcome_str)
-    except ValueError:
-        # Map total to outcome if judge returned invalid value
-        if total >= 80:
-            outcome = Outcome.CONVERTED
-        elif total >= 60:
-            outcome = Outcome.INTERESTED
-        elif total >= 40:
-            outcome = Outcome.NEUTRAL
-        elif total >= 20:
-            outcome = Outcome.RESISTANT
-        else:
-            outcome = Outcome.LOST
-
-    # Funnel progress
-    funnel_progress = _clamp(int(raw.get("funnel_progress", 0)), 0, 3)
-
-    # Objection handling
-    obj_str = raw.get("objection_handling", "none")
-    try:
-        objection_handling = ObjectionHandling(obj_str)
-    except ValueError:
-        objection_handling = ObjectionHandling.NONE
-
-    # Tone match
-    tone_match = bool(raw.get("tone_match", False))
-
-    # Reason
-    reason = str(raw.get("reason", "채점 완료"))
-
-    return EvaluationResult(
-        session_id=session.session_id,
-        strategy_id=session.strategy_id,
-        persona_id=session.persona_id,
-        scores=scores,
-        outcome=outcome,
-        reason=reason,
-        funnel_progress=funnel_progress,
-        objection_handling=objection_handling,
-        tone_match=tone_match,
-    )
-
-
-async def judge_conversation(
-    session: ConversationSession,
-    persona: Persona,
-) -> EvaluationResult:
-    """Evaluate a conversation session using the Judge LLM.
+async def evaluate_conversation(
+    session: dict, strategy: dict, persona_id: str
+) -> dict:
+    """Evaluate a single conversation session.
 
     Args:
-        session: Completed conversation session with turns.
-        persona: The customer persona involved in the conversation.
+        session: Conversation session dict (matching conversation-session schema).
+        strategy: The strategy dict used for this conversation.
+        persona_id: The persona ID for this conversation.
 
     Returns:
-        EvaluationResult with 4-dimension scores and outcome.
-        On failure, returns a 0-score error fallback.
+        Evaluation result dict matching evaluation-result schema.
     """
+    session_id = session.get("session_id", "unknown")
+    strategy_id = session.get("strategy_id", strategy.get("strategy_id", "unknown"))
+
     try:
-        system_prompt = _load_judge_prompt()
-        user_message = _format_transcript_for_judge(session, persona)
+        system_prompt = _get_judge_system()
+        transcript = _format_transcript(session.get("turns", []))
 
-        # Call expensive model with low temperature for consistency
-        response_text = await call_llm_expensive(
-            system_prompt=system_prompt,
-            user_message=user_message,
-            temperature=0.1,
-            expect_json=True,
+        user_prompt = (
+            f"## 대화 정보\n"
+            f"- Strategy: {strategy_id}\n"
+            f"- Persona: {persona_id}\n"
+            f"- Strategy hypothesis: {strategy.get('hypothesis', 'N/A')}\n"
+            f"- Strategy tone: {strategy.get('tone', 'N/A')}\n"
+            f"- Ended by: {session.get('ended_by', 'unknown')}\n\n"
+            f"## 대화 transcript\n\n{transcript}"
         )
 
-        raw = json.loads(response_text) if isinstance(response_text, str) else response_text
-        result = _parse_judge_response(raw, session)
-
-        logger.info(
-            f"Evaluated {session.session_id}: "
-            f"total={result.scores.total}, outcome={result.outcome.value}, "
-            f"funnel={result.funnel_progress}"
+        response = await call_llm(
+            prompt=user_prompt,
+            system=system_prompt,
+            model=settings.expensive_model,
+            temperature=settings.JUDGE_TEMPERATURE,
         )
-        return result
 
-    except Exception as e:
-        logger.error(f"Judge evaluation failed for {session.session_id}: {e}")
-        return EvaluationResult.error_fallback(
-            session_id=session.session_id,
-            strategy_id=session.strategy_id,
-            persona_id=session.persona_id,
-            error_msg=str(e),
+        parsed = extract_json(response)
+
+        # Extract scores
+        scores = {
+            "engagement": int(parsed.get("engagement", 0)),
+            "relevance": int(parsed.get("relevance", 0)),
+            "persuasion": int(parsed.get("persuasion", 0)),
+            "purchase_intent": int(parsed.get("purchase_intent", 0)),
+            "total": int(parsed.get("total", 0)),
+        }
+
+        # Clamp scores to valid ranges
+        for key in ("engagement", "relevance", "persuasion", "purchase_intent"):
+            scores[key] = max(0, min(25, scores[key]))
+        scores["total"] = max(0, min(100, scores["total"]))
+
+        # Validate total equals sum
+        computed_total = sum(
+            scores[k] for k in ("engagement", "relevance", "persuasion", "purchase_intent")
         )
+        if scores["total"] != computed_total:
+            scores["total"] = computed_total
+
+        outcome = parsed.get("outcome", "neutral")
+        valid_outcomes = {"converted", "interested", "neutral", "resistant", "lost", "error"}
+        if outcome not in valid_outcomes:
+            outcome = "neutral"
+
+        reason = parsed.get("reason", "No reason provided")
+
+        return {
+            "session_id": session_id,
+            "strategy_id": strategy_id,
+            "persona_id": persona_id,
+            "scores": scores,
+            "outcome": outcome,
+            "reason": str(reason),
+        }
+
+    except Exception as exc:
+        logger.error(
+            "Evaluation failed for session %s: %s", session_id, exc, exc_info=True
+        )
+        return {
+            "session_id": session_id,
+            "strategy_id": strategy_id,
+            "persona_id": persona_id,
+            "scores": {
+                "engagement": 0,
+                "relevance": 0,
+                "persuasion": 0,
+                "purchase_intent": 0,
+                "total": 0,
+            },
+            "outcome": "error",
+            "reason": f"Evaluation error: {exc}",
+        }

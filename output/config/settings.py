@@ -1,75 +1,143 @@
-"""Pydantic Settings for Ralphthon harness."""
-import os
+"""Ralphthon project settings using Pydantic BaseSettings.
+
+The merged repository keeps the ralphton output codebase while using the
+root-level plz harness layout (`../harness/...`). This settings module exposes
+both the newer uppercase names used by the ralphton output code and the older
+lowercase aliases used by some retained compatibility modules.
+"""
+
 from pathlib import Path
-from typing import Optional
-from pydantic_settings import BaseSettings
+
 from pydantic import Field
+from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    """Environment-variable based settings."""
+    """Central configuration for the Ralphthon output pipeline."""
 
-    # Provider
-    provider: str = Field(default="gemini", alias="RALPHTHON_PROVIDER")
+    # Provider & model selection
+    RALPHTHON_PROVIDER: str = "gemini"  # gemini / openai / anthropic / ollama
+    RALPHTHON_MODEL: str = "gemini-2.0-flash-lite"
+    RALPHTHON_MODEL_CHEAP: str = ""  # if empty, falls back to RALPHTHON_MODEL
+    RALPHTHON_MODEL_EXPENSIVE: str = ""  # if empty, falls back to RALPHTHON_MODEL
 
-    # API Keys (dual key support for higher RPM)
-    gemini_api_key: str = Field(default="", alias="GEMINI_API_KEY")
-    gemini_api_key_2: str = Field(default="", alias="GEMINI_API_KEY_2")
-    openai_api_key: str = Field(default="", alias="OPENAI_API_KEY")
-    anthropic_api_key: str = Field(default="", alias="ANTHROPIC_API_KEY")
-    ollama_base_url: str = Field(default="http://localhost:11434", alias="OLLAMA_BASE_URL")
+    # Run mode
+    RALPHTHON_MODE: str = "DEMO"  # DEV=10, TEST=50, DEMO=200 personas
 
-    # Models — google-genai SDK model names
-    model_cheap: str = Field(default="gemini-2.5-flash-preview-05-20", alias="RALPHTHON_MODEL_CHEAP")
-    model_expensive: str = Field(default="gemini-2.5-flash-preview-05-20", alias="RALPHTHON_MODEL_EXPENSIVE")
+    # Concurrency & rate limiting
+    MAX_CONCURRENT: int = 20
+    MAX_RETRIES: int = 10
+    RATE_LIMIT_DELAY: float = 0.05
 
-    # Execution mode: DEV=10, TEST=50, DEMO=200
-    mode: str = Field(default="TEST", alias="RALPHTHON_MODE")
+    # Pipeline parameters
+    STRATEGIES_PER_RUN: int = 3
+    MAX_TURNS: int = 3  # conversation round-trips
+    RALPH_ITERATIONS: int = 1
 
-    # Concurrency
-    max_concurrent: int = Field(default=20, alias="RALPHTHON_MAX_CONCURRENT")
-    rate_limit_delay: float = Field(default=0.05, alias="RATE_LIMIT_DELAY")
+    # API keys
+    GEMINI_API_KEY: str = ""
+    GEMINI_API_KEY_2: str = ""
+    OPENAI_API_KEY: str = ""
+    ANTHROPIC_API_KEY: str = ""
 
-    # RALPH parameters
-    strategies_per_run: int = Field(default=3, alias="STRATEGIES_PER_RUN")
-    conversation_turns: int = Field(default=3, alias="CONVERSATION_TURNS")
-    ralph_iterations: int = Field(default=1, alias="RALPH_ITERATIONS")
+    # Ollama
+    OLLAMA_BASE_URL: str = "http://localhost:11434"
 
-    # Paths (computed at init)
-    harness_dir: Optional[Path] = Field(default=None)
-    output_dir: Optional[Path] = Field(default=None)
-    personas_dir: Optional[Path] = Field(default=None)
+    # Paths relative to output/
+    PERSONAS_DIR: str = "../harness/data/personas"
+    PROMPTS_DIR: str = "../harness/prompts"
 
-    # Retry
-    max_retries: int = 5
-    retry_base_delay: float = 2.0
+    # Judge
+    JUDGE_TEMPERATURE: float = 0.1
 
-    class Config:
-        env_file = ".env"
-        extra = "ignore"
-        populate_by_name = True
+    model_config = {
+        "env_prefix": "",
+        "env_file": ".env",
+        "extra": "ignore",
+    }
 
-    def model_post_init(self, __context):
-        config_dir = Path(__file__).parent
-        if self.output_dir is None:
-            object.__setattr__(self, "output_dir", config_dir.parent)
-        if self.harness_dir is None:
-            object.__setattr__(self, "harness_dir", config_dir.parent.parent / "harness")
-        if self.personas_dir is None:
-            object.__setattr__(self, "personas_dir", self.harness_dir / "data" / "personas")
+    @property
+    def concurrent(self) -> int:
+        """Return MAX_CONCURRENT clamped to [10, 20]."""
+        return max(10, min(20, self.MAX_CONCURRENT))
+
+    @property
+    def cheap_model(self) -> str:
+        """Return the cheap model, falling back to the default model."""
+        return self.RALPHTHON_MODEL_CHEAP or self.RALPHTHON_MODEL
+
+    @property
+    def expensive_model(self) -> str:
+        """Return the expensive model, falling back to the default model."""
+        return self.RALPHTHON_MODEL_EXPENSIVE or self.RALPHTHON_MODEL
 
     @property
     def persona_count(self) -> int:
+        """Return persona count based on mode: DEV=10, TEST=50, DEMO=200."""
         mode_map = {"DEV": 10, "TEST": 50, "DEMO": 200}
-        return mode_map.get(self.mode.upper(), 50)
+        return mode_map.get(self.RALPHTHON_MODE.upper(), 200)
+
+    @property
+    def output_dir(self) -> Path:
+        return Path(__file__).resolve().parent.parent
+
+    @property
+    def harness_dir(self) -> Path:
+        return (self.output_dir.parent / "harness").resolve()
+
+    @property
+    def personas_dir(self) -> Path:
+        return (self.output_dir / self.PERSONAS_DIR).resolve()
+
+    @property
+    def prompts_dir(self) -> Path:
+        return (self.output_dir / self.PROMPTS_DIR).resolve()
 
     @property
     def api_keys(self) -> list[str]:
-        """Return list of available API keys for round-robin."""
-        keys = [self.gemini_api_key]
-        if self.gemini_api_key_2:
-            keys.append(self.gemini_api_key_2)
+        """Return available Gemini API keys for round-robin usage."""
+        keys = [self.GEMINI_API_KEY]
+        if self.GEMINI_API_KEY_2:
+            keys.append(self.GEMINI_API_KEY_2)
         return [k for k in keys if k]
 
+    # Compatibility aliases for retained v2 modules / dry-run helpers
+    @property
+    def provider(self) -> str:
+        return self.RALPHTHON_PROVIDER
 
+    @property
+    def model_cheap(self) -> str:
+        return self.cheap_model
+
+    @property
+    def model_expensive(self) -> str:
+        return self.expensive_model
+
+    @property
+    def mode(self) -> str:
+        return self.RALPHTHON_MODE
+
+    @property
+    def max_concurrent(self) -> int:
+        return self.MAX_CONCURRENT
+
+    @property
+    def rate_limit_delay(self) -> float:
+        return self.RATE_LIMIT_DELAY
+
+    @property
+    def strategies_per_run(self) -> int:
+        return self.STRATEGIES_PER_RUN
+
+    @property
+    def conversation_turns(self) -> int:
+        return self.MAX_TURNS
+
+    @property
+    def ralph_iterations(self) -> int:
+        return self.RALPH_ITERATIONS
+
+
+# Singleton instance
 settings = Settings()

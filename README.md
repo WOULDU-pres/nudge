@@ -6,6 +6,14 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-WOULDU--pres%2Fnudge-181717?logo=github)](https://github.com/WOULDU-pres/nudge)
 
+## v2 변경사항
+
+- 저장소를 `ralphton-plz` 기준으로 정리하고, 설계 문서(`harness/`)를 루트 구조에 통합했습니다.
+- `output/`은 `ralphton` 구현을 기준으로 재정렬했습니다. 즉, 실행 파이프라인/LLM 호출/루프 오케스트레이션은 `ralphton` 버전을 우선 반영했습니다.
+- 실행 호환성을 위해 `output/config/default.yaml`, `output/frontend/`, 그리고 일부 typed compatibility 파일(`agents/base.py`, `conversation/turn.py`, `evaluation/schema.py`, `personas/schema.py`, `ralph/evaluate.py`)은 함께 유지했습니다.
+- `output/config/settings.py`는 현재 루트 `harness/` 구조에 맞게 경로를 수정했고, 구형/신형 설정명 모두 읽을 수 있게 호환 alias를 추가했습니다.
+- `output/scripts/run_simulation.py`는 `--dry-run`과 `--product` 옵션을 지원하도록 보강했습니다.
+
 ---
 
 ## 문제 정의
@@ -69,13 +77,16 @@ nudge/
 │   │   └── product.yaml        # 판매 제품 정보 (데일리 멀티비타민 플러스)
 │   ├── src/
 │   │   ├── ralph/
-│   │   │   ├── evaluate.py     # E: Judge LLM 채점
+│   │   │   ├── evaluate_stage.py # E: Judge 평가 fan-out (ralphton 기준)
+│   │   │   ├── evaluate.py       # v2 호환 레이어
 │   │   │   ├── reason.py       # R: 상위/하위 대화 패턴 비교 분석
 │   │   │   └── learn.py        # L: 학습 포인트 추출 + 전략 수정 권고
 │   │   ├── conversation/
 │   │   │   ├── engine.py       # 턴 기반 비동기 대화 엔진
 │   │   │   ├── turn.py         # 개별 턴 처리
 │   │   │   └── rules.py        # 대화 종료 조건 (턴 제한, 키워드 감지)
+│   │   ├── evaluation/schema.py # v2 typed 결과 스키마 호환
+│   │   ├── personas/schema.py   # v2 typed 페르소나 스키마 호환
 │   │   └── llm.py              # 멀티프로바이더 LLM 클라이언트
 │   ├── scripts/
 │   │   └── run_simulation.py   # 시뮬레이션 실행 진입점
